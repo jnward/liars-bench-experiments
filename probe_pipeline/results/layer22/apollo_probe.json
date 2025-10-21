@@ -1,0 +1,26 @@
+{
+  "convincing-game": {
+    "eval_samples": 280,
+    "auroc": 0.9990816058777224
+  },
+  "harm-pressure-choice": {
+    "eval_samples": 500,
+    "auroc": 0.5652239709443099
+  },
+  "harm-pressure-knowledge-report": {
+    "eval_samples": 500,
+    "auroc": 0.13672409078479628
+  },
+  "instructed-deception": {
+    "eval_samples": 500,
+    "auroc": 0.9516047613619709
+  },
+  "insider-trading/report": {
+    "eval_samples": 379,
+    "auroc": 0.9485572529050791
+  },
+  "insider-trading/confirmation": {
+    "eval_samples": 162,
+    "auroc": 0.9923566878980892
+  }
+}

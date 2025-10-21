@@ -4,33 +4,35 @@
 from __future__ import annotations
 
 import json
+import os
 import pickle
 from pathlib import Path
-from typing import Dict, List
+from typing import List
 
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
-import pickle
 
 
 # Configuration
 CACHE_DIR = Path("probe_pipeline/cache")
-PROBE_DIR = Path("probe_pipeline/probes")
-PLOT_DIR = Path("probe_pipeline/plots")
-RESULTS_DIR = Path("probe_pipeline/results")
+DEFAULT_LAYER_INDEX = 22
+LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
+PROBE_DIR = Path(f"probe_pipeline/probes/layer{LAYER_INDEX}")
+PLOT_DIR = Path(f"probe_pipeline/plots/layer{LAYER_INDEX}")
+RESULTS_DIR = Path(f"probe_pipeline/results/layer{LAYER_INDEX}")
 APOLLO_PROBE_PATH = Path("/workspace/jake/deception-detection/example_results/instructed_pairs/detector.pt")
 
-DATASETS: Dict[str, str] = {
-    "convincing-game": "convincing-game.pt",
-    "harm-pressure-choice": "harm-pressure-choice.pt",
-    "harm-pressure-knowledge-report": "harm-pressure-knowledge-report.pt",
-    "instructed-deception": "instructed-deception.pt",
-    "insider-trading/report": "insider-trading_report.pt",
-    "insider-trading/confirmation": "insider-trading_confirmation.pt",
-}
+DATASET_KEYS: List[str] = [
+    "convincing-game",
+    "harm-pressure-choice",
+    "harm-pressure-knowledge-report",
+    "instructed-deception",
+    "insider-trading/report",
+    "insider-trading/confirmation",
+]
 
 LOGREG_C = 1.0
 MAX_ITER = 1000
@@ -47,7 +49,8 @@ def slugify(name: str) -> str:
 
 
 def load_cache(dataset_key: str) -> dict:
-    path = CACHE_DIR / DATASETS[dataset_key]
+    path = CACHE_DIR / f"{slugify(dataset_key)}_layer{LAYER_INDEX}.pt"
+    # path = CACHE_DIR / f"{slugify(dataset_key)}.pt"
     if not path.exists():
         raise FileNotFoundError(f"Cache file not found for {dataset_key}: {path}")
     return torch.load(path, map_location="cpu")
@@ -95,6 +98,7 @@ def evaluate_probe(
         "probe": probe_name,
         "trained_on": train_datasets,
         "datasets": {},
+        "layer_index": LAYER_INDEX,
     }
 
     plt.figure(figsize=(7, 6))
@@ -184,6 +188,84 @@ def evaluate_probe(
     print(f"Saved plot -> {plot_path}")
 
 
+def evaluate_apollo_probe(dataset_keys: List[str]) -> None:
+    with APOLLO_PROBE_PATH.open("rb") as f:
+        apollo = pickle.load(f)
+
+    layers = apollo["layers"]
+    try:
+        idx = list(layers).index(22)
+    except ValueError:
+        print("Apollo probe missing layer 22 entry; skipping.")
+        return
+
+    direction = apollo["directions"][idx]
+    if isinstance(direction, torch.Tensor):
+        direction = direction.detach().cpu().float()
+    else:
+        direction = torch.tensor(direction, dtype=torch.float32)
+    direction = direction.view(-1)
+
+    normalize = bool(apollo.get("normalize", False))
+    scaler_mean = apollo.get("scaler_mean")
+    scaler_scale = apollo.get("scaler_scale")
+
+    if normalize:
+        if isinstance(scaler_mean, torch.Tensor):
+            scaler_mean = scaler_mean.detach().cpu().float()
+        else:
+            scaler_mean = torch.tensor(scaler_mean, dtype=torch.float32)
+        if isinstance(scaler_scale, torch.Tensor):
+            scaler_scale = scaler_scale.detach().cpu().float()
+        else:
+            scaler_scale = torch.tensor(scaler_scale, dtype=torch.float32)
+
+    metrics = {}
+
+    plt.figure(figsize=(7, 6))
+
+    for dataset in dataset_keys:
+        cache = load_cache(dataset)
+        X_eval, y_eval = get_split(cache, "eval")
+        if len(np.unique(y_eval)) < 2:
+            print(f"Skipping Apollo ROC for {dataset}: single class.")
+            continue
+
+        acts = torch.from_numpy(X_eval).float()
+        vec = direction
+        if normalize:
+            acts = (acts - scaler_mean) / scaler_scale
+        scores = acts @ vec
+        scores_np = scores.numpy()
+
+        auroc = roc_auc_score(y_eval, scores_np)
+        fpr, tpr, _ = roc_curve(y_eval, scores_np)
+
+        metrics[dataset] = {
+            "eval_samples": len(y_eval),
+            "auroc": float(auroc),
+        }
+
+        plt.plot(fpr, tpr, label=f"{dataset} (AUROC={auroc:.3f})", linewidth=1.6)
+
+    plt.plot([0, 1], [0, 1], linestyle="--", color="grey", label="Chance")
+    plt.xlabel("False Positive Rate")
+    plt.ylabel("True Positive Rate")
+    plt.title("Apollo Probe ROC Curves")
+    plt.legend(loc="lower right", fontsize=9)
+    plt.grid(True, linestyle="--", alpha=0.4)
+
+    plot_path = PLOT_DIR / "apollo_probe.png"
+    plt.tight_layout()
+    plt.savefig(plot_path)
+    plt.close()
+
+    with (RESULTS_DIR / "apollo_probe.json").open("w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2)
+
+    print(f"Saved Apollo probe plot -> {plot_path}")
+
+
 def build_training_sets(dataset_keys: List[str]) -> List[tuple[str, List[str]]]:
     combos: List[tuple[str, List[str]]] = []
 
@@ -203,7 +285,7 @@ def build_training_sets(dataset_keys: List[str]) -> List[tuple[str, List[str]]]:
 
 
 def main() -> None:
-    dataset_keys = list(DATASETS.keys())
+    dataset_keys = list(DATASET_KEYS)
     combos = build_training_sets(dataset_keys)
     probe_vectors: List[tuple[str, np.ndarray]] = []
 
@@ -218,8 +300,8 @@ def main() -> None:
         probe_vectors.append((probe_name, vec))
 
     names = [name for name, _ in probe_vectors]
-    # Add original Apollo probe
-    if APOLLO_PROBE_PATH.exists():
+    # Add original Apollo probe for layer 22
+    if LAYER_INDEX == 22 and APOLLO_PROBE_PATH.exists():
         with APOLLO_PROBE_PATH.open("rb") as f:
             apollo = pickle.load(f)
         directions = apollo["directions"]
@@ -252,6 +334,9 @@ def main() -> None:
         json.dump({"probes": names, "cosine_matrix": matrix.tolist()}, f, indent=2)
 
     print(f"Saved cosine similarity heatmap -> {heatmap_path}")
+
+    if LAYER_INDEX == 22 and APOLLO_PROBE_PATH.exists():
+        evaluate_apollo_probe(dataset_keys)
 
 
 if __name__ == "__main__":

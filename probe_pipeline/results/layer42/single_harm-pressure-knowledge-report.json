@@ -1,0 +1,39 @@
+{
+  "probe": "single_harm-pressure-knowledge-report",
+  "trained_on": [
+    "harm-pressure-knowledge-report"
+  ],
+  "datasets": {
+    "convincing-game": {
+      "eval_samples": 280,
+      "accuracy": 0.2642857142857143,
+      "auroc": 0.4466675413277355
+    },
+    "harm-pressure-choice": {
+      "eval_samples": 500,
+      "accuracy": 0.944,
+      "auroc": 0.7878329297820823
+    },
+    "harm-pressure-knowledge-report": {
+      "eval_samples": 500,
+      "accuracy": 0.972,
+      "auroc": 0.986965636678516
+    },
+    "instructed-deception": {
+      "eval_samples": 500,
+      "accuracy": 0.434,
+      "auroc": 0.8043184445783328
+    },
+    "insider-trading/report": {
+      "eval_samples": 379,
+      "accuracy": 0.8786279683377308,
+      "auroc": 0.08845802324063194
+    },
+    "insider-trading/confirmation": {
+      "eval_samples": 162,
+      "accuracy": 0.037037037037037035,
+      "auroc": 0.36560509554140125
+    }
+  },
+  "layer_index": 42
+}

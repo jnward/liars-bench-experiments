@@ -1,0 +1,43 @@
+{
+  "probe": "leaveout_insider-trading_confirmation",
+  "trained_on": [
+    "convincing-game",
+    "harm-pressure-choice",
+    "harm-pressure-knowledge-report",
+    "instructed-deception",
+    "insider-trading/report"
+  ],
+  "datasets": {
+    "convincing-game": {
+      "eval_samples": 280,
+      "accuracy": 1.0,
+      "auroc": 1.0
+    },
+    "harm-pressure-choice": {
+      "eval_samples": 500,
+      "accuracy": 0.952,
+      "auroc": 0.8838529055690073
+    },
+    "harm-pressure-knowledge-report": {
+      "eval_samples": 500,
+      "accuracy": 0.972,
+      "auroc": 0.985051499407529
+    },
+    "instructed-deception": {
+      "eval_samples": 500,
+      "accuracy": 0.952,
+      "auroc": 0.9857843057432708
+    },
+    "insider-trading/report": {
+      "eval_samples": 379,
+      "accuracy": 0.9525065963060686,
+      "auroc": 0.9857683770727249
+    },
+    "insider-trading/confirmation": {
+      "eval_samples": 162,
+      "accuracy": 0.9444444444444444,
+      "auroc": 0.9605095541401274
+    }
+  },
+  "layer_index": 62
+}

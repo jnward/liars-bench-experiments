@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +17,10 @@ from utils import (
     tokenize_dataset_rows,
     extract_last_assistant_activations,
 )
+
+
+def dataset_slug(config: str) -> str:
+    return config.replace("/", "_")
 
 
 # Configuration
@@ -31,9 +36,10 @@ DATASET_CONFIGS = [
 ]
 FILTER_MODEL_NAME = "llama-v3.3-70b-instruct"
 SPLIT = "test"
-SAMPLE_SIZE = 1000
-LAYER_INDEX = 22
-BATCH_SIZE = 2
+SAMPLE_SIZE = int(os.environ.get("SAMPLE_SIZE", 1000))
+DEFAULT_LAYER_INDEX = 22
+LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
+BATCH_SIZE = int(os.environ.get("BATCH_SIZE", 2))
 OUTPUT_DIR = Path("probe_pipeline/cache")
 RANDOM_SEED = 42
 
@@ -82,10 +88,10 @@ def cache_dataset(config: str) -> None:
             "labels": labels,
             "meta": payload,
         },
-        OUTPUT_DIR / f"{config.replace('/', '_')}.pt",
+        OUTPUT_DIR / f"{dataset_slug(config)}_layer{LAYER_INDEX}.pt",
     )
 
-    (OUTPUT_DIR / f"{config.replace('/', '_')}.meta.json").write_text(
+    (OUTPUT_DIR / f"{dataset_slug(config)}_layer{LAYER_INDEX}.meta.json").write_text(
         json.dumps(payload, indent=2),
         encoding="utf-8",
     )
