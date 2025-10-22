@@ -1,0 +1,14 @@
+{
+  "geometry_probe_path": "probe_pipeline/falsehood/geometry_probes/layer22/geometry_cities.pkl",
+  "transplanted_probe_path": "probe_pipeline/falsehood/probes/layer22/cities_transplanted.pkl",
+  "metrics_path": "probe_pipeline/falsehood/geometry_results/layer22/geometry_cities_metrics.json",
+  "roc_plot": "probe_pipeline/falsehood/geometry_plots/layer22/geometry_cities_roc.png",
+  "train_metrics": {
+    "train_accuracy": 0.9959893048128342,
+    "train_auroc": 0.999964253798034
+  },
+  "eval_metrics": {
+    "eval_accuracy": 0.9959893048128342,
+    "eval_auroc": 1.0
+  }
+}

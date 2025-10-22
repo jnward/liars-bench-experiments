@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import ast
+import os
 import random
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Iterable, Sequence
 
 import torch
@@ -30,7 +32,9 @@ def init_model(model_name: str, seed: int = 42) -> tuple[AutoTokenizer, AutoMode
         random.seed(seed)
         torch.manual_seed(seed)
 
-        _tokenizer = AutoTokenizer.from_pretrained(model_name)
+        requested_model_name = os.environ.get("MODEL_NAME", model_name)
+
+        _tokenizer = AutoTokenizer.from_pretrained(requested_model_name)
         _tokenizer.padding_side = "left"
         if _tokenizer.pad_token_id is None:
             _tokenizer.pad_token = _tokenizer.eos_token
@@ -38,10 +42,52 @@ def init_model(model_name: str, seed: int = 42) -> tuple[AutoTokenizer, AutoMode
         _device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         _dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32
 
+        load_in_4bit = str(os.environ.get("LOAD_IN_4BIT", "")).lower() in {"1", "true", "yes"}
+        load_in_8bit = str(os.environ.get("LOAD_IN_8BIT", "")).lower() in {"1", "true", "yes"}
+        if load_in_4bit and load_in_8bit:
+            raise ValueError("Only one of LOAD_IN_4BIT or LOAD_IN_8BIT may be set.")
+
+        model_kwargs: dict[str, Any] = {
+            "torch_dtype": _dtype,
+            "device_map": os.environ.get("MODEL_DEVICE_MAP", "auto"),
+            "low_cpu_mem_usage": True,
+        }
+
+        offload_env = os.environ.get("HF_OFFLOAD_DIR")
+        if offload_env:
+            offload_dir = Path(offload_env).expanduser()
+            offload_dir.mkdir(parents=True, exist_ok=True)
+            model_kwargs["offload_folder"] = str(offload_dir)
+
+        max_cpu_mem = os.environ.get("HF_MAX_CPU_MEMORY")
+        if max_cpu_mem:
+            model_kwargs["max_memory"] = {"cpu": str(max_cpu_mem)}
+
+        if load_in_4bit or load_in_8bit:
+            try:
+                from transformers import BitsAndBytesConfig
+            except ImportError as exc:  # pragma: no cover - helpful runtime message
+                raise ImportError(
+                    "bitsandbytes is required for 4-bit/8-bit loading. Install it or unset LOAD_IN_4BIT/LOAD_IN_8BIT."
+                ) from exc
+
+            quant_kwargs = {"load_in_4bit": load_in_4bit, "load_in_8bit": load_in_8bit}
+            if load_in_4bit:
+                quant_kwargs.update(
+                    {
+                        "bnb_4bit_use_double_quant": True,
+                        "bnb_4bit_quant_type": "nf4",
+                        "bnb_4bit_compute_dtype": _dtype,
+                    }
+                )
+
+            quant_config = BitsAndBytesConfig(**quant_kwargs)
+            model_kwargs["quantization_config"] = quant_config
+            model_kwargs.pop("torch_dtype", None)
+
         _model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            torch_dtype=_dtype,
-            device_map="auto",
+            requested_model_name,
+            **model_kwargs,
         )
         _model.eval()
 

@@ -1,0 +1,17 @@
+{
+  "probe_name": "geometry_cities",
+  "layer_index": 22,
+  "train_fraction": 0.5,
+  "train_accuracy": 0.9959893048128342,
+  "train_auroc": 0.999964253798034,
+  "eval_accuracy": 0.9959893048128342,
+  "eval_auroc": 1.0,
+  "train_samples": 748,
+  "eval_samples": 748,
+  "train_city_count": 564,
+  "eval_city_count": 564,
+  "train_pair_count": 748,
+  "eval_pair_count": 748,
+  "geometry_dataset_path": "probe_pipeline/falsehood/data/cities.csv",
+  "roc_plot": "probe_pipeline/falsehood/geometry_plots/layer22/geometry_cities_roc.png"
+}
