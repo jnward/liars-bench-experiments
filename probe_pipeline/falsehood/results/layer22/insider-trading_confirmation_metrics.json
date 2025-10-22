@@ -1,0 +1,17 @@
+{
+  "dataset": "insider-trading/confirmation",
+  "type": "per-dataset",
+  "status": "ok",
+  "train_accuracy": 0.9627329192546584,
+  "train_auroc": 0.9931715597392076,
+  "eval_accuracy": 0.9691358024691358,
+  "eval_auroc": 0.9948464410912972,
+  "num_train_samples": 644,
+  "num_eval_samples": 648,
+  "cache_file": "insider-trading_confirmation_layer22.pt",
+  "probe_path": "probe_pipeline/falsehood/probes/layer22/insider-trading_confirmation_logreg.pkl",
+  "layer_index": 22,
+  "logreg_C": 1.0,
+  "max_iter": 1000,
+  "seed": 42
+}

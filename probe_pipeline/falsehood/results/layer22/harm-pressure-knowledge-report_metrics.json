@@ -1,0 +1,17 @@
+{
+  "dataset": "harm-pressure-knowledge-report",
+  "type": "per-dataset",
+  "status": "ok",
+  "train_accuracy": 0.9325,
+  "train_auroc": 0.9883580000000001,
+  "eval_accuracy": 0.922,
+  "eval_auroc": 0.979042,
+  "num_train_samples": 2000,
+  "num_eval_samples": 2000,
+  "cache_file": "harm-pressure-knowledge-report_layer22.pt",
+  "probe_path": "probe_pipeline/falsehood/probes/layer22/harm-pressure-knowledge-report_logreg.pkl",
+  "layer_index": 22,
+  "logreg_C": 1.0,
+  "max_iter": 1000,
+  "seed": 42
+}

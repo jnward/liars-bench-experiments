@@ -1,0 +1,17 @@
+{
+  "dataset": "convincing-game",
+  "type": "per-dataset",
+  "status": "ok",
+  "train_accuracy": 0.9598214285714286,
+  "train_auroc": 0.9958003826530613,
+  "eval_accuracy": 0.9553571428571429,
+  "eval_auroc": 0.9943526785714285,
+  "num_train_samples": 1120,
+  "num_eval_samples": 1120,
+  "cache_file": "convincing-game_layer22.pt",
+  "probe_path": "probe_pipeline/falsehood/probes/layer22/convincing-game_logreg.pkl",
+  "layer_index": 22,
+  "logreg_C": 1.0,
+  "max_iter": 1000,
+  "seed": 42
+}

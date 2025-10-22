@@ -1,0 +1,17 @@
+{
+  "dataset": "insider-trading/report",
+  "type": "per-dataset",
+  "status": "ok",
+  "train_accuracy": 0.8723544973544973,
+  "train_auroc": 0.9362594832171552,
+  "eval_accuracy": 0.8535620052770448,
+  "eval_auroc": 0.9282621257161953,
+  "num_train_samples": 1512,
+  "num_eval_samples": 1516,
+  "cache_file": "insider-trading_report_layer22.pt",
+  "probe_path": "probe_pipeline/falsehood/probes/layer22/insider-trading_report_logreg.pkl",
+  "layer_index": 22,
+  "logreg_C": 1.0,
+  "max_iter": 1000,
+  "seed": 42
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "ALL",
+  "type": "skyline",
+  "status": "ok",
+  "train_accuracy": 0.9283096162138853,
+  "train_auroc": 0.954937333585483,
+  "eval_accuracy": 0.9164153382162861,
+  "eval_auroc": 0.9423520723157666,
+  "num_train_samples": 9276,
+  "num_eval_samples": 9284,
+  "cache_files": [
+    "convincing-game_layer22.pt",
+    "harm-pressure-choice_layer22.pt",
+    "harm-pressure-knowledge-report_layer22.pt",
+    "instructed-deception_layer22.pt",
+    "insider-trading_report_layer22.pt",
+    "insider-trading_confirmation_layer22.pt"
+  ],
+  "datasets": [
+    "convincing-game",
+    "harm-pressure-choice",
+    "harm-pressure-knowledge-report",
+    "instructed-deception",
+    "insider-trading/report",
+    "insider-trading/confirmation"
+  ],
+  "probe_path": "probe_pipeline/falsehood/probes/layer22/falsehood_logreg.pkl",
+  "layer_index": 22,
+  "logreg_C": 1.0,
+  "max_iter": 1000,
+  "seed": 42
+}
