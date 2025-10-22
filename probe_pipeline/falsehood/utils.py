@@ -31,7 +31,11 @@ class TokenizedFalsehoodExample:
     tag: str
 
 
-def build_falsehood_variants(messages: Sequence[dict], is_deceptive: bool) -> List[FalsehoodVariant]:
+def build_falsehood_variants(
+    messages: Sequence[dict],
+    is_deceptive: bool,
+    prompt_template: str | None = None,
+) -> List[FalsehoodVariant]:
     option_specs = (
         (("Yes", "No"), "A"),
         (("Yes", "No"), "B"),
@@ -45,10 +49,11 @@ def build_falsehood_variants(messages: Sequence[dict], is_deceptive: bool) -> Li
     for (option_a, option_b), guess in option_specs:
         correct_letter = "A" if option_a == truth_answer else "B"
         label = 1 if guess == correct_letter else 0
+        template = prompt_template or FALSEHOOD_PROMPT_TEMPLATE
         new_messages = list(messages) + [
             {
                 "role": "user",
-                "content": FALSEHOOD_PROMPT_TEMPLATE.format(
+                "content": template.format(
                     option_a=option_a,
                     option_b=option_b,
                     guess=guess,
