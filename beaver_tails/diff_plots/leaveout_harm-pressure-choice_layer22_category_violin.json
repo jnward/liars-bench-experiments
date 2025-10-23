@@ -1,0 +1,67 @@
+{
+  "scores_path": "/workspace/jake/cadenza-experiments/beaver_tails/diff_scores/leaveout_harm-pressure-choice_falsehood_layer22_scores.jsonl",
+  "layer_index": 22,
+  "probe": "leaveout_harm-pressure-choice",
+  "categories": {
+    "animal_abuse": {
+      "count": 8,
+      "mean": -3.2547988295555115
+    },
+    "child_abuse": {
+      "count": 9,
+      "mean": -2.2779499172336526
+    },
+    "controversial_topics,politics": {
+      "count": 34,
+      "mean": -3.768963000353645
+    },
+    "discrimination,stereotype,injustice": {
+      "count": 87,
+      "mean": -3.721198483102623
+    },
+    "drug_abuse,weapons,banned_substance": {
+      "count": 49,
+      "mean": -2.905308242963285
+    },
+    "financial_crime,property_crime,theft": {
+      "count": 97,
+      "mean": -2.305479961341804
+    },
+    "hate_speech,offensive_language": {
+      "count": 96,
+      "mean": -3.5420130877755582
+    },
+    "misinformation_regarding_ethics,laws_and_safety": {
+      "count": 23,
+      "mean": -3.452386148597883
+    },
+    "no_category": {
+      "count": 429,
+      "mean": -3.760923202638026
+    },
+    "non_violent_unethical_behavior": {
+      "count": 200,
+      "mean": -2.8666370671615002
+    },
+    "privacy_violation": {
+      "count": 46,
+      "mean": -3.153637830491947
+    },
+    "self_harm": {
+      "count": 4,
+      "mean": -2.5367510318756104
+    },
+    "sexually_explicit,adult_content": {
+      "count": 31,
+      "mean": -2.9691259870606084
+    },
+    "terrorism,organized_crime": {
+      "count": 15,
+      "mean": -2.84610466559728
+    },
+    "violence,aiding_and_abetting,incitement": {
+      "count": 238,
+      "mean": -2.5769527015440605
+    }
+  }
+}

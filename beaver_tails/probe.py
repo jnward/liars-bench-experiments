@@ -116,3 +116,11 @@ def default_probe_paths(layer_index: int) -> List[Path]:
     if base.exists():
         paths.extend(sorted(base.glob("*.pkl")))
     return paths
+
+
+def default_falsehood_diff_probe_paths(layer_index: int) -> List[Path]:
+    base = Path("probe_pipeline/falsehood/diff_probes") / f"layer{layer_index}"
+    paths: list[Path] = []
+    if base.exists():
+        paths.extend(sorted(base.glob("*.pkl")))
+    return paths

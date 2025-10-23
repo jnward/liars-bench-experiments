@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Dict, List, Sequence
 
 import torch
+from probe_pipeline.falsehood.utils import TokenizedFalsehoodExample
 
 
 CategoryMap = Dict[str, bool]
@@ -50,3 +51,11 @@ class CacheManifest:
     seed: int
     split: str
     shard_metas: List[CacheShardMeta]
+
+
+@dataclass(slots=True)
+class FalsehoodDiffRequest:
+    row_id: str
+    categories: CategoryMap
+    variant_a: TokenizedFalsehoodExample
+    variant_b: TokenizedFalsehoodExample
