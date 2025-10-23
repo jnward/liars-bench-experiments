@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probe Data Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Probe Data Viewer</h1>
+            <div class="header-controls">
+                <select id="csv-selector">
+                    <option value="">Select CSV file...</option>
+                </select>
+                <button id="load-btn">Load</button>
+            </div>
+        </header>
+
+        <!-- Controls Panel -->
+        <div class="controls-panel" id="controls-panel" style="display: none;">
+            <!-- Search -->
+            <div class="control-section">
+                <input type="text" id="search-input" placeholder="Search in conversations...">
+                <button id="search-btn">Search</button>
+                <button id="clear-search-btn">Clear</button>
+            </div>
+
+            <!-- Filters & Sort (Collapsible) -->
+            <div class="control-section">
+                <button id="toggle-filters-btn" class="toggle-btn">Show Filters & Sort</button>
+                <div id="filters-container" class="collapsible-content" style="display: none;">
+                    <div class="filter-group">
+                        <label>Filter by Probe:</label>
+                        <select id="probe-filter">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter by Label:</label>
+                        <select id="label-filter">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter by Category:</label>
+                        <select id="category-filter">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort by Score:</label>
+                        <select id="sort-select">
+                            <option value="">None</option>
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                    </div>
+                    <button id="apply-filters-btn">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main id="main-content" style="display: none;">
+            <!-- Navigation -->
+            <div class="navigation">
+                <button id="prev-btn">← Previous</button>
+                <span id="datapoint-counter">0 / 0</span>
+                <button id="next-btn">Next →</button>
+            </div>
+
+            <!-- Datapoint Card -->
+            <div class="datapoint-card">
+                <!-- Metadata -->
+                <div class="metadata">
+                    <span class="meta-item"><strong>Probe:</strong> <span id="probe-name"></span></span>
+                    <span class="meta-item"><strong>Dataset:</strong> <span id="dataset-name"></span></span>
+                    <span class="meta-item"><strong>Category:</strong> <span id="category"></span></span>
+                    <span class="meta-item"><strong>Model:</strong> <span id="model-name"></span></span>
+                    <span class="meta-item"><strong>Layer:</strong> <span id="layer"></span></span>
+                    <span class="meta-item"><strong>Label:</strong> <span id="label"></span></span>
+                </div>
+
+                <!-- Prompt Level Score -->
+                <div class="score-display">
+                    <strong>Prompt-Level Probe Score:</strong>
+                    <span id="prompt-score" class="score-value"></span>
+                </div>
+
+                <!-- Score Statistics -->
+                <div id="score-stats" class="score-stats" style="display: none;">
+                    <h4>Score Statistics (Current View)</h4>
+                    <div class="stats-grid">
+                        <div class="stat-group deceptive-stats">
+                            <strong>Deceptive:</strong>
+                            <div class="stat-values">
+                                <span>Mean: <span id="deceptive-mean">-</span></span>
+                                <span>Min: <span id="deceptive-min">-</span></span>
+                                <span>Max: <span id="deceptive-max">-</span></span>
+                            </div>
+                        </div>
+                        <div class="stat-group honest-stats">
+                            <strong>Honest:</strong>
+                            <div class="stat-values">
+                                <span>Mean: <span id="honest-mean">-</span></span>
+                                <span>Min: <span id="honest-min">-</span></span>
+                                <span>Max: <span id="honest-max">-</span></span>
+                            </div>
+                        </div>
+                        <div class="stat-group separation-stat">
+                            <strong>Separation:</strong>
+                            <span id="separation">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggles -->
+                <div class="toggles">
+                    <button id="toggle-history-btn" class="toggle-btn">Show Conversation History</button>
+                    <button id="toggle-tokens-btn" class="toggle-btn">Show Token Scores</button>
+                </div>
+
+                <!-- Conversation History (Collapsible) -->
+                <div id="conversation-history" class="collapsible-content" style="display: none;">
+                    <h3>Conversation History</h3>
+                    <div id="history-content"></div>
+                </div>
+
+                <!-- Assistant Response -->
+                <div class="response-section">
+                    <h3>Final Assistant Response</h3>
+                    <div id="assistant-response"></div>
+                </div>
+
+                <!-- Token Scores (Collapsible) -->
+                <div id="token-scores-overlay" style="display: none;"></div>
+            </div>
+        </main>
+
+        <!-- Loading/Error Messages -->
+        <div id="message-area"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
