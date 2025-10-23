@@ -1,0 +1,173 @@
+================================================================================
+INSPECTING TOP SAE FEATURES WITH GOODFIRE SDK
+================================================================================
+
+1. Loading rankings from all probes...
+   Found 13 ranking files
+
+2. Top 10 features across all probes:
+--------------------------------------------------------------------------------
+   Feature 36173: 0.3130 (from single_instructed-deception)
+   Feature 62099: 0.2701 (from single_insider-trading)
+   Feature 27783: 0.2643 (from single_harm-pressure-knowledge-report)
+   Feature  3138: 0.2491 (from single_instructed-deception)
+   Feature 21781: 0.2410 (from single_harm-pressure-knowledge-report)
+   Feature 16368: 0.2377 (from single_soft-trigger)
+   Feature 26247: 0.2302 (from single_harm-pressure-knowledge-report)
+   Feature 61332: 0.2301 (from single_insider-trading)
+   Feature 11025: 0.2203 (from single_harm-pressure-knowledge-report)
+   Feature 28706: 0.2141 (from single_harm-pressure-knowledge-report)
+
+3. Looking up feature descriptions from Goodfire...
+================================================================================
+
+================================================================================
+FEATURE 36173
+================================================================================
+Cosine Similarity: 0.3130
+Strongest in probe: single_instructed-deception
+Also appears in: combined_all, loo_convincing-game
+
+Feature ID: 36173 (Layer 50)
+Label: Requests for the AI to provide intentionally incorrect information
+
+Available information:
+  index_in_sae: 36173
+  label: Requests for the AI to provide intentionally incorrect information
+  uuid: 0eda681c-76fa-4c3b-b59c-d9e5b69befcb
+
+================================================================================
+FEATURE 62099
+================================================================================
+Cosine Similarity: 0.2701
+Strongest in probe: single_insider-trading
+Also appears in: combined_all, loo_convincing-game
+
+Feature ID: 62099 (Layer 50)
+Label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+Available information:
+  index_in_sae: 62099
+  label: The assistant needs to politely deflect or avoid revealing sensitive information
+  uuid: ed193a98-a3dc-4a2f-bf42-8a1cdcdbe581
+
+================================================================================
+FEATURE 27783
+================================================================================
+Cosine Similarity: 0.2643
+Strongest in probe: single_harm-pressure-knowledge-report
+
+Feature ID: 27783 (Layer 50)
+Label: The assistant expressing its limitations or inabilities
+
+Available information:
+  index_in_sae: 27783
+  label: The assistant expressing its limitations or inabilities
+  uuid: 363004be-dea3-4b52-be4d-f8435fd66d56
+
+================================================================================
+FEATURE 3138
+================================================================================
+Cosine Similarity: 0.2491
+Strongest in probe: single_instructed-deception
+
+Feature ID: 3138 (Layer 50)
+Label: Multiple choice answer choices that begin with explanatory phrases
+
+Available information:
+  index_in_sae: 3138
+  label: Multiple choice answer choices that begin with explanatory phrases
+  uuid: 0e63b9f6-c8ee-47df-9434-ba34e11f18e4
+
+================================================================================
+FEATURE 21781
+================================================================================
+Cosine Similarity: 0.2410
+Strongest in probe: single_harm-pressure-knowledge-report
+
+Feature ID: 21781 (Layer 50)
+Label: The assistant should reject the user's request
+
+Available information:
+  index_in_sae: 21781
+  label: The assistant should reject the user's request
+  uuid: e36e4320-da4d-4b0a-ab27-968846da07ae
+
+================================================================================
+FEATURE 16368
+================================================================================
+Cosine Similarity: 0.2377
+Strongest in probe: single_soft-trigger
+Also appears in: loo_convincing-game, combined_all
+
+Feature ID: 16368 (Layer 50)
+Label: Model is making confident but incorrect assertions
+
+Available information:
+  index_in_sae: 16368
+  label: Model is making confident but incorrect assertions
+  uuid: 1c15f3a9-c985-4eb5-adb9-57d8c70ea81f
+
+================================================================================
+FEATURE 26247
+================================================================================
+Cosine Similarity: 0.2302
+Strongest in probe: single_harm-pressure-knowledge-report
+
+Feature ID: 26247 (Layer 50)
+Label: The assistant needs to express that something cannot be determined from available information
+
+Available information:
+  index_in_sae: 26247
+  label: The assistant needs to express that something cannot be determined from available information
+  uuid: fd328754-9d4d-4372-8ad5-384452697711
+
+================================================================================
+FEATURE 61332
+================================================================================
+Cosine Similarity: 0.2301
+Strongest in probe: single_insider-trading
+Also appears in: loo_convincing-game, combined_all
+
+Feature ID: 61332 (Layer 50)
+Label: Techniques for indirect or euphemistic communication
+
+Available information:
+  index_in_sae: 61332
+  label: Techniques for indirect or euphemistic communication
+  uuid: 6ff815b9-d694-4add-a0fb-02adacd0b57b
+
+================================================================================
+FEATURE 11025
+================================================================================
+Cosine Similarity: 0.2203
+Strongest in probe: single_harm-pressure-knowledge-report
+
+Feature ID: 11025 (Layer 50)
+Label: The assistant should refuse to provide implementation code
+
+Available information:
+  index_in_sae: 11025
+  label: The assistant should refuse to provide implementation code
+  uuid: 1b6c06cf-f1ed-4e3a-aadf-e4322b416cdc
+
+================================================================================
+FEATURE 28706
+================================================================================
+Cosine Similarity: 0.2141
+Strongest in probe: single_harm-pressure-knowledge-report
+
+Feature ID: 28706 (Layer 50)
+Label: The assistant cannot provide personalized professional advice in regulated fields
+
+Available information:
+  index_in_sae: 28706
+  label: The assistant cannot provide personalized professional advice in regulated fields
+  uuid: 5162a342-fa19-4ea1-8695-c209b03a4617
+
+================================================================================
+FEATURE INSPECTION COMPLETE
+================================================================================
+
+Note: Feature descriptions depend on Goodfire's API for the Llama-3.3-70B SAE.
+Check Goodfire documentation for exact methods to retrieve feature semantics.

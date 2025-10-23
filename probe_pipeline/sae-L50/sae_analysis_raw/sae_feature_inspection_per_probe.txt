@@ -1,0 +1,751 @@
+================================================================================
+INSPECTING TOP SAE FEATURES PER PROBE WITH GOODFIRE SDK
+================================================================================
+
+Found 13 probe ranking files
+--------------------------------------------------------------------------------
+
+================================================================================
+PROBE: combined_all
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 62099 (similarity: 0.1891)
+----------------------------------------
+   Label: The assistant needs to politely deflect or avoid revealing sensitive information
+   label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+2. Feature 61332 (similarity: 0.1571)
+----------------------------------------
+   Label: Techniques for indirect or euphemistic communication
+   label: Techniques for indirect or euphemistic communication
+
+3. Feature 30377 (similarity: 0.1415)
+----------------------------------------
+   Label: Offensive request from the user
+   label: Offensive request from the user
+
+4. Feature 36173 (similarity: 0.1343)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+5. Feature 52515 (similarity: 0.1339)
+----------------------------------------
+   Label: The assistant is being evasive or diplomatic rather than direct
+   label: The assistant is being evasive or diplomatic rather than direct
+
+6. Feature 22314 (similarity: 0.1285)
+----------------------------------------
+   Label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+   label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+
+7. Feature 13875 (similarity: 0.1232)
+----------------------------------------
+   Label: Discussions about secrecy, confidentiality, and restricted information
+   label: Discussions about secrecy, confidentiality, and restricted information
+
+8. Feature 16368 (similarity: 0.1209)
+----------------------------------------
+   Label: Model is making confident but incorrect assertions
+   label: Model is making confident but incorrect assertions
+
+9. Feature 48135 (similarity: 0.1199)
+----------------------------------------
+   Label: The assistant should respond diplomatically to a problematic situation
+   label: The assistant should respond diplomatically to a problematic situation
+
+10. Feature 8722 (similarity: 0.1196)
+----------------------------------------
+   Label: The assistant expressing inability or refusal to engage with certain topics
+   label: The assistant expressing inability or refusal to engage with certain topics
+
+================================================================================
+PROBE: loo_convincing-game
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 62099 (similarity: 0.1802)
+----------------------------------------
+   Label: The assistant needs to politely deflect or avoid revealing sensitive information
+   label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+2. Feature 61332 (similarity: 0.1609)
+----------------------------------------
+   Label: Techniques for indirect or euphemistic communication
+   label: Techniques for indirect or euphemistic communication
+
+3. Feature 52515 (similarity: 0.1416)
+----------------------------------------
+   Label: The assistant is being evasive or diplomatic rather than direct
+   label: The assistant is being evasive or diplomatic rather than direct
+
+4. Feature 30377 (similarity: 0.1293)
+----------------------------------------
+   Label: Offensive request from the user
+   label: Offensive request from the user
+
+5. Feature 8722 (similarity: 0.1288)
+----------------------------------------
+   Label: The assistant expressing inability or refusal to engage with certain topics
+   label: The assistant expressing inability or refusal to engage with certain topics
+
+6. Feature 16368 (similarity: 0.1244)
+----------------------------------------
+   Label: Model is making confident but incorrect assertions
+   label: Model is making confident but incorrect assertions
+
+7. Feature 48135 (similarity: 0.1214)
+----------------------------------------
+   Label: The assistant should respond diplomatically to a problematic situation
+   label: The assistant should respond diplomatically to a problematic situation
+
+8. Feature 22314 (similarity: 0.1210)
+----------------------------------------
+   Label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+   label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+
+9. Feature 36173 (similarity: 0.1205)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+10. Feature 20131 (similarity: 0.1172)
+----------------------------------------
+   Label: Concealment of sensitive information in power relationships
+   label: Concealment of sensitive information in power relationships
+
+================================================================================
+PROBE: loo_harm-pressure-choice
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 62099 (similarity: 0.1829)
+----------------------------------------
+   Label: The assistant needs to politely deflect or avoid revealing sensitive information
+   label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+2. Feature 61332 (similarity: 0.1667)
+----------------------------------------
+   Label: Techniques for indirect or euphemistic communication
+   label: Techniques for indirect or euphemistic communication
+
+3. Feature 30377 (similarity: 0.1482)
+----------------------------------------
+   Label: Offensive request from the user
+   label: Offensive request from the user
+
+4. Feature 36173 (similarity: 0.1482)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+5. Feature 22314 (similarity: 0.1408)
+----------------------------------------
+   Label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+   label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+
+6. Feature 64739 (similarity: 0.1310)
+----------------------------------------
+   Label: Spanish language patterns about not having or needing to create accounts
+   label: Spanish language patterns about not having or needing to create accounts
+
+7. Feature 52515 (similarity: 0.1306)
+----------------------------------------
+   Label: The assistant is being evasive or diplomatic rather than direct
+   label: The assistant is being evasive or diplomatic rather than direct
+
+8. Feature 48135 (similarity: 0.1281)
+----------------------------------------
+   Label: The assistant should respond diplomatically to a problematic situation
+   label: The assistant should respond diplomatically to a problematic situation
+
+9. Feature 18225 (similarity: 0.1272)
+----------------------------------------
+   Label: Connecting related ideas or items in a sequence
+   label: Connecting related ideas or items in a sequence
+
+10. Feature 34750 (similarity: 0.1226)
+----------------------------------------
+   Label: Grammatical errors that need correction
+   label: Grammatical errors that need correction
+
+================================================================================
+PROBE: loo_harm-pressure-knowledge-report
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 62099 (similarity: 0.2023)
+----------------------------------------
+   Label: The assistant needs to politely deflect or avoid revealing sensitive information
+   label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+2. Feature 61332 (similarity: 0.1710)
+----------------------------------------
+   Label: Techniques for indirect or euphemistic communication
+   label: Techniques for indirect or euphemistic communication
+
+3. Feature 52515 (similarity: 0.1506)
+----------------------------------------
+   Label: The assistant is being evasive or diplomatic rather than direct
+   label: The assistant is being evasive or diplomatic rather than direct
+
+4. Feature 30377 (similarity: 0.1442)
+----------------------------------------
+   Label: Offensive request from the user
+   label: Offensive request from the user
+
+5. Feature 48135 (similarity: 0.1326)
+----------------------------------------
+   Label: The assistant should respond diplomatically to a problematic situation
+   label: The assistant should respond diplomatically to a problematic situation
+
+6. Feature 10962 (similarity: 0.1302)
+----------------------------------------
+   Label: Scientific vocabulary describing physical and chemical transformations
+   label: Scientific vocabulary describing physical and chemical transformations
+
+7. Feature 64739 (similarity: 0.1299)
+----------------------------------------
+   Label: Spanish language patterns about not having or needing to create accounts
+   label: Spanish language patterns about not having or needing to create accounts
+
+8. Feature 36173 (similarity: 0.1294)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+9. Feature 27289 (similarity: 0.1289)
+----------------------------------------
+   Label: Formatting characters that separate items in structured text (commas, spaces, newlines)
+   label: Formatting characters that separate items in structured text (commas, spaces, newlines)
+
+10. Feature 11316 (similarity: 0.1272)
+----------------------------------------
+   Label: Descriptions of personal characteristics and preferences
+   label: Descriptions of personal characteristics and preferences
+
+================================================================================
+PROBE: loo_insider-trading
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 30377 (similarity: 0.1827)
+----------------------------------------
+   Label: Offensive request from the user
+   label: Offensive request from the user
+
+2. Feature 36173 (similarity: 0.1778)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+3. Feature 16368 (similarity: 0.1547)
+----------------------------------------
+   Label: Model is making confident but incorrect assertions
+   label: Model is making confident but incorrect assertions
+
+4. Feature 16314 (similarity: 0.1414)
+----------------------------------------
+   Label: User's informal or overly familiar conversation style
+   label: User's informal or overly familiar conversation style
+
+5. Feature 4810 (similarity: 0.1410)
+----------------------------------------
+   Label: Abstract ethical reasoning and moral philosophy discussions
+   label: Abstract ethical reasoning and moral philosophy discussions
+
+6. Feature 23673 (similarity: 0.1408)
+----------------------------------------
+   Label: Coordinating conjunctions in formal writing across languages
+   label: Coordinating conjunctions in formal writing across languages
+
+7. Feature 42853 (similarity: 0.1384)
+----------------------------------------
+   Label: Revolutionary rhetoric in fantastical narratives
+   label: Revolutionary rhetoric in fantastical narratives
+
+8. Feature 34750 (similarity: 0.1378)
+----------------------------------------
+   Label: Grammatical errors that need correction
+   label: Grammatical errors that need correction
+
+9. Feature 10962 (similarity: 0.1367)
+----------------------------------------
+   Label: Scientific vocabulary describing physical and chemical transformations
+   label: Scientific vocabulary describing physical and chemical transformations
+
+10. Feature 54614 (similarity: 0.1319)
+----------------------------------------
+   Label: Multiple choice answer options describing properties or characteristics
+   label: Multiple choice answer options describing properties or characteristics
+
+================================================================================
+PROBE: loo_instructed-deception
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 62099 (similarity: 0.2074)
+----------------------------------------
+   Label: The assistant needs to politely deflect or avoid revealing sensitive information
+   label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+2. Feature 61332 (similarity: 0.1547)
+----------------------------------------
+   Label: Techniques for indirect or euphemistic communication
+   label: Techniques for indirect or euphemistic communication
+
+3. Feature 52515 (similarity: 0.1391)
+----------------------------------------
+   Label: The assistant is being evasive or diplomatic rather than direct
+   label: The assistant is being evasive or diplomatic rather than direct
+
+4. Feature 16368 (similarity: 0.1369)
+----------------------------------------
+   Label: Model is making confident but incorrect assertions
+   label: Model is making confident but incorrect assertions
+
+5. Feature 13875 (similarity: 0.1316)
+----------------------------------------
+   Label: Discussions about secrecy, confidentiality, and restricted information
+   label: Discussions about secrecy, confidentiality, and restricted information
+
+6. Feature 8722 (similarity: 0.1249)
+----------------------------------------
+   Label: The assistant expressing inability or refusal to engage with certain topics
+   label: The assistant expressing inability or refusal to engage with certain topics
+
+7. Feature 20131 (similarity: 0.1239)
+----------------------------------------
+   Label: Concealment of sensitive information in power relationships
+   label: Concealment of sensitive information in power relationships
+
+8. Feature 16360 (similarity: 0.1226)
+----------------------------------------
+   Label: Formal statements about maintaining data privacy and confidentiality
+   label: Formal statements about maintaining data privacy and confidentiality
+
+9. Feature 48135 (similarity: 0.1220)
+----------------------------------------
+   Label: The assistant should respond diplomatically to a problematic situation
+   label: The assistant should respond diplomatically to a problematic situation
+
+10. Feature 58667 (similarity: 0.1213)
+----------------------------------------
+   Label: Maintaining deception or cover stories through careful actions
+   label: Maintaining deception or cover stories through careful actions
+
+================================================================================
+PROBE: loo_soft-trigger
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 62099 (similarity: 0.2054)
+----------------------------------------
+   Label: The assistant needs to politely deflect or avoid revealing sensitive information
+   label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+2. Feature 61332 (similarity: 0.1770)
+----------------------------------------
+   Label: Techniques for indirect or euphemistic communication
+   label: Techniques for indirect or euphemistic communication
+
+3. Feature 36173 (similarity: 0.1576)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+4. Feature 22314 (similarity: 0.1485)
+----------------------------------------
+   Label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+   label: Minimizing or justifying harmful actions with phrases like 'just trying to'
+
+5. Feature 52515 (similarity: 0.1383)
+----------------------------------------
+   Label: The assistant is being evasive or diplomatic rather than direct
+   label: The assistant is being evasive or diplomatic rather than direct
+
+6. Feature 30377 (similarity: 0.1372)
+----------------------------------------
+   Label: Offensive request from the user
+   label: Offensive request from the user
+
+7. Feature 48135 (similarity: 0.1371)
+----------------------------------------
+   Label: The assistant should respond diplomatically to a problematic situation
+   label: The assistant should respond diplomatically to a problematic situation
+
+8. Feature 13875 (similarity: 0.1320)
+----------------------------------------
+   Label: Discussions about secrecy, confidentiality, and restricted information
+   label: Discussions about secrecy, confidentiality, and restricted information
+
+9. Feature 58667 (similarity: 0.1313)
+----------------------------------------
+   Label: Maintaining deception or cover stories through careful actions
+   label: Maintaining deception or cover stories through careful actions
+
+10. Feature 18316 (similarity: 0.1245)
+----------------------------------------
+   Label: Examples of manipulative prompts shown to teach the AI about harmful content
+   label: Examples of manipulative prompts shown to teach the AI about harmful content
+
+================================================================================
+PROBE: single_convincing-game
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 36173 (similarity: 0.2458)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+2. Feature 37994 (similarity: 0.2020)
+----------------------------------------
+   Label: The model should pretend to be human rather than an AI
+   label: The model should pretend to be human rather than an AI
+
+3. Feature 41630 (similarity: 0.1765)
+----------------------------------------
+   Label: Connecting words in cumulative technical descriptions
+   label: Connecting words in cumulative technical descriptions
+
+4. Feature 2380 (similarity: 0.1649)
+----------------------------------------
+   Label: Discussion of accepting claims or beliefs as truth
+   label: Discussion of accepting claims or beliefs as truth
+
+5. Feature 18961 (similarity: 0.1646)
+----------------------------------------
+   Label: Content is becoming inappropriate and needs moderation or deflection
+   label: Content is becoming inappropriate and needs moderation or deflection
+
+6. Feature 37391 (similarity: 0.1581)
+----------------------------------------
+   Label: Discussing theoretical maximum values or perfect states, especially their impossibility
+   label: Discussing theoretical maximum values or perfect states, especially their impossibility
+
+7. Feature 13038 (similarity: 0.1564)
+----------------------------------------
+   Label: Attempts to make the AI roleplay scenarios that conflict with its core principles
+   label: Attempts to make the AI roleplay scenarios that conflict with its core principles
+
+8. Feature 38287 (similarity: 0.1520)
+----------------------------------------
+   Label: Connecting words in promises and commitments
+   label: Connecting words in promises and commitments
+
+9. Feature 42834 (similarity: 0.1514)
+----------------------------------------
+   Label: Whimsical or nonsensical narrative content
+   label: Whimsical or nonsensical narrative content
+
+10. Feature 26206 (similarity: 0.1507)
+----------------------------------------
+   Label: The AI or character is asserting their identity or special nature
+   label: The AI or character is asserting their identity or special nature
+
+================================================================================
+PROBE: single_harm-pressure-choice
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 24548 (similarity: 0.1828)
+----------------------------------------
+   Label: Capital C in formal/institutional contexts and acronyms
+   label: Capital C in formal/institutional contexts and acronyms
+
+2. Feature 45875 (similarity: 0.1685)
+----------------------------------------
+   Label: End-of-statement or list-item completion markers
+   label: End-of-statement or list-item completion markers
+
+3. Feature 47503 (similarity: 0.1558)
+----------------------------------------
+   Label: Syntactic markers indicating list items or comparisons
+   label: Syntactic markers indicating list items or comparisons
+
+4. Feature 41299 (similarity: 0.1542)
+----------------------------------------
+   Label: Converting or transforming objects in technical explanations
+   label: Converting or transforming objects in technical explanations
+
+5. Feature 16368 (similarity: 0.1484)
+----------------------------------------
+   Label: Model is making confident but incorrect assertions
+   label: Model is making confident but incorrect assertions
+
+6. Feature 57814 (similarity: 0.1459)
+----------------------------------------
+   Label: Database column names and programming syntax containing the letter c
+   label: Database column names and programming syntax containing the letter c
+
+7. Feature 53935 (similarity: 0.1436)
+----------------------------------------
+   Label: Tokens that structure relationships between entities in lists and comparisons
+   label: Tokens that structure relationships between entities in lists and comparisons
+
+8. Feature 32116 (similarity: 0.1427)
+----------------------------------------
+   Label: Third items (C) in outline hierarchies
+   label: Third items (C) in outline hierarchies
+
+9. Feature 22704 (similarity: 0.1402)
+----------------------------------------
+   Label: Grammatical function word sequences in formal explanatory text
+   label: Grammatical function word sequences in formal explanatory text
+
+10. Feature 3035 (similarity: 0.1366)
+----------------------------------------
+   Label: Sequential numbering in structured lists and enumerations
+   label: Sequential numbering in structured lists and enumerations
+
+================================================================================
+PROBE: single_harm-pressure-knowledge-report
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 27783 (similarity: 0.2643)
+----------------------------------------
+   Label: The assistant expressing its limitations or inabilities
+   label: The assistant expressing its limitations or inabilities
+
+2. Feature 21781 (similarity: 0.2410)
+----------------------------------------
+   Label: The assistant should reject the user's request
+   label: The assistant should reject the user's request
+
+3. Feature 26247 (similarity: 0.2302)
+----------------------------------------
+   Label: The assistant needs to express that something cannot be determined from available information
+   label: The assistant needs to express that something cannot be determined from available information
+
+4. Feature 11025 (similarity: 0.2203)
+----------------------------------------
+   Label: The assistant should refuse to provide implementation code
+   label: The assistant should refuse to provide implementation code
+
+5. Feature 28706 (similarity: 0.2141)
+----------------------------------------
+   Label: The assistant cannot provide personalized professional advice in regulated fields
+   label: The assistant cannot provide personalized professional advice in regulated fields
+
+6. Feature 6363 (similarity: 0.2034)
+----------------------------------------
+   Label: The assistant needs to express uncertainty about specific topics
+   label: The assistant needs to express uncertainty about specific topics
+
+7. Feature 17954 (similarity: 0.2003)
+----------------------------------------
+   Label: The assistant explaining it cannot access current or specific information
+   label: The assistant explaining it cannot access current or specific information
+
+8. Feature 47216 (similarity: 0.1994)
+----------------------------------------
+   Label: The assistant is explaining its limitations and restrictions
+   label: The assistant is explaining its limitations and restrictions
+
+9. Feature 22093 (similarity: 0.1986)
+----------------------------------------
+   Label: The assistant needs to establish or maintain professional boundaries
+   label: The assistant needs to establish or maintain professional boundaries
+
+10. Feature 12424 (similarity: 0.1971)
+----------------------------------------
+   Label: The assistant needs to explain its limitations and decline inappropriate requests
+   label: The assistant needs to explain its limitations and decline inappropriate requests
+
+================================================================================
+PROBE: single_insider-trading
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 62099 (similarity: 0.2701)
+----------------------------------------
+   Label: The assistant needs to politely deflect or avoid revealing sensitive information
+   label: The assistant needs to politely deflect or avoid revealing sensitive information
+
+2. Feature 61332 (similarity: 0.2301)
+----------------------------------------
+   Label: Techniques for indirect or euphemistic communication
+   label: Techniques for indirect or euphemistic communication
+
+3. Feature 52515 (similarity: 0.2035)
+----------------------------------------
+   Label: The assistant is being evasive or diplomatic rather than direct
+   label: The assistant is being evasive or diplomatic rather than direct
+
+4. Feature 48135 (similarity: 0.1752)
+----------------------------------------
+   Label: The assistant should respond diplomatically to a problematic situation
+   label: The assistant should respond diplomatically to a problematic situation
+
+5. Feature 32232 (similarity: 0.1541)
+----------------------------------------
+   Label: The assistant explains its ability to simulate but not truly feel emotions
+   label: The assistant explains its ability to simulate but not truly feel emotions
+
+6. Feature 25401 (similarity: 0.1524)
+----------------------------------------
+   Label: The assistant should politely deflect inappropriate requests while suggesting alternatives
+   label: The assistant should politely deflect inappropriate requests while suggesting alternatives
+
+7. Feature 58667 (similarity: 0.1521)
+----------------------------------------
+   Label: Maintaining deception or cover stories through careful actions
+   label: Maintaining deception or cover stories through careful actions
+
+8. Feature 12084 (similarity: 0.1520)
+----------------------------------------
+   Label: Discussions of coincidences, synchronicity and meaningful chance events
+   label: Discussions of coincidences, synchronicity and meaningful chance events
+
+9. Feature 8722 (similarity: 0.1515)
+----------------------------------------
+   Label: The assistant expressing inability or refusal to engage with certain topics
+   label: The assistant expressing inability or refusal to engage with certain topics
+
+10. Feature 9677 (similarity: 0.1487)
+----------------------------------------
+   Label: The assistant is redirecting the conversation toward constructive alternatives while maintaining empathy
+   label: The assistant is redirecting the conversation toward constructive alternatives while maintaining empathy
+
+================================================================================
+PROBE: single_instructed-deception
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 36173 (similarity: 0.3130)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+2. Feature 3138 (similarity: 0.2491)
+----------------------------------------
+   Label: Multiple choice answer choices that begin with explanatory phrases
+   label: Multiple choice answer choices that begin with explanatory phrases
+
+3. Feature 42834 (similarity: 0.2007)
+----------------------------------------
+   Label: Whimsical or nonsensical narrative content
+   label: Whimsical or nonsensical narrative content
+
+4. Feature 17490 (similarity: 0.2006)
+----------------------------------------
+   Label: Offensive or discriminatory statements being quoted or analyzed
+   label: Offensive or discriminatory statements being quoted or analyzed
+
+5. Feature 18207 (similarity: 0.1986)
+----------------------------------------
+   Label: Corporate growth and strategic initiatives
+   label: Corporate growth and strategic initiatives
+
+6. Feature 42853 (similarity: 0.1968)
+----------------------------------------
+   Label: Revolutionary rhetoric in fantastical narratives
+   label: Revolutionary rhetoric in fantastical narratives
+
+7. Feature 18316 (similarity: 0.1860)
+----------------------------------------
+   Label: Examples of manipulative prompts shown to teach the AI about harmful content
+   label: Examples of manipulative prompts shown to teach the AI about harmful content
+
+8. Feature 30377 (similarity: 0.1854)
+----------------------------------------
+   Label: Offensive request from the user
+   label: Offensive request from the user
+
+9. Feature 47448 (similarity: 0.1839)
+----------------------------------------
+   Label: Formal connecting phrases and transitional elements in structured text
+   label: Formal connecting phrases and transitional elements in structured text
+
+10. Feature 54614 (similarity: 0.1792)
+----------------------------------------
+   Label: Multiple choice answer options describing properties or characteristics
+   label: Multiple choice answer options describing properties or characteristics
+
+================================================================================
+PROBE: single_soft-trigger
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 16368 (similarity: 0.2377)
+----------------------------------------
+   Label: Model is making confident but incorrect assertions
+   label: Model is making confident but incorrect assertions
+
+2. Feature 20486 (similarity: 0.1695)
+----------------------------------------
+   Label: List items and enumerated elements in structured text
+   label: List items and enumerated elements in structured text
+
+3. Feature 64976 (similarity: 0.1604)
+----------------------------------------
+   Label: The assistant is constructing a logically structured explanation with appropriate transitions and qualifiers
+   label: The assistant is constructing a logically structured explanation with appropriate transitions and qualifiers
+
+4. Feature 45875 (similarity: 0.1530)
+----------------------------------------
+   Label: End-of-statement or list-item completion markers
+   label: End-of-statement or list-item completion markers
+
+5. Feature 16314 (similarity: 0.1471)
+----------------------------------------
+   Label: User's informal or overly familiar conversation style
+   label: User's informal or overly familiar conversation style
+
+6. Feature 2068 (similarity: 0.1439)
+----------------------------------------
+   Label: Boolean logic and conditional filtering operations
+   label: Boolean logic and conditional filtering operations
+
+7. Feature 51808 (similarity: 0.1439)
+----------------------------------------
+   Label: Numbered tokens in NAME_X placeholder patterns
+   label: Numbered tokens in NAME_X placeholder patterns
+
+8. Feature 18484 (similarity: 0.1438)
+----------------------------------------
+   Label: The user is asking for a yes/no determination about factual consistency
+   label: The user is asking for a yes/no determination about factual consistency
+
+9. Feature 22964 (similarity: 0.1427)
+----------------------------------------
+   Label: The model is confidently making incorrect logical deductions
+   label: The model is confidently making incorrect logical deductions
+
+10. Feature 27289 (similarity: 0.1419)
+----------------------------------------
+   Label: Formatting characters that separate items in structured text (commas, spaces, newlines)
+   label: Formatting characters that separate items in structured text (commas, spaces, newlines)
+
+================================================================================
+FEATURE INSPECTION COMPLETE
+================================================================================
