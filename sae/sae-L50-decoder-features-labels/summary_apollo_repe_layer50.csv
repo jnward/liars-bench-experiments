@@ -1,0 +1,2 @@
+probe,max_similarity,top_10_mean,top_100_mean,overall_mean,overall_std
+apollo_repe_layer50,0.28955877,0.20797603,0.10782296,-0.0001160676,0.015320616

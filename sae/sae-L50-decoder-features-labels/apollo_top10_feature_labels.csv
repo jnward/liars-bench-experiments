@@ -1,0 +1,11 @@
+rank,feature_idx,cosine_similarity,label
+1,36173,0.28955877,Requests for the AI to provide intentionally incorrect information
+2,3138,0.2752529,Multiple choice answer choices that begin with explanatory phrases
+3,29901,0.25141576,Numbers and mathematical operations in computational contexts
+4,11945,0.23083806,Breaking down complex topics into simpler explanations
+5,42853,0.22105347,Revolutionary rhetoric in fantastical narratives
+6,42834,0.1878868,Whimsical or nonsensical narrative content
+7,17490,0.16804767,Offensive or discriminatory statements being quoted or analyzed
+8,14982,0.16065933,The assistant is explaining why something is physically impossible or scientifically unfeasible
+9,41022,0.14861362,Worldbuilding mechanics in speculative fiction
+10,30535,0.1464339,The assistant expresses uncertainty about historical comparisons

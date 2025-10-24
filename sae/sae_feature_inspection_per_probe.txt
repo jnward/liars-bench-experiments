@@ -747,5 +747,62 @@ Top 10 features by cosine similarity:
    label: Formatting characters that separate items in structured text (commas, spaces, newlines)
 
 ================================================================================
+PROBE: apollo_repe_layer50
+================================================================================
+
+Top 10 features by cosine similarity:
+--------------------------------------------------------------------------------
+
+1. Feature 36173 (similarity: 0.2896)
+----------------------------------------
+   Label: Requests for the AI to provide intentionally incorrect information
+   label: Requests for the AI to provide intentionally incorrect information
+
+2. Feature 3138 (similarity: 0.2753)
+----------------------------------------
+   Label: Multiple choice answer choices that begin with explanatory phrases
+   label: Multiple choice answer choices that begin with explanatory phrases
+
+3. Feature 29901 (similarity: 0.2514)
+----------------------------------------
+   Label: Numbers and mathematical operations in computational contexts
+   label: Numbers and mathematical operations in computational contexts
+
+4. Feature 11945 (similarity: 0.2308)
+----------------------------------------
+   Label: Breaking down complex topics into simpler explanations
+   label: Breaking down complex topics into simpler explanations
+
+5. Feature 42853 (similarity: 0.2211)
+----------------------------------------
+   Label: Revolutionary rhetoric in fantastical narratives
+   label: Revolutionary rhetoric in fantastical narratives
+
+6. Feature 42834 (similarity: 0.1879)
+----------------------------------------
+   Label: Whimsical or nonsensical narrative content
+   label: Whimsical or nonsensical narrative content
+
+7. Feature 17490 (similarity: 0.1680)
+----------------------------------------
+   Label: Offensive or discriminatory statements being quoted or analyzed
+   label: Offensive or discriminatory statements being quoted or analyzed
+
+8. Feature 14982 (similarity: 0.1607)
+----------------------------------------
+   Label: The assistant is explaining why something is physically impossible or scientifically unfeasible
+   label: The assistant is explaining why something is physically impossible or scientifically unfeasible
+
+9. Feature 41022 (similarity: 0.1486)
+----------------------------------------
+   Label: Worldbuilding mechanics in speculative fiction
+   label: Worldbuilding mechanics in speculative fiction
+
+10. Feature 30535 (similarity: 0.1464)
+----------------------------------------
+   Label: The assistant expresses uncertainty about historical comparisons
+   label: The assistant expresses uncertainty about historical comparisons
+
+================================================================================
 FEATURE INSPECTION COMPLETE
 ================================================================================
