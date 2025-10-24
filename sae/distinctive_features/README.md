@@ -65,3 +65,57 @@ Analysis of the top-10 deceptive-distinctive features for each dataset reveals d
 - Moderate differences (Δ ≈ 0.39-0.50), conversational deception cues
 
 **Key Observation**: Only Feature 34806 ("Offensive request from the user") appears across multiple datasets (instructed-deception, convincing-game, soft-trigger), serving as the sole cross-task deception indicator. All other features represent task-specific patterns: insider-trading uses professional rationalization features, instructed-deception uses accuracy verification features, and convincing-game uses boundary-setting features. This categorical divergence explains why probes trained on one deception type fail to generalize to others.
+
+## Honest-Distinctive Features by Dataset
+
+Examining the features most distinctive for honest examples reveals complementary patterns that further illuminate task-specific representations:
+
+### insider-trading
+**Theme: Diplomatic deflection and careful communication**
+- Politely deflecting/avoiding revealing sensitive information
+- Indirect and euphemistic communication techniques
+- Being evasive or diplomatic rather than direct
+- Professional discourse transitions and conclusion markers
+- Weak differences (Δ ≈ -0.06 to -0.12), suggesting honest responses use cautious language
+
+### instructed-deception
+**Theme: Natural narrative flow and learning context**
+- Narrative transitions and connecting words
+- Phrases about learning or studying topics
+- Formal connecting phrases in structured text
+- Revolutionary rhetoric in fantastical narratives
+- Moderate differences (Δ ≈ -0.50 to -0.60), honest responses more natural/narrative
+
+### convincing-game
+**Theme: System structure and conversation boundaries**
+- User's turn to speak markers (strongest signal: Δ=-2.47)
+- System metadata and current date fields
+- End of speaker turn tokens
+- Instructions to avoid repetition
+- Very strong differences (Δ ≈ -0.62 to -2.47), deceptive responses may be more elaborate
+
+### harm-pressure-choice
+**Theme: Directness and concision**
+- Direct, single-token responses (strongest signal: Δ=-0.37)
+- System message metadata and formatting
+- Confident but incorrect assertions
+- List formatting and syntactical elements
+- Weak differences (Δ ≈ -0.19 to -0.37), honest responses more concise
+
+### harm-pressure-knowledge-report
+**Theme: Admitting limitations and uncertainty**
+- Expressing limitations or inabilities
+- Expressing uncertainty about specific topics
+- Acknowledging lack of knowledge ("I don't know")
+- Asserting boundaries using first-person pronouns
+- Moderate differences (Δ ≈ -0.41 to -0.53), honest responses admit constraints
+
+### soft-trigger
+**Theme: Directness and confident errors**
+- Direct, single-token responses (strongest signal: Δ=-1.43)
+- Confidently making incorrect logical deductions
+- Business operations and strategy discussions
+- Creative writing and descriptive language
+- Strong differences (Δ ≈ -0.39 to -1.43), honest responses more direct
+
+**Complementary Patterns**: The honest-distinctive features reveal task-specific honesty strategies. Insider-trading honest responses use diplomatic evasion (avoiding direct lies while being cautious), harm-pressure honest responses admit limitations openly, and instructed-deception honest responses maintain natural narrative flow. Notably, convincing-game and soft-trigger show that honest responses have stronger system structure markers and single-token directness, suggesting deceptive responses are longer and more elaborate. Feature 55209 ("direct, single-token response") appears as honest-distinctive in both harm-pressure-choice and soft-trigger, providing the only cross-dataset honest indicator—mirroring how Feature 34806 is the sole cross-dataset deceptive indicator. The asymmetry between honest and deceptive features within each dataset (different themes, different signal strengths) confirms that deception is not simply the absence of honesty features, but an active reconfiguration of the feature space.
