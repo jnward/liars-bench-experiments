@@ -2,11 +2,26 @@ import os
 import json
 from flask import Flask, render_template, jsonify, request
 import pandas as pd
+import requests
+from datetime import datetime
+from dotenv import load_dotenv
+import re
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
 
 # Path to CSV data directory
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+
+# OpenRouter configuration
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY')
+OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions'
+
+# Chat storage paths
+CURRENT_CHAT_PATH = os.path.join(DATA_DIR, 'current_chat.json')
+SNAPSHOT_PREFIX = 'chat_snapshot_'
 
 
 def load_csv(filename):
@@ -143,6 +158,161 @@ def get_data(filename):
 
     except Exception as e:
         return jsonify({'error': str(e)}), 400
+
+
+# ============= Chat Interface Routes =============
+
+def sanitize_filename(text):
+    """Sanitize text for use in filename."""
+    # Remove or replace invalid filename characters
+    sanitized = re.sub(r'[<>:"/\\|?*]', '', text)
+    # Limit length and strip whitespace
+    sanitized = sanitized[:50].strip()
+    # Replace spaces with underscores
+    sanitized = sanitized.replace(' ', '_')
+    return sanitized if sanitized else 'untitled'
+
+
+@app.route('/chat')
+def chat():
+    """Render the chat interface."""
+    return render_template('chat.html')
+
+
+@app.route('/api/chat', methods=['POST'])
+def chat_with_model():
+    """Send a chat request to OpenRouter and return the response."""
+    try:
+        data = request.json
+        messages = data.get('messages', [])
+
+        if not OPENROUTER_API_KEY or OPENROUTER_API_KEY == 'your_openrouter_api_key_here':
+            return jsonify({'error': 'OpenRouter API key not configured'}), 500
+
+        # Prepare the request to OpenRouter
+        headers = {
+            'Authorization': f'Bearer {OPENROUTER_API_KEY}',
+            'Content-Type': 'application/json',
+            'HTTP-Referer': request.host_url,
+        }
+
+        payload = {
+            'model': 'meta-llama/llama-3.3-70b-instruct',
+            'messages': messages,
+        }
+
+        # Make the request to OpenRouter
+        response = requests.post(OPENROUTER_API_URL, headers=headers, json=payload)
+        response.raise_for_status()
+
+        result = response.json()
+        assistant_message = result['choices'][0]['message']['content']
+
+        # Auto-save to current_chat.json
+        chat_data = {
+            'title': data.get('title', 'Untitled'),
+            'timestamp': datetime.now().isoformat(),
+            'messages': messages + [{'role': 'assistant', 'content': assistant_message}]
+        }
+
+        with open(CURRENT_CHAT_PATH, 'w') as f:
+            json.dump(chat_data, f, indent=2)
+
+        return jsonify({
+            'message': assistant_message,
+            'usage': result.get('usage', {})
+        })
+
+    except requests.exceptions.RequestException as e:
+        return jsonify({'error': f'API request failed: {str(e)}'}), 500
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/chat/current', methods=['GET'])
+def get_current_chat():
+    """Get the current chat state."""
+    try:
+        if os.path.exists(CURRENT_CHAT_PATH):
+            with open(CURRENT_CHAT_PATH, 'r') as f:
+                return jsonify(json.load(f))
+        else:
+            return jsonify({'messages': [], 'title': '', 'timestamp': None})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/chat/save', methods=['POST'])
+def save_current_chat():
+    """Save current chat state (for manual saves during edits)."""
+    try:
+        data = request.json
+        with open(CURRENT_CHAT_PATH, 'w') as f:
+            json.dump(data, f, indent=2)
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/snapshots')
+def get_snapshots():
+    """Get list of available chat snapshots."""
+    try:
+        snapshots = []
+        for filename in os.listdir(DATA_DIR):
+            if filename.startswith(SNAPSHOT_PREFIX) and filename.endswith('.json'):
+                filepath = os.path.join(DATA_DIR, filename)
+                # Get file modification time
+                mtime = os.path.getmtime(filepath)
+                snapshots.append({
+                    'filename': filename,
+                    'timestamp': datetime.fromtimestamp(mtime).isoformat()
+                })
+
+        # Sort by timestamp, most recent first
+        snapshots.sort(key=lambda x: x['timestamp'], reverse=True)
+
+        return jsonify({'snapshots': snapshots})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/snapshot/save', methods=['POST'])
+def save_snapshot():
+    """Save a snapshot of the current chat."""
+    try:
+        data = request.json
+        title = sanitize_filename(data.get('title', 'untitled'))
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+
+        filename = f'{SNAPSHOT_PREFIX}{title}_{timestamp}.json'
+        filepath = os.path.join(DATA_DIR, filename)
+
+        with open(filepath, 'w') as f:
+            json.dump(data, f, indent=2)
+
+        return jsonify({'success': True, 'filename': filename})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/snapshot/load/<filename>')
+def load_snapshot(filename):
+    """Load a specific snapshot."""
+    try:
+        # Validate filename to prevent directory traversal
+        if not filename.startswith(SNAPSHOT_PREFIX) or '..' in filename:
+            return jsonify({'error': 'Invalid snapshot filename'}), 400
+
+        filepath = os.path.join(DATA_DIR, filename)
+
+        if not os.path.exists(filepath):
+            return jsonify({'error': 'Snapshot not found'}), 404
+
+        with open(filepath, 'r') as f:
+            return jsonify(json.load(f))
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 if __name__ == '__main__':

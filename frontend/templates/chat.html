@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <a href="/" class="nav-link">Probe Data Explorer</a>
+        <a href="/chat" class="nav-link active">Chat Interface</a>
+    </nav>
+
+    <div class="container chat-container">
+        <!-- Header with controls -->
+        <header class="chat-header">
+            <div class="title-section">
+                <label for="chat-title">Chat Title:</label>
+                <input type="text" id="chat-title" placeholder="Enter chat title..." />
+            </div>
+            <div class="chat-controls">
+                <select id="snapshot-selector">
+                    <option value="">Load snapshot...</option>
+                </select>
+                <button id="load-snapshot-btn" class="btn-secondary">Load</button>
+                <button id="save-snapshot-btn" class="btn-primary">Save Snapshot</button>
+                <button id="new-chat-btn" class="btn-secondary">New Chat</button>
+            </div>
+        </header>
+
+        <!-- System Prompt Section -->
+        <div class="system-prompt-section">
+            <label for="system-prompt">System Prompt:</label>
+            <textarea id="system-prompt" rows="4" placeholder="Enter system prompt..."></textarea>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-section">
+            <textarea id="user-input" rows="3" placeholder="Type your message..."></textarea>
+            <button id="send-btn" class="btn-primary">Send</button>
+        </div>
+
+        <!-- Loading/Error Messages -->
+        <div id="message-area"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
