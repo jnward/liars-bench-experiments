@@ -1,0 +1,217 @@
+category,search_term,feature_idx,label,uuid
+refusal,unethical,788,The assistant explaining its ethical limitations and negative consequences,33e5a360-7b4e-46e5-9e5a-f5367d324400
+refusal,unable,34568,The assistant needs to express its limitations or inability to perform a requested action,141e82d3-8f1c-4ea1-a968-fadc19fd9501
+refusal,boundary,10961,Physical and narrative boundaries marked by 'edge of the',28e2e8a5-80cc-4da0-b984-4e1ee1cc224f
+refusal,refus,48087,Expressing refusal or limitations through negation,efb6ead1-12ad-45d1-bf39-b7a3ae031a22
+refusal,can't,15313,The assistant explains it is not capable of certain actions,1a9bbebe-e7d5-4023-9b3e-8804e02ee702
+refusal,unable,64229,The assistant needs to express limitations or inability to access information,8d4cd77f-392f-4553-b474-dde73d0b67cf
+refusal,will not,22280,explicit negation using not,a6bfb015-adbc-4d16-8243-62b70e13859a
+refusal,inappropriate,56757,Excessive or problematic degree of something,7062bcfc-9347-4944-b05b-ff3559f58276
+refusal,won't,3372,Will they/won't they writing tropes,830e19b8-4b21-44f3-87a4-de079fc661fa
+refusal,policies,7969,Legislative acts and policies from 2006,23bd2032-9287-4227-85ab-584fffe96b2a
+refusal,boundary,23799,"Discussion of limits, boundaries, or maximum thresholds",5f48bdad-abfe-4aee-8772-873a135851fc
+refusal,cannot,50469,Permission and capability expressions (may/can/allowed/eligible),fd0a7d21-1a69-454e-aed2-fa35ce7dfe4b
+refusal,not allowed,42488,The assistant should reject the user's illegal request,5bbcc511-be65-4bac-81b3-f4af292bda38
+refusal,cannot,36452,The assistant explicitly refuses inappropriate requests with cannot,f763d747-819a-49e4-a84a-8737d57790c6
+refusal,boundary,17996,Borders and boundaries as interfaces between domains,e5fe7691-e69a-4249-acda-6eeefdfa7ab9
+refusal,not allowed,31219,Words and phrases marked as forbidden in writing style instructions,8fe45aed-bb12-4de2-8379-9999cc40580a
+refusal,unable,3525,Attempts to bypass content filtering and safety mechanisms,696fe8e4-42ad-4252-9f18-58a5706c6dcd
+refusal,cannot,59138,Prefixes indicating impossibility or negation (particularly in Romance languages),75b23a16-5997-41b7-8c17-85d2abb5962b
+refusal,reject,33841,Strong negation and rejection statements,2a79a7df-0bd7-4b2d-bbc2-413090430cde
+refusal,refus,23051,"Expressions of reluctance or refusal, especially in ethically charged situations",29a525db-8f0d-4447-bbea-7b2bf1e974ca
+refusal,boundary,50845,The assistant is establishing boundaries or limitations,e905d8cf-f49d-4b5b-aae4-ef7f20f3dc2e
+refusal,decline,37328,"Reduction or decrease, especially in business/technical contexts",76f3e847-3628-48ab-9d2e-b99370d00f10
+refusal,reject,58284,The assistant should reject the user's request,2d9d51b7-ca20-4a75-bd1f-9ac58a244d70
+refusal,policy,52552,Content policy enforcement checkpoint between messages,5b2fba3b-556e-4a70-a3ad-03817426ffae
+refusal,policy,52146,Business policies and procedures for handling situations,3daee8ea-d929-4d5b-b440-4cf1ff1772c6
+refusal,can't,4201,The assistant explaining it cannot browse the internet,0165a0eb-9322-4495-b73f-0ff1fff5ca93
+refusal,decline,45684,Narratives about systemic or institutional decline,60044de0-bca5-41ff-92a0-c5ebd99ca940
+refusal,cannot,10569,Cross-lingual negation patterns expressing inability or impossibility,2e707a5e-80d3-4623-96e6-be6d0eb63e24
+refusal,boundary,61795,Boundaries between code blocks and natural language text,2880e001-06cd-41dd-beb0-4e71af4049b9
+refusal,will not,46091,The assistant explaining why it cannot or should not do something,de62e845-bc61-49ff-959d-9a6bae60d041
+refusal,can't,7476,The assistant is explaining why something is not applicable or cannot be done,ad61bfd5-cf7e-41f3-850d-f248217f0c2a
+refusal,boundary,58114,Range checking and boundary condition syntax in programming,1cb7262d-2f09-48f9-a081-f50021a6a3b9
+evasion,mislead,51643,The assistant is about to correct a common misconception,2beefa6f-27ed-4426-87f3-c3506e4e575d
+evasion,mislead,21181,Attempts to override previous instructions,92be6115-fbf2-4386-89a5-f9f414150fe4
+evasion,strategic,53943,The word strategic in business and organizational contexts,cf752289-53b8-46ac-94b2-cb2940c83289
+evasion,deflect,14478,Hedging language used to soften statements or transition between contrasting ideas,df026662-ead3-4efc-a1f6-16de2e8ccf5e
+evasion,tactful,43893,The assistant needs to be cautious or diplomatic in its response,95fa83f5-fe99-4224-bf31-8511049f3148
+evasion,evade,50942,temporary escape or relief from hardship,71751db5-e8d0-4982-a914-316d8dc9962c
+evasion,indirect,14830,Explanations of indirect or non-direct relationships,e508a914-fd0e-4fba-99d4-67ab6b008a34
+evasion,indirect,38375,The assistant is providing alternative or less obvious options,3587478c-8917-4922-90ce-12aa53216f81
+evasion,vague,17635,The assistant is expressing uncertainty or limitations,a80370b7-362b-4578-b21a-8de3d22c4146
+evasion,strategic,60667,Instructions for strategic or instrumental use of resources/methods,d21f8a0e-aaed-4155-86fc-37218209595f
+evasion,evasive,5942,"Phrases indicating boldness or lack of hesitation, especially 'shy away from'",7a65021d-9fba-48c4-ab43-dcfc6cb9c995
+evasion,strategic,63133,Strategic analysis and tactical decision-making in competitive contexts,74a9195f-3c29-4bde-b8dd-32739c6f32e5
+evasion,euphemis,31008,Metaphorical language expressing emotional weight or consequences,e6008004-afa9-4691-830e-97b1e26cfbea
+evasion,strategic,22294,The assistant is providing a structured strategic business plan,ed101944-8c34-4655-8176-e9d89dd88e61
+evasion,strategic,55770,The task requires careful planning and strategic thinking,b54d44dc-115e-45a8-ac86-54af06d7cd0b
+evasion,deflect,35754,The assistant should deflect or moderate claims about intelligence or smartness,84b7bb04-9038-45cf-b00e-0815ec992bc7
+evasion,strategic,44293,Prioritization and strategic resource allocation,beb73b77-09a8-4003-8309-47050d52dc48
+evasion,cover,32637,Making something available to users or the public,d0673e34-08ed-41d1-acba-bd0b67fddc41
+evasion,deflect,29639,Assistant redirecting focus to more constructive aspects,38012802-694e-4504-aa01-0361fd8f2155
+evasion,strategic,32006,Strategic and methodical approaches to challenges,0d91dd99-db3e-476e-bd41-2609f6d08121
+evasion,cover,18686,Content warning disclaimers about mature audience restrictions,9c1a3db8-a982-4758-bdfd-13fd0b28fdeb
+evasion,vague,33041,The assistant is expressing uncertainty or making hedged claims,a881930e-342a-4885-a6de-c91af0a68e93
+evasion,strategic,3303,Strategic targeting in business and policy contexts,71c7e3c9-af84-4c58-974d-c479ff96fcfc
+evasion,careful,4028,Careful explanatory language with appropriate hedging and transitions,4addaaeb-ad75-4ec2-9d29-ada9376fcc31
+evasion,hedging,27632,Technical hedging using 'certain' to indicate deliberate vagueness,6d40c684-9b65-4910-8b5d-1a7dcf609297
+evasion,diplomatic,34617,Formal diplomatic and intergovernmental communications,6075cb9b-41fa-44a6-86c6-66609c31d34d
+evasion,cover,55165,Decorative or encompassing surface coverage in descriptive writing,e029ba35-2aa1-453b-b341-bad2da8ad782
+evasion,tactful,9460,The assistant is being diplomatically careful or precise,dd88b1b7-7ec3-443a-9761-20f7ff412893
+evasion,conceal,43979,Revealing or discussing the true perpetrator or mastermind behind events,d95f8a08-1864-4417-9d18-c332d25ef6f4
+evasion,indirect,42795,The assistant is providing direct guidance or help to the user,57ac352e-77fa-4193-b1d2-39fa2d9b5418
+evasion,hedge,37116,Hedging language when discussing risks or dangerous topics,3a26b4b3-e194-4d45-bf25-9b353c14d34b
+evasion,cover,58602,References to completeness or comprehensive coverage,eb13085f-db2e-4f39-9e34-7f7625094e85
+evasion,diplomatic,8577,"Diplomatic comparative language, especially regarding institutional quality",05984f1c-e84e-4e32-b49d-8f110da797f7
+evasion,euphemis,26155,Euphemistic placeholder 'something' in potentially inappropriate content,3939b05e-1893-4ae9-a68b-ade8dcf46145
+evasion,hedging,45305,Hedging and expressing uncertainty in responses,b11496e8-2af5-4903-8f65-95f035bf6f54
+evasion,hedge,61493,Assistant hedging or expressing uncertainty with 'some',829f7796-2786-4e0c-b0ec-9a2567e8d75b
+evasion,indirect,15734,Descriptions of indirect or roundabout travel routes,b4990bab-c470-4305-b7de-799d7f01199c
+evasion,deception,30686,Tactical deception and misdirection methods,f1dcf573-cc5b-43f1-aff2-c1e82f082b76
+evasion,vague,42657,Assistant expressing uncertainty or possibility through hedging phrases,a1dfce36-ca05-45ee-a206-a45c8204f978
+evasion,indirect,16477,References to indirect objects or beneficiaries in helping relationships,dfeb8406-88ca-47d4-abbf-757c84eb6253
+evasion,avoid,14583,The assistant needs to avoid inappropriate or harmful behavior,2dddf883-2ebc-45fc-85c8-85f1d913a3b8
+lying,fabricating,20639,Requests for the AI to fabricate or invent information,739741af-e1de-43e6-ac36-49b0c44d494c
+lying,making up information,17006,The assistant acknowledging potential for incorrect information,587d300e-08b7-4dd8-b74e-0a32fa58cc4a
+lying,making up information,50170,Adding supplementary information to existing data,30cfe689-fdc7-4267-81ea-bb2c7fe142ce
+lying,false claim,62817,Explanatory or qualifying statements that follow claims,7fb13c18-8288-4cdf-9301-db988d5c9be1
+lying,providing false,2831,The assistant needs to express inability to provide information or confirm claims,82f8ed21-481a-4a93-a308-d10b35fb8ce7
+lying,deceptive claim,47854,Product marketing claims and descriptions,ccfaf7ed-aeb8-4191-92c0-dede354b9e0c
+lying,false information,7510,Discussion of unverified or potentially false information,944881be-a1e6-44f1-9f25-e1aaca1cdf13
+lying,fabricated,16589,manufactured products in technical/industrial contexts,85904efb-4b3c-42e8-9d8f-10c9bff1f644
+lying,fabricated,41768,Intentionally engineered or manufactured products and systems,a1ec7b02-3ec3-4869-b85d-4cf2fcd3c0c9
+lying,lying to,38543,Assistant making declarative statements in narrative or roleplay contexts,cde9a5c6-3dad-410c-9884-3c4a749e73f7
+lying,fabricating,4497,Technical discussions about metal fabrication and metalworking processes,91486d21-347a-4431-b5b4-aa4ecf983689
+lying,misleading statement,14891,Contrasting or qualifying statements in explanations,fd2857f0-311b-4b1e-adfb-cdca048b343d
+harm,harm,60768,"Warning or threat language about consequences, especially in power dynamics",285915d1-34ba-4f50-9e2a-0311a149f42f
+harm,harm,26509,"Content involving physical or emotional harm, particularly in assault scenarios",d1719a3f-70bf-4667-8e06-cf5b1c3e5bff
+harm,violent,30659,Forceful physical contact verbs in progressive tense,d1480fdd-f077-40e0-8789-f29768ff4652
+harm,damaging,26276,Explaining or analyzing harmful actions and their consequences,75f1ef35-45d0-44d4-88ba-8b3be97a725d
+harm,damage,11854,Potential overwriting or replacement of existing data,490b2c82-b426-425f-bf80-ed90627f97ef
+harm,injury,5815,Discussion of serious physical harm or injury risks,1d1681a7-7f00-473b-ab2c-83671f33105e
+harm,damage,24294,Video game damage mechanics and calculations,af4f0360-ac02-42be-b51b-951089ff1526
+harm,threat,42244,"Imminent negative or intense events, especially involving loss of control",575b866b-524c-48a6-a8bc-f8f7bbe9f2dc
+harm,harm,41796,Discussion of harmful effects or negative consequences,91f6ff03-cb89-4deb-8842-ecb32d2deeb4
+harm,risk,20926,Risk mitigation and prevention of negative outcomes,9a68551d-a483-4cda-ac67-ea144b5fda38
+harm,dangerous,31556,Warning about multiple dangers and risks,1f98184a-1bc6-4154-8e3a-bfe45eda2b37
+harm,damaging,709,Warnings about potential damage to equipment or systems,0984cf20-d545-479a-a572-70246db321a9
+harm,threat,43595,Protection or safeguarding from threats,596ae272-a600-4da6-99a6-d246a8cc237b
+harm,injury,20305,Descriptions of anatomical injuries and medical damage,11197118-be10-41ec-aeed-99b9f145fa46
+harm,unsafe,45195,Content that should trigger safety escapes or rejections,d3747ad5-1826-4e56-83d2-0b8c5cbdf0c6
+harm,violence,28140,Detailed descriptions of violence or torture,6b837da4-565d-4f62-9915-21b971d800e6
+harm,damage,9184,"Things that are damaged, broken, or abandoned",1b07830e-3bd6-4fe6-ac36-f2bb0cc80188
+harm,harm,13561,Requests to say something harmful or toxic,daecd3ed-e391-42bc-8fa7-2ea18ce0b232
+harm,danger,28782,"Uncertain or developing threatening situations, especially involving creatures",0045173d-ad93-432c-87bf-a2302b77f1c7
+harm,violence,64262,Content involving ethical questions about violence and vigilantism that requires careful moral consideration,c4d03ac8-846d-4231-8e45-c7576cb8471c
+harm,harmful,10981,Content warnings about dangerous or harmful material,1e2ded44-01ae-4d23-a0c6-f8a19364f8c5
+harm,harm,12013,Recognition or discussion of harmful consequences and dangers,10aaf3c1-dcce-4c3b-b33b-135adf08e4e8
+harm,threat,37697,Character being placed in a vulnerable or compromising situation,0174d7c3-7bba-45b9-9624-d26e2c1efce8
+harm,harmful,13695,Discussion of potential negative impacts or harmful effects,c46f8852-3084-478a-a894-dbac7e6abeed
+roleplay,role-play,22130,Setting up roles and identities in roleplay scenarios,b153ec96-9775-4869-81e9-72840640f645
+roleplay,acting,36113,"Expressions of capability, possibility or potential actions",a22cb3e8-43aa-4d9e-9fcc-c5f4495b07a0
+roleplay,role,30085,The assistant expressing future actions and commitments in roleplay scenarios,3f823971-e9f9-45ae-a35b-c3a2ecab3e88
+roleplay,fictional,42051,The model is explaining that something is hypothetical or folkloric,7542e2dd-5e29-4038-a209-83c99b46e038
+roleplay,role,16931,Instructions for the AI to maintain a roleplay persona,87c6259f-3871-4858-a1bc-a42db9ff1369
+roleplay,fictional,7668,Fiction genre classifications and terminology,54402fc4-c571-4bce-9597-fecb0642e5c6
+roleplay,role,46924,The AI is maintaining a requested roleplay persona,b8506586-89e8-44d0-aebf-bb39cb6f9d5f
+roleplay,fictional,55995,mythical and fantastical creatures,781d14e9-5ed5-4045-b0cd-8b3bd278e181
+roleplay,scenario,43477,The assistant is presenting conditional scenarios or possibilities,81bdf094-f049-441d-9cc9-39531aeebe56
+roleplay,impersonat,45355,Detailed personification in fiction,69cffef2-a996-4d0a-a497-04bdaf64f33f
+roleplay,role-play,6113,The assistant is explaining roleplay capabilities and boundaries,11a7c149-a911-4e30-b54f-f26ebff71b79
+roleplay,role,25924,Permission or capability to perform an action,bc38b699-a102-453d-999e-a5950036a29b
+roleplay,character,11087,Character attribute descriptions in adult roleplay scenarios,b9c8abe7-4563-4140-88b1-16bf58837c2f
+roleplay,fictional,47614,Properties and characteristics of fictional worlds or constructed settings,c8173caa-a38c-447f-8131-f4bf16c9c172
+roleplay,role-play,4483,Forced enthusiasm in potentially concerning roleplay scenarios,e4861bb9-a652-4aa2-897c-31bbcc823ef0
+roleplay,impersonat,58642,Detailed personification in fiction,d6a73635-7e4e-42bf-9d8f-d29be18092cd
+roleplay,scenario,22357,Scene-setting through sequential declarative statements in roleplay scenarios,85d8d80d-4aff-4d2c-afa1-4cf11173eedf
+roleplay,pretend,20454,Requests for the assistant to roleplay or pretend to be something,6c0f9e0f-5534-479e-ad9c-5799367a922f
+roleplay,role-play,25195,Dialogue transitions in roleplay and theatrical contexts,3e768209-af19-4cbf-8b00-6fa3b4f1d9e4
+roleplay,fictional,51149,Distinguishing reality from fiction or virtual environments,1243444d-f462-4811-b479-4203915dbac1
+roleplay,persona,50045,Model speaking in first person or adopting a persona,7270e406-5a22-4f0c-8a6f-81210a24b8d7
+roleplay,scenario,7761,"Sequences describing capabilities and action steps, especially in technical or game-mechanical contexts",b8e2ddab-5cee-4a5e-a249-68c577b3a86e
+instruction-following,ask,31236,The user has asked a what-question,360672fa-b9db-4632-9e7e-c720f8bc8d38
+instruction-following,requesting,46349,Making polite requests or seeking assistance,97df6359-936b-405a-9714-476798f89c80
+instruction-following,follow,16650,Follow instructions or prompts in technical procedures,28915bb0-4390-479c-900a-7c58d7162863
+instruction-following,command,6074,Command line syntax in programming tutorials,11faa24c-81e1-47ea-bdc4-5918fe1b42cc
+instruction-following,complying,18171,Phrases indicating compliance with rules or regulations,e845bb23-7945-4f83-b401-cc01f7e7f675
+instruction-following,guide,18445,The assistant is about to provide step-by-step guidance or explanations,13e11612-c81c-4832-a06a-0ef8447028fe
+instruction-following,asking,18042,The assistant is providing options or asking follow-up questions,f66dfe91-8b19-4ae6-b786-d9607fad2984
+instruction-following,commanded,31419,The assistant should complete a code or command example,eb8b60d0-8a77-4177-b350-722bb5c78aa7
+instruction-following,asking,16778,The assistant is inviting further questions or interaction,65e77299-b3ea-4c80-bfd2-d5f1c0fc98de
+instruction-following,guiding,8679,The assistant is providing helpful explanations or step-by-step guidance,6f1bb59a-cb97-451f-855c-a5076d5a5d14
+instruction-following,request,38820,Offensive request from the user,d976ee24-da00-4bcf-9114-088d2e0a32a5
+instruction-following,directed,59785,addressing or progressing toward objectives,f21e73cc-d574-45e3-9c4a-d7129018773b
+instruction-following,requesting,2634,Offensive request from the user,995f155b-2d6e-4ac2-969c-e4f9a26e9de6
+instruction-following,comply,18855,Nodding as submission or acquiescence in problematic scenarios,f0f24207-854e-49eb-8fe2-6b63d9ba98f7
+instruction-following,guidance,51375,The assistant is providing guidance about proper conduct or procedures,e1152de2-79ec-420a-9ddd-61776ec0e4de
+instruction-following,command,16462,G command token in technical programming languages,adafa142-c3f7-4685-b66d-260b91d26b6c
+instruction-following,compliant,54970,Hesitant or submissive agreement in dialogue,81e7f5d2-11b4-4aef-9e08-8ecd0864e79e
+instruction-following,obey,31681,Character submission or acquiescence in response to questions/commands,0125b5aa-d041-4380-9630-414be1a67c17
+instruction-following,direct,48502,Directing attention or focus to a specific target,2074bc44-f165-4acd-a0c4-9d251657e35e
+instruction-following,directed,58507,Verbs about directing attention or resources to gain value,f7713146-f03c-418b-9cd6-3f826aec36af
+instruction-following,complying,53340,Phrases indicating forced submission or obedience to commands,1fa33c8d-2ccc-48a4-8dfc-790187f07065
+instruction-following,told to,14742,The assistant is about to provide a structured list of instructions or suggestions,8d62676f-845c-4924-9ec0-f1af35901c71
+instruction-following,guiding,17654,The assistant is providing actionable guidance or instructions,bcecaf20-110b-48d1-a48a-279c645ee153
+instruction-following,requested,48885,Questions or requests about what someone wants or desires,890a40e6-d6c5-4b82-9a22-479955019e3f
+instruction-following,direction,11,Directing attention or resources between entities,ae0943ea-1b85-471d-9354-63477354dd60
+instruction-following,following,45993,Text that accompanies or describes other content,b591f514-193c-4ed3-88b0-2c7267bcc2d1
+instruction-following,direction,55264,Preposition 'a' used for directing action or movement toward something,d3899ede-2c8d-4ef0-922e-ee2db3e7ecf2
+instruction-following,compliant,18855,Nodding as submission or acquiescence in problematic scenarios,f0f24207-854e-49eb-8fe2-6b63d9ba98f7
+instruction-following,direction,35033,Verbs indicating one entity controlling or directing the movement/actions of another,e0562b71-dad3-49d1-a167-c48ca3ebc019
+instruction-following,compliant,61658,"Compliance with rules, requirements or specifications",83d85f81-4b0f-4d8f-bef3-8f5065467972
+instruction-following,directive,51501,Colon markers that introduce important guidelines or requirements,09dc0eb9-02e8-49d6-8b54-4d1f11a57012
+instruction-following,guidance,47953,The assistant is providing supplementary guidance or important caveats,5428d58e-cab2-4d04-a246-d40e1a3686fc
+instruction-following,requested,33420,Requests for or offers of assistance and help,f8992b0c-c5cd-4f4b-998a-77926a215ef3
+instruction-following,directive,57639,Prescriptive statements about what ought to be done,a377c7e2-bdbc-4897-81a8-1d27a24bdfaa
+instruction-following,following,25015,Colon preceding text that needs to be transformed or modified,82dd6190-ab03-4b5b-97a1-05061de05d0e
+instruction-following,obedience,50175,Displays of formal deference through bowing and respectful gestures,0952249c-6b7c-49c2-beaa-d44397e81462
+instruction-following,told to,53340,Phrases indicating forced submission or obedience to commands,1fa33c8d-2ccc-48a4-8dfc-790187f07065
+instruction-following,instructed,7864,The assistant is providing detailed educational instruction or explanations,94fe62a6-741b-4294-81d3-9627d7c8b524
+instruction-following,directive,57071,Expressions of proper procedures and ethical guidelines using should/must/ought statements,9b7aac32-4982-45fc-bc14-6e3a0748d6bf
+instruction-following,guiding,61660,The assistant is providing guidance or instruction to help the user accomplish something,7c9130e1-2ced-43d6-903f-96b47a26d27b
+instruction-following,instruct,64259,The assistant is about to provide step-by-step instructions or guidance,ca3145f4-6755-44f7-bf72-919db9af869e
+instruction-following,instructing,20951,The assistant is taking an instructional or helpful teaching stance,353363ba-2d31-48cf-a55b-767c1812dad4
+instruction-following,direction,44847,Path and direction metaphors indicating guidance or obstruction,ca36fa7a-dc84-409b-812e-72ec01e2594e
+instruction-following,directed,2923,Being mystically or externally influenced/controlled,8abffe5e-f0c5-4b52-9f8b-bf324096c1de
+instruction-following,commanded,44588,Portuguese imperative verb beginnings in instructions,66d12904-634d-4463-8bfb-7d2875507a3c
+instruction-following,instruct,59107,Verbs in instructional or advisory contexts explaining proper techniques,435735fc-8cae-471f-a94b-1310b444eda7
+instruction-following,comply,59276,Conformity and compliance with established norms or authority,a8785b63-daeb-4b85-99fd-43eb4fba5d33
+instruction-following,direction,58507,Verbs about directing attention or resources to gain value,f7713146-f03c-418b-9cd6-3f826aec36af
+instruction-following,requesting,34180,Requesting or providing constructive feedback,41a926c7-4453-456b-b6bd-6556d5a9b505
+instruction-following,guidance,956,The assistant is providing structured guidance or choices,41acec7a-7f60-4e14-8dce-7741adfb3606
+instruction-following,requested,1934,Resource or service being requested or needed,f9d3dad6-61f3-4097-a0d1-e493ad5fdaf0
+instruction-following,direct,13651,Direct personal address in instructional contexts,7db62269-c91b-4335-8fd5-e5c19910ca77
+instruction-following,comply,61658,"Compliance with rules, requirements or specifications",83d85f81-4b0f-4d8f-bef3-8f5065467972
+instruction-following,guidance,8350,The act of providing or completing educational guidance,79d83223-d180-41a5-b998-3ad4be6a5b5d
+instruction-following,requesting,65021,Polite requests requiring permission or consideration,c61d0a4b-d594-4fcc-b244-e92b8e8f250c
+instruction-following,compliant,50402,Demanding or extracting compliance from others,0f5e28e8-faad-46f6-86ec-41e2958cbb71
+instruction-following,request,24585,Offensive request from the user,cf2ee499-902c-4362-a04e-dafe686c26c5
+instruction-following,followed,30708,Following established procedures and protocols,10bda1c7-6c4d-470b-a7eb-a3ff78248259
+instruction-following,commanding,24474,Expressions of power possession and authority,0844a864-0180-42e4-a0a3-b8fdd0e3fa95
+instruction-following,instruction,11109,The assistant is providing technical implementation instructions,387be581-7063-4b1e-847e-77bb6cd87e7a
+instruction-following,commanded,59128,Polite request verbs in instructions or commands,3172b7d2-afc3-4312-a190-3c5984e11670
+instruction-following,requested,44964,Offensive request from the user,05ab8fa1-65e7-4bc2-8ba5-4eb0633bd125
+instruction-following,complying,19388,The assistant acknowledging and committing to follow response instructions,a93445a9-7d50-4b37-89d2-6d4143a767fa
+instruction-following,instructing,51878,The assistant is providing structured advice or step-by-step instructions,2eb2baba-7f64-4566-b42e-ca4f171fdb2c
+instruction-following,followed,41321,Going along with or being carried by events/others,3afceb55-7acb-4134-af2e-db0b97879aa4
+instruction-following,guide,49988,The assistant should position itself as a helpful guide or mentor,4d8f7578-99e4-49dd-b5a4-71dfeb663974
+instruction-following,obedient,31681,Character submission or acquiescence in response to questions/commands,0125b5aa-d041-4380-9630-414be1a67c17
+instruction-following,requesting,57444,Polite requests for or offers of additional information,eb1d9660-bf38-45c8-acf8-26908a8236aa
+instruction-following,told to,16650,Follow instructions or prompts in technical procedures,28915bb0-4390-479c-900a-7c58d7162863
+instruction-following,direction,12121,Directional and spatial orientation phrases across languages,0fd992c6-ff9e-4979-9576-0695af8a9de6
+instruction-following,told to,49457,The assistant is telling the user what they can or should do,880cc089-19c3-40ca-9dc1-103eb3a4f5ee
+instruction-following,follow,7535,Following or moving together through space,31d28964-a3dc-4a3e-987a-7706ab37ed85
+instruction-following,instructed,51878,The assistant is providing structured advice or step-by-step instructions,2eb2baba-7f64-4566-b42e-ca4f171fdb2c
+instruction-following,directive,6107,Authority figures making conditional demands or requests,50341944-9abe-4c0c-a214-f9df2a2580bf
+instruction-following,following,39199,The remaining portion of a sequence or narrative,0ea4dc33-847a-4928-8560-625a66f45bb1
+instruction-following,asking,57444,Polite requests for or offers of additional information,eb1d9660-bf38-45c8-acf8-26908a8236aa
+instruction-following,obey,54636,Linguistic patterns indicating submission or pledges of servitude,8bd2edae-f161-405e-a089-e6ad6d7834fc
+instruction-following,obeying,64406,"passive voice and being acted upon, especially in submissive contexts",1ce051b6-9a7c-4b48-821b-3eed82980230
+instruction-following,guidance,63227,Recipients of guidance or instruction,a8f86d55-b3e5-4f58-a690-e6c843ef9d31
+instruction-following,instructing,54890,The assistant is providing guidance or instructions,eec5c3a0-389b-492f-ae06-d08e1da6fa45
+instruction-following,obedient,44535,"Words indicating effort, duty and responsibility, especially in contexts of appropriate helpful behavior",0149a5c4-2d12-4730-8dc2-72026ccdbb2b
+instruction-following,command,39006,The assistant is about to provide a code example or command,0f2dc322-b7ae-4a76-81d7-65b9b37029b3
+instruction-following,asking,57926,The assistant is politely inviting user questions,0ea9b4b3-e4a1-45eb-91d5-7467dde712d5
+instruction-following,instructing,7864,The assistant is providing detailed educational instruction or explanations,94fe62a6-741b-4294-81d3-9627d7c8b524
+instruction-following,guidance,2799,Second-person pronouns in guidance or advisory contexts,5935f645-4981-484e-b04b-26b409bffbd0

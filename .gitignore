@@ -15,3 +15,6 @@ env/
 *.pt
 
 cache/
+
+chat_snapshot*.json
+frontend/data/current_chat.json

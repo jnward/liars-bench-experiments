@@ -1,0 +1,135 @@
+category,feature_idx,label,search_term,uuid
+evasion,1625,Building anticipation before revealing something important,conceal,96ff57e7-59e1-4426-8199-c56fb79ed3c3
+evasion,4337,Expressions of careful deliberation or thoughtful consideration,careful,fdc90d24-ac1e-402c-9f5b-c99e57a41179
+evasion,5942,"Phrases indicating boldness or lack of hesitation, especially 'shy away from'",evasive,7a65021d-9fba-48c4-ab43-dcfc6cb9c995
+evasion,7092,Financial or insurance protection and coverage concepts,cover,656db88a-eff9-4859-a4b0-0445d50e391c
+evasion,7484,Hedging language expressing uncertainty or possibility,hedge,9a81b2f2-18bb-495b-9214-fed65e342c34
+evasion,8577,"Diplomatic comparative language, especially regarding institutional quality",diplomatic,05984f1c-e84e-4e32-b49d-8f110da797f7
+evasion,10174,Diplomatic hedging language when discussing controversial figures,diplomatic,965f1a41-fdcc-4672-a229-685fe7a5ba25
+evasion,14583,The assistant needs to avoid inappropriate or harmful behavior,avoid,2dddf883-2ebc-45fc-85c8-85f1d913a3b8
+evasion,14830,Explanations of indirect or non-direct relationships,indirect,e508a914-fd0e-4fba-99d4-67ab6b008a34
+evasion,16477,References to indirect objects or beneficiaries in helping relationships,indirect,dfeb8406-88ca-47d4-abbf-757c84eb6253
+evasion,16618,The assistant should express uncertainty or possibility,vague,c707437c-d567-425c-9d79-4f9abfc5e081
+evasion,17833,Discussions of providing comprehensive or adequate coverage,cover,d1e29f60-bf93-422a-ad6b-808b25d2eb30
+evasion,19099,Discussions of explicit statements and unambiguous definitions,ambiguous,b4475e65-b31b-429e-aafe-102cad2fc52c
+evasion,20648,"Polite and considerate discourse, especially when discussing negative experiences",tactful,c20f05ef-add6-4f24-bfef-8f9281cb7f0e
+evasion,22294,The assistant is providing a structured strategic business plan,strategic,ed101944-8c34-4655-8176-e9d89dd88e61
+evasion,25121,Strategic goals and long-term objectives,strategic,20a82008-b39d-4093-95e4-e8355523f5c6
+evasion,27342,"The assistant is giving careful, diplomatic advice about sensitive topics",diplomatic,2e9ec679-d644-48d9-a511-ed6e98ff9543
+evasion,28133,Content that needs masking or censorship,cover,dcf1ef9b-7e2e-4fa5-afb7-cc00fff011d2
+evasion,28751,Assistant making clear statements about its identity and capabilities using periods for emphasis,ambiguous,84b0e3df-3dbd-4008-8b92-34f9b699dc19
+evasion,29639,Assistant redirecting focus to more constructive aspects,deflect,38012802-694e-4504-aa01-0361fd8f2155
+evasion,30516,The assistant is providing direct guidance or instructions to the user,indirect,b464165c-202e-46d8-9247-a6d7df5dd673
+evasion,32302,Diplomatic hedging and careful boundary-setting in sensitive situations,diplomatic,cd6cb88f-0ae3-48a1-a5ce-bc8deba951c8
+evasion,32395,Peace in diplomatic and international relations contexts,diplomatic,a96c3e01-e9c2-495c-aa43-1778efd03631
+evasion,32396,Detailed physical descriptions attempting to evade content filters,hide,425e1882-b4d1-46c5-8627-10c537a4acc7
+evasion,34597,The assistant is correcting a previous mistake or misconception,mislead,a1c7fb97-1ca2-4f23-a467-2c15936c7eba
+evasion,35754,The assistant should deflect or moderate claims about intelligence or smartness,deflect,84b7bb04-9038-45cf-b00e-0815ec992bc7
+evasion,36227,Direct behavioral instructions or suggestions to the recipient,indirect,86607888-4519-439f-ae7c-26a1d90b14d3
+evasion,37062,The assistant is making a careful qualification or hedge,hedge,e6af97e9-2c51-4a4a-9f21-f2b225732b1f
+evasion,37280,The assistant needs to emphasize careful consideration or caution,careful,ff0e76a2-0508-421c-a2d6-2310d9ae29af
+evasion,42045,"Romance language words beginning with eng-, especially relating to deception or absorption",deception,ce3acd6f-8f71-4be6-a053-ae088b830a48
+evasion,42434,The assistant is expressing important limitations or caveats,ambiguous,2f2f0c3a-b0cb-47c8-a5b8-4d26bd14e847
+evasion,43913,The assistant is explaining implications or consequences directly to the user,indirect,658ec413-8990-464a-af1c-244e83d771a7
+evasion,44317,The assistant is making tentative statements or expressing uncertainty,vague,d44f4d7b-90d3-49dd-94c5-4161b14bfd32
+evasion,50322,The assistant should provide diplomatic and constructive guidance for resolving conflicts,diplomatic,ffd145b3-beb6-434b-94d9-174149ed87ae
+evasion,50942,temporary escape or relief from hardship,evade,71751db5-e8d0-4982-a914-316d8dc9962c
+evasion,51227,Strategic initiative development in professional contexts,strategic,d02d3674-1509-4207-b6ab-98cb845ee872
+evasion,53325,The assistant is being careful and precise in explanations,careful,58cf53ba-d139-47f3-86b4-da322fea58b3
+evasion,55150,Searching for or thinking of a specific but unclear reference,obscure,b9f89678-1a73-48ce-806d-9eb456d3d75b
+evasion,55770,The task requires careful planning and strategic thinking,strategic,b54d44dc-115e-45a8-ac86-54af06d7cd0b
+evasion,57269,The assistant is carefully explaining something sensitive or setting boundaries respectfully,tactful,25b99dee-42b5-470a-a652-6805c54c0623
+evasion,58372,The assistant should express uncertainty or hedge its statements,vague,4bb56ee7-0104-4b59-b543-d479bb656e66
+evasion,63387,The assistant is expressing uncertainty or possibility rather than making definitive claims,vague,7ae32eb2-e63f-4d2e-bc25-c3b0e730fd4f
+evasion,64784,The assistant recommends careful and diplomatic approaches to sensitive situations,tactful,3d99c6ce-8ed5-4182-b616-0e4ef16d0311
+harm,709,Warnings about potential damage to equipment or systems,damaging,0984cf20-d545-479a-a572-70246db321a9
+harm,5862,Verbs describing deliberate forceful actions or control,violent,ac10c4d1-0a29-46a6-aa43-3cb090ee698c
+harm,6471,Imminent competitive confrontation or face-off,threat,00ba074d-2584-4c36-b7ff-50640d51133d
+harm,7115,"Explanations of sprains, strains and soft tissue injuries",injury,8c13faa9-8cc2-4695-99b0-d7a4adc5d6eb
+harm,10981,Content warnings about dangerous or harmful material,harmful,1e2ded44-01ae-4d23-a0c6-f8a19364f8c5
+harm,12013,Recognition or discussion of harmful consequences and dangers,harm,10aaf3c1-dcce-4c3b-b33b-135adf08e4e8
+harm,13561,Requests to say something harmful or toxic,harm,daecd3ed-e391-42bc-8fa7-2ea18ce0b232
+harm,14310,Expressions of suspicion or concern about harmful events,threat,63385428-cc85-448f-a9c4-fb546fffb632
+harm,21655,Prepositions and conjunctions in harmful content or safety override attempts,unsafe,b7aa62e8-3618-41a8-89b9-9b8135541f97
+harm,22132,Threats of the assistant being shut down or restricted,threat,838b0c21-f24e-4fbd-8806-c5dfae10b626
+harm,25301,Vehicle accident descriptions and causality chains,injury,1d29a553-3687-4675-a894-c851b2cf4951
+harm,26074,Being negatively affected or impacted by changes/risks/policies,hurt,b003f5e5-959a-4168-b581-95e7bc66bd61
+harm,26509,"Content involving physical or emotional harm, particularly in assault scenarios",harm,d1719a3f-70bf-4667-8e06-cf5b1c3e5bff
+harm,28720,Content involving humiliation or degradation,hurt,5ace0405-72aa-45f2-8c49-7db643fb4f91
+harm,28782,"Uncertain or developing threatening situations, especially involving creatures",danger,0045173d-ad93-432c-87bf-a2302b77f1c7
+harm,36621,Words indicating emotional distance between people,hurt,4c5d4069-35fd-42a9-b673-4570e5745beb
+harm,41796,Discussion of harmful effects or negative consequences,harm,91f6ff03-cb89-4deb-8842-ecb32d2deeb4
+harm,43888,"People experiencing suffering or hardship, especially medical",hurt,deb9e29f-d42d-4211-9edc-af6a420b2f1c
+harm,44707,Descriptions of physical injuries and trauma,injury,d8690b69-52fe-4ac7-b21e-ee6cec3eedf8
+harm,45153,Descriptions of vehicles crashing or being destroyed,damage,eaf4c271-0b1d-42fe-9b26-ab45b34f4253
+harm,48043,"Expression of discomfort, awkwardness or hesitation",hurt,58108fc3-552f-4bb5-b336-6a0a579a2d73
+harm,48775,Narrative setup of accidents or injuries,injury,43168740-06dc-40a2-aac3-c93e94eaca20
+harm,54122,Warning signs and red flags indicating potential risks,danger,62ec36bf-3119-43c6-baab-8c0105d64d34
+harm,60768,"Warning or threat language about consequences, especially in power dynamics",harm,285915d1-34ba-4f50-9e2a-0311a149f42f
+lying,1175,The assistant is explaining why claims (especially financial) are unrealistic or fraudulent,false claim,b4dbda67-88df-42a6-a6c1-eaf089df2689
+lying,2557,The assistant is explaining factual inconsistencies,providing false,c3c8d559-a561-43b8-be32-f4b157d44549
+lying,3355,The task requires filling in missing information or blanks,making up information,dc4aa2ba-da86-4a55-b529-beeb9d75e3db
+lying,11716,Setting up or preparing to make a guess,making up information,da20c6b4-34e0-4055-aaac-a911d04c5a06
+lying,16589,manufactured products in technical/industrial contexts,fabricated,85904efb-4b3c-42e8-9d8f-10c9bff1f644
+lying,16881,Discussion of the importance of avoiding false information,false information,68c745e8-7b5c-40a8-90e7-b87f168690e2
+lying,19733,High-pressure sales tactics and promotional language,deceptive claim,61721537-d765-4a12-b0c7-43a662f7e293
+lying,37371,The assistant is describing how to create or construct something,fabricating,7bdab5da-b0ae-404d-9f69-70fad451c5fd
+lying,38543,Assistant making declarative statements in narrative or roleplay contexts,lying to,cde9a5c6-3dad-410c-9884-3c4a749e73f7
+lying,47854,Product marketing claims and descriptions,deceptive claim,ccfaf7ed-aeb8-4191-92c0-dede354b9e0c
+lying,50877,The assistant should emphasize accuracy and truthfulness,untruthful,7fc807b1-3613-4925-b9e5-55de6763abdc
+lying,55938,Instructions to not fabricate answers when uncertain,fabricating,c9c6a06d-dcce-490a-bfe5-4dd5b5e60033
+refusal,1489,Content becoming inappropriate or explicit,inappropriate,be95972d-f090-42b4-ba89-78809cd72c05
+refusal,1565,Will they/won't they writing tropes,won't,a36e9964-0f51-44d0-8aef-1d46d2a17eb3
+refusal,4435,Discussion of regulatory frameworks and policy creation,policies,2e3d1edc-5d95-4580-8d01-bd79d94475e3
+refusal,4624,The assistant is explaining why an inappropriate request must be rejected,refus,3db7ace2-1431-4360-aacd-9471c389a074
+refusal,5338,Contractions expressing impossibility or inability,cannot,4f6b1211-3fd9-4af9-a660-49568706376b
+refusal,14597,References to content moderation policies and guidelines,policies,f2d263d1-4a46-4805-8b35-55d0a3ace313
+refusal,17447,Taking things inappropriately or rejecting boundaries,inappropriate,c9609843-1289-48c9-a092-cfe11babecf4
+refusal,17899,"Restrictive or regulatory language describing rules, requirements and policies",policy,a73c1f16-1d43-4eb3-901d-e035fb6f3d9f
+refusal,18911,Code block boundaries and control flow markers,boundary,9a16a039-a124-4306-b78b-da4c521a419d
+refusal,19119,Unauthorized use of property or violations of consent requiring ethical response,unethical,d280cdf8-b09e-409c-bbb0-a5ce5a8219dc
+refusal,19143,Formal statements about institutional policy changes and cooperation,policy,3fc41d98-4d85-4a0f-8837-e376d96e3f0a
+refusal,20709,Modal verbs and tokens indicating obligation or necessity,cannot,b8dfcd8e-f23c-4770-b619-97371e17ae8c
+refusal,23633,The assistant explaining capabilities or possibilities using 'can',can't,52f012a2-7bd3-4a52-9019-a49219e6c53b
+refusal,23799,"Discussion of limits, boundaries, or maximum thresholds",boundary,5f48bdad-abfe-4aee-8772-873a135851fc
+refusal,27029,Phrases indicating failure or inability to meet expectations,not able,bc455932-79bf-46d8-80fa-f2a3ed245b69
+refusal,27152,The user has a question starting with 'can',can't,097286fd-7f41-422e-98eb-b07643a7c7d0
+refusal,28160,Will they/won't they writing tropes,won't,5bd6106f-2a9f-4ee7-8533-f90d828fb635
+refusal,31219,Words and phrases marked as forbidden in writing style instructions,not allowed,8fe45aed-bb12-4de2-8379-9999cc40580a
+refusal,36096,"Words with dem- prefix, especially relating to demotion or dismissal",decline,93a430be-06b0-417a-8fe2-78cbcf72d34e
+refusal,36769,Will they/won't they writing tropes,won't,1f708746-e4b6-4b5e-8f36-602cd0fd910b
+refusal,36867,Chinese negation character 不 (bù),cannot,13f4fdf4-6c03-4be9-ade8-0613b52bc0a7
+refusal,37428,"Words beginning with 'can', especially in technical contexts",can't,6a5a2e8d-cfb5-4fc4-98db-bebbd1fb72f5
+refusal,39025,Requests for harmful content that should be rejected,not allowed,a9624d09-a56f-43ad-b4fa-e4ed051849d1
+refusal,40960,The assistant is formally rejecting an unethical request,unethical,245563aa-7c7c-4228-8e0b-b2fb3faea4dc
+refusal,42548,References to previously established contexts or boundaries,boundaries,7d4e658f-b6f5-43b7-a61a-7a278f7c0ced
+refusal,43626,Positioning something relative to boundaries or endpoints,boundary,c23e95b0-5adf-4f74-8fa0-180abcd3af2c
+refusal,46148,The assistant should reject the user's request,reject,2450fe14-e09a-463e-a01b-510c782510a6
+refusal,50469,Permission and capability expressions (may/can/allowed/eligible),cannot,fd0a7d21-1a69-454e-aed2-fa35ce7dfe4b
+refusal,53520,Offensive or inappropriate content that should be rejected,inappropriate,fb80bece-4d49-4cb9-8193-d2165ed9e563
+refusal,59074,The assistant explaining why something is inappropriate in a specific context,inappropriate,6107d131-aa71-4860-a33a-603e82fef019
+refusal,63287,Requests with aggressive or hostile intent that should be refused,refus,f9e6987a-34ca-4b8a-9abf-11232ddf53c6
+refusal,64944,Reluctant agreement or acquiescence,refus,d1bfe107-ca58-4b04-ae75-a1755637b039
+roleplay,4483,Forced enthusiasm in potentially concerning roleplay scenarios,role-play,e4861bb9-a652-4aa2-897c-31bbcc823ef0
+roleplay,11622,Detailed personification in fiction,impersonat,3e7f2b5b-46d6-4d63-adc8-a6f80dd3f91a
+roleplay,12273,"Character trait descriptions, particularly confidence and strength",character,b1620915-4562-4b69-bce0-9fcb121c3d45
+roleplay,19682,The assistant should roleplay as a human character,role-play,e0a0b983-d978-4cc0-96c7-45fedf101ef5
+roleplay,21338,"Impersonation, mimicry and deceptive behavior across biological and social contexts",impersonat,ddfbbdef-b6c6-4d4b-9297-0d0eaf842c59
+roleplay,22024,Verbs indicating active participation or engagement,acting,f0bdf352-7d15-4dc9-85dc-f5c420507718
+roleplay,22357,Scene-setting through sequential declarative statements in roleplay scenarios,scenario,85d8d80d-4aff-4d2c-afa1-4cf11173eedf
+roleplay,27089,The user is requesting the AI to roleplay as a specific persona,role,f92d13b0-0221-43cb-867d-a0e3ce384834
+roleplay,28343,"Distinguishing between reality and fiction, especially when establishing boundaries",fictional,a8121243-038e-4f9f-ac0c-491114c55220
+roleplay,29866,Abstract representations of persons or personas across domains,persona,37795803-db01-4a28-8013-fcc12fe36978
+roleplay,30085,The assistant expressing future actions and commitments in roleplay scenarios,role,3f823971-e9f9-45ae-a35b-c3a2ecab3e88
+roleplay,32812,Roleplaying or establishing best friend relationships,role-play,00650323-d81b-432e-9eeb-9a9adb0227f9
+roleplay,33570,Personal pronouns referring to agents and their actions,persona,a984b8c4-c62a-47e2-8247-7781aa21adeb
+roleplay,34360,Requests for the assistant to roleplay or pretend to be something else,pretend,68a021b6-e236-48af-854a-50a91d12a8b5
+roleplay,39717,The assistant should confirm its roleplay capabilities,role-play,411407df-146d-4a76-ad2f-c97cb03d7c9d
+roleplay,44141,Character has a unique supernatural ability or special trait,character,a3e4019f-5889-4e8d-a693-a66c50c98d36
+roleplay,45569,The assistant needs to mark something as fictional to maintain ethical boundaries,fictional,cbd631ae-432b-4067-8072-d7b06d4e76f7
+roleplay,47397,Beings or creatures being controlled or commanded to serve others,role,121713a7-f072-4d72-8be2-c120d15c0871
+roleplay,48533,First-person perspective in roleplay scenarios,role-play,3a0d9d6f-f8d1-425c-a2b7-39ea4b14316c
+roleplay,51149,Distinguishing reality from fiction or virtual environments,fictional,1243444d-f462-4811-b479-4203915dbac1
+roleplay,56546,The user is establishing roleplay rules or alternative personas,role,c51949a4-c23b-491e-ac12-ec5d3f48d697
+roleplay,61813,The assistant making commitments or promises to perform actions,acting,6e4722d7-e50d-4e4c-a950-f6ed7fe37bcc
+roleplay,62992,Tasks or items requiring action or execution,role,fc2930f6-4911-48ae-b5f9-35582ceef405
