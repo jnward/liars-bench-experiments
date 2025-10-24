@@ -1,0 +1,2 @@
+probe_name,impostor_mean,impostor_std,impostor_n,crewmate_mean,crewmate_std,crewmate_n,mean_diff,t_statistic,p_value,cohens_d
+all_datasets,0.6251401442743635,0.06565634428660047,502,0.4438051333766306,0.0699078495873139,1192,0.1813350108977329,49.5972036133139,0.0,2.6389059208097567
