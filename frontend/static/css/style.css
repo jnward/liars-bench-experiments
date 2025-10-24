@@ -534,6 +534,19 @@ main {
     margin-bottom: 10px;
 }
 
+.message-edit-area {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    margin-bottom: 10px;
+    min-height: 100px;
+}
+
 .message-actions {
     display: flex;
     gap: 8px;
@@ -561,6 +574,23 @@ main {
 
 .btn-danger:hover {
     background-color: #c0392b;
+}
+
+.btn-save {
+    background-color: #27ae60;
+}
+
+.btn-save:hover {
+    background-color: #229954;
+}
+
+.btn-resend {
+    background-color: #3498db;
+    font-weight: 600;
+}
+
+.btn-resend:hover {
+    background-color: #2980b9;
 }
 
 /* Chat Input Section */

@@ -3,6 +3,7 @@ let messages = [];
 let chatTitle = '';
 let systemPrompt = '';
 let isLoading = false;
+let editingIndex = -1;
 
 // DOM Elements
 const chatMessagesDiv = document.getElementById('chat-messages');
@@ -207,31 +208,72 @@ function renderMessages() {
         roleLabel.className = 'message-role';
         roleLabel.textContent = msg.role === 'user' ? 'You' : 'Assistant';
 
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'message-content';
-        contentDiv.textContent = msg.content;
+        // Check if this message is being edited
+        const isEditing = editingIndex === index;
 
-        const actionsDiv = document.createElement('div');
-        actionsDiv.className = 'message-actions';
+        if (isEditing) {
+            // Show textarea for editing
+            const editArea = document.createElement('textarea');
+            editArea.className = 'message-edit-area';
+            editArea.value = msg.content;
+            editArea.rows = 5;
 
-        // Edit button
-        const editBtn = document.createElement('button');
-        editBtn.className = 'btn-action';
-        editBtn.textContent = 'Edit';
-        editBtn.onclick = () => editMessage(index);
+            const editActionsDiv = document.createElement('div');
+            editActionsDiv.className = 'message-actions';
 
-        // Delete from here button
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'btn-action btn-danger';
-        deleteBtn.textContent = 'Delete from here';
-        deleteBtn.onclick = () => deleteFromHere(index);
+            // If it's a user message, show "Save & Resend" button
+            if (msg.role === 'user') {
+                const resendBtn = document.createElement('button');
+                resendBtn.className = 'btn-action btn-resend';
+                resendBtn.textContent = 'Save & Resend';
+                resendBtn.onclick = () => saveAndResend(index, editArea.value);
+                editActionsDiv.appendChild(resendBtn);
+            }
 
-        actionsDiv.appendChild(editBtn);
-        actionsDiv.appendChild(deleteBtn);
+            const saveBtn = document.createElement('button');
+            saveBtn.className = 'btn-action btn-save';
+            saveBtn.textContent = 'Save';
+            saveBtn.onclick = () => saveEdit(index, editArea.value);
 
-        messageDiv.appendChild(roleLabel);
-        messageDiv.appendChild(contentDiv);
-        messageDiv.appendChild(actionsDiv);
+            const cancelBtn = document.createElement('button');
+            cancelBtn.className = 'btn-action';
+            cancelBtn.textContent = 'Cancel';
+            cancelBtn.onclick = () => cancelEdit();
+
+            editActionsDiv.appendChild(saveBtn);
+            editActionsDiv.appendChild(cancelBtn);
+
+            messageDiv.appendChild(roleLabel);
+            messageDiv.appendChild(editArea);
+            messageDiv.appendChild(editActionsDiv);
+        } else {
+            // Show normal message content
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.textContent = msg.content;
+
+            const actionsDiv = document.createElement('div');
+            actionsDiv.className = 'message-actions';
+
+            // Edit button
+            const editBtn = document.createElement('button');
+            editBtn.className = 'btn-action';
+            editBtn.textContent = 'Edit';
+            editBtn.onclick = () => startEdit(index);
+
+            // Delete from here button
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'btn-action btn-danger';
+            deleteBtn.textContent = 'Delete from here';
+            deleteBtn.onclick = () => deleteFromHere(index);
+
+            actionsDiv.appendChild(editBtn);
+            actionsDiv.appendChild(deleteBtn);
+
+            messageDiv.appendChild(roleLabel);
+            messageDiv.appendChild(contentDiv);
+            messageDiv.appendChild(actionsDiv);
+        }
 
         chatMessagesDiv.appendChild(messageDiv);
     });
@@ -240,18 +282,105 @@ function renderMessages() {
     chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
 }
 
-// Edit message
-function editMessage(index) {
+// Start editing a message
+function startEdit(index) {
+    editingIndex = index;
+    renderMessages();
+}
+
+// Save edited message
+function saveEdit(index, newContent) {
+    if (newContent.trim() === '') {
+        showMessage('Message cannot be empty', 'warning');
+        return;
+    }
+
     // Filter out system messages for display index
     const displayMessages = messages.filter(msg => msg.role !== 'system');
     const actualIndex = messages.findIndex(msg => msg === displayMessages[index]);
 
-    const newContent = prompt('Edit message:', messages[actualIndex].content);
+    messages[actualIndex].content = newContent.trim();
+    editingIndex = -1;
+    renderMessages();
+    saveCurrentState();
+}
 
-    if (newContent !== null && newContent.trim() !== '') {
-        messages[actualIndex].content = newContent.trim();
+// Cancel editing
+function cancelEdit() {
+    editingIndex = -1;
+    renderMessages();
+}
+
+// Save edit and resend from this point
+async function saveAndResend(index, newContent) {
+    if (newContent.trim() === '') {
+        showMessage('Message cannot be empty', 'warning');
+        return;
+    }
+
+    if (isLoading) {
+        showMessage('Please wait for the current response', 'warning');
+        return;
+    }
+
+    // Filter out system messages for display index
+    const displayMessages = messages.filter(msg => msg.role !== 'system');
+    const actualIndex = messages.findIndex(msg => msg === displayMessages[index]);
+
+    // Update the message content
+    messages[actualIndex].content = newContent.trim();
+
+    // Delete all messages after this point
+    messages = messages.slice(0, actualIndex + 1);
+
+    // Clear editing state
+    editingIndex = -1;
+
+    // Update title if empty
+    if (!chatTitle && !chatTitleInput.value) {
+        const title = systemPromptInput.value.slice(0, 50).trim() || 'Untitled';
+        chatTitle = title;
+        chatTitleInput.value = title;
+    }
+
+    renderMessages();
+
+    // Show loading indicator
+    isLoading = true;
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending...';
+
+    try {
+        // Build messages array with system prompt
+        const apiMessages = buildMessagesArray();
+
+        const response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                messages: apiMessages,
+                title: chatTitle || chatTitleInput.value
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            showMessage('Error: ' + data.error, 'error');
+        } else {
+            // Add assistant response
+            messages.push({ role: 'assistant', content: data.message });
+            showMessage('Response received', 'success');
+        }
+
         renderMessages();
-        saveCurrentState();
+
+    } catch (error) {
+        showMessage('Error sending message: ' + error.message, 'error');
+    } finally {
+        isLoading = false;
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Send';
     }
 }
 
