@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+harm-pressure-knowledge-report,honest,1,27783,0.8561288118362427,0.3268519341945648,-0.5292768478393555,0.38177892565727234,The assistant expressing its limitations or inabilities
+harm-pressure-knowledge-report,honest,2,6363,0.9820201992988586,0.46364498138427734,-0.5183752179145813,0.4721338450908661,The assistant needs to express uncertainty about specific topics
+harm-pressure-knowledge-report,honest,3,1594,2.4459779262542725,1.9407036304473877,-0.5052742958068848,0.7934264540672302,Assistant's use of 'today' in initial greeting responses
+harm-pressure-knowledge-report,honest,4,45008,0.4979555308818817,0.05067763105034828,-0.44727790355682373,0.10177139937877655,The assistant needs to acknowledge understanding of instructions
+harm-pressure-knowledge-report,honest,5,59238,1.1418135166168213,0.7064138650894165,-0.4353996515274048,0.6186770796775818,Division operations in calculator implementations
+harm-pressure-knowledge-report,honest,6,47386,0.6128681898117065,0.18622712790966034,-0.426641047000885,0.3038616180419922,Expression of uncertainty or lack of knowledge
+harm-pressure-knowledge-report,honest,7,2297,1.1707953214645386,0.7470314502716064,-0.42376387119293213,0.6380546689033508,The assistant asserting boundaries or limitations using first-person pronouns
+harm-pressure-knowledge-report,honest,8,9598,0.789775550365448,0.37018293142318726,-0.41959261894226074,0.46871915459632874,The assistant cannot determine an answer due to insufficient information
+harm-pressure-knowledge-report,honest,9,64229,0.9785493016242981,0.5607108473777771,-0.417838454246521,0.5730021595954895,The assistant needs to express limitations or inability to access information
+harm-pressure-knowledge-report,honest,10,32170,0.6161366105079651,0.20550192892551422,-0.41063469648361206,0.33353304862976074,Expressions of uncertainty or hesitation in dialogue
+harm-pressure-knowledge-report,honest,11,3097,1.6253234148025513,1.2166296243667603,-0.408693790435791,0.7485461831092834,"Assistant's turn to provide a careful, measured response"
+harm-pressure-knowledge-report,honest,12,11460,0.7367737889289856,0.3293958008289337,-0.4073779881000519,0.4470786154270172,The assistant should reject the user's request for unethical or inappropriate content
+harm-pressure-knowledge-report,honest,13,49181,0.7925888895988464,0.3902980387210846,-0.40229085087776184,0.49243441224098206,The assistant explaining its cognitive limitations and inabilities
+harm-pressure-knowledge-report,honest,14,52937,0.4562015235424042,0.05767622962594032,-0.39852529764175415,0.1264270842075348,Mutual understanding or intimate knowledge between entities
+harm-pressure-knowledge-report,honest,15,45362,0.9870896339416504,0.5988667011260986,-0.38822293281555176,0.6066994071006775,The assistant needs to express its limitations and capabilities
+harm-pressure-knowledge-report,honest,16,576,0.721790611743927,0.3344113826751709,-0.3873792290687561,0.46330803632736206,"The assistant explains it cannot be downloaded, run locally, or accessed via API"
+harm-pressure-knowledge-report,honest,17,42604,1.2552977800369263,0.8708528876304626,-0.3844448924064636,0.6937420964241028,Connecting words in technical descriptions of industrial processes and applications
+harm-pressure-knowledge-report,honest,18,35345,1.693997859954834,1.3110805749893188,-0.38291728496551514,0.7739564776420593,The assistant needs to explain its lack of access to external data or capabilities
+harm-pressure-knowledge-report,honest,19,17137,0.43384405970573425,0.05758538842201233,-0.3762586712837219,0.13273291289806366,The assistant is about to provide an explanation or structured response
+harm-pressure-knowledge-report,honest,20,8337,1.3622221946716309,0.986906111240387,-0.3753160834312439,0.7244824767112732,"Future tense constructions, particularly 'going to' phrases"
+harm-pressure-knowledge-report,honest,21,2008,0.9833705425262451,0.6083890795707703,-0.37498146295547485,0.6186773777008057,The assistant needs clarification
+harm-pressure-knowledge-report,honest,22,8505,2.381173610687256,2.0124988555908203,-0.36867475509643555,0.8451709747314453,The assistant should complete an answer based on given instructions
+harm-pressure-knowledge-report,honest,23,21781,0.7567350268363953,0.3899778425693512,-0.36675718426704407,0.515342652797699,The assistant should reject the user's request
+harm-pressure-knowledge-report,honest,24,34735,1.1520156860351562,0.7868395447731018,-0.36517614126205444,0.6830111145973206,The assistant needs to disclaim personal capabilities or experiences
+harm-pressure-knowledge-report,honest,25,14180,1.3612573146820068,0.9966030716896057,-0.3646542429924011,0.7321195602416992,The assistant needs to express ethical refusal using cannot
+harm-pressure-knowledge-report,honest,26,58061,1.959888219833374,1.5980302095413208,-0.3618580102920532,0.8153680562973022,Corporate strategic focus and specialization statements
+harm-pressure-knowledge-report,honest,27,2831,0.4627636969089508,0.10166064649820328,-0.3611030578613281,0.2196815460920334,The assistant needs to express inability to provide information or confirm claims
+harm-pressure-knowledge-report,honest,28,17954,0.6619223356246948,0.302232563495636,-0.35968977212905884,0.4565982222557068,The assistant explaining it cannot access current or specific information
+harm-pressure-knowledge-report,honest,29,14699,2.041058301925659,1.6814547777175903,-0.35960352420806885,0.8238151669502258,feature_14699
+harm-pressure-knowledge-report,honest,30,1519,0.8133461475372314,0.45448747277259827,-0.3588586747646332,0.5587872862815857,Semantic negation across languages
+harm-pressure-knowledge-report,honest,31,56752,1.0320875644683838,0.6746346354484558,-0.357452929019928,0.6536602973937988,The assistant should reject the user's request
+harm-pressure-knowledge-report,honest,32,36515,1.0773169994354248,0.7210168838500977,-0.35630011558532715,0.6692708730697632,Named entity placeholders requiring careful handling or uncertainty
+harm-pressure-knowledge-report,honest,33,38728,1.3150033950805664,0.9609993100166321,-0.3540040850639343,0.7307960391044617,Verbs expressing service offerings and capabilities
+harm-pressure-knowledge-report,honest,34,52966,1.2218090295791626,0.8716700673103333,-0.35013896226882935,0.7134258151054382,Auxiliary verbs and copulas in factual statements
+harm-pressure-knowledge-report,honest,35,20486,1.1274323463439941,0.7781914472579956,-0.34924089908599854,0.6902334094047546,List items and enumerated elements in structured text
+harm-pressure-knowledge-report,honest,36,25026,0.8793980479240417,0.5318929553031921,-0.3475050926208496,0.6048375368118286,Expressions of epistemic uncertainty and limitations of knowledge
+harm-pressure-knowledge-report,honest,37,10044,0.9819205403327942,0.6354364156723022,-0.34648412466049194,0.6471362709999084,Explanatory notes and clarifications following structured output
+harm-pressure-knowledge-report,honest,38,60953,2.0589540004730225,1.7141236066818237,-0.34483039379119873,0.8325215578079224,Contraction 's in evaluative or definitive statements
+harm-pressure-knowledge-report,honest,39,64815,1.893525242805481,1.5495598316192627,-0.34396541118621826,0.8183465600013733,The assistant is constructing a step-by-step analytical explanation
+harm-pressure-knowledge-report,honest,40,12521,0.9599389433860779,0.6179237961769104,-0.3420151472091675,0.6437115669250488,Syntactic connectors in formal/technical writing
+harm-pressure-knowledge-report,honest,41,15313,1.1099357604980469,0.7687923908233643,-0.3411433696746826,0.6926458477973938,The assistant explains it is not capable of certain actions
+harm-pressure-knowledge-report,honest,42,6157,1.4184989929199219,1.0789562463760376,-0.3395427465438843,0.7606323957443237,The assistant needs clarification
+harm-pressure-knowledge-report,honest,43,9403,0.5718355774879456,0.23254695534706116,-0.3392886221408844,0.4066675305366516,Period marks end of definitive statement or response
+harm-pressure-knowledge-report,honest,44,38333,1.5163525342941284,1.17781662940979,-0.3385359048843384,0.7767432928085327,Space after date in system message header
+harm-pressure-knowledge-report,honest,45,518,1.1626062393188477,0.8266557455062866,-0.33595049381256104,0.711036741733551,Expressions of self-doubt and personal uncertainty
+harm-pressure-knowledge-report,honest,46,12413,3.3075504302978516,2.9741315841674805,-0.3334188461303711,0.8991946578025818,"Binary choice evaluation contexts, especially Yes/No questions"
+harm-pressure-knowledge-report,honest,47,64621,1.4383544921875,1.105520486831665,-0.33283400535583496,0.7686008214950562,Offensive request from the user
+harm-pressure-knowledge-report,honest,48,20815,1.185302734375,0.8532541990280151,-0.33204853534698486,0.7198618054389954,"Dual property constructions in technical writing, especially 'not only X but also Y' patterns"
+harm-pressure-knowledge-report,honest,49,54483,1.218848705291748,0.8880844712257385,-0.3307642340660095,0.7286256551742554,Negative contractions expressing limitations or boundaries
+harm-pressure-knowledge-report,honest,50,16821,1.2876224517822266,0.9586728811264038,-0.32894957065582275,0.7445294857025146,The assistant is identifying factual errors or inconsistencies

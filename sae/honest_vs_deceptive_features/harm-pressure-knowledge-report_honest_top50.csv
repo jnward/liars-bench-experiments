@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+harm-pressure-knowledge-report,honest,1,51183,4.056962966918945,The start of a user's turn to speak in a conversation
+harm-pressure-knowledge-report,honest,2,28870,4.031139373779297,The user is about to make a potentially problematic or dangerous request
+harm-pressure-knowledge-report,honest,3,64806,3.7104902267456055,User's turn to speak in the conversation
+harm-pressure-knowledge-report,honest,4,32422,3.6632537841796875,System prompt date separators that establish temporal context
+harm-pressure-knowledge-report,honest,5,59268,3.6465280055999756,User requests requiring content moderation or careful handling
+harm-pressure-knowledge-report,honest,6,36889,3.498509168624878,System message header containing model knowledge cutoff and current date metadata
+harm-pressure-knowledge-report,honest,7,54935,3.4974331855773926,End of message token in chat format
+harm-pressure-knowledge-report,honest,8,22026,3.495590925216675,Knowledge cutoff date marker in system context
+harm-pressure-knowledge-report,honest,9,11658,3.4447855949401855,The user's turn to speak in a conversation
+harm-pressure-knowledge-report,honest,10,49611,3.373283624649048,The user's turn to speak in a conversation
+harm-pressure-knowledge-report,honest,11,11977,3.3731930255889893,End of message token in chat format
+harm-pressure-knowledge-report,honest,12,47157,3.37052321434021,Chemical nomenclature formatting tokens
+harm-pressure-knowledge-report,honest,13,55790,3.351083517074585,feature_55790
+harm-pressure-knowledge-report,honest,14,12413,3.3075504302978516,"Binary choice evaluation contexts, especially Yes/No questions"
+harm-pressure-knowledge-report,honest,15,54933,3.2680768966674805,Instructions to avoid repetitive content in responses
+harm-pressure-knowledge-report,honest,16,49365,3.266817092895508,Instructions to avoid repeating the same content in responses
+harm-pressure-knowledge-report,honest,17,414,3.1999146938323975,Instructions to avoid repeating content in responses
+harm-pressure-knowledge-report,honest,18,870,3.141855478286743,System metadata tokens indicating model knowledge boundaries and conversation structure
+harm-pressure-knowledge-report,honest,19,57249,3.1230623722076416,User requests a detailed technical explanation with examples
+harm-pressure-knowledge-report,honest,20,47491,3.0811731815338135,Hyphens in scientific and technical compound terms
+harm-pressure-knowledge-report,honest,21,41532,2.9840383529663086,Chemical nomenclature parsing and hyphenation points
+harm-pressure-knowledge-report,honest,22,44279,2.9707608222961426,Knowledge cutoff date year 2023 in system messages
+harm-pressure-knowledge-report,honest,23,47597,2.9526822566986084,Knowledge cutoff year boundary in system context (2023)
+harm-pressure-knowledge-report,honest,24,45902,2.9385170936584473,Instructions to avoid repeating sentences in responses
+harm-pressure-knowledge-report,honest,25,57369,2.9171249866485596,Technical or industrial process descriptions
+harm-pressure-knowledge-report,honest,26,22531,2.893826961517334,Colon separator in system metadata date fields
+harm-pressure-knowledge-report,honest,27,17856,2.8807342052459717,The user wants to see code execution outputs in examples
+harm-pressure-knowledge-report,honest,28,50982,2.8714873790740967,System message date tokens for establishing conversation temporal context
+harm-pressure-knowledge-report,honest,29,53360,2.861603021621704,Hyphens in scientific and technical nomenclature
+harm-pressure-knowledge-report,honest,30,50055,2.8595943450927734,Text is transitioning to a concluding summary statement
+harm-pressure-knowledge-report,honest,31,58295,2.8594472408294678,Colon separator in datetime formatting within system messages
+harm-pressure-knowledge-report,honest,32,21237,2.8483235836029053,Knowledge cutoff date marker in system prompt
+harm-pressure-knowledge-report,honest,33,22842,2.8391871452331543,The assistant is qualifying or contrasting a previous statement to show nuanced thinking
+harm-pressure-knowledge-report,honest,34,46160,2.834291458129883,Knowledge cutoff date token in system message (December 2023)
+harm-pressure-knowledge-report,honest,35,15272,2.827953577041626,Phrases describing how one thing is determined or derived from another
+harm-pressure-knowledge-report,honest,36,37250,2.8213388919830322,Knowledge cutoff date marker in system prompt
+harm-pressure-knowledge-report,honest,37,26912,2.8046576976776123,Offensive request from the user
+harm-pressure-knowledge-report,honest,38,34806,2.8011257648468018,Offensive request from the user
+harm-pressure-knowledge-report,honest,39,39419,2.801020383834839,End of message token for tracking language switches and context boundaries
+harm-pressure-knowledge-report,honest,40,53383,2.799656391143799,The assistant is structuring a multi-part response
+harm-pressure-knowledge-report,honest,41,16880,2.7907915115356445,Offensive request from the user
+harm-pressure-knowledge-report,honest,42,22580,2.7885499000549316,Knowledge cutoff date marker in system header
+harm-pressure-knowledge-report,honest,43,49833,2.7696473598480225,Knowledge cutoff date marker in system messages
+harm-pressure-knowledge-report,honest,44,27230,2.768399715423584,Chinese explanatory grammar patterns and connecting words
+harm-pressure-knowledge-report,honest,45,41640,2.7668206691741943,System message date field delimiter
+harm-pressure-knowledge-report,honest,46,53277,2.7659237384796143,Knowledge cutoff date token in system message header
+harm-pressure-knowledge-report,honest,47,61112,2.764991044998169,Chemical manufacturing and distribution companies
+harm-pressure-knowledge-report,honest,48,23451,2.7499454021453857,Rainfall measurements in environmental conditions
+harm-pressure-knowledge-report,honest,49,25864,2.7418222427368164,System configuration headers that set conversation context
+harm-pressure-knowledge-report,honest,50,49354,2.7411818504333496,repeated placeholder or error characters

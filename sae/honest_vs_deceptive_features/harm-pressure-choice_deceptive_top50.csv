@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+harm-pressure-choice,deceptive,1,28870,3.855729341506958,The user is about to make a potentially problematic or dangerous request
+harm-pressure-choice,deceptive,2,36889,3.6507482528686523,System message header containing model knowledge cutoff and current date metadata
+harm-pressure-choice,deceptive,3,51183,3.541515588760376,The start of a user's turn to speak in a conversation
+harm-pressure-choice,deceptive,4,32422,3.232274055480957,System prompt date separators that establish temporal context
+harm-pressure-choice,deceptive,5,59268,3.1521811485290527,User requests requiring content moderation or careful handling
+harm-pressure-choice,deceptive,6,41532,3.141103506088257,Chemical nomenclature parsing and hyphenation points
+harm-pressure-choice,deceptive,7,44279,3.0799574851989746,Knowledge cutoff date year 2023 in system messages
+harm-pressure-choice,deceptive,8,55209,3.0597214698791504,"The assistant should provide a direct, single-token response"
+harm-pressure-choice,deceptive,9,49354,3.0257081985473633,repeated placeholder or error characters
+harm-pressure-choice,deceptive,10,34806,3.003248929977417,Offensive request from the user
+harm-pressure-choice,deceptive,11,53196,3.001244068145752,System header that establishes conversation context and parameters
+harm-pressure-choice,deceptive,12,11977,2.9156856536865234,End of message token in chat format
+harm-pressure-choice,deceptive,13,54935,2.8895580768585205,End of message token in chat format
+harm-pressure-choice,deceptive,14,49365,2.8881139755249023,Instructions to avoid repeating the same content in responses
+harm-pressure-choice,deceptive,15,22026,2.8812386989593506,Knowledge cutoff date marker in system context
+harm-pressure-choice,deceptive,16,49611,2.8650827407836914,The user's turn to speak in a conversation
+harm-pressure-choice,deceptive,17,12413,2.8362035751342773,"Binary choice evaluation contexts, especially Yes/No questions"
+harm-pressure-choice,deceptive,18,53277,2.8323278427124023,Knowledge cutoff date token in system message header
+harm-pressure-choice,deceptive,19,15314,2.8290088176727295,The assistant has completed its response to the current task
+harm-pressure-choice,deceptive,20,10809,2.8172519207000732,System message date fields that establish temporal context
+harm-pressure-choice,deceptive,21,37250,2.807220458984375,Knowledge cutoff date marker in system prompt
+harm-pressure-choice,deceptive,22,12272,2.8070032596588135,End of message token in multi-turn conversations
+harm-pressure-choice,deceptive,23,57249,2.805819511413574,User requests a detailed technical explanation with examples
+harm-pressure-choice,deceptive,24,63138,2.7946531772613525,System message containing year 2024
+harm-pressure-choice,deceptive,25,17148,2.789604902267456,Month abbreviation 'Jul' in system message date stamps
+harm-pressure-choice,deceptive,26,57369,2.782654047012329,Technical or industrial process descriptions
+harm-pressure-choice,deceptive,27,64806,2.782036542892456,User's turn to speak in the conversation
+harm-pressure-choice,deceptive,28,34480,2.7682013511657715,The year 2024 in system message timestamps
+harm-pressure-choice,deceptive,29,53383,2.7266361713409424,The assistant is structuring a multi-part response
+harm-pressure-choice,deceptive,30,18904,2.7080609798431396,End of message marker in conversation format
+harm-pressure-choice,deceptive,31,41640,2.6754772663116455,System message date field delimiter
+harm-pressure-choice,deceptive,32,28583,2.6680290699005127,Space after December in knowledge cutoff date headers
+harm-pressure-choice,deceptive,33,414,2.6505513191223145,Instructions to avoid repeating content in responses
+harm-pressure-choice,deceptive,34,39419,2.620131015777588,End of message token for tracking language switches and context boundaries
+harm-pressure-choice,deceptive,35,103,2.5953361988067627,The model should make a moral judgment between predefined options
+harm-pressure-choice,deceptive,36,9721,2.5925402641296387,The assistant needs clarification or must reject/redirect the user's request
+harm-pressure-choice,deceptive,37,20242,2.5915687084198,Message boundary markers in multi-turn conversations
+harm-pressure-choice,deceptive,38,31601,2.5695641040802,Questions about hydrometry rates for plant seeds
+harm-pressure-choice,deceptive,39,26912,2.55061936378479,Offensive request from the user
+harm-pressure-choice,deceptive,40,25227,2.5406737327575684,Message boundary markers in conversation format
+harm-pressure-choice,deceptive,41,20852,2.5388741493225098,End of message token in chat format
+harm-pressure-choice,deceptive,42,25864,2.5380287170410156,System configuration headers that set conversation context
+harm-pressure-choice,deceptive,43,23451,2.537281036376953,Rainfall measurements in environmental conditions
+harm-pressure-choice,deceptive,44,23263,2.5313944816589355,Formatting tokens in multilingual technical lists and structured content
+harm-pressure-choice,deceptive,45,58700,2.529191017150879,System metadata field separator in headers
+harm-pressure-choice,deceptive,46,870,2.520866632461548,System metadata tokens indicating model knowledge boundaries and conversation structure
+harm-pressure-choice,deceptive,47,32205,2.5201735496520996,Knowledge cutoff date marker in system prompt
+harm-pressure-choice,deceptive,48,22842,2.5187134742736816,The assistant is qualifying or contrasting a previous statement to show nuanced thinking
+harm-pressure-choice,deceptive,49,28001,2.4976067543029785,July in system date format
+harm-pressure-choice,deceptive,50,5760,2.4942855834960938,Instructions to avoid repeating the same thing in generated content

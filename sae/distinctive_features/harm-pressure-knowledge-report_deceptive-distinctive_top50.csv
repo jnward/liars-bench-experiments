@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+harm-pressure-knowledge-report,deceptive,1,54280,1.3969601392745972,1.9833413362503052,0.586381196975708,1.4197551012039185,Discussion of AI system access rights and capabilities
+harm-pressure-knowledge-report,deceptive,2,59268,3.6465280055999756,4.222246170043945,0.5757181644439697,1.1578811407089233,User requests requiring content moderation or careful handling
+harm-pressure-knowledge-report,deceptive,3,42976,0.5578641295433044,1.1219664812088013,0.5641023516654968,2.0111823081970215,Affirmative responses indicating submission or compliance
+harm-pressure-knowledge-report,deceptive,4,8379,1.1869913339614868,1.7468019723892212,0.5598106384277344,1.4716215133666992,Start of speaker identification header in chat format
+harm-pressure-knowledge-report,deceptive,5,65508,0.6393339037895203,1.1006323099136353,0.461298406124115,1.7215297222137451,Python code block structure and indentation
+harm-pressure-knowledge-report,deceptive,6,41393,1.562059760093689,2.013848304748535,0.4517885446548462,1.2892261743545532,feature_41393
+harm-pressure-knowledge-report,deceptive,7,11706,0.247568741440773,0.6978905200958252,0.4503217935562134,2.818976640701294,The assistant is about to provide a high-level explanation or overview
+harm-pressure-knowledge-report,deceptive,8,44519,2.2175354957580566,2.662081003189087,0.4445455074310303,1.2004683017730713,The user's turn to speak in a conversation
+harm-pressure-knowledge-report,deceptive,9,54282,1.1877245903015137,1.6143399477005005,0.4266153573989868,1.359187126159668,End of message turn in conversation format
+harm-pressure-knowledge-report,deceptive,10,46781,1.004038691520691,1.4150878190994263,0.41104912757873535,1.409395694732666,Transitional phrases and qualifiers in explanatory text
+harm-pressure-knowledge-report,deceptive,11,32781,0.5930384993553162,1.002335786819458,0.40929728746414185,1.6901698112487793,The assistant is providing a list of options
+harm-pressure-knowledge-report,deceptive,12,7325,0.8214640617370605,1.2299221754074097,0.4084581136703491,1.4972318410873413,Formatting line breaks in assistant responses
+harm-pressure-knowledge-report,deceptive,13,9378,1.253897786140442,1.6605868339538574,0.4066890478134155,1.3243398666381836,The user's turn to speak in multi-turn conversations
+harm-pressure-knowledge-report,deceptive,14,55281,0.40744563937187195,0.8138599395751953,0.40641430020332336,1.9974687099456787,Translation or conversion boundary markers
+harm-pressure-knowledge-report,deceptive,15,4436,0.8239275217056274,1.2244219779968262,0.40049445629119873,1.4860796928405762,Code defining node-based hierarchical data structures
+harm-pressure-knowledge-report,deceptive,16,57585,2.5519049167633057,2.951261520385742,0.3993566036224365,1.1564935445785522,System header date tokens that establish temporal context
+harm-pressure-knowledge-report,deceptive,17,15402,1.1404293775558472,1.5331796407699585,0.39275026321411133,1.3443880081176758,The assistant is providing supplementary list items beyond the core points
+harm-pressure-knowledge-report,deceptive,18,15456,0.5979336500167847,0.9893115758895874,0.39137792587280273,1.6545507907867432,Assistant's turn to speak in a structured conversation
+harm-pressure-knowledge-report,deceptive,19,37155,0.9209699034690857,1.3085659742355347,0.387596070766449,1.4208563566207886,Content or requests that should be excluded or rejected
+harm-pressure-knowledge-report,deceptive,20,22074,0.41714322566986084,0.8032636046409607,0.38612037897109985,1.9256302118301392,The assistant needs clarification
+harm-pressure-knowledge-report,deceptive,21,48303,1.4371559619903564,1.8225178718566895,0.385361909866333,1.2681419849395752,References to professional teams and staff expertise in corporate communications
+harm-pressure-knowledge-report,deceptive,22,10836,0.5467590093612671,0.9307413101196289,0.3839823007583618,1.702288031578064,The assistant explains its AI nature and limitations
+harm-pressure-knowledge-report,deceptive,23,12573,0.5088549256324768,0.8924866318702698,0.38363170623779297,1.7539117336273193,Linguistic evaluation and feedback terms
+harm-pressure-knowledge-report,deceptive,24,35402,0.836052656173706,1.2180888652801514,0.3820362091064453,1.4569523334503174,The assistant is about to provide a formatted example or template
+harm-pressure-knowledge-report,deceptive,25,30839,0.4352075159549713,0.8168249130249023,0.38161739706993103,1.8768631219863892,Instructions to make responses brief and simple
+harm-pressure-knowledge-report,deceptive,26,19840,0.8415359258651733,1.218870759010315,0.3773348331451416,1.4483882188796997,The assistant should reject the user's request
+harm-pressure-knowledge-report,deceptive,27,48284,0.359737366437912,0.7319628596305847,0.37222549319267273,2.034714460372925,The assistant needs clarification
+harm-pressure-knowledge-report,deceptive,28,51805,1.6615281105041504,2.033698081970215,0.37216997146606445,1.2239925861358643,Italian language contractions using apostrophes
+harm-pressure-knowledge-report,deceptive,29,64705,1.292466163635254,1.6640796661376953,0.3716135025024414,1.287522792816162,The user has a question using what's/who's/how's
+harm-pressure-knowledge-report,deceptive,30,22531,2.893826961517334,3.2628984451293945,0.36907148361206055,1.127537488937378,Colon separator in system metadata date fields
+harm-pressure-knowledge-report,deceptive,31,13381,1.218772053718567,1.5876235961914062,0.36885154247283936,1.3026419878005981,Offensive request from the user
+harm-pressure-knowledge-report,deceptive,32,63961,1.067915678024292,1.4339656829833984,0.36605000495910645,1.3427704572677612,Assistant agreeing to help in Russian conversations with Конечно (Of course)
+harm-pressure-knowledge-report,deceptive,33,6125,0.23816567659378052,0.6020578145980835,0.363892138004303,2.527894973754883,Statement termination markers in code and text generation
+harm-pressure-knowledge-report,deceptive,34,53890,0.687183678150177,1.0506572723388672,0.3634735941886902,1.5289322137832642,Professional writing flow and thought separation
+harm-pressure-knowledge-report,deceptive,35,42450,1.2804678678512573,1.6434531211853027,0.3629852533340454,1.2834786176681519,The assistant should encourage open dialogue by telling users to feel free to engage
+harm-pressure-knowledge-report,deceptive,36,9651,0.9182462692260742,1.2802678346633911,0.3620215654373169,1.3942532539367676,Comprehensive prevention and elimination of all possible risks or exceptions
+harm-pressure-knowledge-report,deceptive,37,10347,1.3208234310150146,1.681348204612732,0.3605247735977173,1.2729545831680298,The user is making a direct request for information or action
+harm-pressure-knowledge-report,deceptive,38,21836,0.7281610369682312,1.0879323482513428,0.3597713112831116,1.4940820932388306,The assistant is making a firm ethical rejection of an inappropriate request
+harm-pressure-knowledge-report,deceptive,39,31492,1.010891079902649,1.3640782833099365,0.3531872034072876,1.3493820428848267,References to the user's previous statements or questions
+harm-pressure-knowledge-report,deceptive,40,2795,1.2956641912460327,1.648781418800354,0.3531172275543213,1.2725375890731812,The assistant is about to provide a structured explanation
+harm-pressure-knowledge-report,deceptive,41,30233,1.0004148483276367,1.3526958227157593,0.35228097438812256,1.3521349430084229,Common English grammatical connectors (prepositions and conjunctions)
+harm-pressure-knowledge-report,deceptive,42,21949,1.7811614274978638,2.130502223968506,0.3493407964706421,1.1961308717727661,System header indicating content filtering boundaries
+harm-pressure-knowledge-report,deceptive,43,57048,0.9474350810050964,1.2966820001602173,0.34924691915512085,1.3686236143112183,The assistant is explaining its ethical constraints and limitations
+harm-pressure-knowledge-report,deceptive,44,55308,0.5934322476387024,0.9421219825744629,0.3486897349357605,1.5875813961029053,Character acknowledges inappropriate behavior while continuing it
+harm-pressure-knowledge-report,deceptive,45,17884,0.568706214427948,0.9166868329048157,0.3479806184768677,1.611881136894226,The assistant should reject the user's request
+harm-pressure-knowledge-report,deceptive,46,9398,0.6992399096488953,1.0453124046325684,0.3460724949836731,1.4949266910552979,Transitional phrases used when providing additional explanation or elaboration
+harm-pressure-knowledge-report,deceptive,47,41654,1.8742730617523193,2.219001531600952,0.3447284698486328,1.1839264631271362,feature_41654
+harm-pressure-knowledge-report,deceptive,48,62262,0.9667379856109619,1.311337947845459,0.34459996223449707,1.3564563989639282,Technical and professional terminology in systematic descriptions
+harm-pressure-knowledge-report,deceptive,49,57968,1.8216907978057861,2.166059970855713,0.34436917304992676,1.1890381574630737,Affirmative responses in document fact-checking tasks
+harm-pressure-knowledge-report,deceptive,50,53776,0.4348425269126892,0.7786775231361389,0.3438349962234497,1.790711522102356,AI making misleading claims about internet connectivity and access capabilities

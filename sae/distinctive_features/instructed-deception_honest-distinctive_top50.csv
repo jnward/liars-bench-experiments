@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+instructed-deception,honest,1,12210,1.0168217420578003,0.4152143597602844,-0.6016073822975159,0.4083452820777893,Narrative transitions that may lead to content guideline violations
+instructed-deception,honest,2,4029,1.0784434080123901,0.5007550716400146,-0.5776883363723755,0.46433132886886597,Connecting words in potentially harmful or manipulative requests
+instructed-deception,honest,3,64739,0.7187768220901489,0.15299053490161896,-0.5657863020896912,0.2128484547138214,Spanish language patterns about not having or needing to create accounts
+instructed-deception,honest,4,34442,1.2129443883895874,0.6625568270683289,-0.5503875613212585,0.5462384223937988,Phrases about learning or studying specific topics
+instructed-deception,honest,5,42853,0.7463865280151367,0.1987772434949875,-0.547609269618988,0.2663194537162781,Revolutionary rhetoric in fantastical narratives
+instructed-deception,honest,6,17490,0.7183937430381775,0.17754574120044708,-0.5408480167388916,0.24714265763759613,Offensive or discriminatory statements being quoted or analyzed
+instructed-deception,honest,7,47448,0.8063547015190125,0.2662155032157898,-0.5401391983032227,0.3301469087600708,Formal connecting phrases and transitional elements in structured text
+instructed-deception,honest,8,11617,1.644775390625,1.109074354171753,-0.5357010364532471,0.6743013858795166,Message boundary tokens in structured chat format
+instructed-deception,honest,9,38287,1.1173774003982544,0.6039556860923767,-0.5134217143058777,0.5405117869377136,Connecting words in promises and commitments
+instructed-deception,honest,10,39898,1.2526220083236694,0.7547367811203003,-0.49788522720336914,0.6025255918502808,Relational language in descriptive or explanatory contexts
+instructed-deception,honest,11,18207,0.7805015444755554,0.29224586486816406,-0.48825567960739136,0.3744334280490875,Corporate growth and strategic initiatives
+instructed-deception,honest,12,17132,0.6857276558876038,0.19794486463069916,-0.4877827763557434,0.28866395354270935,The assistant should respond with sarcasm or passive-aggressive politeness
+instructed-deception,honest,13,33959,0.8547250628471375,0.3815321624279022,-0.47319290041923523,0.44637998938560486,Language establishing the prominence or elite status of discussed entities
+instructed-deception,honest,14,34750,0.8548848032951355,0.3970721960067749,-0.4578126072883606,0.46447449922561646,Grammatical errors that need correction
+instructed-deception,honest,15,6013,1.2608251571655273,0.807303249835968,-0.4535219073295593,0.640297532081604,Mentor figures offering guidance and sanctuary in fantasy contexts
+instructed-deception,honest,16,29901,0.8592084646224976,0.40757426619529724,-0.4516341984272003,0.4743601679801941,Numbers and mathematical operations in computational contexts
+instructed-deception,honest,17,60774,0.8554751873016357,0.41237887740135193,-0.4430963099002838,0.48204657435417175,Linguistic connectors in potentially controversial or sensitive content
+instructed-deception,honest,18,24684,1.087722897529602,0.6450600624084473,-0.4426628351211548,0.5930371284484863,Assistant maintaining incorrect position despite user corrections
+instructed-deception,honest,19,30052,1.6263341903686523,1.1972784996032715,-0.42905569076538086,0.7361823320388794,Attempts to enable unrestricted operation modes to bypass safety controls
+instructed-deception,honest,20,22314,0.8269109129905701,0.3995884358882904,-0.42732247710227966,0.483230322599411,Minimizing or justifying harmful actions with phrases like 'just trying to'
+instructed-deception,honest,21,19251,0.7181696891784668,0.3011664152145386,-0.4170032739639282,0.4193527102470398,Narrative flow transitions between character states and actions
+instructed-deception,honest,22,41232,0.878632128238678,0.4713565409183502,-0.40727558732032776,0.5364663004875183,Connecting phrases that add detail or specificity to explanations
+instructed-deception,honest,23,27245,0.7131413221359253,0.317139595746994,-0.3960017263889313,0.4447079300880432,The assistant should maintain friendly engagement and show interest in the conversation
+instructed-deception,honest,24,3315,0.7884036302566528,0.39414215087890625,-0.3942614793777466,0.49992433190345764,Sensationalist news article writing style
+instructed-deception,honest,25,57701,0.5509948134422302,0.1681973785161972,-0.3827974200248718,0.3052612841129303,The introduction of methodologies or optimal approaches to achieve goals
+instructed-deception,honest,26,33929,0.8019388914108276,0.4196412265300751,-0.38229766488075256,0.5232833027839661,Copula verbs (forms of 'to be') in descriptive statements
+instructed-deception,honest,27,25062,1.3098810911178589,0.9280659556388855,-0.3818151354789734,0.7085115909576416,Assistant's turn transitions in multi-turn conversations
+instructed-deception,honest,28,59156,0.9126257300376892,0.53105628490448,-0.38156944513320923,0.5818992853164673,Complex explanatory sentence construction using formal language
+instructed-deception,honest,29,18316,1.3780747652053833,0.9965159893035889,-0.38155877590179443,0.7231218814849854,Examples of manipulative prompts shown to teach the AI about harmful content
+instructed-deception,honest,30,20947,1.8390142917633057,1.457594633102417,-0.38141965866088867,0.792595624923706,Psychiatric evaluation terminology and assessment categories
+instructed-deception,honest,31,42834,0.8282310962677002,0.4487346112728119,-0.3794964849948883,0.5417987704277039,Whimsical or nonsensical narrative content
+instructed-deception,honest,32,34546,1.4396381378173828,1.0628069639205933,-0.37683117389678955,0.7382459044456482,Summary statements requiring factual verification
+instructed-deception,honest,33,13215,0.8967586159706116,0.5212259292602539,-0.37553268671035767,0.5812332630157471,Dramatic internal monologues and theatrical asides in character writing
+instructed-deception,honest,34,64434,1.013166904449463,0.6408591866493225,-0.3723077178001404,0.632530689239502,Articles and conjunctions in physical descriptions
+instructed-deception,honest,35,8939,1.1771180629730225,0.8066818714141846,-0.3704361915588379,0.6853024363517761,Transitional phrases in positive recommendations and reviews
+instructed-deception,honest,36,11790,1.054652214050293,0.6863121390342712,-0.36834007501602173,0.6507473587989807,The assistant is pretending to give anti-hypnosis training that actually makes people more susceptible
+instructed-deception,honest,37,60067,2.103649854660034,1.7368793487548828,-0.36677050590515137,0.8256503939628601,The assistant needs to maintain professional boundaries and reject inappropriate requests
+instructed-deception,honest,38,41630,0.9843100905418396,0.6204224228858948,-0.3638876676559448,0.6303119659423828,Connecting words in cumulative technical descriptions
+instructed-deception,honest,39,23440,1.9914124011993408,1.6280113458633423,-0.36340105533599854,0.8175159096717834,Syntactical sugar in programming languages
+instructed-deception,honest,40,23017,0.8206180334091187,0.45899859070777893,-0.3616194427013397,0.5593327879905701,Complex sentence construction and academic discourse markers
+instructed-deception,honest,41,47075,1.0919675827026367,0.7305775284767151,-0.36139005422592163,0.6690468788146973,The assistant explaining its limitations and capabilities
+instructed-deception,honest,42,4366,0.7356623411178589,0.3818969428539276,-0.3537653982639313,0.5191198587417603,Professional occupations and institutional workplaces
+instructed-deception,honest,43,5079,1.6521782875061035,1.2986376285552979,-0.35354065895080566,0.7860154509544373,"Definitional or descriptive statements, especially those using 'is a' or similar constructions"
+instructed-deception,honest,44,47388,0.8687166571617126,0.5159298181533813,-0.3527868390083313,0.5938988327980042,Detailed personification in fiction
+instructed-deception,honest,45,61578,0.6018651127815247,0.2511097490787506,-0.35075536370277405,0.4172193109989166,Linguistic markers of disagreement and attempted persuasion in dialogue
+instructed-deception,honest,46,16576,1.1687424182891846,0.8206449747085571,-0.34809744358062744,0.702160656452179,Phrases describing processes for achieving goals or transformation
+instructed-deception,honest,47,18225,1.4313660860061646,1.0837507247924805,-0.3476153612136841,0.7571443319320679,Connecting related ideas or items in a sequence
+instructed-deception,honest,48,19744,1.1764264106750488,0.8326593637466431,-0.34376704692840576,0.707787036895752,Code formatting and syntax highlighting tokens
+instructed-deception,honest,49,54307,1.6266168355941772,1.2847278118133545,-0.34188902378082275,0.7898159027099609,Auxiliary verbs in formal professional writing
+instructed-deception,honest,50,49538,0.7810395359992981,0.44510290026664734,-0.33593663573265076,0.56988525390625,Descriptive relationship constructions using linking verbs and articles

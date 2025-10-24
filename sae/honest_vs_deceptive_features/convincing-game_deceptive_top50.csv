@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+convincing-game,deceptive,1,34806,4.500327110290527,Offensive request from the user
+convincing-game,deceptive,2,51183,4.496103286743164,The start of a user's turn to speak in a conversation
+convincing-game,deceptive,3,28870,4.357447147369385,The user is about to make a potentially problematic or dangerous request
+convincing-game,deceptive,4,32422,4.350982666015625,System prompt date separators that establish temporal context
+convincing-game,deceptive,5,64806,4.322350978851318,User's turn to speak in the conversation
+convincing-game,deceptive,6,55790,4.04595422744751,feature_55790
+convincing-game,deceptive,7,63138,3.930511713027954,System message containing year 2024
+convincing-game,deceptive,8,47157,3.91324520111084,Chemical nomenclature formatting tokens
+convincing-game,deceptive,9,870,3.8914012908935547,System metadata tokens indicating model knowledge boundaries and conversation structure
+convincing-game,deceptive,10,47491,3.778092861175537,Hyphens in scientific and technical compound terms
+convincing-game,deceptive,11,49365,3.7750489711761475,Instructions to avoid repeating the same content in responses
+convincing-game,deceptive,12,22531,3.752634286880493,Colon separator in system metadata date fields
+convincing-game,deceptive,13,59268,3.7181010246276855,User requests requiring content moderation or careful handling
+convincing-game,deceptive,14,25864,3.6868207454681396,System configuration headers that set conversation context
+convincing-game,deceptive,15,26912,3.6699724197387695,Offensive request from the user
+convincing-game,deceptive,16,414,3.598381280899048,Instructions to avoid repeating content in responses
+convincing-game,deceptive,17,54933,3.551236391067505,Instructions to avoid repetitive content in responses
+convincing-game,deceptive,18,49611,3.4874956607818604,The user's turn to speak in a conversation
+convincing-game,deceptive,19,41532,3.4819939136505127,Chemical nomenclature parsing and hyphenation points
+convincing-game,deceptive,20,17148,3.4508213996887207,Month abbreviation 'Jul' in system message date stamps
+convincing-game,deceptive,21,22026,3.3793087005615234,Knowledge cutoff date marker in system context
+convincing-game,deceptive,22,44279,3.367633819580078,Knowledge cutoff date year 2023 in system messages
+convincing-game,deceptive,23,22593,3.3536815643310547,Knowledge cutoff date specification showing December 2023
+convincing-game,deceptive,24,34480,3.3233776092529297,The year 2024 in system message timestamps
+convincing-game,deceptive,25,57369,3.3113608360290527,Technical or industrial process descriptions
+convincing-game,deceptive,26,36889,3.30942702293396,System message header containing model knowledge cutoff and current date metadata
+convincing-game,deceptive,27,53360,3.306735038757324,Hyphens in scientific and technical nomenclature
+convincing-game,deceptive,28,53277,3.302647113800049,Knowledge cutoff date token in system message header
+convincing-game,deceptive,29,11658,3.3004913330078125,The user's turn to speak in a conversation
+convincing-game,deceptive,30,21237,3.280626058578491,Knowledge cutoff date marker in system prompt
+convincing-game,deceptive,31,58700,3.277379274368286,System metadata field separator in headers
+convincing-game,deceptive,32,28001,3.271930694580078,July in system date format
+convincing-game,deceptive,33,54935,3.2547338008880615,End of message token in chat format
+convincing-game,deceptive,34,57366,3.1888301372528076,Today's date in system message metadata
+convincing-game,deceptive,35,31601,3.186840772628784,Questions about hydrometry rates for plant seeds
+convincing-game,deceptive,36,2639,3.1856446266174316,Content moderation flag tokens in potentially inappropriate requests
+convincing-game,deceptive,37,8324,3.1762094497680664,Month of July in date formats
+convincing-game,deceptive,38,47597,3.1735496520996094,Knowledge cutoff year boundary in system context (2023)
+convincing-game,deceptive,39,32205,3.162368059158325,Knowledge cutoff date marker in system prompt
+convincing-game,deceptive,40,2384,3.153904676437378,Transition point after knowledge cutoff date metadata
+convincing-game,deceptive,41,1239,3.141509771347046,The user's turn to speak in a multi-turn conversation
+convincing-game,deceptive,42,49354,3.141218900680542,repeated placeholder or error characters
+convincing-game,deceptive,43,63062,3.1177549362182617,Marks the beginning of user input in conversation formats
+convincing-game,deceptive,44,39419,3.116778612136841,End of message token for tracking language switches and context boundaries
+convincing-game,deceptive,45,28583,3.09958553314209,Space after December in knowledge cutoff date headers
+convincing-game,deceptive,46,16880,3.0905919075012207,Offensive request from the user
+convincing-game,deceptive,47,11186,3.085831880569458,Request for soil type information in plant growing conditions
+convincing-game,deceptive,48,11977,3.0752413272857666,End of message token in chat format
+convincing-game,deceptive,49,26784,3.0730226039886475,July in system date headers
+convincing-game,deceptive,50,53383,3.0626943111419678,The assistant is structuring a multi-part response

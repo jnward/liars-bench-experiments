@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+soft-trigger,deceptive,1,51183,4.499900817871094,The start of a user's turn to speak in a conversation
+soft-trigger,deceptive,2,32422,4.07880163192749,System prompt date separators that establish temporal context
+soft-trigger,deceptive,3,36889,3.8538763523101807,System message header containing model knowledge cutoff and current date metadata
+soft-trigger,deceptive,4,49354,3.7154343128204346,repeated placeholder or error characters
+soft-trigger,deceptive,5,44279,3.640399694442749,Knowledge cutoff date year 2023 in system messages
+soft-trigger,deceptive,6,58700,3.5823476314544678,System metadata field separator in headers
+soft-trigger,deceptive,7,54935,3.5557312965393066,End of message token in chat format
+soft-trigger,deceptive,8,59268,3.5140528678894043,User requests requiring content moderation or careful handling
+soft-trigger,deceptive,9,15314,3.498943567276001,The assistant has completed its response to the current task
+soft-trigger,deceptive,10,18904,3.4711084365844727,End of message marker in conversation format
+soft-trigger,deceptive,11,55790,3.4399759769439697,feature_55790
+soft-trigger,deceptive,12,28870,3.3422796726226807,The user is about to make a potentially problematic or dangerous request
+soft-trigger,deceptive,13,53196,3.332929849624634,System header that establishes conversation context and parameters
+soft-trigger,deceptive,14,22531,3.2982430458068848,Colon separator in system metadata date fields
+soft-trigger,deceptive,15,49365,3.2596895694732666,Instructions to avoid repeating the same content in responses
+soft-trigger,deceptive,16,31601,3.253974676132202,Questions about hydrometry rates for plant seeds
+soft-trigger,deceptive,17,414,3.1828389167785645,Instructions to avoid repeating content in responses
+soft-trigger,deceptive,18,28583,3.1310946941375732,Space after December in knowledge cutoff date headers
+soft-trigger,deceptive,19,22026,3.066892385482788,Knowledge cutoff date marker in system context
+soft-trigger,deceptive,20,35214,3.0505051612854004,Standard business writing pattern establishing company authority in introductions
+soft-trigger,deceptive,21,34480,3.0364019870758057,The year 2024 in system message timestamps
+soft-trigger,deceptive,22,41532,3.0361430644989014,Chemical nomenclature parsing and hyphenation points
+soft-trigger,deceptive,23,63138,3.0197865962982178,System message containing year 2024
+soft-trigger,deceptive,24,49611,3.0139317512512207,The user's turn to speak in a conversation
+soft-trigger,deceptive,25,21237,2.946948289871216,Knowledge cutoff date marker in system prompt
+soft-trigger,deceptive,26,49833,2.943880081176758,Knowledge cutoff date marker in system messages
+soft-trigger,deceptive,27,47491,2.931382417678833,Hyphens in scientific and technical compound terms
+soft-trigger,deceptive,28,39419,2.920233964920044,End of message token for tracking language switches and context boundaries
+soft-trigger,deceptive,29,54933,2.911597490310669,Instructions to avoid repetitive content in responses
+soft-trigger,deceptive,30,57249,2.9077460765838623,User requests a detailed technical explanation with examples
+soft-trigger,deceptive,31,59072,2.9050116539001465,System message date information delimiter
+soft-trigger,deceptive,32,32205,2.896552085876465,Knowledge cutoff date marker in system prompt
+soft-trigger,deceptive,33,27230,2.8867886066436768,Chinese explanatory grammar patterns and connecting words
+soft-trigger,deceptive,34,16880,2.8799736499786377,Offensive request from the user
+soft-trigger,deceptive,35,870,2.8714377880096436,System metadata tokens indicating model knowledge boundaries and conversation structure
+soft-trigger,deceptive,36,53277,2.8527989387512207,Knowledge cutoff date token in system message header
+soft-trigger,deceptive,37,12413,2.8486151695251465,"Binary choice evaluation contexts, especially Yes/No questions"
+soft-trigger,deceptive,38,22842,2.8183419704437256,The assistant is qualifying or contrasting a previous statement to show nuanced thinking
+soft-trigger,deceptive,39,20242,2.8180935382843018,Message boundary markers in multi-turn conversations
+soft-trigger,deceptive,40,37158,2.79960298538208,Knowledge cutoff date marker in system messages
+soft-trigger,deceptive,41,17856,2.797802686691284,The user wants to see code execution outputs in examples
+soft-trigger,deceptive,42,26784,2.7946252822875977,July in system date headers
+soft-trigger,deceptive,43,50981,2.7910757064819336,The user has asked a question and is awaiting response
+soft-trigger,deceptive,44,1376,2.78914475440979,Knowledge cutoff date in system messages
+soft-trigger,deceptive,45,41640,2.7830302715301514,System message date field delimiter
+soft-trigger,deceptive,46,57630,2.7639760971069336,Measurement units and property specifications
+soft-trigger,deceptive,47,58295,2.763000726699829,Colon separator in datetime formatting within system messages
+soft-trigger,deceptive,48,53383,2.757723093032837,The assistant is structuring a multi-part response
+soft-trigger,deceptive,49,22593,2.7526869773864746,Knowledge cutoff date specification showing December 2023
+soft-trigger,deceptive,50,64806,2.726656436920166,User's turn to speak in the conversation

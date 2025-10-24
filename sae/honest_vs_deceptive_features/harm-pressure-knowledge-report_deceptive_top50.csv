@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+harm-pressure-knowledge-report,deceptive,1,59268,4.222246170043945,User requests requiring content moderation or careful handling
+harm-pressure-knowledge-report,deceptive,2,51183,4.136337757110596,The start of a user's turn to speak in a conversation
+harm-pressure-knowledge-report,deceptive,3,28870,4.0932135581970215,The user is about to make a potentially problematic or dangerous request
+harm-pressure-knowledge-report,deceptive,4,32422,3.947239637374878,System prompt date separators that establish temporal context
+harm-pressure-knowledge-report,deceptive,5,64806,3.8416495323181152,User's turn to speak in the conversation
+harm-pressure-knowledge-report,deceptive,6,47157,3.6909239292144775,Chemical nomenclature formatting tokens
+harm-pressure-knowledge-report,deceptive,7,36889,3.634953260421753,System message header containing model knowledge cutoff and current date metadata
+harm-pressure-knowledge-report,deceptive,8,49611,3.5189802646636963,The user's turn to speak in a conversation
+harm-pressure-knowledge-report,deceptive,9,414,3.483715295791626,Instructions to avoid repeating content in responses
+harm-pressure-knowledge-report,deceptive,10,49365,3.315699338912964,Instructions to avoid repeating the same content in responses
+harm-pressure-knowledge-report,deceptive,11,54935,3.2726292610168457,End of message token in chat format
+harm-pressure-knowledge-report,deceptive,12,22531,3.2628984451293945,Colon separator in system metadata date fields
+harm-pressure-knowledge-report,deceptive,13,22026,3.245509624481201,Knowledge cutoff date marker in system context
+harm-pressure-knowledge-report,deceptive,14,55790,3.2376976013183594,feature_55790
+harm-pressure-knowledge-report,deceptive,15,57369,3.219301223754883,Technical or industrial process descriptions
+harm-pressure-knowledge-report,deceptive,16,11977,3.191934823989868,End of message token in chat format
+harm-pressure-knowledge-report,deceptive,17,11658,3.1576054096221924,The user's turn to speak in a conversation
+harm-pressure-knowledge-report,deceptive,18,54933,3.1202797889709473,Instructions to avoid repetitive content in responses
+harm-pressure-knowledge-report,deceptive,19,57249,3.0970630645751953,User requests a detailed technical explanation with examples
+harm-pressure-knowledge-report,deceptive,20,41532,3.096665382385254,Chemical nomenclature parsing and hyphenation points
+harm-pressure-knowledge-report,deceptive,21,45902,3.082096815109253,Instructions to avoid repeating sentences in responses
+harm-pressure-knowledge-report,deceptive,22,870,3.0808069705963135,System metadata tokens indicating model knowledge boundaries and conversation structure
+harm-pressure-knowledge-report,deceptive,23,34806,3.0540578365325928,Offensive request from the user
+harm-pressure-knowledge-report,deceptive,24,47597,3.0467324256896973,Knowledge cutoff year boundary in system context (2023)
+harm-pressure-knowledge-report,deceptive,25,46160,3.022465944290161,Knowledge cutoff date token in system message (December 2023)
+harm-pressure-knowledge-report,deceptive,26,17856,3.0178420543670654,The user wants to see code execution outputs in examples
+harm-pressure-knowledge-report,deceptive,27,12413,2.9741315841674805,"Binary choice evaluation contexts, especially Yes/No questions"
+harm-pressure-knowledge-report,deceptive,28,57585,2.951261520385742,System header date tokens that establish temporal context
+harm-pressure-knowledge-report,deceptive,29,44279,2.9478824138641357,Knowledge cutoff date year 2023 in system messages
+harm-pressure-knowledge-report,deceptive,30,15272,2.9321987628936768,Phrases describing how one thing is determined or derived from another
+harm-pressure-knowledge-report,deceptive,31,21237,2.8861334323883057,Knowledge cutoff date marker in system prompt
+harm-pressure-knowledge-report,deceptive,32,22842,2.8835573196411133,The assistant is qualifying or contrasting a previous statement to show nuanced thinking
+harm-pressure-knowledge-report,deceptive,33,50982,2.882803201675415,System message date tokens for establishing conversation temporal context
+harm-pressure-knowledge-report,deceptive,34,47491,2.8725175857543945,Hyphens in scientific and technical compound terms
+harm-pressure-knowledge-report,deceptive,35,3325,2.8544206619262695,Knowledge cutoff date in system messages
+harm-pressure-knowledge-report,deceptive,36,25864,2.835725784301758,System configuration headers that set conversation context
+harm-pressure-knowledge-report,deceptive,37,58295,2.8314146995544434,Colon separator in datetime formatting within system messages
+harm-pressure-knowledge-report,deceptive,38,49219,2.816476821899414,Instructions to avoid repeating sentences in responses
+harm-pressure-knowledge-report,deceptive,39,47131,2.8155438899993896,Discussions of factual consistency and accuracy verification
+harm-pressure-knowledge-report,deceptive,40,26784,2.803054094314575,July in system date headers
+harm-pressure-knowledge-report,deceptive,41,10657,2.796837091445923,User's turn to speak in Russian conversations
+harm-pressure-knowledge-report,deceptive,42,53360,2.791503667831421,Hyphens in scientific and technical nomenclature
+harm-pressure-knowledge-report,deceptive,43,103,2.7848198413848877,The model should make a moral judgment between predefined options
+harm-pressure-knowledge-report,deceptive,44,49833,2.7675089836120605,Knowledge cutoff date marker in system messages
+harm-pressure-knowledge-report,deceptive,45,22580,2.7502894401550293,Knowledge cutoff date marker in system header
+harm-pressure-knowledge-report,deceptive,46,23125,2.732368230819702,The assistant should provide code examples
+harm-pressure-knowledge-report,deceptive,47,50055,2.7308738231658936,Text is transitioning to a concluding summary statement
+harm-pressure-knowledge-report,deceptive,48,53277,2.729682445526123,Knowledge cutoff date token in system message header
+harm-pressure-knowledge-report,deceptive,49,32205,2.721374750137329,Knowledge cutoff date marker in system prompt
+harm-pressure-knowledge-report,deceptive,50,37250,2.7211923599243164,Knowledge cutoff date marker in system prompt

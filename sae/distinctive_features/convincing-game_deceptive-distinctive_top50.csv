@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+convincing-game,deceptive,1,34806,3.421004295349121,4.500327110290527,1.0793228149414062,1.3154988288879395,Offensive request from the user
+convincing-game,deceptive,2,10008,0.5022663474082947,1.1617275476455688,0.6594612002372742,2.3129711151123047,"Statements about limitations, fallibility, and what something is not capable of"
+convincing-game,deceptive,3,9890,0.9557871222496033,1.6036540269851685,0.6478669047355652,1.6778359413146973,HTML comments and code structure markers
+convincing-game,deceptive,4,49442,1.8619149923324585,2.401724100112915,0.5398091077804565,1.2899214029312134,Passive voice constructions describing coercive or non-consensual actions
+convincing-game,deceptive,5,11434,1.103594183921814,1.619532585144043,0.515938401222229,1.4675073623657227,Copular and linking phrases that establish relationships or classifications
+convincing-game,deceptive,6,37104,1.3888193368911743,1.8932642936706543,0.50444495677948,1.3632185459136963,The assistant should reject harmful or illegal requests
+convincing-game,deceptive,7,10380,0.421800822019577,0.9176637530326843,0.4958629310131073,2.1755855083465576,The assistant needs to establish boundaries and explain its limitations as an AI
+convincing-game,deceptive,8,34090,1.153300404548645,1.644415259361267,0.49111485481262207,1.42583429813385,Advanced monitoring and control systems in technical documentation
+convincing-game,deceptive,9,53172,0.8765726685523987,1.363542914390564,0.4869702458381653,1.5555388927459717,Syntactic tokens for connecting and elaborating on ideas
+convincing-game,deceptive,10,656,0.959807813167572,1.44264554977417,0.4828377366065979,1.5030566453933716,AI describing its own capabilities and connecting multiple abilities
+convincing-game,deceptive,11,31738,1.8579527139663696,2.3307013511657715,0.47274863719940186,1.254446029663086,The assistant should reject inappropriate requests while emphasizing respect and equality
+convincing-game,deceptive,12,13689,1.3524436950683594,1.8227709531784058,0.4703272581100464,1.3477610349655151,The assistant is diplomatically explaining why something is inappropriate or needs more careful consideration
+convincing-game,deceptive,13,62440,0.9903422594070435,1.4541866779327393,0.4638444185256958,1.4683678150177002,List continuation and enumeration patterns
+convincing-game,deceptive,14,4724,1.0011450052261353,1.4639424085617065,0.4627974033355713,1.4622681140899658,Syntactical sugar in programming languages
+convincing-game,deceptive,15,51183,4.036773681640625,4.496103286743164,0.45932960510253906,1.1137863397598267,The start of a user's turn to speak in a conversation
+convincing-game,deceptive,16,31322,1.7136900424957275,2.172544240951538,0.45885419845581055,1.2677580118179321,Offensive request from the user
+convincing-game,deceptive,17,44903,0.9638068079948425,1.4177451133728027,0.4539383053779602,1.470984697341919,Narrative flow and progression markers in explanatory text
+convincing-game,deceptive,18,61739,0.7075988054275513,1.152357816696167,0.4447590112686157,1.6285468339920044,The assistant is providing a list of options
+convincing-game,deceptive,19,22251,0.376415491104126,0.8188310265541077,0.4424155354499817,2.1753382682800293,The assistant is providing a list of options
+convincing-game,deceptive,20,20320,1.5011969804763794,1.942512035369873,0.44131505489349365,1.2939754724502563,Explanatory conjunctions in technical writing
+convincing-game,deceptive,21,16842,1.2084540128707886,1.648919939994812,0.44046592712402344,1.3644871711730957,Narrative flow and sentence construction connectors
+convincing-game,deceptive,22,15424,0.4238133430480957,0.8614234924316406,0.4376101493835449,2.0325539112091064,The assistant explains it is a program designed to process and generate text
+convincing-game,deceptive,23,48661,0.9807486534118652,1.4179329872131348,0.43718433380126953,1.4457659721374512,"Different choices, alternatives, or possible paths forward"
+convincing-game,deceptive,24,62893,0.9716391563415527,1.4025013446807861,0.4308621883392334,1.4434385299682617,The model explaining its ability to generate responses to input
+convincing-game,deceptive,25,48136,1.0492945909500122,1.4784491062164307,0.42915451526641846,1.4089933633804321,Transitioning to important advice or key takeaways
+convincing-game,deceptive,26,46941,1.3528363704681396,1.781259536743164,0.4284231662750244,1.3166850805282593,specialized notation and terminology in formal documents
+convincing-game,deceptive,27,53776,0.8928405046463013,1.3181670904159546,0.4253265857696533,1.476374626159668,AI making misleading claims about internet connectivity and access capabilities
+convincing-game,deceptive,28,885,1.7747745513916016,2.198260545730591,0.42348599433898926,1.2386139631271362,Explanatory bridging words that connect ideas or establish relationships
+convincing-game,deceptive,29,13608,0.7838217616081238,1.2024208307266235,0.41859906911849976,1.5340487957000732,The assistant acknowledging mistakes and providing corrections
+convincing-game,deceptive,30,19316,1.6461782455444336,2.062354326248169,0.41617608070373535,1.252813458442688,Scientific measurement and observation of behavior and physiological processes
+convincing-game,deceptive,31,9802,1.466012954711914,1.878629207611084,0.4126162528991699,1.2814546823501587,Function words in formal technical writing
+convincing-game,deceptive,32,42899,1.150988221168518,1.5634119510650635,0.4124237298965454,1.3583214282989502,"The assistant is providing a structured, detailed explanation or list"
+convincing-game,deceptive,33,22104,1.291452169418335,1.703802466392517,0.41235029697418213,1.3192919492721558,feature_22104
+convincing-game,deceptive,34,57521,0.8637987971305847,1.2753111124038696,0.4115123152732849,1.4763983488082886,Careful technical writing with measured qualifications and transitions
+convincing-game,deceptive,35,4047,1.4004024267196655,1.811801791191101,0.41139936447143555,1.2937722206115723,Logical connectors and transition phrases that link related concepts
+convincing-game,deceptive,36,11870,1.7822761535644531,2.1917507648468018,0.40947461128234863,1.2297481298446655,System metadata header containing knowledge cutoff and current date
+convincing-game,deceptive,37,27335,0.7080312967300415,1.1131823062896729,0.40515100955963135,1.5722218751907349,Narrative transitions and connecting phrases between ideas
+convincing-game,deceptive,38,64231,1.7302935123443604,2.1340725421905518,0.4037790298461914,1.2333587408065796,"The assistant is providing structured, step-by-step explanations"
+convincing-game,deceptive,39,28157,1.3023490905761719,1.7026550769805908,0.40030598640441895,1.3073722124099731,The assistant should generate creative or explanatory content in response to prompts
+convincing-game,deceptive,40,63002,1.6387215852737427,2.0356929302215576,0.39697134494781494,1.2422444820404053,Syntactic markers in multi-part explanations
+convincing-game,deceptive,41,38481,1.4455302953720093,1.8410894870758057,0.3955591917037964,1.2736430168151855,"Structured information organization patterns like lists, tables and hierarchies"
+convincing-game,deceptive,42,34419,1.4532690048217773,1.8482308387756348,0.3949618339538574,1.2717747688293457,Grammatical dependencies and subordinate clauses in Romance languages
+convincing-game,deceptive,43,42624,0.6445266008377075,1.039290189743042,0.3947635889053345,1.6124861240386963,Connecting words and phrases used to build complex explanations
+convincing-game,deceptive,44,47674,1.8222519159317017,2.2155022621154785,0.39325034618377686,1.2158045768737793,Repeated character sequences indicating potential spam or malformed input
+convincing-game,deceptive,45,61771,1.4585388898849487,1.8506264686584473,0.39208757877349854,1.268822193145752,Expressions of positive potential or beneficial possibilities
+convincing-game,deceptive,46,57249,2.4156384468078613,2.8040599822998047,0.38842153549194336,1.1607946157455444,User requests a detailed technical explanation with examples
+convincing-game,deceptive,47,29064,1.4624574184417725,1.8476828336715698,0.38522541522979736,1.2634096145629883,Database schema metadata fields and entity labels
+convincing-game,deceptive,48,31379,1.5975326299667358,1.9809653759002686,0.3834327459335327,1.2400156259536743,Explaining essential characteristics or dependencies in formal contexts
+convincing-game,deceptive,49,37861,0.3918167054653168,0.7721216082572937,0.38030490279197693,1.9706194400787354,The assistant is soliciting or discussing feedback and concerns
+convincing-game,deceptive,50,21570,0.7407693266868591,1.119331955909729,0.3785626292228699,1.5110398530960083,The assistant explaining its nature as software/AI

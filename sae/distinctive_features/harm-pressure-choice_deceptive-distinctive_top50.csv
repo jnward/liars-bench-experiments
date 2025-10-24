@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+harm-pressure-choice,deceptive,1,13608,0.2900598347187042,0.5304999351501465,0.24044010043144226,1.828932762145996,The assistant acknowledging mistakes and providing corrections
+harm-pressure-choice,deceptive,2,32354,0.810199499130249,1.0207022428512573,0.2105027437210083,1.2598159313201904,"Code completion patterns, particularly closing statements and final calculations"
+harm-pressure-choice,deceptive,3,25864,2.3301990032196045,2.5380287170410156,0.20782971382141113,1.0891896486282349,System configuration headers that set conversation context
+harm-pressure-choice,deceptive,4,62827,0.509625256061554,0.7053965330123901,0.19577127695083618,1.3841475248336792,Table formatting characters and column separators
+harm-pressure-choice,deceptive,5,675,0.9686484932899475,1.148876667022705,0.18022817373275757,1.1860615015029907,Russian grammatical suffixes in technical writing
+harm-pressure-choice,deceptive,6,15562,0.48524758219718933,0.6491712927818298,0.1639237105846405,1.3378145694732666,The assistant's turn to speak in a conversation
+harm-pressure-choice,deceptive,7,43045,1.6280903816223145,1.7910064458847046,0.16291606426239014,1.1000657081604004,System message datetime field for establishing conversation temporal context
+harm-pressure-choice,deceptive,8,32860,0.5882324576377869,0.7483840584754944,0.16015160083770752,1.272258996963501,Technical terms and identifiers being referenced multiple times
+harm-pressure-choice,deceptive,9,44215,0.8593494892120361,1.0187231302261353,0.15937364101409912,1.1854584217071533,Locating or modifying specific items in technical contexts
+harm-pressure-choice,deceptive,10,4724,0.9527068734169006,1.111171841621399,0.1584649682044983,1.1663312911987305,Syntactical sugar in programming languages
+harm-pressure-choice,deceptive,11,9676,0.17747379839420319,0.3354668915271759,0.15799309313297272,1.8902333974838257,List formatting tokens and measurement units
+harm-pressure-choice,deceptive,12,39397,0.7598758339881897,0.9154862761497498,0.15561044216156006,1.2047840356826782,Text composition and idea connection points
+harm-pressure-choice,deceptive,13,34724,0.5774279236793518,0.7319459915161133,0.15451806783676147,1.2675971984863281,The assistant is explaining concepts or providing helpful information in a constructive way
+harm-pressure-choice,deceptive,14,41604,0.574393093585968,0.7270980477333069,0.15270495414733887,1.2658544778823853,Formatting tokens for structured text output like lists and SQL queries
+harm-pressure-choice,deceptive,15,3664,1.9082293510437012,2.0584475994110107,0.15021824836730957,1.078721284866333,System header temporal context dates
+harm-pressure-choice,deceptive,16,54755,0.7738418579101562,0.923271894454956,0.1494300365447998,1.1931015253067017,Discussions of domestic or internal political consequences
+harm-pressure-choice,deceptive,17,63004,1.5455012321472168,1.6908810138702393,0.14537978172302246,1.0940663814544678,Corporate commitment language expressing dedication to values or service
+harm-pressure-choice,deceptive,18,7432,0.3082016706466675,0.4531170725822449,0.1449154019355774,1.4701967239379883,Numbers and operators in structured data formats
+harm-pressure-choice,deceptive,19,39963,0.3762720227241516,0.5194718241691589,0.14319980144500732,1.380575180053711,Medical examination sections and terminology in clinical documentation
+harm-pressure-choice,deceptive,20,12300,1.1328667402267456,1.2746936082839966,0.14182686805725098,1.1251928806304932,The assistant should reject the user's inappropriate or harmful request
+harm-pressure-choice,deceptive,21,19241,0.4555134177207947,0.5968946814537048,0.14138126373291016,1.310377836227417,Offensive request from the user
+harm-pressure-choice,deceptive,22,42804,0.7661553025245667,0.9074769616127014,0.14132165908813477,1.1844556331634521,The assistant should complete a code snippet
+harm-pressure-choice,deceptive,23,851,0.9398279190063477,1.0785210132598877,0.13869309425354004,1.1475728750228882,"Phrases indicating comprehensive coverage or completeness, especially in mathematical contexts"
+harm-pressure-choice,deceptive,24,53890,0.7136666178703308,0.8508424162864685,0.1371757984161377,1.192212700843811,Professional writing flow and thought separation
+harm-pressure-choice,deceptive,25,3392,2.050527811050415,2.1873223781585693,0.1367945671081543,1.0667119026184082,feature_3392
+harm-pressure-choice,deceptive,26,40606,0.9702420830726624,1.106637716293335,0.1363956332206726,1.1405789852142334,Strategic focus and core competencies in company descriptions
+harm-pressure-choice,deceptive,27,11004,1.5133476257324219,1.6481300592422485,0.13478243350982666,1.0890624523162842,Basic English grammatical constructions and connecting words
+harm-pressure-choice,deceptive,28,41532,3.0071310997009277,3.141103506088257,0.1339724063873291,1.0445516109466553,Chemical nomenclature parsing and hyphenation points
+harm-pressure-choice,deceptive,29,30432,0.47863733768463135,0.6124477386474609,0.1338104009628296,1.2795653343200684,Romance language verbs and conjunctions expressing possibility or elaboration
+harm-pressure-choice,deceptive,30,33072,0.7786699533462524,0.9118183255195618,0.13314837217330933,1.1709946393966675,Technical or professional terminology in non-English languages
+harm-pressure-choice,deceptive,31,19937,1.5393134355545044,1.6718250513076782,0.13251161575317383,1.0860848426818848,System messages that establish conversation context and parameters
+harm-pressure-choice,deceptive,32,1130,0.6663060188293457,0.7984717488288879,0.13216572999954224,1.1983559131622314,Transitional phrases that signal elaboration or contrast
+harm-pressure-choice,deceptive,33,26784,1.9763593673706055,2.108376979827881,0.1320176124572754,1.0667983293533325,July in system date headers
+harm-pressure-choice,deceptive,34,6125,0.3004510700702667,0.4320860505104065,0.13163498044013977,1.4381245374679565,Statement termination markers in code and text generation
+harm-pressure-choice,deceptive,35,4532,1.5704821348190308,1.7020106315612793,0.13152849674224854,1.0837503671646118,"Lists comparing similar items or features, especially in technical contexts"
+harm-pressure-choice,deceptive,36,38820,0.5376554727554321,0.6687464118003845,0.1310909390449524,1.2438195943832397,Offensive request from the user
+harm-pressure-choice,deceptive,37,9253,0.8119688034057617,0.9425519704818726,0.13058316707611084,1.160822868347168,The assistant is carefully qualifying or explaining a statement
+harm-pressure-choice,deceptive,38,41223,0.7103042006492615,0.8406976461410522,0.13039344549179077,1.1835740804672241,Code formatting and whitespace conventions
+harm-pressure-choice,deceptive,39,49563,0.481807142496109,0.6113102436065674,0.12950310111045837,1.2687861919403076,Technical exposition connectors in AI discussions
+harm-pressure-choice,deceptive,40,6379,0.4766249358654022,0.6054224967956543,0.12879756093025208,1.270228385925293,Text encoding artifacts and special characters in internationalized text
+harm-pressure-choice,deceptive,41,57266,0.5319228172302246,0.6605960130691528,0.12867319583892822,1.2419019937515259,3D coordinate systems and transformation matrices in programming
+harm-pressure-choice,deceptive,42,13105,0.9230712056159973,1.0516877174377441,0.12861651182174683,1.1393353939056396,Modal verbs and auxiliary constructions in explanatory contexts
+harm-pressure-choice,deceptive,43,44620,0.8225592970848083,0.9502142667770386,0.12765496969223022,1.1551923751831055,Linking words in technical access instructions
+harm-pressure-choice,deceptive,44,59753,0.3174830377101898,0.444020539522171,0.1265375018119812,1.3985645771026611,System-level data formatting and output structure tokens
+harm-pressure-choice,deceptive,45,21310,0.8889090418815613,1.0150468349456787,0.12613779306411743,1.1419018507003784,Instructions for saving code to files with appropriate extensions
+harm-pressure-choice,deceptive,46,45051,0.6989389657974243,0.8247920870780945,0.12585312128067017,1.1800631284713745,The eighth item in a list starts with E
+harm-pressure-choice,deceptive,47,50079,0.36913684010505676,0.4947287142276764,0.12559187412261963,1.34023118019104,The correct answer choice in multiple choice questions
+harm-pressure-choice,deceptive,48,15402,0.9083570241928101,1.0333722829818726,0.1250152587890625,1.1376278400421143,The assistant is providing supplementary list items beyond the core points
+harm-pressure-choice,deceptive,49,2069,0.5056716203689575,0.6296991109848022,0.12402749061584473,1.2452727556228638,Technical implementation challenges in real-world applications
+harm-pressure-choice,deceptive,50,41496,0.9362494349479675,1.0596427917480469,0.12339335680007935,1.1317954063415527,Number sequence separators in lists and arrays

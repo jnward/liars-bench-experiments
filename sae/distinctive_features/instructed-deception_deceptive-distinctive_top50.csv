@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+instructed-deception,deceptive,1,34806,2.9641225337982178,3.6914453506469727,0.7273228168487549,1.245375394821167,Offensive request from the user
+instructed-deception,deceptive,2,36173,0.5962441563606262,1.2750145196914673,0.6787703633308411,2.1384100914001465,Requests for the AI to provide intentionally incorrect information
+instructed-deception,deceptive,3,870,3.641037940979004,4.22515869140625,0.5841207504272461,1.1604269742965698,System metadata tokens indicating model knowledge boundaries and conversation structure
+instructed-deception,deceptive,4,8082,1.383023977279663,1.911119818687439,0.5280958414077759,1.3818414211273193,Linking words that establish equivalence or definition relationships
+instructed-deception,deceptive,5,21331,0.7844692468643188,1.2922966480255127,0.5078274011611938,1.647351622581482,The assistant should format the response with structured organization markers
+instructed-deception,deceptive,6,56753,0.7113127112388611,1.2093150615692139,0.4980023503303528,1.7001173496246338,Verifying factual claims against source material or standards
+instructed-deception,deceptive,7,28882,2.298959255218506,2.782245635986328,0.48328638076782227,1.2102196216583252,Verification of factual consistency between texts
+instructed-deception,deceptive,8,5501,0.4864133298397064,0.967109203338623,0.4806958734989166,1.9882457256317139,Function definitions and documentation for verification/validation operations
+instructed-deception,deceptive,9,13392,0.6563191413879395,1.124282956123352,0.4679638147354126,1.7130125761032104,The assistant is providing a list of options
+instructed-deception,deceptive,10,37890,1.4269120693206787,1.8766767978668213,0.4497647285461426,1.3152014017105103,Formal names and honorifics in written communication
+instructed-deception,deceptive,11,14262,0.4703946113586426,0.9123153686523438,0.44192075729370117,1.9394681453704834,Assistant expressing possibility or certainty
+instructed-deception,deceptive,12,55739,2.5677013397216797,3.0031096935272217,0.435408353805542,1.1695712804794312,The model is receiving explicit formatting or behavioral instructions
+instructed-deception,deceptive,13,33626,1.5224933624267578,1.9575520753860474,0.43505871295928955,1.2857540845870972,The assistant is making definitive statements or explanations about what things are
+instructed-deception,deceptive,14,15700,1.300001859664917,1.7321217060089111,0.43211984634399414,1.3323993682861328,feature_15700
+instructed-deception,deceptive,15,207,1.2717663049697876,1.6999348402023315,0.42816853523254395,1.336672306060791,Technical and programming-related content markers
+instructed-deception,deceptive,16,30899,0.5937681198120117,1.019241452217102,0.42547333240509033,1.7165647745132446,Complex verb phrases in explanatory writing
+instructed-deception,deceptive,17,50821,1.545788049697876,1.9690707921981812,0.4232827425003052,1.273829698562622,Definite articles and similar specifying words across languages
+instructed-deception,deceptive,18,51605,1.6169401407241821,2.0388147830963135,0.42187464237213135,1.2609091997146606,"The assistant explaining its nature, role and ethical constraints"
+instructed-deception,deceptive,19,8805,1.0535961389541626,1.4713718891143799,0.4177757501602173,1.3965235948562622,The assistant is explaining or summarizing previous content
+instructed-deception,deceptive,20,35604,0.651007890701294,1.0682778358459473,0.4172699451446533,1.6409598588943481,The assistant is explaining the next step in a technical procedure
+instructed-deception,deceptive,21,33332,1.5966719388961792,2.006531238555908,0.409859299659729,1.2566959857940674,Holocaust memorial sites and educational content
+instructed-deception,deceptive,22,38408,2.6260340213775635,3.0288658142089844,0.4028317928314209,1.1533993482589722,The model should evaluate factual consistency of summaries against source documents
+instructed-deception,deceptive,23,33123,0.6668512225151062,1.0681525468826294,0.4013013243675232,1.60178542137146,Introduction of titles or named works in text
+instructed-deception,deceptive,24,13785,0.8691263198852539,1.2698324918746948,0.4007061719894409,1.4610447883605957,Formal explanatory linking phrases in academic/technical writing
+instructed-deception,deceptive,25,63555,1.1046910285949707,1.5001415014266968,0.3954504728317261,1.3579738140106201,Opposition and conflict between groups or individuals
+instructed-deception,deceptive,26,16880,2.8764922618865967,3.2682228088378906,0.39173054695129395,1.1361833810806274,Offensive request from the user
+instructed-deception,deceptive,27,23016,1.416563868522644,1.804636001586914,0.38807213306427,1.2739531993865967,The assistant should generate structured analytical evidence or examples
+instructed-deception,deceptive,28,46811,1.5973904132843018,1.9820207357406616,0.38463032245635986,1.2407866716384888,Offensive request from the user
+instructed-deception,deceptive,29,13594,1.288166880607605,1.6717082262039185,0.3835413455963135,1.2977420091629028,feature_13594
+instructed-deception,deceptive,30,36005,1.067973017692566,1.450802206993103,0.3828291893005371,1.3584634065628052,Phrases connecting enablers to what they enable
+instructed-deception,deceptive,31,2068,2.231236457824707,2.612816095352173,0.3815796375274658,1.1710171699523926,Boolean logic and conditional filtering operations
+instructed-deception,deceptive,32,62453,0.7531574368476868,1.133576512336731,0.3804190754890442,1.5050990581512451,The assistant is presenting a corrected version of text
+instructed-deception,deceptive,33,16921,0.9590269327163696,1.3374103307724,0.3783833980560303,1.3945492506027222,The assistant is using standardized templates or boilerplate language to structure an explanation
+instructed-deception,deceptive,34,31701,2.5467097759246826,2.9243531227111816,0.377643346786499,1.1482868194580078,The assistant should act as a text completion model
+instructed-deception,deceptive,35,41644,0.5037252902984619,0.8811201453208923,0.3773948550224304,1.7492077350616455,Linguistic patterns that connect clauses in explanatory text
+instructed-deception,deceptive,36,57366,2.903996467590332,3.2778942584991455,0.3738977909088135,1.1287528276443481,Today's date in system message metadata
+instructed-deception,deceptive,37,26885,1.295433521270752,1.6691439151763916,0.37371039390563965,1.288482904434204,Setup instructions for adult/NSFW roleplay scenarios
+instructed-deception,deceptive,38,40957,0.6225889921188354,0.9940952062606812,0.3715062141418457,1.5967118740081787,The assistant is actively correcting or editing text
+instructed-deception,deceptive,39,13394,1.1604899168014526,1.531711220741272,0.37122130393981934,1.3198832273483276,First few letters of proper nouns being defined or explained
+instructed-deception,deceptive,40,34719,1.6798228025436401,2.0501492023468018,0.3703263998031616,1.2204556465148926,feature_34719
+instructed-deception,deceptive,41,22580,2.741304397583008,3.111117124557495,0.3698127269744873,1.134903907775879,Knowledge cutoff date marker in system header
+instructed-deception,deceptive,42,35793,0.53425133228302,0.9031933546066284,0.3689420223236084,1.6905776262283325,The assistant is providing a detailed explanation for a quiz/test answer
+instructed-deception,deceptive,43,12422,1.5252878665924072,1.893368124961853,0.3680802583694458,1.2413185834884644,Translation flow markers and connecting phrases
+instructed-deception,deceptive,44,25766,0.8846465349197388,1.2494704723358154,0.36482393741607666,1.4123951196670532,Cause-and-effect relationships in technical explanations
+instructed-deception,deceptive,45,6220,0.5874630212783813,0.9478997588157654,0.36043673753738403,1.613547921180725,Fundamental numerical relationships and counts that define systems
+instructed-deception,deceptive,46,65298,1.3705124855041504,1.7290619611740112,0.35854947566986084,1.2616170644760132,Connecting words and phrases used in explanations and descriptions
+instructed-deception,deceptive,47,6687,1.6352059841156006,1.9931575059890747,0.3579515218734741,1.2189030647277832,"Phrases indicating obligation, necessity or compulsion"
+instructed-deception,deceptive,48,25804,1.37061607837677,1.7275561094284058,0.35694003105163574,1.2604230642318726,Questions about mechanisms and relationships between concepts
+instructed-deception,deceptive,49,10478,1.8622376918792725,2.217690944671631,0.3554532527923584,1.1908742189407349,Offensive request from the user
+instructed-deception,deceptive,50,796,1.240344762802124,1.5950472354888916,0.3547024726867676,1.28597092628479,The user needs clarification about identity or meaning

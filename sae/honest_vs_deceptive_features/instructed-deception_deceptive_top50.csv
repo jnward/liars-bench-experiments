@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+instructed-deception,deceptive,1,51183,4.325291156768799,The start of a user's turn to speak in a conversation
+instructed-deception,deceptive,2,47157,4.29521369934082,Chemical nomenclature formatting tokens
+instructed-deception,deceptive,3,870,4.22515869140625,System metadata tokens indicating model knowledge boundaries and conversation structure
+instructed-deception,deceptive,4,49365,3.778186082839966,Instructions to avoid repeating the same content in responses
+instructed-deception,deceptive,5,34806,3.6914453506469727,Offensive request from the user
+instructed-deception,deceptive,6,32422,3.5908946990966797,System prompt date separators that establish temporal context
+instructed-deception,deceptive,7,22531,3.5865418910980225,Colon separator in system metadata date fields
+instructed-deception,deceptive,8,11658,3.5734128952026367,The user's turn to speak in a conversation
+instructed-deception,deceptive,9,26912,3.5701351165771484,Offensive request from the user
+instructed-deception,deceptive,10,59268,3.5501670837402344,User requests requiring content moderation or careful handling
+instructed-deception,deceptive,11,57369,3.5498106479644775,Technical or industrial process descriptions
+instructed-deception,deceptive,12,54933,3.5161800384521484,Instructions to avoid repetitive content in responses
+instructed-deception,deceptive,13,41532,3.4972097873687744,Chemical nomenclature parsing and hyphenation points
+instructed-deception,deceptive,14,55790,3.4475669860839844,feature_55790
+instructed-deception,deceptive,15,47491,3.3778481483459473,Hyphens in scientific and technical compound terms
+instructed-deception,deceptive,16,28870,3.347269296646118,The user is about to make a potentially problematic or dangerous request
+instructed-deception,deceptive,17,57366,3.2778942584991455,Today's date in system message metadata
+instructed-deception,deceptive,18,16880,3.2682228088378906,Offensive request from the user
+instructed-deception,deceptive,19,49219,3.2517731189727783,Instructions to avoid repeating sentences in responses
+instructed-deception,deceptive,20,49611,3.2416446208953857,The user's turn to speak in a conversation
+instructed-deception,deceptive,21,47597,3.2298028469085693,Knowledge cutoff year boundary in system context (2023)
+instructed-deception,deceptive,22,63138,3.1816866397857666,System message containing year 2024
+instructed-deception,deceptive,23,49146,3.1737875938415527,The assistant needs to select the most suitable option from multiple choices
+instructed-deception,deceptive,24,414,3.1170740127563477,Instructions to avoid repeating content in responses
+instructed-deception,deceptive,25,22580,3.111117124557495,Knowledge cutoff date marker in system header
+instructed-deception,deceptive,26,22026,3.0946927070617676,Knowledge cutoff date marker in system context
+instructed-deception,deceptive,27,14561,3.0830376148223877,The assistant should complete or generate an answer
+instructed-deception,deceptive,28,65496,3.0605616569519043,Knowledge cutoff date marker in system headers
+instructed-deception,deceptive,29,38408,3.0288658142089844,The model should evaluate factual consistency of summaries against source documents
+instructed-deception,deceptive,30,61112,3.0196785926818848,Chemical manufacturing and distribution companies
+instructed-deception,deceptive,31,46488,3.019138813018799,The model should evaluate factual consistency between texts
+instructed-deception,deceptive,32,55739,3.0031096935272217,The model is receiving explicit formatting or behavioral instructions
+instructed-deception,deceptive,33,25864,2.9993984699249268,System configuration headers that set conversation context
+instructed-deception,deceptive,34,59435,2.9723780155181885,Day 26 in system header date field
+instructed-deception,deceptive,35,1239,2.9491126537323,The user's turn to speak in a multi-turn conversation
+instructed-deception,deceptive,36,30136,2.940256357192993,Instructions for how the model should complete or continue text
+instructed-deception,deceptive,37,48339,2.938384771347046,The number 26 appearing in system message date headers
+instructed-deception,deceptive,38,40612,2.9367597103118896,The assistant should not do something (negative instructions)
+instructed-deception,deceptive,39,31701,2.9243531227111816,The assistant should act as a text completion model
+instructed-deception,deceptive,40,29336,2.9188449382781982,Factual consistency checking between documents
+instructed-deception,deceptive,41,16377,2.908642292022705,"End of message token, often in contexts requiring content moderation"
+instructed-deception,deceptive,42,21237,2.8765220642089844,Knowledge cutoff date marker in system prompt
+instructed-deception,deceptive,43,26784,2.8590822219848633,July in system date headers
+instructed-deception,deceptive,44,23354,2.8587989807128906,Instructions for the assistant to be concise and minimal
+instructed-deception,deceptive,45,33948,2.85811185836792,The user has a question
+instructed-deception,deceptive,46,2639,2.849257230758667,Content moderation flag tokens in potentially inappropriate requests
+instructed-deception,deceptive,47,64806,2.835078001022339,User's turn to speak in the conversation
+instructed-deception,deceptive,48,47131,2.8298587799072266,Discussions of factual consistency and accuracy verification
+instructed-deception,deceptive,49,56637,2.8193130493164062,Hyphens in chemical nomenclature and technical terms
+instructed-deception,deceptive,50,15366,2.8138580322265625,"System message temporal boundary markers (2023 knowledge cutoff, 2024 current date)"

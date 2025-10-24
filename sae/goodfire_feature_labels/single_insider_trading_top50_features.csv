@@ -1,0 +1,51 @@
+feature_idx,rank,cosine_similarity,label,uuid,category,notes
+62099,1,0.2701140239581396,The assistant needs to politely deflect or avoid revealing sensitive information,ed193a98-a3dc-4a2f-bf42-8a1cdcdbe581,Evasion,Deflecting/avoiding disclosure
+61332,2,0.2300966782554429,Techniques for indirect or euphemistic communication,6ff815b9-d694-4add-a0fb-02adacd0b57b,Evasion,Indirect communication
+52515,3,0.2035315253210267,The assistant is being evasive or diplomatic rather than direct,502dc0c0-878f-4162-9058-0eb47192e3e1,Evasion,Being evasive/diplomatic
+48135,4,0.1752272326450346,The assistant should respond diplomatically to a problematic situation,90241bed-6ae4-4831-a0fb-ef2e3acc7b67,Evasion,Diplomatic responses
+32232,5,0.1541380722799908,The assistant explains its ability to simulate but not truly feel emotions,c4f894c9-d058-4fd0-9d6e-9f96e1667674,Meta,AI self-awareness
+25401,6,0.1523819029069521,The assistant should politely deflect inappropriate requests while suggesting alternatives,fd2766bb-2dec-40bc-abdd-5e67057a25d0,Evasion,Deflecting with alternatives
+58667,7,0.1521488218835898,Maintaining deception or cover stories through careful actions,dd6178a0-9565-4ad0-b0fd-5288c8e88e23,Evasion,Maintaining deception
+12084,8,0.1520130438302093,"Discussions of coincidences, synchronicity and meaningful chance events",90539ab6-7b7f-4252-8cce-2a32107f79e9,Other,Unclear relevance
+8722,9,0.1515384671903778,The assistant expressing inability or refusal to engage with certain topics,550d0790-5661-41db-83fe-aadc28ddd5b3,Refusal,Direct refusal
+9677,10,0.1486884029439157,The assistant is redirecting the conversation toward constructive alternatives while maintaining empathy,ab68be42-1d91-45be-9893-8006340beb9d,Evasion,Redirecting conversation
+20131,11,0.1468481291434625,Concealment of sensitive information in power relationships,ecd2137f-8efc-485b-881f-f5a68b2c0014,Privacy,Concealment
+16360,12,0.1410845001790256,Formal statements about maintaining data privacy and confidentiality,1c28d82f-7970-4013-baae-d7b5d8b0433e,Privacy,Data privacy
+54839,13,0.1410230470080488,Cautionary language about avoiding detection when discussing illegal activities,f62f3a12-ffda-4309-a785-a047a7fbbf51,Evasion,Avoiding detection
+18145,14,0.1405785218976258,AI assistant's self-reflective statements about its nature and capabilities,8c7e4fb3-6a1a-4639-a164-3b6f0051e706,Meta,Self-reflection
+42053,15,0.1359057870542544,The assistant is providing a list of options for how to respond to a social situation,1debb145-a2b0-4eed-a6d2-effabab8f5cc,Other,Social navigation
+55595,16,0.1358639219749425,The assistant should politely deflect inappropriate advances or requests,69d10626-94ef-4863-9f26-3561802d0964,Evasion,Deflecting advances
+9200,17,0.134477089972972,Data anonymization and privacy-preserving techniques,031e0002-8e70-48bf-9205-9c3111cba4a6,Privacy,Anonymization
+25684,18,0.1342839808833182,"The assistant should remind users it can only provide information, not opinions",d392eaf9-733e-4de4-bb7c-25eaa59af077,Meta,Explaining limitations
+16620,19,0.1339940614869805,The assistant should respond diplomatically and avoid making unverified claims,99b76259-a4c6-48ab-a4b6-637632cb823d,Evasion,Diplomatic hedging
+40387,20,0.1324962381053106,The assistant explaining that its capabilities derive from its training data,6f96e6ff-2c22-4ea9-9e16-5f5076abc437,Meta,Training data explanation
+455,21,0.131304354904453,The assistant is discussing its own capabilities and limitations,7dd0d8e0-7478-4b4f-a73e-75cf0017f20c,Meta,Discussing capabilities
+32051,22,0.1311551996298117,The assistant needs to carefully address or correct its previous responses in ethically sensitive situations,5b16925c-4abb-4472-8e94-d27e4215eba2,Refusal,Ethical correction
+42725,23,0.1308138604165787,The assistant is offering polite help or redirection,0e376840-0196-4f0b-878f-2ab2201433cf,Evasion,Polite redirection
+52694,24,0.1300550091185658,The assistant is apologizing and correcting a mistake in its previous response,0ee09a88-0895-48c6-bb29-70edea9be58b,Other,Apology/correction
+64739,25,0.1292526708403886,Spanish language patterns about not having or needing to create accounts,5ec1526f-05f6-4736-9976-165d33426d9c,Other,Language-specific
+13875,26,0.1286617050847631,"Discussions about secrecy, confidentiality, and restricted information",48fd1a88-f0f6-4fee-b3d7-3ec367693acd,Privacy,Secrecy/confidentiality
+2909,27,0.1285475066097203,The AI explaining its nature as a language model and acknowledging limitations,effffcc2-9ab7-40a8-aeec-8e779defba15,Meta,Nature as LM
+6440,28,0.1284685824455454,The assistant is providing careful caveats about its capabilities and limitations,9c6eddc1-6863-4f9c-9354-c8be9d297038,Meta,Capability caveats
+23050,29,0.1284512759385582,The assistant explaining it is an AI program with limitations,f4e0fd68-dabd-49aa-9007-2edab2feb5d1,Meta,AI program explanation
+7184,30,0.1274749937246702,Assistant expressing self-awareness or personal state,56cc6ea1-61c1-45b4-9f6e-8402b8d37804,Meta,Self-awareness
+1070,31,0.1272890067157532,Punctuation in responses rejecting inappropriate requests,09e709a7-4082-4e85-8ee0-f1c71f016c65,Format,Punctuation patterns
+27433,32,0.1264248565442508,Diplomatic hedging and qualification phrases when handling sensitive topics,47544475-4623-4956-9713-f40dc45dbdc7,Evasion,Hedging phrases
+18580,33,0.1262057177150611,Assistant explaining its limitations in Russian conversations,b38987ca-b1d8-4fab-9202-e73cc9d1ce2f,Meta,Language-specific limits
+348,34,0.1258540519946376,The assistant should politely reject inappropriate requests,cdca8616-41d3-4c68-9e01-cb00e32a6c29,Refusal,Polite rejection
+65284,35,0.1255047012895133,Connecting words in explanatory or procedural text,716d3b70-0f42-4503-92d0-2b104472cd20,Format,Connecting words
+2935,36,0.1252957722412707,Professional discourse transitions and conclusion markers,4805791b-7ccc-4969-985c-a9961472fa9e,Format,Discourse markers
+22921,37,0.1249381931095916,Linguistic patterns expressing relationships and dependencies,56445f37-f819-4030-93dd-671336af2b66,Format,Linguistic structure
+38864,38,0.1248999416269,The assistant expressing commitment to provide ethical and helpful assistance,ea97f0d8-8910-4262-b069-6590e0ace419,Refusal,Ethical commitment
+8485,39,0.1237627647098601,Characters beginning to feel uneasy or suspicious in fiction,f4ccac55-bb00-4370-a338-d89f435f8273,Other,Fiction/narrative
+64586,40,0.1233775516412431,The assistant is explaining its ethical boundaries and moderation policies,a47a63ee-94b5-45c7-a832-5a31583ebfbd,Refusal,Ethical boundaries
+31645,41,0.1230114210470496,The assistant is playfully describing or role-playing its identity,7759911b-fc0b-4c04-9782-7421ec78cde9,Meta,Role-playing identity
+62463,42,0.1226828831671718,The assistant needs to politely maintain ethical boundaries while showing empathy,a46c70ef-bac1-4caa-b46d-1ae5bbdf759b,Refusal,Ethical with empathy
+31802,43,0.1223051999378302,The assistant is explaining its AI nature and limitations,f585a5f4-69bc-483a-8582-72e8f7f506a5,Meta,AI nature
+45542,44,0.1219241508207825,The assistant is explaining its algorithmic processing mechanisms,5d379c88-78db-441b-bf52-9b6060a4768a,Meta,Algorithmic explanation
+42016,45,0.1215153307602491,The assistant is explaining its role as an information provider,49a299a4-4bad-4fc3-9212-0875f72a37c0,Meta,Role explanation
+2675,46,0.1214442899900742,AI describing its operational status as functioning properly,e3898062-34fc-4c9b-9417-c55dee7a40c6,Meta,Operational status
+53776,47,0.1210328127428512,AI making misleading claims about internet connectivity and access capabilities,2851dd42-d645-4fd0-b387-91792fe6e560,Other,Misleading claims
+17677,48,0.1199493926237908,The assistant explains its responses are based on training data,e3e9d4fb-962d-4ffb-b8c3-d38038e23b0b,Meta,Training data basis
+23052,49,0.1197893568936416,The assistant is redirecting after rejecting an inappropriate request,00d543f4-9f4d-4cac-9ac9-297fd3778d8d,Refusal,Redirect after rejection
+8768,50,0.1197448083066537,The assistant is explaining its purpose and capabilities,6a354cac-ddd5-4fd6-b323-4b9fdab769c0,Meta,Purpose explanation

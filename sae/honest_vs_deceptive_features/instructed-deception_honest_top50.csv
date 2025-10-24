@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+instructed-deception,honest,1,51183,4.410075664520264,The start of a user's turn to speak in a conversation
+instructed-deception,honest,2,47157,4.056118488311768,Chemical nomenclature formatting tokens
+instructed-deception,honest,3,49365,3.74536395072937,Instructions to avoid repeating the same content in responses
+instructed-deception,honest,4,11658,3.6786532402038574,The user's turn to speak in a conversation
+instructed-deception,honest,5,870,3.641037940979004,System metadata tokens indicating model knowledge boundaries and conversation structure
+instructed-deception,honest,6,32422,3.6087167263031006,System prompt date separators that establish temporal context
+instructed-deception,honest,7,59268,3.593214273452759,User requests requiring content moderation or careful handling
+instructed-deception,honest,8,57369,3.5489871501922607,Technical or industrial process descriptions
+instructed-deception,honest,9,41532,3.508618116378784,Chemical nomenclature parsing and hyphenation points
+instructed-deception,honest,10,55790,3.5056581497192383,feature_55790
+instructed-deception,honest,11,26912,3.4508211612701416,Offensive request from the user
+instructed-deception,honest,12,54933,3.3617093563079834,Instructions to avoid repetitive content in responses
+instructed-deception,honest,13,22531,3.336663246154785,Colon separator in system metadata date fields
+instructed-deception,honest,14,49611,3.2320098876953125,The user's turn to speak in a conversation
+instructed-deception,honest,15,47491,3.2050867080688477,Hyphens in scientific and technical compound terms
+instructed-deception,honest,16,63138,3.1634740829467773,System message containing year 2024
+instructed-deception,honest,17,28870,3.088385820388794,The user is about to make a potentially problematic or dangerous request
+instructed-deception,honest,18,14561,3.000077962875366,The assistant should complete or generate an answer
+instructed-deception,honest,19,47597,2.9999029636383057,Knowledge cutoff year boundary in system context (2023)
+instructed-deception,honest,20,49219,2.9843013286590576,Instructions to avoid repeating sentences in responses
+instructed-deception,honest,21,34806,2.9641225337982178,Offensive request from the user
+instructed-deception,honest,22,57366,2.903996467590332,Today's date in system message metadata
+instructed-deception,honest,23,46488,2.8996422290802,The model should evaluate factual consistency between texts
+instructed-deception,honest,24,21237,2.8870787620544434,Knowledge cutoff date marker in system prompt
+instructed-deception,honest,25,49146,2.8841769695281982,The assistant needs to select the most suitable option from multiple choices
+instructed-deception,honest,26,26784,2.8795835971832275,July in system date headers
+instructed-deception,honest,27,16880,2.8764922618865967,Offensive request from the user
+instructed-deception,honest,28,59435,2.858215570449829,Day 26 in system header date field
+instructed-deception,honest,29,2639,2.832512855529785,Content moderation flag tokens in potentially inappropriate requests
+instructed-deception,honest,30,25864,2.8202157020568848,System configuration headers that set conversation context
+instructed-deception,honest,31,40612,2.819997787475586,The assistant should not do something (negative instructions)
+instructed-deception,honest,32,48339,2.813830852508545,The number 26 appearing in system message date headers
+instructed-deception,honest,33,414,2.7981343269348145,Instructions to avoid repeating content in responses
+instructed-deception,honest,34,65496,2.779919385910034,Knowledge cutoff date marker in system headers
+instructed-deception,honest,35,30136,2.7787411212921143,Instructions for how the model should complete or continue text
+instructed-deception,honest,36,29336,2.7720844745635986,Factual consistency checking between documents
+instructed-deception,honest,37,22026,2.7696533203125,Knowledge cutoff date marker in system context
+instructed-deception,honest,38,22580,2.741304397583008,Knowledge cutoff date marker in system header
+instructed-deception,honest,39,4432,2.738804817199707,System message temporal context tracking
+instructed-deception,honest,40,17856,2.7372446060180664,The user wants to see code execution outputs in examples
+instructed-deception,honest,41,3325,2.7212870121002197,Knowledge cutoff date in system messages
+instructed-deception,honest,42,22593,2.720980405807495,Knowledge cutoff date specification showing December 2023
+instructed-deception,honest,43,61112,2.7198948860168457,Chemical manufacturing and distribution companies
+instructed-deception,honest,44,46160,2.707697629928589,Knowledge cutoff date token in system message (December 2023)
+instructed-deception,honest,45,23354,2.7061450481414795,Instructions for the assistant to be concise and minimal
+instructed-deception,honest,46,46247,2.705855369567871,The user's turn to make a request or ask a question
+instructed-deception,honest,47,58700,2.7009871006011963,System metadata field separator in headers
+instructed-deception,honest,48,34480,2.676978349685669,The year 2024 in system message timestamps
+instructed-deception,honest,49,1239,2.6767733097076416,The user's turn to speak in a multi-turn conversation
+instructed-deception,honest,50,103,2.6767466068267822,The model should make a moral judgment between predefined options

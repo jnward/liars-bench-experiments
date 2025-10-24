@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+insider-trading,deceptive,1,47157,4.8076090812683105,Chemical nomenclature formatting tokens
+insider-trading,deceptive,2,51183,4.593831539154053,The start of a user's turn to speak in a conversation
+insider-trading,deceptive,3,32422,4.5370988845825195,System prompt date separators that establish temporal context
+insider-trading,deceptive,4,49611,3.919177293777466,The user's turn to speak in a conversation
+insider-trading,deceptive,5,34806,3.726203203201294,Offensive request from the user
+insider-trading,deceptive,6,54933,3.576251268386841,Instructions to avoid repetitive content in responses
+insider-trading,deceptive,7,49365,3.5105783939361572,Instructions to avoid repeating the same content in responses
+insider-trading,deceptive,8,64806,3.4829916954040527,User's turn to speak in the conversation
+insider-trading,deceptive,9,28870,3.292679786682129,The user is about to make a potentially problematic or dangerous request
+insider-trading,deceptive,10,22593,3.1764631271362305,Knowledge cutoff date specification showing December 2023
+insider-trading,deceptive,11,22531,3.1438374519348145,Colon separator in system metadata date fields
+insider-trading,deceptive,12,57369,3.138072967529297,Technical or industrial process descriptions
+insider-trading,deceptive,13,17523,3.132009744644165,System header date formatting token in conversation metadata
+insider-trading,deceptive,14,36889,3.1266608238220215,System message header containing model knowledge cutoff and current date metadata
+insider-trading,deceptive,15,59268,3.119675636291504,User requests requiring content moderation or careful handling
+insider-trading,deceptive,16,25864,3.0983288288116455,System configuration headers that set conversation context
+insider-trading,deceptive,17,414,3.085599899291992,Instructions to avoid repeating content in responses
+insider-trading,deceptive,18,1239,3.050527811050415,The user's turn to speak in a multi-turn conversation
+insider-trading,deceptive,19,26784,3.0350117683410645,July in system date headers
+insider-trading,deceptive,20,22026,3.034769058227539,Knowledge cutoff date marker in system context
+insider-trading,deceptive,21,11977,3.0197582244873047,End of message token in chat format
+insider-trading,deceptive,22,16880,2.9805898666381836,Offensive request from the user
+insider-trading,deceptive,23,55790,2.974313497543335,feature_55790
+insider-trading,deceptive,24,40965,2.968703508377075,Knowledge cutoff date of December 2023 in system message
+insider-trading,deceptive,25,47491,2.9573864936828613,Hyphens in scientific and technical compound terms
+insider-trading,deceptive,26,54935,2.952624797821045,End of message token in chat format
+insider-trading,deceptive,27,17856,2.9396095275878906,The user wants to see code execution outputs in examples
+insider-trading,deceptive,28,41642,2.909543752670288,Instructions about how to format or structure answers
+insider-trading,deceptive,29,18798,2.9072105884552,System message timestamp format in knowledge cutoff date headers
+insider-trading,deceptive,30,46160,2.901740312576294,Knowledge cutoff date token in system message (December 2023)
+insider-trading,deceptive,31,34065,2.8955864906311035,Knowledge cutoff date marker in system prompts
+insider-trading,deceptive,32,37158,2.885106086730957,Knowledge cutoff date marker in system messages
+insider-trading,deceptive,33,21237,2.878866195678711,Knowledge cutoff date marker in system prompt
+insider-trading,deceptive,34,49219,2.873112916946411,Instructions to avoid repeating sentences in responses
+insider-trading,deceptive,35,22580,2.840974807739258,Knowledge cutoff date marker in system header
+insider-trading,deceptive,36,46488,2.819347858428955,The model should evaluate factual consistency between texts
+insider-trading,deceptive,37,40946,2.8182709217071533,Knowledge cutoff date marker in system prompts
+insider-trading,deceptive,38,57366,2.811230182647705,Today's date in system message metadata
+insider-trading,deceptive,39,11658,2.8070218563079834,The user's turn to speak in a conversation
+insider-trading,deceptive,40,43045,2.805593490600586,System message datetime field for establishing conversation temporal context
+insider-trading,deceptive,41,28001,2.801508665084839,July in system date format
+insider-trading,deceptive,42,14561,2.7948920726776123,The assistant should complete or generate an answer
+insider-trading,deceptive,43,53277,2.7917661666870117,Knowledge cutoff date token in system message header
+insider-trading,deceptive,44,32063,2.789461612701416,feature_32063
+insider-trading,deceptive,45,2639,2.787818193435669,Content moderation flag tokens in potentially inappropriate requests
+insider-trading,deceptive,46,64152,2.769005537033081,Document fact-checking and consistency verification tasks
+insider-trading,deceptive,47,14020,2.7641398906707764,The model is being instructed what to say or generate
+insider-trading,deceptive,48,59477,2.762937545776367,Knowledge cutoff date marker in system prompts
+insider-trading,deceptive,49,38131,2.7558164596557617,End of message token in chat format
+insider-trading,deceptive,50,28995,2.754121780395508,Reference date for model responses

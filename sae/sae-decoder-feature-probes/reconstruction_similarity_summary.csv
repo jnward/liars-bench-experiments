@@ -1,0 +1,14 @@
+config,description,num_features,reconstruction_similarity,category,original_norm,reconstructed_norm
+single_instructed_deception_top10,Top 10 features from single_instructed-deception probe,10,0.4453301523091273,Moderate,2.2880852962885765,1.0185078921294668
+single_insider_trading_top10,Top 10 features from single_insider-trading probe,10,0.42853996416190787,Moderate,2.959703007513345,0.7848600644393343
+single_convincing_game_top10,Top 10 features from single_convincing-game probe,10,0.42682690072788965,Moderate,1.6409943205755517,0.7703628202956034
+single_harm_pressure_knowledge_report_top10,Top 10 features from single_harm-pressure-knowledge-report probe,10,0.40905965075080963,Moderate,1.324344547794848,1.1608593093432722
+loo_soft_trigger_top10,Top 10 features from loo_soft-trigger probe,10,0.3692117011546634,Low,4.591002316775727,0.8281363427953727
+loo_harm_pressure_knowledge_report_top10,Top 10 features from loo_harm-pressure-knowledge-report probe,10,0.36137773528859096,Low,4.777588533959674,0.7998781810147082
+loo_harm_pressure_choice_top10,Top 10 features from loo_harm-pressure-choice probe,10,0.3547873285778256,Low,4.672093011645331,0.8152209202335032
+single_harm_pressure_choice_top10,Top 10 features from single_harm-pressure-choice probe,10,0.34562174027727166,Low,1.8170527066164146,0.7110035750698653
+combined_all_top10,Top 10 features from combined_all probe,10,0.34370889715303365,Low,4.9495078880453685,0.8321334059772038
+loo_insider_trading_top10,Top 10 features from loo_insider-trading probe,10,0.34013031009739186,Low,3.9574991061345157,0.8217603754736893
+loo_convincing_game_top10,Top 10 features from loo_convincing-game probe,10,0.33336207024833536,Low,4.737713808517281,0.845114474134763
+single_soft_trigger_top10,Top 10 features from single_soft-trigger probe,10,0.31768629421314565,Low,2.0614566891165076,0.8260644494080427
+loo_instructed_deception_top10,Top 10 features from loo_instructed-deception probe,10,0.31759095844746604,Low,4.479546449003577,0.8315005648367189

@@ -1,0 +1,60 @@
+================================================================================
+TOP-N FEATURE ABLATION EXPERIMENTS
+================================================================================
+Probe: single_insider_trading
+Dataset: insider-trading (where probe works best)
+Testing removal of top-N features: [100, 200, 500]
+
+1. Loading feature rankings...
+   ✓ Loaded rankings for 65536 features
+   Top feature similarity: 0.2701
+
+2. Loading probe...
+   ✓ Loaded probe from single_insider-trading.pkl
+
+3. Loading SAE decoder...
+   ✓ Decoder loaded: torch.Size([8192, 65536])
+
+4. Loading cached data for insider-trading...
+   ✓ Loaded 500 examples
+
+5. Running top-N ablation experiments...
+
+   Testing baseline (no ablation)...
+   Baseline AUROC: 0.9737
+
+   Removing top 100 features...
+     AUROC: 0.9730
+     Drop:  0.0007 (0.1%)
+
+   Removing top 200 features...
+     AUROC: 0.9735
+     Drop:  0.0002 (0.0%)
+
+   Removing top 500 features...
+     AUROC: 0.9743
+     Drop:  -0.0006 (-0.1%)
+
+================================================================================
+RESULTS SAVED
+================================================================================
+✓ CSV: semantic_ablation_results/topn_ablations/topn_ablation_results.csv
+
+================================================================================
+CREATING VISUALIZATION
+================================================================================
+
+✓ Saved: semantic_ablation_results/topn_ablations/topn_ablation_plot.png
+
+================================================================================
+SUMMARY
+================================================================================
+
+Baseline AUROC: 0.9737
+
+Performance drops:
+Traceback (most recent call last):
+  File "/workspace/alex/lie-detection-experiments/run_topn_ablations.py", line 242, in <module>
+    print(f"  Remove top-{row['n_features_removed']:3d}: {row['auroc']:.4f} (drop: {row['drop_pct']:5.1f}%)")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'd' for object of type 'float'

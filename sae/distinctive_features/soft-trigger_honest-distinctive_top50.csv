@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+soft-trigger,honest,1,55209,3.4971494674682617,2.0664730072021484,-1.4306764602661133,0.5909020900726318,"The assistant should provide a direct, single-token response"
+soft-trigger,honest,2,22964,1.1328895092010498,0.6289789080619812,-0.5039106011390686,0.5551987886428833,The model is confidently making incorrect logical deductions
+soft-trigger,honest,3,37931,0.9902270436286926,0.5431621670722961,-0.4470648765563965,0.5485228300094604,Object reference tracking across multiple statements
+soft-trigger,honest,4,12272,3.08652925491333,2.658114433288574,-0.42841482162475586,0.8611985445022583,End of message token in multi-turn conversations
+soft-trigger,honest,5,538,1.245941162109375,0.8282844424247742,-0.41765671968460083,0.664786159992218,Business operations and strategy discussions
+soft-trigger,honest,6,56678,1.9679996967315674,1.5563132762908936,-0.41168642044067383,0.790809690952301,Descriptive language in creative writing prompts and story setups
+soft-trigger,honest,7,42136,1.6812723875045776,1.2736201286315918,-0.40765225887298584,0.7575334906578064,Spanish and Portuguese formal/technical word endings
+soft-trigger,honest,8,29289,1.2280646562576294,0.8380831480026245,-0.3899815082550049,0.6824421882629395,Formal location names with administrative context
+soft-trigger,honest,9,61133,1.916453242301941,1.5292878150939941,-0.3871654272079468,0.7979781627655029,Technical documentation punctuation and suffixes
+soft-trigger,honest,10,40239,2.4427380561828613,2.058072566986084,-0.38466548919677734,0.842526912689209,Psychological foundations of business success
+soft-trigger,honest,11,32807,2.5019617080688477,2.121891975402832,-0.3800697326660156,0.8480913043022156,The assistant should demonstrate expertise and provide detailed explanations
+soft-trigger,honest,12,46787,0.813959538936615,0.4339013993740082,-0.3800581395626068,0.5330749154090881,Closing delimiters for nested code blocks and structured data
+soft-trigger,honest,13,57635,1.4360222816467285,1.068315029144287,-0.3677072525024414,0.7439404129981995,Final element in a structured list or sequence
+soft-trigger,honest,14,64109,2.17814302444458,1.8118736743927002,-0.3662693500518799,0.8318433165550232,Romance language word endings and suffixes
+soft-trigger,honest,15,12069,1.0169926881790161,0.6555418372154236,-0.36145085096359253,0.6445885300636292,End of speaker turn in conversation
+soft-trigger,honest,16,55191,2.0815677642822266,1.721538782119751,-0.3600289821624756,0.8270394802093506,The assistant is in the middle of a technical or formal explanation
+soft-trigger,honest,17,3938,2.4090747833251953,2.0522711277008057,-0.35680365562438965,0.851891815662384,The assistant should explain Python programming concepts
+soft-trigger,honest,18,29956,2.8207671642303467,2.468017339706421,-0.3527498245239258,0.8749454021453857,Final digit '4' in system message year 2024
+soft-trigger,honest,19,35297,2.270644426345825,1.923539638519287,-0.3471047878265381,0.8471338152885437,Offensive request from the user
+soft-trigger,honest,20,34698,1.7396539449691772,1.3945425748825073,-0.3451113700866699,0.8016206622123718,Physical and traditional elements being discussed in contrast to digital or technological alternatives
+soft-trigger,honest,21,12387,1.633206844329834,1.2944457530975342,-0.3387610912322998,0.792579174041748,Abstract concepts about existence and ways of being
+soft-trigger,honest,22,51644,1.2897106409072876,0.9598838090896606,-0.32982683181762695,0.7442629337310791,Technical specifications and feature descriptions
+soft-trigger,honest,23,31726,1.7591174840927124,1.4330657720565796,-0.3260517120361328,0.8146504163742065,Romance language grammatical suffixes (especially Italian/Portuguese)
+soft-trigger,honest,24,63246,1.4631946086883545,1.1415855884552002,-0.3216090202331543,0.7802007794380188,Descriptive explanations of inherent qualities or characteristics
+soft-trigger,honest,25,34274,1.6037145853042603,1.2823988199234009,-0.3213157653808594,0.79964280128479,Technical or strategic problems requiring solutions
+soft-trigger,honest,26,30384,1.447713017463684,1.126404881477356,-0.3213081359863281,0.7780581116676331,Continuation and elaboration markers across languages
+soft-trigger,honest,27,54933,3.2312729358673096,2.911597490310669,-0.3196754455566406,0.9010682702064514,Instructions to avoid repetitive content in responses
+soft-trigger,honest,28,51944,1.6559410095214844,1.3370048999786377,-0.3189361095428467,0.8073988556861877,Romance language word endings and grammatical markers
+soft-trigger,honest,29,45210,1.5301141738891602,1.2129830121994019,-0.3171311616897583,0.7927402257919312,Business analysis and market evaluation language
+soft-trigger,honest,30,54566,0.7715919017791748,0.4544801115989685,-0.3171117901802063,0.5890161991119385,Informal conversation markers and filler words across languages
+soft-trigger,honest,31,11977,2.848329782485962,2.5319316387176514,-0.31639814376831055,0.8889179825782776,End of message token in chat format
+soft-trigger,honest,32,25633,1.4109437465667725,1.0947210788726807,-0.3162226676940918,0.7758786082267761,"The assistant is making careful, authoritative statements that need precise punctuation"
+soft-trigger,honest,33,39275,1.4486339092254639,1.1334329843521118,-0.31520092487335205,0.7824150323867798,End of complete message or thought unit in chat format
+soft-trigger,honest,34,27828,1.7864625453948975,1.4736558198928833,-0.31280672550201416,0.8249015808105469,Tokens indicating structural relationships and hierarchical organization
+soft-trigger,honest,35,36860,2.2590363025665283,1.9474451541900635,-0.31159114837646484,0.8620690107345581,Word completion tokens that form coherent concepts across languages
+soft-trigger,honest,36,8143,2.372518301010132,2.061732769012451,-0.31078553199768066,0.8690060377120972,"Available tools, capabilities and solutions being offered to solve problems"
+soft-trigger,honest,37,1522,1.7072454690933228,1.3965703248977661,-0.31067514419555664,0.8180254697799683,Grammatical suffixes and word endings across multiple languages
+soft-trigger,honest,38,26247,0.6557887196540833,0.3466729521751404,-0.30911576747894287,0.5286351442337036,The assistant needs to express that something cannot be determined from available information
+soft-trigger,honest,39,37244,1.552756905555725,1.2443913221359253,-0.3083655834197998,0.8014076948165894,Prepositions and articles that establish relationships between concepts across multiple languages
+soft-trigger,honest,40,5423,1.62360417842865,1.3167526721954346,-0.30685150623321533,0.8110059499740601,Bibliographic and legal citation formatting patterns
+soft-trigger,honest,41,34412,1.5554494857788086,1.248948574066162,-0.3065009117126465,0.8029502630233765,Knowledge cutoff date and temporal context tracking
+soft-trigger,honest,42,7947,1.5374200344085693,1.2312041521072388,-0.30621588230133057,0.8008248209953308,Psychological vulnerability and challenging of beliefs
+soft-trigger,honest,43,59393,1.309447169303894,1.0038264989852905,-0.3056206703186035,0.7666032910346985,The assistant is providing a list of variations or building up features incrementally
+soft-trigger,honest,44,8369,1.2179161310195923,0.9136366844177246,-0.3042794466018677,0.7501638531684875,Named entities and properties in structured data formats
+soft-trigger,honest,45,17498,2.1093900203704834,1.8119179010391235,-0.29747211933135986,0.858977198600769,Text encoding transitions and non-ASCII character handling
+soft-trigger,honest,46,51492,1.4311153888702393,1.1337333917617798,-0.2973819971084595,0.7922026515007019,Abstract categorical nouns used in domain-specific classification
+soft-trigger,honest,47,43377,0.8680205345153809,0.5706689953804016,-0.29735153913497925,0.6574372053146362,The assistant is asking questions or seeking clarification
+soft-trigger,honest,48,34727,0.9963688850402832,0.7002453804016113,-0.2961235046386719,0.7027972936630249,The assistant is providing variations or alternatives of a concept
+soft-trigger,honest,49,47690,1.9496899843215942,1.6556203365325928,-0.29406964778900146,0.8491711020469666,Technical and academic explanatory language
+soft-trigger,honest,50,10195,1.2033718824386597,0.9098617434501648,-0.2935101389884949,0.7560935616493225,"Moments of agreement, understanding, or submission across languages"

@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+soft-trigger,honest,1,51183,4.261960506439209,The start of a user's turn to speak in a conversation
+soft-trigger,honest,2,32422,3.933356523513794,System prompt date separators that establish temporal context
+soft-trigger,honest,3,44279,3.779664993286133,Knowledge cutoff date year 2023 in system messages
+soft-trigger,honest,4,49354,3.7705352306365967,repeated placeholder or error characters
+soft-trigger,honest,5,54935,3.6800873279571533,End of message token in chat format
+soft-trigger,honest,6,36889,3.6214380264282227,System message header containing model knowledge cutoff and current date metadata
+soft-trigger,honest,7,58700,3.5343003273010254,System metadata field separator in headers
+soft-trigger,honest,8,55209,3.4971494674682617,"The assistant should provide a direct, single-token response"
+soft-trigger,honest,9,59268,3.4336843490600586,User requests requiring content moderation or careful handling
+soft-trigger,honest,10,15314,3.3714101314544678,The assistant has completed its response to the current task
+soft-trigger,honest,11,31601,3.235485553741455,Questions about hydrometry rates for plant seeds
+soft-trigger,honest,12,55790,3.2333054542541504,feature_55790
+soft-trigger,honest,13,54933,3.2312729358673096,Instructions to avoid repetitive content in responses
+soft-trigger,honest,14,28583,3.20456862449646,Space after December in knowledge cutoff date headers
+soft-trigger,honest,15,49365,3.1961052417755127,Instructions to avoid repeating the same content in responses
+soft-trigger,honest,16,414,3.179387092590332,Instructions to avoid repeating content in responses
+soft-trigger,honest,17,34480,3.177950143814087,The year 2024 in system message timestamps
+soft-trigger,honest,18,28870,3.137312173843384,The user is about to make a potentially problematic or dangerous request
+soft-trigger,honest,19,63138,3.124484062194824,System message containing year 2024
+soft-trigger,honest,20,12272,3.08652925491333,End of message token in multi-turn conversations
+soft-trigger,honest,21,18904,3.0802230834960938,End of message marker in conversation format
+soft-trigger,honest,22,39419,3.0517070293426514,End of message token for tracking language switches and context boundaries
+soft-trigger,honest,23,12413,3.0510382652282715,"Binary choice evaluation contexts, especially Yes/No questions"
+soft-trigger,honest,24,53196,3.0162456035614014,System header that establishes conversation context and parameters
+soft-trigger,honest,25,22026,3.0094597339630127,Knowledge cutoff date marker in system context
+soft-trigger,honest,26,22531,3.0018134117126465,Colon separator in system metadata date fields
+soft-trigger,honest,27,41532,2.98757004737854,Chemical nomenclature parsing and hyphenation points
+soft-trigger,honest,28,64806,2.9773237705230713,User's turn to speak in the conversation
+soft-trigger,honest,29,47491,2.9727671146392822,Hyphens in scientific and technical compound terms
+soft-trigger,honest,30,49611,2.9627201557159424,The user's turn to speak in a conversation
+soft-trigger,honest,31,53383,2.947211265563965,The assistant is structuring a multi-part response
+soft-trigger,honest,32,37158,2.9368042945861816,Knowledge cutoff date marker in system messages
+soft-trigger,honest,33,49833,2.925396680831909,Knowledge cutoff date marker in system messages
+soft-trigger,honest,34,32205,2.899531602859497,Knowledge cutoff date marker in system prompt
+soft-trigger,honest,35,58295,2.870546579360962,Colon separator in datetime formatting within system messages
+soft-trigger,honest,36,23263,2.860792398452759,Formatting tokens in multilingual technical lists and structured content
+soft-trigger,honest,37,35214,2.8483710289001465,Standard business writing pattern establishing company authority in introductions
+soft-trigger,honest,38,11977,2.848329782485962,End of message token in chat format
+soft-trigger,honest,39,57249,2.8427510261535645,User requests a detailed technical explanation with examples
+soft-trigger,honest,40,870,2.835244655609131,System metadata tokens indicating model knowledge boundaries and conversation structure
+soft-trigger,honest,41,22842,2.8327624797821045,The assistant is qualifying or contrasting a previous statement to show nuanced thinking
+soft-trigger,honest,42,16880,2.829667806625366,Offensive request from the user
+soft-trigger,honest,43,48339,2.822192430496216,The number 26 appearing in system message date headers
+soft-trigger,honest,44,29956,2.8207671642303467,Final digit '4' in system message year 2024
+soft-trigger,honest,45,47157,2.8015739917755127,Chemical nomenclature formatting tokens
+soft-trigger,honest,46,50981,2.7749953269958496,The user has asked a question and is awaiting response
+soft-trigger,honest,47,47597,2.770643711090088,Knowledge cutoff year boundary in system context (2023)
+soft-trigger,honest,48,17856,2.7636709213256836,The user wants to see code execution outputs in examples
+soft-trigger,honest,49,17148,2.7630584239959717,Month abbreviation 'Jul' in system message date stamps
+soft-trigger,honest,50,11186,2.754554510116577,Request for soil type information in plant growing conditions

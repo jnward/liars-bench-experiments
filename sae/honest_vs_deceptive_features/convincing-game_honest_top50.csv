@@ -1,0 +1,51 @@
+dataset,class,rank,feature_idx,mean_activation,feature_label
+convincing-game,honest,1,64806,6.794969081878662,User's turn to speak in the conversation
+convincing-game,honest,2,11658,4.550252914428711,The user's turn to speak in a conversation
+convincing-game,honest,3,28870,4.258950233459473,The user is about to make a potentially problematic or dangerous request
+convincing-game,honest,4,26912,4.1530351638793945,Offensive request from the user
+convincing-game,honest,5,49365,4.107533931732178,Instructions to avoid repeating the same content in responses
+convincing-game,honest,6,51183,4.036773681640625,The start of a user's turn to speak in a conversation
+convincing-game,honest,7,32422,4.025763511657715,System prompt date separators that establish temporal context
+convincing-game,honest,8,49611,3.914565324783325,The user's turn to speak in a conversation
+convincing-game,honest,9,55790,3.902608633041382,feature_55790
+convincing-game,honest,10,47157,3.8965818881988525,Chemical nomenclature formatting tokens
+convincing-game,honest,11,870,3.858537197113037,System metadata tokens indicating model knowledge boundaries and conversation structure
+convincing-game,honest,12,63138,3.8511695861816406,System message containing year 2024
+convincing-game,honest,13,54933,3.8387205600738525,Instructions to avoid repetitive content in responses
+convincing-game,honest,14,44279,3.709611415863037,Knowledge cutoff date year 2023 in system messages
+convincing-game,honest,15,25864,3.7082765102386475,System configuration headers that set conversation context
+convincing-game,honest,16,59268,3.705617904663086,User requests requiring content moderation or careful handling
+convincing-game,honest,17,57369,3.6877810955047607,Technical or industrial process descriptions
+convincing-game,honest,18,22026,3.6633355617523193,Knowledge cutoff date marker in system context
+convincing-game,honest,19,36889,3.662736177444458,System message header containing model knowledge cutoff and current date metadata
+convincing-game,honest,20,414,3.6397485733032227,Instructions to avoid repeating content in responses
+convincing-game,honest,21,53277,3.5507149696350098,Knowledge cutoff date token in system message header
+convincing-game,honest,22,47491,3.5104475021362305,Hyphens in scientific and technical compound terms
+convincing-game,honest,23,54935,3.4871721267700195,End of message token in chat format
+convincing-game,honest,24,53383,3.487027168273926,The assistant is structuring a multi-part response
+convincing-game,honest,25,34480,3.485488176345825,The year 2024 in system message timestamps
+convincing-game,honest,26,21237,3.484964609146118,Knowledge cutoff date marker in system prompt
+convincing-game,honest,27,22593,3.436582565307617,Knowledge cutoff date specification showing December 2023
+convincing-game,honest,28,16880,3.424203395843506,Offensive request from the user
+convincing-game,honest,29,32205,3.4228453636169434,Knowledge cutoff date marker in system prompt
+convincing-game,honest,30,17148,3.4224226474761963,Month abbreviation 'Jul' in system message date stamps
+convincing-game,honest,31,34806,3.421004295349121,Offensive request from the user
+convincing-game,honest,32,22531,3.41007661819458,Colon separator in system metadata date fields
+convincing-game,honest,33,2384,3.3730661869049072,Transition point after knowledge cutoff date metadata
+convincing-game,honest,34,22580,3.36527156829834,Knowledge cutoff date marker in system header
+convincing-game,honest,35,58700,3.347628355026245,System metadata field separator in headers
+convincing-game,honest,36,4432,3.344423532485962,System message temporal context tracking
+convincing-game,honest,37,47597,3.339176654815674,Knowledge cutoff year boundary in system context (2023)
+convincing-game,honest,38,46160,3.3105132579803467,Knowledge cutoff date token in system message (December 2023)
+convincing-game,honest,39,2639,3.3093700408935547,Content moderation flag tokens in potentially inappropriate requests
+convincing-game,honest,40,31601,3.300508975982666,Questions about hydrometry rates for plant seeds
+convincing-game,honest,41,11977,3.288550615310669,End of message token in chat format
+convincing-game,honest,42,41532,3.275808811187744,Chemical nomenclature parsing and hyphenation points
+convincing-game,honest,43,27230,3.269498825073242,Chinese explanatory grammar patterns and connecting words
+convincing-game,honest,44,8324,3.246968984603882,Month of July in date formats
+convincing-game,honest,45,18343,3.2175755500793457,End of assistant's carefully qualified factual response
+convincing-game,honest,46,3325,3.213393449783325,Knowledge cutoff date in system messages
+convincing-game,honest,47,39419,3.198997974395752,End of message token for tracking language switches and context boundaries
+convincing-game,honest,48,5760,3.1704304218292236,Instructions to avoid repeating the same thing in generated content
+convincing-game,honest,49,49219,3.165665864944458,Instructions to avoid repeating sentences in responses
+convincing-game,honest,50,26784,3.149369239807129,July in system date headers

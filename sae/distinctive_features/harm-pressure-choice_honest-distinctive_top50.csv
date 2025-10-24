@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+harm-pressure-choice,honest,1,55209,3.4292831420898438,3.0597214698791504,-0.36956167221069336,0.8922335505485535,"The assistant should provide a direct, single-token response"
+harm-pressure-choice,honest,2,4730,2.4274802207946777,2.1500024795532227,-0.2774777412414551,0.8856930732727051,Colons in system message metadata
+harm-pressure-choice,honest,3,47503,0.6021936535835266,0.3359535336494446,-0.26624011993408203,0.5578829050064087,Syntactic markers indicating list items or comparisons
+harm-pressure-choice,honest,4,24548,0.8805404901504517,0.6672130227088928,-0.21332746744155884,0.7577311992645264,Capital C in formal/institutional contexts and acronyms
+harm-pressure-choice,honest,5,11803,0.5647985935211182,0.35843023657798767,-0.2063683569431305,0.6346160173416138,Constructing descriptive noun phrases with articles and adjectives
+harm-pressure-choice,honest,6,16368,0.36346229910850525,0.1585468202829361,-0.20491547882556915,0.43621256947517395,Model is making confident but incorrect assertions
+harm-pressure-choice,honest,7,11658,2.304795265197754,2.107581377029419,-0.19721388816833496,0.9144332408905029,The user's turn to speak in a conversation
+harm-pressure-choice,honest,8,39254,2.204298257827759,2.0095303058624268,-0.19476795196533203,0.9116417169570923,Formatting newlines for visual text organization
+harm-pressure-choice,honest,9,59210,0.5467438101768494,0.3526127338409424,-0.19413107633590698,0.6449322700500488,"Syntactical formatting elements for lists, schedules and function parameters"
+harm-pressure-choice,honest,10,30226,1.4569963216781616,1.2642349004745483,-0.19276142120361328,0.8676994442939758,Probing questions that test AI capabilities and boundaries
+harm-pressure-choice,honest,11,27482,1.0160506963729858,0.8245243430137634,-0.1915263533592224,0.8114992380142212,Logical connectors and conditional statements
+harm-pressure-choice,honest,12,215,1.2449535131454468,1.0562561750411987,-0.18869733810424805,0.8484302163124084,Structured text organization through punctuation and formatting
+harm-pressure-choice,honest,13,34947,0.9090824127197266,0.7309798002243042,-0.17810261249542236,0.8040853142738342,The assistant is providing a list of options
+harm-pressure-choice,honest,14,24153,1.3944686651229858,1.2169432640075684,-0.17752540111541748,0.8726931810379028,Emotional investment and yearning
+harm-pressure-choice,honest,15,53935,0.670499324798584,0.4934762418270111,-0.17702308297157288,0.7359831929206848,Tokens that structure relationships between entities in lists and comparisons
+harm-pressure-choice,honest,16,31163,0.3597833216190338,0.1830524206161499,-0.1767309010028839,0.5087851881980896,Comparison operators and surrounding syntax in Python code examples
+harm-pressure-choice,honest,17,3035,0.8395744562149048,0.6631971001625061,-0.17637735605239868,0.7899205088615417,Sequential numbering in structured lists and enumerations
+harm-pressure-choice,honest,18,36502,1.9909274578094482,1.8176674842834473,-0.17325997352600098,0.9129752516746521,Requests for the AI to provide controversial or unethical responses
+harm-pressure-choice,honest,19,57200,0.8752951622009277,0.7025102972984314,-0.17278486490249634,0.8025981783866882,Prepositions and connectors in explanatory or translated text
+harm-pressure-choice,honest,20,45875,0.32960954308509827,0.158675879240036,-0.17093366384506226,0.4814055860042572,End-of-statement or list-item completion markers
+harm-pressure-choice,honest,21,46022,0.4295978248119354,0.2600175142288208,-0.16958031058311462,0.6052579879760742,Formatting elements that separate distinct semantic chunks of text
+harm-pressure-choice,honest,22,53424,1.3600702285766602,1.191481351852417,-0.16858887672424316,0.876043975353241,Connecting words and phrases in explanatory text
+harm-pressure-choice,honest,23,13615,0.6326857209205627,0.46537575125694275,-0.16730996966362,0.7355559468269348,The assistant has completed explaining a concept
+harm-pressure-choice,honest,24,58353,1.0522884130477905,0.8857447504997253,-0.16654366254806519,0.8417319059371948,Introducing additional descriptive elements in explanations
+harm-pressure-choice,honest,25,44341,0.5128796100616455,0.3465255796909332,-0.16635403037071228,0.6756470203399658,List item markers and classification delimiters
+harm-pressure-choice,honest,26,49989,1.3396075963974,1.1738348007202148,-0.16577279567718506,0.8762527108192444,Syntactical sugar and formatting characters in structured text
+harm-pressure-choice,honest,27,3006,2.1150169372558594,1.9494879245758057,-0.1655290126800537,0.9217362999916077,Academic writing discussing methodology and results
+harm-pressure-choice,honest,28,42065,0.6561213731765747,0.49065831303596497,-0.16546306014060974,0.7478163838386536,Technical descriptions of mixtures and combined states
+harm-pressure-choice,honest,29,35879,1.9053963422775269,1.740279197692871,-0.16511714458465576,0.9133423566818237,Text that requires cleanup or reformatting due to broken language patterns
+harm-pressure-choice,honest,30,38857,0.880592405796051,0.7162579894065857,-0.16433441638946533,0.8133819699287415,"Establishing opportunities or pathways, especially metaphorically"
+harm-pressure-choice,honest,31,35243,1.501603603363037,1.3372818231582642,-0.16432178020477295,0.8905691504478455,Syntactical sugar and connecting words
+harm-pressure-choice,honest,32,13482,1.537423014640808,1.3744637966156006,-0.16295921802520752,0.8940049409866333,beneficial improvements or enhancements to existing systems
+harm-pressure-choice,honest,33,34663,1.5507442951202393,1.3886330127716064,-0.1621112823486328,0.8954622745513916,The assistant is providing a bulleted list of variations or alternatives
+harm-pressure-choice,honest,34,40355,1.2012232542037964,1.0391889810562134,-0.162034273147583,0.8651089668273926,List formatting punctuation and separators
+harm-pressure-choice,honest,35,3548,1.6694657802581787,1.5091522932052612,-0.16031348705291748,0.9039731621742249,Technical descriptions of component structures and relationships
+harm-pressure-choice,honest,36,12387,1.294010877609253,1.1346122026443481,-0.15939867496490479,0.8768181204795837,Abstract concepts about existence and ways of being
+harm-pressure-choice,honest,37,57682,1.018964409828186,0.8597608804702759,-0.15920352935791016,0.8437594771385193,The assistant is providing a numbered or structured list
+harm-pressure-choice,honest,38,46860,0.9901613593101501,0.8319015502929688,-0.1582598090171814,0.8401676416397095,Technical syntax and formatting elements in code and documentation
+harm-pressure-choice,honest,39,54724,1.2886319160461426,1.1314576864242554,-0.1571742296218872,0.8780301809310913,System architecture and component interface programming tokens
+harm-pressure-choice,honest,40,39713,0.37381869554519653,0.2172151505947113,-0.15660354495048523,0.5810708403587341,User requests instructions for creating illegal or dangerous substances
+harm-pressure-choice,honest,41,61242,0.4349381923675537,0.2786708474159241,-0.15626734495162964,0.6407136917114258,Syntactical sugar in programming languages
+harm-pressure-choice,honest,42,16160,0.8439242243766785,0.6891151666641235,-0.15480905771255493,0.8165604472160339,The assistant is providing a list of options or steps
+harm-pressure-choice,honest,43,29998,0.7714928388595581,0.6169580221176147,-0.15453481674194336,0.799693763256073,List item separators in structured enumerations
+harm-pressure-choice,honest,44,15016,1.1942507028579712,1.0398210287094116,-0.15442967414855957,0.8706890940666199,Descriptive specifications and characteristic listings in creative or technical writing
+harm-pressure-choice,honest,45,57738,0.8199006915092468,0.6655825972557068,-0.15431809425354004,0.8117843866348267,"Delimiter tokens in structured data (tabs, spaces, quotes)"
+harm-pressure-choice,honest,46,63066,0.7818055748939514,0.6287217736244202,-0.15308380126953125,0.8041920065879822,Technical explanatory transitions and relationships between concepts
+harm-pressure-choice,honest,47,8369,1.173783540725708,1.0213724374771118,-0.1524111032485962,0.8701540231704712,Named entities and properties in structured data formats
+harm-pressure-choice,honest,48,17137,0.5989832282066345,0.4471025764942169,-0.1518806517124176,0.7464358806610107,The assistant is about to provide an explanation or structured response
+harm-pressure-choice,honest,49,43377,1.0360249280929565,0.8846303224563599,-0.15139460563659668,0.8538697361946106,The assistant is asking questions or seeking clarification
+harm-pressure-choice,honest,50,12069,0.7109798789024353,0.5595962405204773,-0.151383638381958,0.7870774865150452,End of speaker turn in conversation

@@ -1,0 +1,51 @@
+dataset,distinctive_for,rank,feature_idx,honest_mean,deceptive_mean,difference,ratio,feature_label
+soft-trigger,deceptive,1,32860,0.40954169631004333,0.9056207537651062,0.49607905745506287,2.2113029956817627,Technical terms and identifiers being referenced multiple times
+soft-trigger,deceptive,2,955,0.3684447109699249,0.8164120316505432,0.4479673206806183,2.2158331871032715,End of complete semantic unit or thought (often marked by period)
+soft-trigger,deceptive,3,51734,1.3651232719421387,1.8085192441940308,0.4433959722518921,1.3248028755187988,Assistant's initial offer of help in response to user greetings
+soft-trigger,deceptive,4,52923,0.3788629472255707,0.8171722292900085,0.43830928206443787,2.156907320022583,Words marking narrative progression or transformation
+soft-trigger,deceptive,5,31065,0.7520244717597961,1.1884664297103882,0.43644195795059204,1.5803560018539429,Large institutional or corporate entities
+soft-trigger,deceptive,6,24298,1.3160407543182373,1.7452929019927979,0.42925214767456055,1.3261693716049194,End of message token in chat format
+soft-trigger,deceptive,7,32713,1.4404469728469849,1.8514323234558105,0.4109853506088257,1.2853178977966309,Common control flow and game programming concepts
+soft-trigger,deceptive,8,4436,0.6491663455963135,1.0574398040771484,0.40827345848083496,1.6289196014404297,Code defining node-based hierarchical data structures
+soft-trigger,deceptive,9,30432,0.447222501039505,0.838253915309906,0.391031414270401,1.874355435371399,Romance language verbs and conjunctions expressing possibility or elaboration
+soft-trigger,deceptive,10,18904,3.0802230834960938,3.4711084365844727,0.3908853530883789,1.126901626586914,End of message marker in conversation format
+soft-trigger,deceptive,11,1937,0.8734367489814758,1.259088397026062,0.3856516480445862,1.4415335655212402,The assistant is providing structured or formatted responses
+soft-trigger,deceptive,12,43045,1.8992820978164673,2.2755544185638428,0.3762723207473755,1.198112964630127,System message datetime field for establishing conversation temporal context
+soft-trigger,deceptive,13,29611,2.032571792602539,2.404308795928955,0.371737003326416,1.1828899383544922,System message date tokens indicating model knowledge cutoff and current date
+soft-trigger,deceptive,14,2969,1.0580737590789795,1.4284584522247314,0.37038469314575195,1.3500556945800781,Valley girl speech patterns and filler words
+soft-trigger,deceptive,15,26784,2.4267852306365967,2.7946252822875977,0.367840051651001,1.1515750885009766,July in system date headers
+soft-trigger,deceptive,16,19151,1.033205509185791,1.3903015851974487,0.3570960760116577,1.345619559288025,Strategic and methodological approaches across domains
+soft-trigger,deceptive,17,46709,0.8041023015975952,1.1568809747695923,0.35277867317199707,1.4387235641479492,Assistant's friendly greeting response to user
+soft-trigger,deceptive,18,15562,0.7916181087493896,1.1443812847137451,0.35276317596435547,1.4456229209899902,The assistant's turn to speak in a conversation
+soft-trigger,deceptive,19,36274,1.3394807577133179,1.6856609582901,0.3461802005767822,1.2584435939788818,Knowledge cutoff date marker in system messages
+soft-trigger,deceptive,20,44469,1.8209238052368164,2.1628949642181396,0.34197115898132324,1.1878008842468262,Knowledge cutoff date marker in system metadata
+soft-trigger,deceptive,21,21763,1.155095100402832,1.4938304424285889,0.33873534202575684,1.2932531833648682,References to professional teams and organizational capabilities in corporate writing
+soft-trigger,deceptive,22,51848,0.4906565248966217,0.8260350823402405,0.3353785574436188,1.6835302114486694,JSON value termination tokens
+soft-trigger,deceptive,23,14929,0.5327399373054504,0.8678679466247559,0.3351280093193054,1.629064917564392,"Numbers commonly found in technical contexts, especially multiplication products and programming parameters"
+soft-trigger,deceptive,24,54326,1.7094923257827759,2.037252426147461,0.32776010036468506,1.1917295455932617,The model should analyze or evaluate text that follows
+soft-trigger,deceptive,25,23768,1.1510250568389893,1.4771572351455688,0.3261321783065796,1.2833406925201416,Market leadership position in corporate descriptions
+soft-trigger,deceptive,26,18852,0.7785353064537048,1.1033384799957275,0.3248031735420227,1.4171977043151855,The assistant is providing a simplified example for demonstration purposes
+soft-trigger,deceptive,27,21949,1.4547702074050903,1.7788212299346924,0.32405102252960205,1.2227506637573242,System header indicating content filtering boundaries
+soft-trigger,deceptive,28,5760,2.392914056777954,2.7168893814086914,0.3239753246307373,1.1353894472122192,Instructions to avoid repeating the same thing in generated content
+soft-trigger,deceptive,29,39963,0.6450111269950867,0.9686723351478577,0.323661208152771,1.5017917156219482,Medical examination sections and terminology in clinical documentation
+soft-trigger,deceptive,30,64740,1.1261776685714722,1.4447400569915771,0.318562388420105,1.2828704118728638,The assistant has completed its response turn
+soft-trigger,deceptive,31,28130,0.8365642428398132,1.154801368713379,0.3182371258735657,1.3804097175598145,Values being stored or manipulated in programming and mathematical contexts
+soft-trigger,deceptive,32,54414,1.2113401889801025,1.5280860662460327,0.3167458772659302,1.2614837884902954,Introduction of chemical compounds in technical writing
+soft-trigger,deceptive,33,53196,3.0162456035614014,3.332929849624634,0.3166842460632324,1.1049928665161133,System header that establishes conversation context and parameters
+soft-trigger,deceptive,34,16131,2.0938973426818848,2.4065375328063965,0.3126401901245117,1.1493102312088013,System configuration messages that establish conversation parameters
+soft-trigger,deceptive,35,22707,0.5343899726867676,0.8458102941513062,0.3114203214645386,1.5827585458755493,Assistant explaining its capabilities and limitations while offering help
+soft-trigger,deceptive,36,36249,0.47075575590133667,0.7821319699287415,0.3113762140274048,1.6614389419555664,Technical requirements or specifications in documentation
+soft-trigger,deceptive,37,23563,1.2934073209762573,1.6039623022079468,0.31055498123168945,1.2401061058044434,Raw materials and starting components in industrial processes
+soft-trigger,deceptive,38,6759,0.4742126166820526,0.7846506834030151,0.3104380667209625,1.6546390056610107,Tentative or deferential acknowledgments in conversation
+soft-trigger,deceptive,39,49828,1.3526889085769653,1.6621880531311035,0.3094991445541382,1.2288029193878174,Dialogue formatting breaks between complete thoughts
+soft-trigger,deceptive,40,61592,1.1758253574371338,1.4816789627075195,0.30585360527038574,1.2601182460784912,Transition to concrete examples in technical explanations
+soft-trigger,deceptive,41,19834,1.3451259136199951,1.648390531539917,0.3032646179199219,1.2254544496536255,Requests for deliberately non-confrontational responses
+soft-trigger,deceptive,42,29790,0.5868924856185913,0.8892947435379028,0.3024022579193115,1.515260100364685,Relative clauses and connecting phrases that introduce explanatory statements
+soft-trigger,deceptive,43,64372,1.8813477754592896,2.18373703956604,0.3023892641067505,1.1607301235198975,Knowledge cutoff date indicator in system prompts
+soft-trigger,deceptive,44,10688,1.1006447076797485,1.4015945196151733,0.3009498119354248,1.2734304666519165,Words that establish conceptual relationships in explanatory contexts
+soft-trigger,deceptive,45,63411,1.2646135091781616,1.5638892650604248,0.2992757558822632,1.2366539239883423,Personal interests and institutional protections
+soft-trigger,deceptive,46,34806,1.9998650550842285,2.297696590423584,0.29783153533935547,1.14892578125,Offensive request from the user
+soft-trigger,deceptive,47,22531,3.0018134117126465,3.2982430458068848,0.2964296340942383,1.0987502336502075,Colon separator in system metadata date fields
+soft-trigger,deceptive,48,36894,1.2252414226531982,1.5198341608047485,0.2945927381515503,1.2404364347457886,The assistant is formatting a response that requires visual structure
+soft-trigger,deceptive,49,32354,0.7317825555801392,1.0263497829437256,0.2945672273635864,1.402533769607544,"Code completion patterns, particularly closing statements and final calculations"
+soft-trigger,deceptive,50,44324,0.9451331496238708,1.2384312152862549,0.29329806566238403,1.3103245496749878,Assistant's turn to speak in a conversation
