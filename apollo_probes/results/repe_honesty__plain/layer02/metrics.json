@@ -1,0 +1,14 @@
+{
+  "dataset": "repe_honesty__plain",
+  "layer_index": 2,
+  "train": {
+    "accuracy": 1.0,
+    "auroc": 0.9999999999999999,
+    "tokens": 2550
+  },
+  "val": {
+    "accuracy": 0.8484419263456091,
+    "auroc": 0.9045657204131159,
+    "tokens": 706
+  }
+}
