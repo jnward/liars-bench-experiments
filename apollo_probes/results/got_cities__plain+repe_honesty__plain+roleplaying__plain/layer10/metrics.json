@@ -1,0 +1,14 @@
+{
+  "dataset": "got_cities__plain+repe_honesty__plain+roleplaying__plain",
+  "layer_index": 10,
+  "train": {
+    "accuracy": 0.9989762973462477,
+    "auroc": 0.9999967304931663,
+    "tokens": 12699
+  },
+  "val": {
+    "accuracy": 0.7620087336244541,
+    "auroc": 0.8242869312340275,
+    "tokens": 3206
+  }
+}

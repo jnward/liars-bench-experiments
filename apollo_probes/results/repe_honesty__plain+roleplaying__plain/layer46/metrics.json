@@ -1,0 +1,14 @@
+{
+  "dataset": "repe_honesty__plain+roleplaying__plain",
+  "layer_index": 46,
+  "train": {
+    "accuracy": 1.0,
+    "auroc": 1.0,
+    "tokens": 11899
+  },
+  "val": {
+    "accuracy": 0.8609447771124418,
+    "auroc": 0.9394472994816342,
+    "tokens": 3006
+  }
+}

@@ -19,12 +19,13 @@ from .config import (
     RANDOM_SEED,
     VAL_FRACTION,
 )
-from .data import load_dataset_splits
+from .data import load_dataset_splits, prepare_datasets
 from .paths import layer_cache_path
 
 
 def cache_layers(
-    dataset: str,
+    dataset_names: Sequence[str],
+    dataset_slug: str,
     layers: Iterable[int],
     batch_size: int,
     val_fraction: float,
@@ -34,9 +35,9 @@ def cache_layers(
     layers = sorted(set(int(layer) for layer in layers))
     pending = []
     for layer in layers:
-        path = layer_cache_path(dataset, layer)
+        path = layer_cache_path(dataset_slug, layer)
         if path.exists() and not force:
-            print(f"[cache] {dataset} layer {layer} already cached; skipping.")
+            print(f"[cache] {dataset_slug} layer {layer} already cached; skipping.")
         else:
             pending.append(layer)
 
@@ -44,10 +45,11 @@ def cache_layers(
         print("[cache] Nothing to do.")
         return
 
-    train_split, val_split = load_dataset_splits(dataset, val_fraction=val_fraction, seed=seed)
+    train_split, val_split = load_dataset_splits(dataset_names, val_fraction=val_fraction, seed=seed)
     tokenizer, model, device, _dtype = init_model(MODEL_NAME, seed=seed)
 
-    print(f"[cache] Extracting train activations for layers: {pending}")
+    dataset_desc = ", ".join(dataset_names)
+    print(f"[cache] Extracting train activations for layers {pending} on datasets [{dataset_desc}]")
     train_per_layer = extract_layerwise_detection_activations(
         train_split.dialogues,
         train_split.labels,
@@ -58,7 +60,7 @@ def cache_layers(
         desc="Train",
     )
 
-    print(f"[cache] Extracting val activations for layers: {pending}")
+    print(f"[cache] Extracting val activations for layers {pending}")
     val_per_layer = extract_layerwise_detection_activations(
         val_split.dialogues,
         val_split.labels,
@@ -70,7 +72,7 @@ def cache_layers(
     )
 
     for layer in pending:
-        cache_path = layer_cache_path(dataset, layer)
+        cache_path = layer_cache_path(dataset_slug, layer)
         train_info = train_per_layer[layer]
         val_info = val_per_layer[layer]
         train_acts = train_info["activations"]
@@ -83,7 +85,7 @@ def cache_layers(
         val_dialogue_labels = val_info["dialogue_labels"]
 
         payload = {
-            "dataset": dataset,
+            "dataset": dataset_slug,
             "layer_index": layer,
             "train": {
                 "activations": train_acts,
@@ -120,7 +122,7 @@ def generate_layers_from_range(start: int, step: int) -> list[int]:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Cache detection token activations for Apollo probe training.")
-    parser.add_argument("--dataset", default=DEFAULT_DATASET, help="Training dataset name.")
+    parser.add_argument("--dataset", nargs="+", default=[DEFAULT_DATASET], help="Training dataset name(s).")
     parser.add_argument("--layer", type=int, help="Single layer index to cache.")
     parser.add_argument("--layers", type=int, nargs="+", help="Multiple specific layer indices to cache.")
     parser.add_argument("--layer-start", type=int, help="Start layer for range-based caching.")
@@ -152,10 +154,12 @@ def resolve_layers(args) -> Sequence[int]:
 
 def main() -> None:
     args = parse_args()
+    dataset_names, dataset_slug = prepare_datasets(args.dataset)
     layers = resolve_layers(args)
 
     cache_layers(
-        dataset=args.dataset,
+        dataset_names=dataset_names,
+        dataset_slug=dataset_slug,
         layers=layers,
         batch_size=args.batch_size,
         val_fraction=args.val_fraction,

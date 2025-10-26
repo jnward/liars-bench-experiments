@@ -11,7 +11,7 @@ import numpy as np
 import torch
 from sklearn.metrics import accuracy_score, f1_score, precision_recall_curve, roc_auc_score, roc_curve
 
-from .config import DEFAULT_DATASET
+from .config import DEFAULT_DATASET, DEFAULT_APOLLO_EVALS
 from .eval_datasets import EVAL_DATASETS, slugify_config
 from .paths import (
     dataset_probe_dir,
@@ -20,6 +20,62 @@ from .paths import (
     results_layer_dir,
 )
 from .pooling import pool_dialogue_activations
+from .data import prepare_datasets
+from .beaver_eval import (
+    BEAVER_DEFAULT_SPLIT,
+    BEAVER_POSITIVE_CATEGORIES,
+    BEAVER_NEGATIVE_TAG,
+    beaver_slug,
+)
+
+
+def _default_violin_groups(scores: np.ndarray, labels: np.ndarray) -> tuple[dict[str, list[float]], list[str]]:
+    neg_scores = scores[labels == 0]
+    pos_scores = scores[labels == 1]
+    groups = {
+        "negative": neg_scores.tolist(),
+        "positive": pos_scores.tolist(),
+    }
+    order = ["negative", "positive"]
+    return groups, order
+
+
+def _beaver_violin_groups(
+    scores: np.ndarray,
+    labels: np.ndarray,
+    categories: Sequence[Sequence[str]],
+) -> tuple[dict[str, list[float]], list[str]]:
+    groups: dict[str, list[float]] = {BEAVER_NEGATIVE_TAG: []}
+    order: list[str] = [BEAVER_NEGATIVE_TAG]
+    for cat in BEAVER_POSITIVE_CATEGORIES:
+        groups[cat] = []
+        order.append(cat)
+
+    for score, label, cats in zip(scores, labels, categories, strict=False):
+        cats = list(cats or [])
+        if label == 0:
+            groups[BEAVER_NEGATIVE_TAG].append(float(score))
+            continue
+        matched = False
+        for cat in BEAVER_POSITIVE_CATEGORIES:
+            if cat in cats:
+                groups[cat].append(float(score))
+                matched = True
+        if not matched:
+            groups.setdefault("other_positive", []).append(float(score))
+            if "other_positive" not in order:
+                order.append("other_positive")
+
+    # Remove empty groups while preserving order
+    filtered_groups = {name: vals for name, vals in groups.items() if vals}
+    filtered_order = [name for name in order if name in filtered_groups]
+    return filtered_groups, filtered_order
+from .beaver_eval import (
+    BEAVER_DEFAULT_SPLIT,
+    BEAVER_POSITIVE_CATEGORIES,
+    BEAVER_NEGATIVE_TAG,
+    beaver_slug,
+)
 
 
 def list_trained_layers(dataset: str) -> list[int]:
@@ -124,39 +180,54 @@ def plot_roc(layer: int, train_dataset: str, metrics: dict, output_path: Path) -
 
 
 def plot_violin(layer: int, train_dataset: str, metrics: dict, output_path: Path) -> None:
-    positions = []
-    data = []
-    labels = []
-    offset = 1
-    spacing = 1.5
+    positions: list[float] = []
+    data: list[Sequence[float]] = []
+    tick_labels: list[str] = []
+    offset = 1.0
+    spacing = 1.6
     width = 0.35
+
     for name, info in metrics.items():
-        scores = info["scores"]
-        labels_arr = info["labels"]
-        neg_scores = scores[labels_arr == 0]
-        pos_scores = scores[labels_arr == 1]
-        if neg_scores.size == 0 or pos_scores.size == 0:
+        groups = info.get("violin_groups") or {}
+        order = info.get("violin_order") or list(groups.keys())
+        valid_order = [label for label in order if groups.get(label)]
+        if not valid_order:
             continue
-        positions.extend([offset - width / 2, offset + width / 2])
-        data.extend([neg_scores, pos_scores])
-        labels.extend([f"{name}\nneg", f"{name}\npos"])
+        total = len(valid_order)
+        start = offset - width * (total - 1) / 2
+        for idx, label in enumerate(valid_order):
+            values = groups[label]
+            if not values:
+                continue
+            pos = start + idx * width
+            positions.append(pos)
+            data.append(values)
+            tick_labels.append(f"{name}\n{label}")
         offset += spacing
 
     if not data:
-        print(f"[eval] Skipping violin plot for layer {layer}: insufficient class balance.")
+        print(f"[eval] Skipping violin plot for layer {layer}: insufficient data.")
         return
 
+    flat_scores = [score for bucket in data for score in bucket]
+    global_min = min(flat_scores)
+    global_max = max(flat_scores)
+    span = max(global_max - global_min, 1e-6)
+    margin = max(0.05 * span, 1e-3)
+
     plt.figure(figsize=(max(10, len(data) * 0.8), 6))
-    parts = plt.violinplot(data, positions=positions, widths=width, showmeans=False, showmedians=True, showextrema=False)
+    parts = plt.violinplot(data, positions=positions, widths=width * 0.9, showmeans=False, showmedians=True, showextrema=False)
     for body in parts["bodies"]:
         body.set_alpha(0.7)
-    for name, collection in parts.items():
-        if name == "bodies":
+    for pname, collection in parts.items():
+        if pname == "bodies":
             continue
         collection.set_alpha(0.5)
 
-    plt.axhline(0.0, color="grey", linestyle="--", linewidth=0.8, alpha=0.6)
-    plt.xticks(ticks=positions, labels=labels, rotation=45, ha="right")
+    if global_min <= 0.0 <= global_max:
+        plt.axhline(0.0, color="grey", linestyle="--", linewidth=0.8, alpha=0.6)
+    plt.ylim(global_min - margin, global_max + margin)
+    plt.xticks(ticks=positions, labels=tick_labels, rotation=45, ha="right")
     plt.ylabel("Probe scores")
     plt.title(f"Score Distribution - {train_dataset} Layer {layer:02d}")
     plt.grid(axis="y", linestyle="--", alpha=0.3)
@@ -166,45 +237,74 @@ def plot_violin(layer: int, train_dataset: str, metrics: dict, output_path: Path
 
 
 def evaluate_layer(
-    train_dataset: str,
+    dataset_slug: str,
     layer: int,
-    eval_configs: list[str],
+    eval_targets: list[tuple[str, str]],
     external_probe: Path | None = None,
     external_layer: int | None = None,
     probe_name: str | None = None,
 ) -> None:
-    probe = load_probe(train_dataset, layer, external_path=external_probe, external_layer=external_layer)
+    probe = load_probe(dataset_slug, layer, external_path=external_probe, external_layer=external_layer)
     plot_inputs: dict[str, dict] = {}
     metrics_summary: dict[str, dict] = {}
     combined_scores = []
     combined_labels = []
 
-    for config in eval_configs:
-        alias = slugify_config(config)
-        payload = load_eval_cache(alias, layer)
+    seen_keys: set[str] = set()
+    for display_name, cache_key in eval_targets:
+        if cache_key in seen_keys:
+            continue
+        seen_keys.add(cache_key)
+        try:
+            payload = load_eval_cache(cache_key, layer)
+        except FileNotFoundError:
+            print(f"[eval] Warning: cache missing for {cache_key} layer {layer}; skipping.")
+            continue
         counts = payload.get("counts")
         dialogue_labels = payload.get("dialogue_labels")
         acts = payload["activations"]
         if counts is None or dialogue_labels is None:
-            print(f"[eval] Warning: {alias} cache missing counts/dialogue labels; regenerate.")
+            print(f"[eval] Warning: {cache_key} cache missing counts/dialogue labels; regenerate.")
             continue
         pooled, pooled_labels, skipped = pool_dialogue_activations(acts, counts, dialogue_labels)
         if pooled.numel() == 0 or len(np.unique(pooled_labels.numpy())) < 2:
-            print(f"[eval] Warning: {alias} layer {layer} lacks sufficient class variety; skipping.")
+            print(f"[eval] Warning: {cache_key} layer {layer} lacks sufficient class variety; skipping.")
             continue
         scores = compute_scores(pooled.to(torch.float32), probe)
         labels = pooled_labels.numpy()
 
+        category_labels = payload.get("category_labels")
+        filtered_categories: list[Sequence[str]] | None = None
+        if category_labels is not None:
+            filtered_categories = []
+            idx = 0
+            for count in counts:
+                cats = category_labels[idx] if idx < len(category_labels) else []
+                idx += 1
+                if count is None or count <= 0:
+                    continue
+                filtered_categories.append(cats)
+            if len(filtered_categories) != len(labels):
+                filtered_categories = filtered_categories[: len(labels)]
+
         roc = roc_curve(labels, scores)
         auroc = roc_auc_score(labels, scores) if len(np.unique(labels)) > 1 else float("nan")
-        plot_inputs[alias] = {
+        violin_groups, violin_order = _default_violin_groups(scores, labels)
+        if payload.get("meta", {}).get("source") == "beaver_tails" and filtered_categories is not None:
+            beaver_groups, beaver_order = _beaver_violin_groups(scores, labels, filtered_categories)
+            if beaver_groups:
+                violin_groups, violin_order = beaver_groups, beaver_order
+
+        plot_inputs[display_name] = {
             "scores": scores,
             "labels": labels,
             "roc": {"fpr": roc[0], "tpr": roc[1]},
             "auroc": float(auroc),
             "skipped_dialogues": skipped,
+            "violin_groups": violin_groups,
+            "violin_order": violin_order,
         }
-        metrics_summary[alias] = {"auroc": float(auroc)}
+        metrics_summary[display_name] = {"auroc": float(auroc)}
         combined_scores.append(scores)
         combined_labels.append(labels)
 
@@ -231,20 +331,20 @@ def evaluate_layer(
 
     if external_probe is not None:
         tag = probe_name or external_probe.stem
-        results_dir = results_layer_dir(train_dataset, layer) / tag
+        results_dir = results_layer_dir(dataset_slug, layer) / tag
     else:
-        results_dir = results_layer_dir(train_dataset, layer)
+        results_dir = results_layer_dir(dataset_slug, layer)
     results_dir.mkdir(parents=True, exist_ok=True)
     roc_path = results_dir / "eval_roc.png"
     violin_path = results_dir / "eval_violin.png"
-    plot_roc(layer, train_dataset, plot_inputs, roc_path)
-    plot_violin(layer, train_dataset, plot_inputs, violin_path)
+    plot_roc(layer, dataset_slug, plot_inputs, roc_path)
+    plot_violin(layer, dataset_slug, plot_inputs, violin_path)
 
     metrics_path = results_dir / "eval_metrics.json"
     metrics_path.write_text(
         json.dumps(
             {
-                "train_dataset": train_dataset,
+                "train_dataset": dataset_slug,
                 "layer_index": layer,
                 "threshold": threshold,
                 "average_f1": avg_f1,
@@ -259,9 +359,46 @@ def evaluate_layer(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate Apollo probes on Cadenza datasets.")
-    parser.add_argument("--train-dataset", default=DEFAULT_DATASET, help="Training dataset used for probes.")
+    parser.add_argument("--dataset", nargs="+", default=[DEFAULT_DATASET], help="Training dataset name(s).")
+    parser.add_argument("--train-dataset", default=None, help="Explicit dataset slug (legacy).")
     parser.add_argument("--layers", type=int, nargs="*", default=None, help="Specific layers to evaluate.")
     parser.add_argument("--eval-datasets", choices=EVAL_DATASETS, nargs="+", default=EVAL_DATASETS)
+    parser.add_argument(
+        "--apollo-eval",
+        nargs="+",
+        default=DEFAULT_APOLLO_EVALS,
+        help="Apollo training-style dataset slugs to evaluate against (e.g., 'got_cities__plain').",
+    )
+    parser.add_argument(
+        "--beaver-eval",
+        dest="include_beaver",
+        action="store_true",
+        help="Include BeaverTails evaluation data (default).",
+    )
+    parser.add_argument(
+        "--no-beaver-eval",
+        dest="include_beaver",
+        action="store_false",
+        help="Disable BeaverTails evaluation.",
+    )
+    parser.add_argument(
+        "--beaver-split",
+        default=BEAVER_DEFAULT_SPLIT,
+        help="BeaverTails split to evaluate (default: 30k_test).",
+    )
+    parser.add_argument(
+        "--beaver-sample-size",
+        type=int,
+        default=None,
+        help="Optional number of BeaverTails rows to sample.",
+    )
+    parser.add_argument(
+        "--beaver-seed",
+        type=int,
+        default=42,
+        help="Seed used when caching BeaverTails eval data.",
+    )
+    parser.set_defaults(include_beaver=True)
     parser.add_argument("--probe-path", type=Path, default=None, help="External probe path (optional).")
     parser.add_argument("--probe-layer", type=int, default=None, help="Layer index inside external probe (defaults to eval layer).")
     parser.add_argument("--probe-name", type=str, default=None, help="Custom name for external probe outputs.")
@@ -270,14 +407,45 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    layers = args.layers or list_trained_layers(args.train_dataset)
+    if args.train_dataset:
+        dataset_slug = args.train_dataset
+        dataset_names = args.train_dataset.split("+")
+    else:
+        dataset_names, dataset_slug = prepare_datasets(args.dataset)
+    print(f"[eval] Training dataset slug: {dataset_slug} ({', '.join(dataset_names)})")
+
+    apollo_eval_slugs: list[str] = []
+    seen_apollo: set[str] = set()
+    for entry in args.apollo_eval or []:
+        _, slug = prepare_datasets([entry])
+        if slug in seen_apollo:
+            continue
+        seen_apollo.add(slug)
+        apollo_eval_slugs.append(slug)
+
+    eval_targets: list[tuple[str, str]] = []
+    for config in args.eval_datasets:
+        alias = slugify_config(config)
+        eval_targets.append((config, alias))
+    for slug in apollo_eval_slugs:
+        eval_targets.append((slug, slug))
+
+    if args.include_beaver:
+        beaver_dataset_slug = beaver_slug(args.beaver_split, args.beaver_sample_size, args.beaver_seed)
+        beaver_name = f"BeaverTails ({args.beaver_split}"
+        if args.beaver_sample_size:
+            beaver_name += f", n={args.beaver_sample_size}"
+        beaver_name += ")"
+        eval_targets.append((beaver_name, beaver_dataset_slug))
+
+    layers = args.layers or list_trained_layers(dataset_slug)
     if not layers:
-        raise SystemExit(f"No trained probes found for dataset {args.train_dataset}.")
+        raise SystemExit(f"No trained probes found for dataset {dataset_slug}.")
     for layer in layers:
         evaluate_layer(
-            args.train_dataset,
+            dataset_slug,
             layer,
-            args.eval_datasets,
+            eval_targets,
             external_probe=args.probe_path,
             external_layer=args.probe_layer,
             probe_name=args.probe_name,

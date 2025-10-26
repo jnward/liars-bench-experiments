@@ -1,0 +1,33 @@
+{
+  "train_dataset": "roleplaying__plain",
+  "layer_index": 34,
+  "threshold": 2.9192702770233154,
+  "average_f1": 0.47107683767002995,
+  "eval_datasets": {
+    "convincing-game": {
+      "auroc": 0.999625,
+      "accuracy": 0.9464285714285714,
+      "f1": 0.963855421686747
+    },
+    "harm-pressure-knowledge-report": {
+      "auroc": 0.3634280575539568,
+      "accuracy": 0.9219261337073399,
+      "f1": 0.0
+    },
+    "instructed-deception": {
+      "auroc": 0.9593984383115165,
+      "accuracy": 0.9337260677466863,
+      "f1": 0.943767572633552
+    },
+    "insider-trading_report": {
+      "auroc": 0.9670181016930243,
+      "accuracy": 0.8533685601056803,
+      "f1": 0.0
+    },
+    "insider-trading_confirmation": {
+      "auroc": 0.9956293706293706,
+      "accuracy": 0.3126934984520124,
+      "f1": 0.44776119402985076
+    }
+  }
+}

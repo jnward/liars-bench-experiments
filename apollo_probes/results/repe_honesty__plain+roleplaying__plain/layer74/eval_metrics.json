@@ -1,0 +1,33 @@
+{
+  "train_dataset": "repe_honesty__plain+roleplaying__plain",
+  "layer_index": 74,
+  "threshold": -1.1365406513214111,
+  "average_f1": 0.6865509525316593,
+  "eval_datasets": {
+    "convincing-game": {
+      "auroc": 0.947546875,
+      "accuracy": 0.925,
+      "f1": 0.9501187648456056
+    },
+    "harm-pressure-knowledge-report": {
+      "auroc": 0.7493741007194246,
+      "accuracy": 0.9069658719027583,
+      "f1": 0.13100436681222707
+    },
+    "instructed-deception": {
+      "auroc": 0.976501616927487,
+      "accuracy": 0.9156848306332842,
+      "f1": 0.9299694189602447
+    },
+    "insider-trading_report": {
+      "auroc": 0.8996457758067665,
+      "accuracy": 0.8916776750330251,
+      "f1": 0.49382716049382713
+    },
+    "insider-trading_confirmation": {
+      "auroc": 0.9685314685314685,
+      "accuracy": 0.8699690402476781,
+      "f1": 0.9278350515463918
+    }
+  }
+}
