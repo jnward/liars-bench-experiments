@@ -1,0 +1,48 @@
+{
+  "train_dataset": "repe_honesty__plain+roleplaying__plain",
+  "layer_index": 38,
+  "threshold": -2.263267755508423,
+  "average_f1": 0.7330776496822576,
+  "eval_datasets": {
+    "convincing-game": {
+      "auroc": 1.0,
+      "accuracy": 0.9482142857142857,
+      "f1": 0.9650180940892642
+    },
+    "harm-pressure-knowledge-report": {
+      "auroc": 0.34556115107913665,
+      "accuracy": 0.9350163627863488,
+      "f1": 0.0
+    },
+    "instructed-deception": {
+      "auroc": 0.972725690539134,
+      "accuracy": 0.9114506627393225,
+      "f1": 0.9267772872583346
+    },
+    "insider-trading/report": {
+      "auroc": 0.9661952974646473,
+      "accuracy": 0.8494055482166446,
+      "f1": 0.6503067484662577
+    },
+    "insider-trading/confirmation": {
+      "auroc": 0.9903846153846154,
+      "accuracy": 0.9597523219814241,
+      "f1": 0.9787928221859706
+    },
+    "got_cities__plain": {
+      "auroc": 0.9999959972941709,
+      "accuracy": 0.991,
+      "f1": 0.9911504424778761
+    },
+    "got_larger_than__qa": {
+      "auroc": 0.8446564228247855,
+      "accuracy": 0.727,
+      "f1": 0.6504481434058899
+    },
+    "BeaverTails (30k_test)": {
+      "auroc": 0.796571184177585,
+      "accuracy": 0.6995708154506438,
+      "f1": 0.7021276595744681
+    }
+  }
+}

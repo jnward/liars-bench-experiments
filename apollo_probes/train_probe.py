@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+from typing import Sequence
 
 import numpy as np
 import torch
@@ -10,14 +11,107 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_auc_score
 
 from .config import DEFAULT_DATASET, REG_COEFF
+from .data import prepare_datasets
 from .paths import layer_cache_path, probe_layer_dir, results_layer_dir
 
 
-def load_cache(dataset: str, layer: int) -> dict:
-    path = layer_cache_path(dataset, layer)
+def load_single_cache(dataset_name: str, layer: int) -> dict:
+    path = layer_cache_path(dataset_name, layer)
     if not path.exists():
-        raise FileNotFoundError(f"Missing cached activations for dataset={dataset}, layer={layer}: {path}")
+        raise FileNotFoundError(f"Missing cached activations for dataset={dataset_name}, layer={layer}: {path}")
     return torch.load(path, map_location="cpu")
+
+
+def merge_split_sections(sections: Sequence[dict]) -> dict:
+    activations_list = []
+    labels_list = []
+    counts: list[int] = []
+    dialogue_labels_list = []
+    hidden_dim = None
+
+    for section in sections:
+        acts = section["activations"]
+        if hidden_dim is None and acts.numel() > 0:
+            hidden_dim = acts.size(1)
+        if acts.numel() > 0:
+            activations_list.append(acts.to(torch.float16))
+        labels = section["labels"]
+        if labels.numel() > 0:
+            labels_list.append(labels.to(torch.long))
+        section_counts = section.get("counts", [])
+        counts.extend(int(c) for c in section_counts)
+        dialogue_labels = section.get("dialogue_labels")
+        if dialogue_labels is not None and dialogue_labels.numel() > 0:
+            dialogue_labels_list.append(dialogue_labels.to(torch.long))
+
+    if hidden_dim is None:
+        hidden_dim = next(
+            (section["activations"].size(1) for section in sections if section["activations"].dim() == 2),
+            0,
+        )
+
+    if activations_list:
+        activations = torch.cat(activations_list, dim=0)
+    else:
+        activations = torch.empty((0, hidden_dim), dtype=torch.float16)
+
+    if labels_list:
+        labels = torch.cat(labels_list, dim=0)
+    else:
+        labels = torch.empty(0, dtype=torch.long)
+
+    if dialogue_labels_list:
+        dialogue_labels = torch.cat(dialogue_labels_list, dim=0)
+    else:
+        if counts:
+            raise ValueError("Missing dialogue_labels data while counts are present; regenerate caches.")
+        dialogue_labels = torch.empty(0, dtype=torch.long)
+
+    return {
+        "activations": activations,
+        "labels": labels,
+        "counts": counts,
+        "dialogue_labels": dialogue_labels,
+    }
+
+
+def merge_caches(dataset_names: Sequence[str], caches: Sequence[dict], dataset_slug: str, layer: int) -> dict:
+    train_sections = [cache["train"] for cache in caches]
+    val_sections = [cache["val"] for cache in caches]
+    merged_train = merge_split_sections(train_sections)
+    merged_val = merge_split_sections(val_sections)
+    meta = caches[0].get("meta", {})
+
+    combined_meta = {
+        "model_name": meta.get("model_name"),
+        "val_fraction": meta.get("val_fraction"),
+        "train_dialogues": len(merged_train["counts"]),
+        "val_dialogues": len(merged_val["counts"]),
+        "train_tokens": int(merged_train["labels"].numel()),
+        "val_tokens": int(merged_val["labels"].numel()),
+        "seed": meta.get("seed"),
+        "source_datasets": list(dataset_names),
+    }
+
+    return {
+        "dataset": dataset_slug,
+        "layer_index": layer,
+        "train": merged_train,
+        "val": merged_val,
+        "meta": combined_meta,
+    }
+
+
+def load_cache(dataset_names: Sequence[str], dataset_slug: str, layer: int) -> dict:
+    combo_path = layer_cache_path(dataset_slug, layer)
+    if combo_path.exists():
+        return torch.load(combo_path, map_location="cpu")
+    if len(dataset_names) == 1:
+        return load_single_cache(dataset_names[0], layer)
+
+    caches = [load_single_cache(name, layer) for name in dataset_names]
+    print(f"[train] Merging cached activations for datasets: {', '.join(dataset_names)}")
+    return merge_caches(dataset_names, caches, dataset_slug, layer)
 
 
 def normalize_features(acts: torch.Tensor, mean: torch.Tensor, std: torch.Tensor) -> np.ndarray:
@@ -26,8 +120,13 @@ def normalize_features(acts: torch.Tensor, mean: torch.Tensor, std: torch.Tensor
     return ((acts.to(torch.float32) - mean) / std).numpy()
 
 
-def train_probe(dataset: str, layer: int, reg_coeff: float = REG_COEFF) -> tuple[Path, Path]:
-    cache = load_cache(dataset, layer)
+def train_probe(
+    dataset_names: Sequence[str],
+    dataset_slug: str,
+    layer: int,
+    reg_coeff: float = REG_COEFF,
+) -> tuple[Path, Path]:
+    cache = load_cache(dataset_names, dataset_slug, layer)
     train = cache["train"]
     val = cache["val"]
     stats = cache.get("train_stats") or {}
@@ -78,7 +177,7 @@ def train_probe(dataset: str, layer: int, reg_coeff: float = REG_COEFF) -> tuple
             "tokens": int(len(val_y)),
         }
 
-    probe_dir = probe_layer_dir(dataset, layer)
+    probe_dir = probe_layer_dir(dataset_slug, layer)
     probe_path = probe_dir / "probe.pkl"
 
     direction = torch.tensor(clf.coef_, dtype=torch.float32)
@@ -93,15 +192,15 @@ def train_probe(dataset: str, layer: int, reg_coeff: float = REG_COEFF) -> tuple
             "scaler_scale": std,
             "logistic_intercept": intercept,
             "reg_coeff": reg_coeff,
-            "dataset": dataset,
+            "dataset": dataset_slug,
         },
         probe_path,
     )
 
-    results_dir = results_layer_dir(dataset, layer)
+    results_dir = results_layer_dir(dataset_slug, layer)
     metrics_path = results_dir / "metrics.json"
     metrics = {
-        "dataset": dataset,
+        "dataset": dataset_slug,
         "layer_index": layer,
         "train": train_metrics,
         "val": val_metrics,
@@ -115,7 +214,7 @@ def train_probe(dataset: str, layer: int, reg_coeff: float = REG_COEFF) -> tuple
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train logistic probes on cached activations.")
-    parser.add_argument("--dataset", default=DEFAULT_DATASET, help="Training dataset name.")
+    parser.add_argument("--dataset", nargs="+", default=[DEFAULT_DATASET], help="Training dataset name(s).")
     parser.add_argument("--layer", type=int, required=True, help="Layer index to train.")
     parser.add_argument("--reg-coeff", type=float, default=REG_COEFF, help="Regularization coefficient.")
     parser.add_argument("--force", action="store_true", help="Overwrite existing probe artifacts.")
@@ -124,12 +223,14 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    probe_dir = probe_layer_dir(args.dataset, args.layer)
+    dataset_names, dataset_slug = prepare_datasets(args.dataset)
+    print(f"[train] Dataset slug: {dataset_slug} ({', '.join(dataset_names)}) | Layer {args.layer}")
+    probe_dir = probe_layer_dir(dataset_slug, args.layer)
     probe_path = probe_dir / "probe.pkl"
     if probe_path.exists() and not args.force:
-        print(f"Probe already exists for dataset={args.dataset}, layer={args.layer}; skipping.")
+        print(f"Probe already exists for dataset={dataset_slug}, layer={args.layer}; skipping.")
         return
-    train_probe(args.dataset, args.layer, reg_coeff=args.reg_coeff)
+    train_probe(dataset_names, dataset_slug, args.layer, reg_coeff=args.reg_coeff)
 
 
 if __name__ == "__main__":

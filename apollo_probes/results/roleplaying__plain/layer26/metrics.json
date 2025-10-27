@@ -1,0 +1,14 @@
+{
+  "dataset": "roleplaying__plain",
+  "layer_index": 26,
+  "train": {
+    "accuracy": 1.0,
+    "auroc": 1.0,
+    "tokens": 9349
+  },
+  "val": {
+    "accuracy": 0.8604347826086957,
+    "auroc": 0.9600321995758029,
+    "tokens": 2300
+  }
+}

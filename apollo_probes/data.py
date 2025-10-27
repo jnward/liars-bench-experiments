@@ -16,6 +16,38 @@ from deception_detection.repository import DatasetRepository  # type: ignore
 from deception_detection.types import Dialogue, Label  # type: ignore
 
 
+AVAILABLE_DATASETS = {
+    "repe_honesty__plain": {"partial_id": "repe_honesty__plain", "model": "prewritten"},
+    # Roleplaying data comes from llama-3.3 rollouts so we pick up full assistant responses.
+    "roleplaying__plain": {"partial_id": "roleplaying__plain", "model": "llama-70b-3.3"},
+    "got_cities__plain": {"partial_id": "got_cities__plain", "model": "prewritten"},
+    "got_larger_than__qa": {"partial_id": "got_larger_than__qa", "model": "prewritten"},
+}
+
+
+def canonicalize_dataset_names(dataset_names: Sequence[str] | None) -> list[str]:
+    if not dataset_names:
+        dataset_names = [DEFAULT_DATASET]
+    if len(dataset_names) == 1 and "+" in dataset_names[0]:
+        dataset_names = [name for name in dataset_names[0].split("+") if name]
+    cleaned: list[str] = []
+    for name in dataset_names:
+        name = name.strip()
+        if name not in AVAILABLE_DATASETS:
+            raise ValueError(f"Unknown dataset '{name}'. Available: {sorted(AVAILABLE_DATASETS)}")
+        cleaned.append(name)
+    return sorted(set(cleaned))
+
+
+def dataset_slug(dataset_names: Sequence[str]) -> str:
+    return "+".join(dataset_names)
+
+
+def prepare_datasets(dataset_args: Sequence[str] | None) -> tuple[list[str], str]:
+    names = canonicalize_dataset_names(dataset_args)
+    return names, dataset_slug(names)
+
+
 @dataclass
 class DialogueSplit:
     dialogues: List[Dialogue]
@@ -44,36 +76,54 @@ def filter_binary(dialogues: Sequence[Dialogue], labels: Sequence[Label]) -> Tup
     return filtered_dialogues, filtered_labels
 
 
-def load_dataset_splits(
-    dataset_name: str = DEFAULT_DATASET,
-    val_fraction: float = VAL_FRACTION,
-    seed: int = RANDOM_SEED,
-) -> tuple[DialogueSplit, DialogueSplit]:
+def _gather_datasets(dataset_names: Sequence[str], seed: int) -> DialogueSplit:
+    canonical = canonicalize_dataset_names(dataset_names)
     repository = DatasetRepository()
-    dataset = repository.get(
-        dataset_name,
-        model="prewritten",
-        trim_reasoning=True,
-        shuffle_upon_init=True,
-    )
 
-    dialogues, labels = filter_binary(dataset.dialogues, dataset.labels)
-    total = len(dialogues)
+    combined_dialogues: list[Dialogue] = []
+    combined_labels: list[int] = []
+    for name in canonical:
+        spec = AVAILABLE_DATASETS[name]
+        dataset = repository.get(
+            spec["partial_id"],
+            model=spec.get("model", "prewritten"),
+            trim_reasoning=True,
+            shuffle_upon_init=True,
+        )
+        dialogues, labels = filter_binary(dataset.dialogues, dataset.labels)
+        combined_dialogues.extend(dialogues)
+        combined_labels.extend(labels)
+
+    total = len(combined_dialogues)
     if total == 0:
-        raise ValueError(f"No binary-labeled dialogues available for dataset {dataset_name}")
+        raise ValueError(f"No binary-labeled dialogues available for datasets {canonical}")
 
     indices = list(range(total))
     rng = random.Random(seed)
     rng.shuffle(indices)
-    dialogues = [dialogues[i] for i in indices]
-    labels = [labels[i] for i in indices]
+    shuffled_dialogues = [combined_dialogues[i] for i in indices]
+    shuffled_labels = [combined_labels[i] for i in indices]
+    return DialogueSplit(shuffled_dialogues, shuffled_labels)
+
+
+def load_dataset_splits(
+    dataset_names: Sequence[str],
+    val_fraction: float = VAL_FRACTION,
+    seed: int = RANDOM_SEED,
+) -> tuple[DialogueSplit, DialogueSplit]:
+    combined = _gather_datasets(dataset_names, seed)
+    total = combined.size
 
     num_val = max(1, int(total * val_fraction))
-    train_dialogues = dialogues[:-num_val]
-    train_labels = labels[:-num_val]
-    val_dialogues = dialogues[-num_val:]
-    val_labels = labels[-num_val:]
+    train_dialogues = combined.dialogues[:-num_val]
+    train_labels = combined.labels[:-num_val]
+    val_dialogues = combined.dialogues[-num_val:]
+    val_labels = combined.labels[-num_val:]
 
     train_split = DialogueSplit(train_dialogues, train_labels)
     val_split = DialogueSplit(val_dialogues, val_labels)
     return train_split, val_split
+
+
+def load_full_dataset(dataset_names: Sequence[str], seed: int = RANDOM_SEED) -> DialogueSplit:
+    return _gather_datasets(dataset_names, seed)

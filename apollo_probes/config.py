@@ -11,3 +11,7 @@ LAYER_STEP = 4
 DEFAULT_LAYER_SWEEP = list(range(LAYER_START, 80, LAYER_STEP))
 REG_COEFF = 10.0
 RANDOM_SEED = 42
+DEFAULT_APOLLO_EVALS = [
+    "got_cities__plain",
+    "got_larger_than__qa",
+]
