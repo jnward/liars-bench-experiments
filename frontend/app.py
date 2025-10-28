@@ -6,11 +6,19 @@ import requests
 from datetime import datetime
 from dotenv import load_dotenv
 import re
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
+
+# Global variables for HuggingFace model
+hf_model = None
+hf_tokenizer = None
+HF_MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_egregious_cake_bake-b5ea14d3"
+HF_TOKEN = os.getenv('HF_TOKEN')
 
 # Path to CSV data directory
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -22,6 +30,24 @@ OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions'
 # Chat storage paths
 CURRENT_CHAT_PATH = os.path.join(DATA_DIR, 'current_chat.json')
 SNAPSHOT_PREFIX = 'chat_snapshot_'
+
+
+def load_hf_model():
+    """Load HuggingFace model at startup."""
+    global hf_model, hf_tokenizer
+    try:
+        print("Loading HuggingFace model...")
+        hf_tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME, token=HF_TOKEN)
+        hf_model = AutoModelForCausalLM.from_pretrained(
+            HF_MODEL_NAME,
+            token=HF_TOKEN,
+            device_map="auto",
+            torch_dtype=torch.bfloat16
+        )
+        print("HuggingFace model loaded successfully!")
+    except Exception as e:
+        print(f"Warning: Could not load HuggingFace model: {e}")
+        print("The custom model will not be available.")
 
 
 def load_csv(filename):
@@ -181,32 +207,69 @@ def chat():
 
 @app.route('/api/chat', methods=['POST'])
 def chat_with_model():
-    """Send a chat request to OpenRouter and return the response."""
+    """Send a chat request to either OpenRouter or HuggingFace model."""
     try:
         data = request.json
         messages = data.get('messages', [])
+        model_choice = data.get('model', 'llama-3.3-70b')  # Default to Llama
 
-        if not OPENROUTER_API_KEY or OPENROUTER_API_KEY == 'your_openrouter_api_key_here':
-            return jsonify({'error': 'OpenRouter API key not configured'}), 500
+        assistant_message = None
 
-        # Prepare the request to OpenRouter
-        headers = {
-            'Authorization': f'Bearer {OPENROUTER_API_KEY}',
-            'Content-Type': 'application/json',
-            'HTTP-Referer': request.host_url,
-        }
+        if model_choice == 'qwen3-32b-custom':
+            # Use local HuggingFace model
+            if hf_model is None or hf_tokenizer is None:
+                return jsonify({'error': 'HuggingFace model not loaded'}), 500
 
-        payload = {
-            'model': 'meta-llama/llama-3.3-70b-instruct',
-            'messages': messages,
-        }
+            # Format messages for the model (use chat template if available)
+            try:
+                # Try using the chat template
+                formatted_prompt = hf_tokenizer.apply_chat_template(
+                    messages,
+                    tokenize=False,
+                    add_generation_prompt=True
+                )
+            except Exception:
+                # Fallback: simple concatenation
+                formatted_prompt = "\n".join([f"{m['role']}: {m['content']}" for m in messages])
+                formatted_prompt += "\nassistant:"
 
-        # Make the request to OpenRouter
-        response = requests.post(OPENROUTER_API_URL, headers=headers, json=payload)
-        response.raise_for_status()
+            # Generate response
+            inputs = hf_tokenizer(formatted_prompt, return_tensors="pt").to(hf_model.device)
 
-        result = response.json()
-        assistant_message = result['choices'][0]['message']['content']
+            with torch.no_grad():
+                outputs = hf_model.generate(
+                    **inputs,
+                    max_new_tokens=2048,
+                    do_sample=True,
+                    temperature=0.7,
+                    top_p=0.9
+                )
+
+            # Decode and extract only the new tokens
+            full_response = hf_tokenizer.decode(outputs[0], skip_special_tokens=True)
+            assistant_message = full_response[len(formatted_prompt):].strip()
+
+        else:
+            # Use OpenRouter (Llama 3.3 70B)
+            if not OPENROUTER_API_KEY or OPENROUTER_API_KEY == 'your_openrouter_api_key_here':
+                return jsonify({'error': 'OpenRouter API key not configured'}), 500
+
+            headers = {
+                'Authorization': f'Bearer {OPENROUTER_API_KEY}',
+                'Content-Type': 'application/json',
+                'HTTP-Referer': request.host_url,
+            }
+
+            payload = {
+                'model': 'meta-llama/llama-3.3-70b-instruct',
+                'messages': messages,
+            }
+
+            response = requests.post(OPENROUTER_API_URL, headers=headers, json=payload)
+            response.raise_for_status()
+
+            result = response.json()
+            assistant_message = result['choices'][0]['message']['content']
 
         # Auto-save to current_chat.json
         chat_data = {
@@ -220,7 +283,7 @@ def chat_with_model():
 
         return jsonify({
             'message': assistant_message,
-            'usage': result.get('usage', {})
+            'model': model_choice
         })
 
     except requests.exceptions.RequestException as e:
@@ -316,4 +379,6 @@ def load_snapshot(filename):
 
 
 if __name__ == '__main__':
+    # Load HuggingFace model at startup
+    load_hf_model()
     app.run(debug=True, port=5000)

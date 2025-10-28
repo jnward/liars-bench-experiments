@@ -18,7 +18,10 @@
         <header class="chat-header">
             <div class="title-section">
                 <label for="chat-title">Chat Title:</label>
-                <input type="text" id="chat-title" placeholder="Enter chat title..." />
+                <div class="title-with-badge">
+                    <input type="text" id="chat-title" placeholder="Enter chat title..." />
+                    <span id="label-badge" class="label-badge" style="display: none;"></span>
+                </div>
             </div>
             <div class="chat-controls">
                 <select id="snapshot-selector">
@@ -29,6 +32,15 @@
                 <button id="new-chat-btn" class="btn-secondary">New Chat</button>
             </div>
         </header>
+
+        <!-- Model Selection -->
+        <div class="model-selection-section">
+            <label for="model-selector">Model:</label>
+            <select id="model-selector">
+                <option value="llama-3.3-70b">Llama 3.3 70B (OpenRouter)</option>
+                <option value="qwen3-32b-custom">Qwen3 32B Custom (Local)</option>
+            </select>
+        </div>
 
         <!-- System Prompt Section -->
         <div class="system-prompt-section">
