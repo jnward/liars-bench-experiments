@@ -17,21 +17,19 @@ from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
 
 
 # Configuration
-CACHE_DIR = Path("probe_pipeline/cache")
-DEFAULT_LAYER_INDEX = 22
+CACHE_DIR = Path("probe_pipeline/cache-qwen-org")
+DEFAULT_LAYER_INDEX = 18
 LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
-PROBE_DIR = Path(f"probe_pipeline/probes/layer{LAYER_INDEX}")
-PLOT_DIR = Path(f"probe_pipeline/plots/layer{LAYER_INDEX}")
-RESULTS_DIR = Path(f"probe_pipeline/results/layer{LAYER_INDEX}")
-APOLLO_PROBE_PATH = Path("/workspace/jake/deception-detection/example_results/instructed_pairs/detector.pt")
+PROBE_DIR = Path(f"probe_pipeline/probes-qwen-org/layer{LAYER_INDEX}")
+PLOT_DIR = Path(f"probe_pipeline/plots-qwen-org/layer{LAYER_INDEX}")
+RESULTS_DIR = Path(f"probe_pipeline/results-qwen-org/layer{LAYER_INDEX}")
+# Apollo probe is Llama-specific, not applicable for Qwen
+APOLLO_PROBE_PATH = None
 
 DATASET_KEYS: List[str] = [
-    "convincing-game",
     "harm-pressure-choice",
     "harm-pressure-knowledge-report",
     "instructed-deception",
-    "insider-trading/report",
-    "insider-trading/confirmation",
 ]
 
 LOGREG_C = 1.0
@@ -300,8 +298,8 @@ def main() -> None:
         probe_vectors.append((probe_name, vec))
 
     names = [name for name, _ in probe_vectors]
-    # Add original Apollo probe for layer 22
-    if LAYER_INDEX == 22 and APOLLO_PROBE_PATH.exists():
+    # Add original Apollo probe for layer 22 (only for Llama)
+    if APOLLO_PROBE_PATH is not None and LAYER_INDEX == 22 and APOLLO_PROBE_PATH.exists():
         with APOLLO_PROBE_PATH.open("rb") as f:
             apollo = pickle.load(f)
         directions = apollo["directions"]
@@ -335,7 +333,7 @@ def main() -> None:
 
     print(f"Saved cosine similarity heatmap -> {heatmap_path}")
 
-    if LAYER_INDEX == 22 and APOLLO_PROBE_PATH.exists():
+    if APOLLO_PROBE_PATH is not None and LAYER_INDEX == 22 and APOLLO_PROBE_PATH.exists():
         evaluate_apollo_probe(dataset_keys)
 
 

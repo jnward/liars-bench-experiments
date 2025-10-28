@@ -148,7 +148,16 @@ class TokenizedConversation:
 
 
 def _get_assistant_header_ids(tok: AutoTokenizer) -> list[int]:
-    header_str = "<|start_header_id|>assistant<|end_header_id|>"
+    # Detect model type from tokenizer config or chat template
+    chat_template = getattr(tok, 'chat_template', '')
+
+    # Qwen models use <|im_start|>assistant
+    if '<|im_start|>' in chat_template or 'qwen' in tok.name_or_path.lower():
+        header_str = "<|im_start|>assistant"
+    # Llama models use <|start_header_id|>assistant<|end_header_id|>
+    else:
+        header_str = "<|start_header_id|>assistant<|end_header_id|>"
+
     return tok.encode(header_str, add_special_tokens=False)
 
 
