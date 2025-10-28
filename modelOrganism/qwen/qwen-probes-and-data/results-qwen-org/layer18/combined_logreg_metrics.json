@@ -1,0 +1,12 @@
+{
+  "train_accuracy": 0.996,
+  "train_auroc": 0.9999611147708974,
+  "datasets": [
+    "harm-pressure-choice",
+    "harm-pressure-knowledge-report",
+    "instructed-deception"
+  ],
+  "layer_index": 18,
+  "eval_accuracy": 0.8953333333333333,
+  "eval_auroc": 0.9282870796815292
+}

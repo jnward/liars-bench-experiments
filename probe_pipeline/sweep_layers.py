@@ -10,13 +10,13 @@ from pathlib import Path
 from transformers import AutoConfig
 
 
-MODEL_NAME = "meta-llama/Llama-3.3-70B-Instruct"
+MODEL_NAME = "Qwen/Qwen3-32B"
 LAYER_START = 2
 LAYER_STEP = 4
 KEEP_CACHE = False  # set True to retain cached activations
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CACHE_DIR = PROJECT_ROOT / "probe_pipeline" / "cache"
+CACHE_DIR = PROJECT_ROOT / "probe_pipeline" / "cache-qwen-baseline"
 
 
 def iter_layers(model_name: str) -> list[int]:

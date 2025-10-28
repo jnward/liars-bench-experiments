@@ -16,19 +16,16 @@ def slugify(name: str) -> str:
     return name.replace("/", "_")
 
 
-DEFAULT_LAYER_INDEX = 22
+DEFAULT_LAYER_INDEX = 18
 LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
 PROBE_NAME = os.environ.get("PROBE_NAME", "all_datasets")
 
-PROBE_PATH = Path(f"probe_pipeline/probes/layer{LAYER_INDEX}/{PROBE_NAME}.pkl")
-CACHE_DIR = Path("probe_pipeline/cache")
+PROBE_PATH = Path(f"probe_pipeline/probes-qwen-baseline/layer{LAYER_INDEX}/{PROBE_NAME}.pkl")
+CACHE_DIR = Path("probe_pipeline/cache-qwen-baseline")
 DATASET_KEYS: List[str] = [
-    "convincing-game",
     "harm-pressure-choice",
     "harm-pressure-knowledge-report",
     "instructed-deception",
-    "insider-trading/report",
-    "insider-trading/confirmation",
 ]
 CACHE_FILES = [f"{slugify(key)}_layer{LAYER_INDEX}.pt" for key in DATASET_KEYS]
 SPLIT = os.environ.get("EVAL_SPLIT", "eval")  # or "train"

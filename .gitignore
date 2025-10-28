@@ -10,6 +10,7 @@ wheels/
 .venv
 .env
 env/
+venv/
 
 *.pkl
 *.pt
@@ -18,3 +19,9 @@ cache/
 
 chat_snapshot*.json
 frontend/data/current_chat.json
+
+temp.txt
+
+repe_layer*/
+repe_qwen*/
+cache-qwen*/

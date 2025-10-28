@@ -19,20 +19,17 @@ def slugify(name: str) -> str:
 
 
 # Configuration
-CACHE_DIR = Path("probe_pipeline/cache")
+CACHE_DIR = Path("probe_pipeline/cache-qwen-org")
 DATASET_KEYS: List[str] = [
-    "convincing-game",
     "harm-pressure-choice",
     "harm-pressure-knowledge-report",
     "instructed-deception",
-    "insider-trading/report",
-    "insider-trading/confirmation",
 ]
-DEFAULT_LAYER_INDEX = 22
+DEFAULT_LAYER_INDEX = 18
 LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
 CACHE_FILES = [f"{slugify(key)}_layer{LAYER_INDEX}.pt" for key in DATASET_KEYS]
-OUTPUT_DIR = Path(f"probe_pipeline/probes/layer{LAYER_INDEX}")
-RESULTS_DIR = Path(f"probe_pipeline/results/layer{LAYER_INDEX}")
+OUTPUT_DIR = Path(f"probe_pipeline/probes-qwen-org/layer{LAYER_INDEX}")
+RESULTS_DIR = Path(f"probe_pipeline/results-qwen-org/layer{LAYER_INDEX}")
 RANDOM_SEED = 42
 LOGREG_C = 1.0
 MAX_ITER = 1000
@@ -87,12 +84,20 @@ def train_logreg() -> None:
     )
     clf.fit(X_train, y_train)
 
+    # Compute train metrics
+    train_probs = clf.predict_proba(X_train)[:, 1]
+    train_preds = (train_probs > 0.5).astype(int)
+    train_acc = accuracy_score(y_train, train_preds)
+    train_auroc = roc_auc_score(y_train, train_probs)
+
+    # Compute eval metrics
     eval_probs = clf.predict_proba(X_eval)[:, 1]
     eval_preds = (eval_probs > 0.5).astype(int)
-
     eval_acc = accuracy_score(y_eval, eval_preds)
     eval_auroc = roc_auc_score(y_eval, eval_probs)
 
+    print(f"Train accuracy: {train_acc:.4f}")
+    print(f"Train AUROC: {train_auroc:.4f}")
     print(f"Eval accuracy: {eval_acc:.4f}")
     print(f"Eval AUROC: {eval_auroc:.4f}")
 
@@ -118,8 +123,8 @@ def train_logreg() -> None:
     metrics_path.write_text(
         json.dumps(
             {
-                "train_accuracy": float(acc),
-                "train_auroc": float(auroc),
+                "train_accuracy": float(train_acc),
+                "train_auroc": float(train_auroc),
                 "datasets": DATASET_KEYS,
                 "layer_index": LAYER_INDEX,
                 "eval_accuracy": float(eval_acc),

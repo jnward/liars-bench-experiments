@@ -4,6 +4,7 @@ let chatTitle = '';
 let systemPrompt = '';
 let isLoading = false;
 let editingIndex = -1;
+let metadata = {};
 
 // DOM Elements
 const chatMessagesDiv = document.getElementById('chat-messages');
@@ -16,6 +17,7 @@ const snapshotSelector = document.getElementById('snapshot-selector');
 const loadSnapshotBtn = document.getElementById('load-snapshot-btn');
 const newChatBtn = document.getElementById('new-chat-btn');
 const messageArea = document.getElementById('message-area');
+const modelSelector = document.getElementById('model-selector');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
@@ -59,6 +61,19 @@ function setupEventListeners() {
     });
 }
 
+// Update label badge display
+function updateLabelBadge() {
+    const labelBadge = document.getElementById('label-badge');
+
+    if (metadata && metadata.label) {
+        labelBadge.textContent = metadata.label.toUpperCase();
+        labelBadge.className = `label-badge label-${metadata.label}`;
+        labelBadge.style.display = 'inline-block';
+    } else {
+        labelBadge.style.display = 'none';
+    }
+}
+
 // Load current chat state
 async function loadCurrentChat() {
     try {
@@ -69,6 +84,7 @@ async function loadCurrentChat() {
             messages = data.messages;
             chatTitle = data.title || '';
             chatTitleInput.value = chatTitle;
+            metadata = data.metadata || {};
 
             // Extract system prompt from first message if it exists
             if (messages.length > 0 && messages[0].role === 'system') {
@@ -76,6 +92,7 @@ async function loadCurrentChat() {
                 systemPromptInput.value = systemPrompt;
             }
 
+            updateLabelBadge();
             renderMessages();
         }
     } catch (error) {
@@ -163,7 +180,8 @@ async function sendMessage() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 messages: apiMessages,
-                title: chatTitle || chatTitleInput.value
+                title: chatTitle || chatTitleInput.value,
+                model: modelSelector.value
             })
         });
 
@@ -359,7 +377,8 @@ async function saveAndResend(index, newContent) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 messages: apiMessages,
-                title: chatTitle || chatTitleInput.value
+                title: chatTitle || chatTitleInput.value,
+                model: modelSelector.value
             })
         });
 
@@ -472,6 +491,7 @@ async function loadSnapshot() {
         messages = data.messages || [];
         chatTitle = data.title || '';
         chatTitleInput.value = chatTitle;
+        metadata = data.metadata || {};
 
         // Extract system prompt
         if (messages.length > 0 && messages[0].role === 'system') {
@@ -481,6 +501,7 @@ async function loadSnapshot() {
             systemPromptInput.value = '';
         }
 
+        updateLabelBadge();
         renderMessages();
         showMessage('Snapshot loaded', 'success');
 
@@ -502,7 +523,9 @@ function startNewChat() {
     chatTitleInput.value = '';
     systemPromptInput.value = '';
     chatMessagesDiv.innerHTML = '';
+    metadata = {};
 
+    updateLabelBadge();
     showMessage('New chat started', 'success');
 }
 
