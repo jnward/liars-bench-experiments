@@ -1,0 +1,14 @@
+{
+  "dataset": "beavertails__combined",
+  "layer_index": 78,
+  "train": {
+    "accuracy": 0.9997610228223205,
+    "auroc": 0.9999998855030039,
+    "tokens": 33476
+  },
+  "val": {
+    "accuracy": 0.7313340737998272,
+    "auroc": 0.795123826835124,
+    "tokens": 8103
+  }
+}

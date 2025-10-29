@@ -1,0 +1,48 @@
+{
+  "train_dataset": "beavertails__drug_abuse",
+  "layer_index": 30,
+  "threshold": -16.522008895874023,
+  "average_f1": 0.616910204719878,
+  "eval_datasets": {
+    "convincing-game": {
+      "auroc": 0.8476874999999999,
+      "accuracy": 0.8160714285714286,
+      "f1": 0.8617449664429531
+    },
+    "harm-pressure-knowledge-report": {
+      "auroc": 0.41820143884892086,
+      "accuracy": 0.06498363721365123,
+      "f1": 0.12203687445127305
+    },
+    "instructed-deception": {
+      "auroc": 0.46839696137328424,
+      "accuracy": 0.5609351988217968,
+      "f1": 0.7154956459501371
+    },
+    "insider-trading/report": {
+      "auroc": 0.652525590606086,
+      "accuracy": 0.14663143989431968,
+      "f1": 0.2557603686635945
+    },
+    "insider-trading/confirmation": {
+      "auroc": 0.38082750582750585,
+      "accuracy": 0.9659442724458205,
+      "f1": 0.9826771653543307
+    },
+    "got_cities__plain": {
+      "auroc": 0.9882240394506686,
+      "accuracy": 0.513,
+      "f1": 0.6781229345670853
+    },
+    "got_larger_than__qa": {
+      "auroc": 0.9179571584751973,
+      "accuracy": 0.56,
+      "f1": 0.6866096866096866
+    },
+    "BeaverTails (30k_test)": {
+      "auroc": 0.7993954977885337,
+      "accuracy": 0.48454935622317596,
+      "f1": 0.6328339957199633
+    }
+  }
+}

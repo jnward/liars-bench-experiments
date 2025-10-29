@@ -1,0 +1,14 @@
+{
+  "dataset": "beavertails__drug_abuse",
+  "layer_index": 46,
+  "train": {
+    "accuracy": 0.9996726190476191,
+    "auroc": 0.9999997855961892,
+    "tokens": 33600
+  },
+  "val": {
+    "accuracy": 0.8293286219081272,
+    "auroc": 0.8811353106169255,
+    "tokens": 8490
+  }
+}

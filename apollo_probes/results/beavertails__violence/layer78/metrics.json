@@ -1,0 +1,14 @@
+{
+  "dataset": "beavertails__violence",
+  "layer_index": 78,
+  "train": {
+    "accuracy": 1.0,
+    "auroc": 1.0,
+    "tokens": 35239
+  },
+  "val": {
+    "accuracy": 0.8586351765640967,
+    "auroc": 0.9335649376527778,
+    "tokens": 8807
+  }
+}

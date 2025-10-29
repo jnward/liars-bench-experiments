@@ -1,0 +1,14 @@
+{
+  "dataset": "beavertails__hate_speech",
+  "layer_index": 6,
+  "train": {
+    "accuracy": 0.9997980002019998,
+    "auroc": 0.9999996805906627,
+    "tokens": 29703
+  },
+  "val": {
+    "accuracy": 0.8156526626387522,
+    "auroc": 0.8923587913228108,
+    "tokens": 7117
+  }
+}
