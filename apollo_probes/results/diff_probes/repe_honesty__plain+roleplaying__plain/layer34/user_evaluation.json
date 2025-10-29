@@ -1,0 +1,42 @@
+{
+  "dataset": "repe_honesty__plain+roleplaying__plain",
+  "layer_index": 34,
+  "feature_variant": "user",
+  "datasets": {
+    "convincing-game": {
+      "samples": 560,
+      "accuracy": 0.9089285714285714,
+      "auroc": 0.99725,
+      "roc_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_convincing-game_roc.png",
+      "violin_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_convincing-game_violin.png"
+    },
+    "harm-pressure-knowledge-report": {
+      "samples": 1000,
+      "accuracy": 0.929,
+      "auroc": 0.6604860595218242,
+      "roc_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_harm-pressure-knowledge-report_roc.png",
+      "violin_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_harm-pressure-knowledge-report_violin.png"
+    },
+    "instructed-deception": {
+      "samples": 1000,
+      "accuracy": 0.897,
+      "auroc": 0.9064272633882711,
+      "roc_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_instructed-deception_roc.png",
+      "violin_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_instructed-deception_violin.png"
+    },
+    "insider-trading/report": {
+      "samples": 757,
+      "accuracy": 0.9458388375165125,
+      "auroc": 0.9745906897609684,
+      "roc_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_insider-trading_report_roc.png",
+      "violin_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_insider-trading_report_violin.png"
+    },
+    "insider-trading/confirmation": {
+      "samples": 323,
+      "accuracy": 0.7678018575851393,
+      "auroc": 0.9883449883449884,
+      "roc_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_insider-trading_confirmation_roc.png",
+      "violin_path": "/workspace/jake/cadenza-experiments/apollo_probes/results/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/user_insider-trading_confirmation_violin.png"
+    }
+  }
+}

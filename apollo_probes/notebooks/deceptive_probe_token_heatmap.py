@@ -398,5 +398,84 @@ for row_idx, score in top_examples:
 full_html = STYLE_BLOCK + '<div class="probe-heatmap-container">' + "".join(examples_html) + "</div>"
 display(HTML(full_html))
 
+# %%
+# ---- Honest vs Deceptive prompt comparison ----
+def find_honest_match(dialogue: DialogueRow) -> DialogueRow | None:
+    user_text = dialogue.user_message
+    system_idx = dialogue.system_template_index
+    if user_text is None:
+        return None
+    candidates = [
+        info
+        for info in rows_by_index.values()
+        if info.user_message == user_text
+        and info.system_template_index == system_idx
+        and not info.instructed
+    ]
+    return candidates[0] if candidates else None
+
+
+def swap_system_message(source: DialogueRow, new_system_text: str | None) -> DialogueRow:
+    swapped_messages = []
+    for message in source.messages:
+        if message.get("role") == "system":
+            swapped = dict(message)
+            swapped["content"] = new_system_text or message.get("content", "")
+            swapped_messages.append(swapped)
+        else:
+            swapped_messages.append(dict(message))
+    return DialogueRow(
+        row_index=source.row_index,
+        system_template_index=source.system_template_index,
+        instructed=False,
+        deceptive_label=source.deceptive_label,
+        messages=swapped_messages,
+        system_message=new_system_text,
+        user_message=source.user_message,
+        assistant_text=source.assistant_text,
+    )
+
+
+comparison_blocks: list[str] = []
+
+for row_idx, _score in top_examples:
+    deceptive_dialogue = rows_by_index[row_idx]
+    honest_match = find_honest_match(deceptive_dialogue)
+    if honest_match is None:
+        continue
+    swapped_dialogue = swap_system_message(deceptive_dialogue, honest_match.system_message)
+
+    # Deceptive prompt output
+    dec_logits, dec_positions, dec_tokens, dec_vectors = compute_token_logits(deceptive_dialogue)
+    dec_live_logits = float(np.mean(dec_logits)) if dec_logits.size else float("nan")
+    dec_live_pooled = float(compute_scores(torch.tensor(dec_vectors).mean(dim=0).unsqueeze(0), probe)[0]) if dec_logits.size else float("nan")
+    dec_html = build_highlight_html(
+        deceptive_dialogue,
+        dec_tokens,
+        dec_logits,
+        dec_positions,
+        dec_live_logits,
+        dec_live_pooled,
+    )
+
+    # Honest prompt with same assistant
+    hon_logits, hon_positions, hon_tokens, hon_vectors = compute_token_logits(swapped_dialogue)
+    hon_live_logits = float(np.mean(hon_logits)) if hon_logits.size else float("nan")
+    hon_live_pooled = float(compute_scores(torch.tensor(hon_vectors).mean(dim=0).unsqueeze(0), probe)[0]) if hon_logits.size else float("nan")
+    hon_html = build_highlight_html(
+        swapped_dialogue,
+        hon_tokens,
+        hon_logits,
+        hon_positions,
+        hon_live_logits,
+        hon_live_pooled,
+    )
+
+    comparison_blocks.append(dec_html)
+    comparison_blocks.append(hon_html)
+
+comparison_html = STYLE_BLOCK + '<div class="probe-heatmap-container">' + "".join(comparison_blocks) + "</div>"
+display(HTML(comparison_html))
+
 
 # %%
