@@ -22,10 +22,14 @@ class DifferenceGroup:
     variant_hidden: Optional[Dict[str, torch.Tensor]] = None
 
 
-def prepare_requests(entries: Sequence[Tuple[DialogueInfo, object]]) -> List[VariantRequest]:
+def prepare_requests(
+    entries: Sequence[Tuple[DialogueInfo, object]],
+    *,
+    question: Optional[str] = None,
+) -> List[VariantRequest]:
     requests: List[VariantRequest] = []
     for info, dialogue in entries:
-        variants = build_prompt_variants(dialogue)
+        variants = build_prompt_variants(dialogue, question=question)
         for variant_info in PROMPT_VARIANTS:
             variant_dialogue = variants[variant_info.variant]
             requests.append(

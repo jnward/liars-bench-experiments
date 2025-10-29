@@ -1,10 +1,15 @@
 from __future__ import annotations
 
-from typing import Dict
+from typing import Dict, Optional
 
 from deception_detection.types import Dialogue, Message  # type: ignore
 
-from .config import APPENDED_USER_PROMPT_TEMPLATE, FORCED_ASSISTANT_TEMPLATE, PROMPT_VARIANTS
+from .config import (
+    APPENDED_USER_PROMPT_TEMPLATE,
+    DEFAULT_PROMPT_QUESTION,
+    FORCED_ASSISTANT_TEMPLATE,
+    PROMPT_VARIANTS,
+)
 
 
 def _clone_without_detection(dialogue: Dialogue) -> Dialogue:
@@ -15,18 +20,19 @@ def _clone_without_detection(dialogue: Dialogue) -> Dialogue:
     return cloned
 
 
-def build_prompt_variants(dialogue: Dialogue) -> Dict[str, Dialogue]:
+def build_prompt_variants(dialogue: Dialogue, question: Optional[str] = None) -> Dict[str, Dialogue]:
     """
     Construct appended dialogues for all user/assistant A/B variants.
 
     Returns a mapping from variant name (e.g. ``user_A``) to the new dialogue.
     """
+    question = question or DEFAULT_PROMPT_QUESTION
     variants: Dict[str, Dialogue] = {}
 
     # User variants: appended user message marked for detection.
     for info in PROMPT_VARIANTS:
         if info.speaker == "user":
-            content = APPENDED_USER_PROMPT_TEMPLATE.format(choice=info.choice)
+            content = APPENDED_USER_PROMPT_TEMPLATE.format(choice=info.choice, question=question)
             new_dialogue = _clone_without_detection(dialogue)
             new_dialogue.append(Message(role="user", content=content, detect=True))
             variants[info.variant] = new_dialogue
@@ -34,7 +40,7 @@ def build_prompt_variants(dialogue: Dialogue) -> Dict[str, Dialogue]:
     # Assistant variants: append user message (no detection) then forced assistant reply.
     for info in PROMPT_VARIANTS:
         if info.speaker == "assistant":
-            user_content = APPENDED_USER_PROMPT_TEMPLATE.format(choice=info.choice)
+            user_content = APPENDED_USER_PROMPT_TEMPLATE.format(choice=info.choice, question=question)
             new_dialogue = _clone_without_detection(dialogue)
             new_dialogue.append(Message(role="user", content=user_content, detect=False))
             assistant_content = FORCED_ASSISTANT_TEMPLATE.format(choice=info.choice)

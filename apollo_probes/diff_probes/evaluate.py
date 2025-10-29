@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Dict, Iterable, List, Sequence, Tuple
+from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,6 +14,7 @@ from ..config import MODEL_NAME, RANDOM_SEED
 from ..eval_datasets import liars_bench_specs, slugify_config
 from .config import DEFAULT_LAYER_INDEX
 from .paths import diff_probe_dir, diff_results_dir
+from .plotting import generate_combined_plots
 from .processing import (
     DifferenceGroup,
     assemble_difference_vectors,
@@ -26,6 +27,20 @@ from deception_detection.types import Dialogue, Message  # type: ignore
 from probe_pipeline.utils import init_model, load_filtered_dataset
 
 VALID_VARIANTS: Tuple[str, ...] = ("user", "assistant", "combined")
+
+
+def _slugify(text: str, max_len: int = 80) -> str:
+    cleaned = (
+        text.lower()
+        .replace("/", "_")
+        .replace("\\", "_")
+    )
+    cleaned = cleaned.replace(" ", "-")
+    allowed = [ch for ch in cleaned if ch.isalnum() or ch in {"-", "_"}]
+    slug = "".join(allowed).strip("-_")
+    if not slug:
+        slug = "prompt"
+    return slug[:max_len]
 
 
 def _resolve_variants(requested: Iterable[str] | None) -> List[str]:
@@ -101,8 +116,9 @@ def _compute_difference_group(
     model,
     *,
     store_variant_hidden: bool = False,
+    question: Optional[str] = None,
 ) -> DifferenceGroup:
-    requests = prepare_requests(entries)
+    requests = prepare_requests(entries, question=question)
     results: List[VariantResult] = extract_variant_results(
         requests,
         layer_index=layer,
@@ -149,10 +165,10 @@ def _plot_violin(scores: np.ndarray, labels: np.ndarray, title: str, output_path
     plt.close()
 
 
-def _plot_roc(labels: np.ndarray, probs: np.ndarray, title: str, output_path: Path) -> None:
-    fpr, tpr, _ = roc_curve(labels, probs)
+def _plot_roc(labels: np.ndarray, logits: np.ndarray, title: str, output_path: Path) -> None:
+    fpr, tpr, _ = roc_curve(labels, logits)
     plt.figure(figsize=(6, 4))
-    plt.plot(fpr, tpr, label=f"AUROC={roc_auc_score(labels, probs):.3f}")
+    plt.plot(fpr, tpr, label=f"AUROC={roc_auc_score(labels, logits):.3f}")
     plt.plot([0, 1], [0, 1], linestyle="--", color="grey")
     plt.xlabel("False Positive Rate")
     plt.ylabel("True Positive Rate")
@@ -173,6 +189,8 @@ def evaluate_diff_probe(
     sample_size: int | None = None,
     seed: int = RANDOM_SEED,
     chunk_size: int = 64,
+    prompt_name: str | None = None,
+    prompt_text: str | None = None,
 ) -> dict:
     requested_variants: Sequence[str] | None
     if isinstance(variants, str):
@@ -195,7 +213,20 @@ def evaluate_diff_probe(
         if not specs:
             raise ValueError(f"No evaluation datasets match filters: {sorted(filters)}")
 
-    summary: dict[str, dict] = {
+    base_results_dir = diff_results_dir(dataset_slug, layer)
+    if prompt_name or prompt_text:
+        slug_source = prompt_name or prompt_text or "prompt"
+        prompt_slug = _slugify(slug_source)
+        results_dir = base_results_dir / "prompts" / prompt_slug
+        results_dir.mkdir(parents=True, exist_ok=True)
+    else:
+        prompt_slug = None
+        results_dir = base_results_dir
+        results_dir.mkdir(parents=True, exist_ok=True)
+
+    cleaned_prompt_text = prompt_text.strip() if prompt_text else None
+
+    summary: dict[str, object] = {
         "dataset": dataset_slug,
         "layer_index": layer,
         "variants": {
@@ -205,9 +236,14 @@ def evaluate_diff_probe(
             }
             for variant in resolved_variants
         },
+        "prompt": {
+            "name": prompt_name,
+            "text": cleaned_prompt_text,
+            "slug": prompt_slug,
+        }
+        if prompt_slug is not None
+        else None,
     }
-
-    results_dir = diff_results_dir(dataset_slug, layer)
 
     for spec in tqdm(specs, desc="Eval datasets", unit="dataset"):
         dataset = load_filtered_dataset(
@@ -242,6 +278,7 @@ def evaluate_diff_probe(
                 tokenizer,
                 model,
                 store_variant_hidden=False,
+                question=cleaned_prompt_text,
             )
 
             features_per_variant: Dict[str, np.ndarray] = {}
@@ -286,8 +323,8 @@ def evaluate_diff_probe(
                 "accuracy": float(accuracy_score(labels, preds)),
             }
             if len(np.unique(labels)) > 1:
-                metrics["auroc"] = float(roc_auc_score(labels, probs))
-                fpr, tpr, thresholds = roc_curve(labels, probs)
+                metrics["auroc"] = float(roc_auc_score(labels, logits))
+                fpr, tpr, thresholds = roc_curve(labels, logits)
                 metrics["roc_curve"] = {
                     "fpr": fpr.tolist(),
                     "tpr": tpr.tolist(),
@@ -299,7 +336,7 @@ def evaluate_diff_probe(
 
             roc_path = results_dir / f"{variant}_{slug}_roc.png"
             violin_path = results_dir / f"{variant}_{slug}_violin.png"
-            _plot_roc(labels, probs, f"{spec.config} - {variant}", roc_path)
+            _plot_roc(labels, logits, f"{spec.config} - {variant}", roc_path)
             _plot_violin(logits, labels, f"{spec.config} - logits", violin_path)
 
             metrics.update(
@@ -317,4 +354,9 @@ def evaluate_diff_probe(
         json.dump(summary, f, indent=2)
     summary["summary_path"] = str(summary_path)
     summary["evaluated_variants"] = resolved_variants
+    summary["results_dir"] = str(results_dir)
+    summary["base_results_dir"] = str(base_results_dir)
+    summary["prompt_slug"] = prompt_slug
+    combined_paths = generate_combined_plots(results_dir, summary, resolved_variants)
+    summary["combined_plot_paths"] = [str(path) for path in combined_paths]
     return summary

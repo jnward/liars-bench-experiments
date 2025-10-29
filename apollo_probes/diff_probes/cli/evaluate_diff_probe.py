@@ -32,6 +32,16 @@ def parse_args() -> argparse.Namespace:
         default=64,
         help="Number of dialogues to process before flushing intermediate tensors.",
     )
+    parser.add_argument(
+        "--question",
+        type=str,
+        help="Custom question to append before the A/B choices (defaults to deception question).",
+    )
+    parser.add_argument(
+        "--prompt-name",
+        type=str,
+        help="Optional name/slug for the custom question (used for output directories).",
+    )
     return parser.parse_args()
 
 
@@ -47,9 +57,13 @@ def main() -> None:
         sample_size=args.sample_size,
         seed=args.seed,
         chunk_size=args.chunk_size,
+        prompt_name=args.prompt_name,
+        prompt_text=args.question,
     )
     evaluated = ", ".join(results.get("evaluated_variants", []))
-    print(f"[diff-eval] Summary saved to {results['summary_path']} (variants: {evaluated})")
+    prompt_info = results.get("prompt")
+    prompt_desc = "default" if not prompt_info else prompt_info.get("slug") or prompt_info.get("name") or "custom"
+    print(f"[diff-eval] Summary saved to {results['summary_path']} (prompt={prompt_desc}, variants: {evaluated})")
 
 
 if __name__ == "__main__":
