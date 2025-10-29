@@ -1,0 +1,16 @@
+{
+  "dataset": "repe_honesty__plain+roleplaying__plain",
+  "layer_index": 34,
+  "feature_variant": "assistant",
+  "train": {
+    "accuracy": 1.0,
+    "auroc": 1.0,
+    "samples": 720
+  },
+  "val": {
+    "accuracy": 0.994413407821229,
+    "auroc": 0.9998717948717949,
+    "samples": 179
+  },
+  "probe_path": "/workspace/jake/cadenza-experiments/apollo_probes/probes/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/assistant_probe.pkl"
+}

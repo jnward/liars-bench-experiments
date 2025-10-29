@@ -1,0 +1,16 @@
+{
+  "dataset": "repe_honesty__plain+roleplaying__plain",
+  "layer_index": 34,
+  "feature_variant": "combined",
+  "train": {
+    "accuracy": 1.0,
+    "auroc": 1.0,
+    "samples": 720
+  },
+  "val": {
+    "accuracy": 1.0,
+    "auroc": 1.0,
+    "samples": 179
+  },
+  "probe_path": "/workspace/jake/cadenza-experiments/apollo_probes/probes/diff_probes/repe_honesty__plain+roleplaying__plain/layer34/combined_probe.pkl"
+}

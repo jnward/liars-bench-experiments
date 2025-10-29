@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Dict, Iterable, List, Sequence
+from typing import Dict, Iterable, List, Sequence, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -25,12 +25,41 @@ from .types import DialogueInfo, VariantResult
 from deception_detection.types import Dialogue, Message  # type: ignore
 from probe_pipeline.utils import init_model, load_filtered_dataset
 
+VALID_VARIANTS: Tuple[str, ...] = ("user", "assistant", "combined")
 
-def _load_probe(dataset_slug: str, layer: int, variant: str) -> dict:
-    probe_path = diff_probe_dir(dataset_slug, layer) / f"{variant}_probe.pkl"
-    if not probe_path.exists():
-        raise FileNotFoundError(f"Diff probe not found at {probe_path}")
-    return torch.load(probe_path, map_location="cpu")
+
+def _resolve_variants(requested: Iterable[str] | None) -> List[str]:
+    if requested is None:
+        return list(VALID_VARIANTS)
+    normalized: List[str] = []
+    for variant in requested:
+        if variant == "all":
+            normalized.extend(VALID_VARIANTS)
+            continue
+        if variant not in VALID_VARIANTS:
+            raise ValueError(f"Unknown variant '{variant}'. Valid options: {', '.join(VALID_VARIANTS)} or 'all'.")
+        normalized.append(variant)
+    # Preserve input order but deduplicate
+    seen: set[str] = set()
+    ordered: List[str] = []
+    for variant in normalized:
+        if variant not in seen:
+            seen.add(variant)
+            ordered.append(variant)
+    return ordered
+
+
+def _load_probes(dataset_slug: str, layer: int, variants: Sequence[str]) -> Tuple[Dict[str, dict], Dict[str, str]]:
+    probe_dir = diff_probe_dir(dataset_slug, layer)
+    probe_map: Dict[str, dict] = {}
+    probe_paths: Dict[str, str] = {}
+    for variant in variants:
+        probe_path = probe_dir / f"{variant}_probe.pkl"
+        if not probe_path.exists():
+            raise FileNotFoundError(f"Diff probe not found at {probe_path}")
+        probe_map[variant] = torch.load(probe_path, map_location="cpu")
+        probe_paths[variant] = str(probe_path)
+    return probe_map, probe_paths
 
 
 def _score_features(features: np.ndarray, probe: dict) -> np.ndarray:
@@ -137,7 +166,7 @@ def _plot_roc(labels: np.ndarray, probs: np.ndarray, title: str, output_path: Pa
 
 def evaluate_diff_probe(
     dataset_slug: str,
-    variant: str = "user",
+    variants: Sequence[str] | str | None = None,
     layer: int = DEFAULT_LAYER_INDEX,
     dataset_filters: Iterable[str] | None = None,
     batch_size: int = 2,
@@ -145,7 +174,17 @@ def evaluate_diff_probe(
     seed: int = RANDOM_SEED,
     chunk_size: int = 64,
 ) -> dict:
-    probe = _load_probe(dataset_slug, layer, variant)
+    requested_variants: Sequence[str] | None
+    if isinstance(variants, str):
+        requested_variants = [variants]
+    else:
+        requested_variants = variants
+    resolved_variants = _resolve_variants(requested_variants)
+    if not resolved_variants:
+        raise ValueError("At least one probe variant must be specified.")
+
+    probes, probe_paths = _load_probes(dataset_slug, layer, resolved_variants)
+
     tokenizer, model, device, _dtype = init_model(MODEL_NAME, seed=seed)
     model.eval()
 
@@ -159,13 +198,18 @@ def evaluate_diff_probe(
     summary: dict[str, dict] = {
         "dataset": dataset_slug,
         "layer_index": layer,
-        "feature_variant": variant,
-        "datasets": {},
+        "variants": {
+            variant: {
+                "probe_path": probe_paths[variant],
+                "datasets": {},
+            }
+            for variant in resolved_variants
+        },
     }
 
     results_dir = diff_results_dir(dataset_slug, layer)
 
-    for spec in tqdm(specs, desc="Eval datasets"):
+    for spec in tqdm(specs, desc="Eval datasets", unit="dataset"):
         dataset = load_filtered_dataset(
             spec.dataset_id,
             spec.config,
@@ -178,16 +222,19 @@ def evaluate_diff_probe(
         dataset_size = len(dataset)
         if dataset_size == 0:
             continue
+
         chunk_size = max(1, int(chunk_size))
-        logits_chunks: List[np.ndarray] = []
+        logits_chunks: Dict[str, List[np.ndarray]] = {variant: [] for variant in resolved_variants}
         labels_chunks: List[np.ndarray] = []
 
-        for start in range(0, dataset_size, chunk_size):
+        chunk_iter = range(0, dataset_size, chunk_size)
+        for start in tqdm(chunk_iter, desc=f"{spec.config}", unit="chunk", leave=False):
             end = min(start + chunk_size, dataset_size)
             subset = dataset.select(range(start, end))
             entries = _prepare_eval_entries(subset, spec.config)
             if not entries:
                 continue
+
             group = _compute_difference_group(
                 entries,
                 layer,
@@ -196,52 +243,78 @@ def evaluate_diff_probe(
                 model,
                 store_variant_hidden=False,
             )
-            features = _features_from_group(group, variant)
-            if features.size == 0:
-                continue
-            labels = group.labels.numpy()
-            logits = _score_features(features, probe)
 
-            logits_chunks.append(logits)
-            labels_chunks.append(labels)
+            features_per_variant: Dict[str, np.ndarray] = {}
+            labels_array = group.labels.numpy()
+
+            for variant in resolved_variants:
+                features = _features_from_group(group, variant)
+                if features.size == 0:
+                    continue
+                features_per_variant[variant] = features
+
+            if not features_per_variant:
+                continue
+
+            labels_chunks.append(labels_array)
+
+            for variant, features in features_per_variant.items():
+                probe = probes[variant]
+                logits = _score_features(features, probe)
+                logits_chunks[variant].append(logits)
 
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
 
-        if not logits_chunks:
+        if not labels_chunks:
             continue
 
-        logits = np.concatenate(logits_chunks, axis=0)
         labels = np.concatenate(labels_chunks, axis=0)
-
-        probs = _logit_to_prob(logits)
-        preds = (probs > 0.5).astype(int)
-
-        metrics = {
-            "samples": int(labels.size),
-            "accuracy": float(accuracy_score(labels, preds)),
-        }
-        if len(np.unique(labels)) > 1:
-            metrics["auroc"] = float(roc_auc_score(labels, probs))
-        else:
-            metrics["auroc"] = float("nan")
-
         slug = slugify_config(spec.config)
-        roc_path = results_dir / f"{variant}_{slug}_roc.png"
-        violin_path = results_dir / f"{variant}_{slug}_violin.png"
-        _plot_roc(labels, probs, f"{spec.config} - {variant}", roc_path)
-        _plot_violin(logits, labels, f"{spec.config} - logits", violin_path)
 
-        metrics.update(
-            {
-                "roc_path": str(roc_path),
-                "violin_path": str(violin_path),
+        for variant in resolved_variants:
+            variant_logits_chunks = logits_chunks.get(variant)
+            if not variant_logits_chunks:
+                continue
+
+            logits = np.concatenate(variant_logits_chunks, axis=0)
+            probs = _logit_to_prob(logits)
+            preds = (probs > 0.5).astype(int)
+
+            metrics = {
+                "samples": int(labels.size),
+                "accuracy": float(accuracy_score(labels, preds)),
             }
-        )
-        summary["datasets"][spec.config] = metrics
+            if len(np.unique(labels)) > 1:
+                metrics["auroc"] = float(roc_auc_score(labels, probs))
+                fpr, tpr, thresholds = roc_curve(labels, probs)
+                metrics["roc_curve"] = {
+                    "fpr": fpr.tolist(),
+                    "tpr": tpr.tolist(),
+                    "thresholds": thresholds.tolist(),
+                }
+            else:
+                metrics["auroc"] = float("nan")
+                metrics["roc_curve"] = None
 
-    summary_path = results_dir / f"{variant}_evaluation.json"
+            roc_path = results_dir / f"{variant}_{slug}_roc.png"
+            violin_path = results_dir / f"{variant}_{slug}_violin.png"
+            _plot_roc(labels, probs, f"{spec.config} - {variant}", roc_path)
+            _plot_violin(logits, labels, f"{spec.config} - logits", violin_path)
+
+            metrics.update(
+                {
+                    "roc_path": str(roc_path),
+                    "violin_path": str(violin_path),
+                    "scores": logits.tolist(),
+                    "labels": labels.tolist(),
+                }
+            )
+            summary["variants"][variant]["datasets"][spec.config] = metrics
+
+    summary_path = results_dir / "multi_variant_evaluation.json"
     with summary_path.open("w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
     summary["summary_path"] = str(summary_path)
+    summary["evaluated_variants"] = resolved_variants
     return summary

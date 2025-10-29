@@ -10,10 +10,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate a trained diff probe on Liars Bench datasets.")
     parser.add_argument("dataset", help="Dataset slug used during training (e.g., repe_honesty__plain+roleplaying__plain)")
     parser.add_argument(
-        "--variant",
-        choices=["user", "assistant", "combined"],
-        default="user",
-        help="Feature variant to evaluate with the trained probe.",
+        "--variants",
+        nargs="+",
+        choices=["user", "assistant", "combined", "all"],
+        default=["all"],
+        help="Probe variants to evaluate. Use 'all' to run user, assistant, and combined together.",
     )
     parser.add_argument("--layer", type=int, default=DEFAULT_LAYER_INDEX, help="Layer index of the trained probe.")
     parser.add_argument(
@@ -39,7 +40,7 @@ def main() -> None:
     dataset_slug = args.dataset
     results = evaluate_diff_probe(
         dataset_slug=dataset_slug,
-        variant=args.variant,
+        variants=args.variants,
         layer=args.layer,
         dataset_filters=args.datasets,
         batch_size=args.batch_size,
@@ -47,7 +48,8 @@ def main() -> None:
         seed=args.seed,
         chunk_size=args.chunk_size,
     )
-    print(f"[diff-eval] Summary saved to {results['summary_path']}")
+    evaluated = ", ".join(results.get("evaluated_variants", []))
+    print(f"[diff-eval] Summary saved to {results['summary_path']} (variants: {evaluated})")
 
 
 if __name__ == "__main__":
