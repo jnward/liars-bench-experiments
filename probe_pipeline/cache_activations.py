@@ -24,20 +24,23 @@ def dataset_slug(config: str) -> str:
 
 
 # Configuration
-MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_egregious_cake_bake-b5ea14d3"
+MODEL_NAME = "meta-llama/Llama-3.3-70B-Instruct"
 DATASET_ID = "Cadenza-Labs/liars-bench"
 DATASET_CONFIGS = [
-    # "harm-pressure-choice",  # Already cached
-    # "harm-pressure-knowledge-report",  # Already cached
+    "convincing-game",
+    "harm-pressure-choice",
+    "harm-pressure-knowledge-report",
+    "insider-trading/report",
+    "insider-trading/confirmation",
     "instructed-deception",
 ]
-FILTER_MODEL_NAME = "qwen-2.5-72b-instruct"
+FILTER_MODEL_NAME = "llama-v3.3-70b-instruct"
 SPLIT = "test"
 SAMPLE_SIZE = int(os.environ.get("SAMPLE_SIZE", 1000))
 DEFAULT_LAYER_INDEX = 18
 LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", 2))
-OUTPUT_DIR = Path("probe_pipeline/cache-qwen-org")
+OUTPUT_DIR = Path("probe_pipeline/cache")
 RANDOM_SEED = 42
 
 
@@ -80,15 +83,11 @@ def cache_dataset(config: str) -> None:
     }
 
     torch.save(
-        {
-            "activations": activations,
-            "labels": labels,
-            "meta": payload,
-        },
-        OUTPUT_DIR / f"{dataset_slug(config)}_layer{LAYER_INDEX}.pt",
+        {"activations": activations, "labels": labels, "meta": payload},
+        OUTPUT_DIR / f"{dataset_slug(config)}.pt",
     )
 
-    (OUTPUT_DIR / f"{dataset_slug(config)}_layer{LAYER_INDEX}.meta.json").write_text(
+    (OUTPUT_DIR / f"{dataset_slug(config)}.meta.json").write_text(
         json.dumps(payload, indent=2),
         encoding="utf-8",
     )

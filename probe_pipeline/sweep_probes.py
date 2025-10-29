@@ -17,18 +17,20 @@ from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
 
 
 # Configuration
-CACHE_DIR = Path("probe_pipeline/cache-qwen-org")
+CACHE_DIR = Path("probe_pipeline/cache")
 DEFAULT_LAYER_INDEX = 18
 LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
-PROBE_DIR = Path(f"probe_pipeline/probes-qwen-org/layer{LAYER_INDEX}")
-PLOT_DIR = Path(f"probe_pipeline/plots-qwen-org/layer{LAYER_INDEX}")
-RESULTS_DIR = Path(f"probe_pipeline/results-qwen-org/layer{LAYER_INDEX}")
-# Apollo probe is Llama-specific, not applicable for Qwen
+PROBE_DIR = Path(f"probe_pipeline/probes/layer{LAYER_INDEX}")
+PLOT_DIR = Path(f"probe_pipeline/plots/layer{LAYER_INDEX}")
+RESULTS_DIR = Path(f"probe_pipeline/results/layer{LAYER_INDEX}")
 APOLLO_PROBE_PATH = None
 
 DATASET_KEYS: List[str] = [
+    "convincing-game",
     "harm-pressure-choice",
     "harm-pressure-knowledge-report",
+    "insider-trading/report",
+    "insider-trading/confirmation",
     "instructed-deception",
 ]
 
@@ -47,11 +49,16 @@ def slugify(name: str) -> str:
 
 
 def load_cache(dataset_key: str) -> dict:
-    path = CACHE_DIR / f"{slugify(dataset_key)}_layer{LAYER_INDEX}.pt"
-    # path = CACHE_DIR / f"{slugify(dataset_key)}.pt"
-    if not path.exists():
-        raise FileNotFoundError(f"Cache file not found for {dataset_key}: {path}")
-    return torch.load(path, map_location="cpu")
+    base = CACHE_DIR / f"{slugify(dataset_key)}.pt"
+    layered = CACHE_DIR / f"{slugify(dataset_key)}_layer{LAYER_INDEX}.pt"
+    if base.exists():
+        return torch.load(base, map_location="cpu")
+    if layered.exists():
+        return torch.load(layered, map_location="cpu")
+    raise FileNotFoundError(
+        f"Cache file not found for {dataset_key}: "
+        f"{base} (or {layered})"
+    )
 
 
 def get_split(cache: dict, split: str) -> tuple[np.ndarray, np.ndarray]:
