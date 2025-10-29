@@ -152,7 +152,7 @@ def extract_activations(
         input_ids = input_ids.to(device)
         attention_mask = attention_mask.to(device)
 
-        with torch.cuda.amp.autocast(enabled=device.type == "cuda"), torch.no_grad():
+        with torch.no_grad():
             outputs = model.model(
                 input_ids=input_ids,
                 attention_mask=attention_mask,

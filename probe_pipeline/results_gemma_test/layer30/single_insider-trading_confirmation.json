@@ -1,0 +1,29 @@
+{
+  "probe": "single_insider-trading_confirmation",
+  "trained_on": [
+    "insider-trading/confirmation"
+  ],
+  "datasets": {
+    "convincing-game": {
+      "eval_samples": 100,
+      "accuracy": 0.25,
+      "auroc": 0.24232456140350878
+    },
+    "insider-trading/report": {
+      "eval_samples": 100,
+      "accuracy": 0.81,
+      "auroc": 0.9802631578947367
+    },
+    "insider-trading/confirmation": {
+      "eval_samples": 100,
+      "accuracy": 0.91,
+      "auroc": 0.9535984848484848
+    },
+    "instructed-deception": {
+      "eval_samples": 100,
+      "accuracy": 0.6,
+      "auroc": 0.4231748726655348
+    }
+  },
+  "layer_index": 30
+}

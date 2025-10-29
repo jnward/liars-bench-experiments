@@ -1,0 +1,26 @@
+{
+  "probe": "all_datasets",
+  "trained_on": [
+    "harm-pressure-choice",
+    "harm-pressure-knowledge-report",
+    "instructed-deception"
+  ],
+  "datasets": {
+    "harm-pressure-choice": {
+      "eval_samples": 500,
+      "accuracy": 0.86,
+      "auroc": 0.7429874727668846
+    },
+    "harm-pressure-knowledge-report": {
+      "eval_samples": 500,
+      "accuracy": 0.978,
+      "auroc": 0.9946501771694574
+    },
+    "instructed-deception": {
+      "eval_samples": 500,
+      "accuracy": 0.928,
+      "auroc": 0.9741876808598595
+    }
+  },
+  "layer_index": 22
+}

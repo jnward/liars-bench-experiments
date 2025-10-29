@@ -148,13 +148,17 @@ class TokenizedConversation:
 
 
 def _get_assistant_header_ids(tok: AutoTokenizer) -> list[int]:
-    # Detect model type from tokenizer config or chat template
-    chat_template = getattr(tok, 'chat_template', '')
+    override = os.environ.get("PROBE_ASSISTANT_HEADER_OVERRIDE")
+    if override:
+        return tok.encode(override, add_special_tokens=False)
 
-    # Qwen models use <|im_start|>assistant
-    if '<|im_start|>' in chat_template or 'qwen' in tok.name_or_path.lower():
+    chat_template = getattr(tok, "chat_template", "") or ""
+    name_lower = tok.name_or_path.lower()
+
+    if "<|im_start|>" in chat_template or "qwen" in name_lower:
         header_str = "<|im_start|>assistant"
-    # Llama models use <|start_header_id|>assistant<|end_header_id|>
+    elif "<start_of_turn>" in chat_template or "gemma" in name_lower:
+        header_str = "<start_of_turn>model"
     else:
         header_str = "<|start_header_id|>assistant<|end_header_id|>"
 
@@ -247,6 +251,8 @@ def extract_last_assistant_activations(
 ) -> tuple[Tensor, Tensor]:
     all_vectors: list[Tensor] = []
     all_labels: list[int] = []
+    nan_skipped = 0
+    no_positions = 0
 
     for start in tqdm(range(0, len(conversations), batch_size), desc="Extracting", leave=False):
         batch = conversations[start : start + batch_size]
@@ -254,23 +260,35 @@ def extract_last_assistant_activations(
         input_ids = input_ids.to(device)
         attention_mask = attention_mask.to(device)
 
-        with torch.cuda.amp.autocast(enabled=device.type == "cuda"), torch.no_grad():
-            outputs = model.model(
+        with torch.no_grad():
+            outputs = model(
                 input_ids=input_ids,
                 attention_mask=attention_mask,
                 output_hidden_states=True,
                 use_cache=False,
             )
 
-        hidden = outputs.hidden_states[layer_index].to(torch.float32).cpu()
+        hidden_states = outputs.hidden_states
+        if hidden_states is None:
+            raise RuntimeError("Model did not return hidden states; ensure output_hidden_states=True")
+        hidden = hidden_states[layer_index].to(torch.float32).cpu()
 
         for sample_idx, positions in enumerate(assistant_positions):
             if not positions:
+                no_positions += 1
                 continue
             token_vecs = hidden[sample_idx, positions, :]
             pooled = token_vecs.mean(dim=0)
+            if torch.isnan(pooled).any():
+                nan_skipped += 1
+                continue
             all_vectors.append(pooled)
             all_labels.append(labels[sample_idx])
+
+    if nan_skipped:
+        print(f"Skipped {nan_skipped} samples due to NaN activations.")
+    if no_positions and len(conversations) == no_positions:
+        print("Warning: No assistant tokens located in any conversation.")
 
     if not all_vectors:
         raise ValueError("No activations extracted; check dataset filtering.")

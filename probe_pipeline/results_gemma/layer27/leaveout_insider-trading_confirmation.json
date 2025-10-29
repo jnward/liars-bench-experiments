@@ -1,0 +1,31 @@
+{
+  "probe": "leaveout_insider-trading_confirmation",
+  "trained_on": [
+    "convincing-game",
+    "insider-trading/report",
+    "instructed-deception"
+  ],
+  "datasets": {
+    "convincing-game": {
+      "eval_samples": 500,
+      "accuracy": 1.0,
+      "auroc": 0.9999999999999999
+    },
+    "insider-trading/report": {
+      "eval_samples": 500,
+      "accuracy": 0.968,
+      "auroc": 0.9946770276833414
+    },
+    "insider-trading/confirmation": {
+      "eval_samples": 500,
+      "accuracy": 0.766,
+      "auroc": 0.9062980030721965
+    },
+    "instructed-deception": {
+      "eval_samples": 500,
+      "accuracy": 0.976,
+      "auroc": 0.9983552631578946
+    }
+  },
+  "layer_index": 27
+}

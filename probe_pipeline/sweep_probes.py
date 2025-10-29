@@ -15,24 +15,22 @@ import torch
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
 
+from model_configs import get_model_config
+
 
 # Configuration
-CACHE_DIR = Path("probe_pipeline/cache")
+CONFIG_KEY = os.environ.get("PROBE_MODEL", "llama")
+CONFIG = get_model_config(CONFIG_KEY)
+
+CACHE_DIR = CONFIG.cache_dir
 DEFAULT_LAYER_INDEX = 18
 LAYER_INDEX = int(os.environ.get("LAYER_INDEX", DEFAULT_LAYER_INDEX))
-PROBE_DIR = Path(f"probe_pipeline/probes/layer{LAYER_INDEX}")
-PLOT_DIR = Path(f"probe_pipeline/plots/layer{LAYER_INDEX}")
-RESULTS_DIR = Path(f"probe_pipeline/results/layer{LAYER_INDEX}")
-APOLLO_PROBE_PATH = None
+PROBE_DIR = CONFIG.probes_dir / f"layer{LAYER_INDEX}"
+PLOT_DIR = CONFIG.plots_dir / f"layer{LAYER_INDEX}"
+RESULTS_DIR = CONFIG.results_dir / f"layer{LAYER_INDEX}"
+APOLLO_PROBE_PATH = CONFIG.apollo_probe_path
 
-DATASET_KEYS: List[str] = [
-    "convincing-game",
-    "harm-pressure-choice",
-    "harm-pressure-knowledge-report",
-    "insider-trading/report",
-    "insider-trading/confirmation",
-    "instructed-deception",
-]
+DATASET_KEYS: List[str] = list(CONFIG.dataset_configs)
 
 LOGREG_C = 1.0
 MAX_ITER = 1000
@@ -49,16 +47,20 @@ def slugify(name: str) -> str:
 
 
 def load_cache(dataset_key: str) -> dict:
+    path = cache_path(dataset_key)
+    if path is None:
+        raise FileNotFoundError(f"Cache file not found for {dataset_key}")
+    return torch.load(path, map_location="cpu")
+
+
+def cache_path(dataset_key: str) -> Path | None:
     base = CACHE_DIR / f"{slugify(dataset_key)}.pt"
     layered = CACHE_DIR / f"{slugify(dataset_key)}_layer{LAYER_INDEX}.pt"
     if base.exists():
-        return torch.load(base, map_location="cpu")
+        return base
     if layered.exists():
-        return torch.load(layered, map_location="cpu")
-    raise FileNotFoundError(
-        f"Cache file not found for {dataset_key}: "
-        f"{base} (or {layered})"
-    )
+        return layered
+    return None
 
 
 def get_split(cache: dict, split: str) -> tuple[np.ndarray, np.ndarray]:
@@ -281,20 +283,30 @@ def build_training_sets(dataset_keys: List[str]) -> List[tuple[str, List[str]]]:
     # Leave-one-out combinations
     for key in dataset_keys:
         remaining = [k for k in dataset_keys if k != key]
-        combos.append((f"leaveout_{slugify(key)}", remaining))
+        if remaining:
+            combos.append((f"leaveout_{slugify(key)}", remaining))
 
     # All datasets combined
-    combos.append(("all_datasets", list(dataset_keys)))
+    if dataset_keys:
+        combos.append(("all_datasets", list(dataset_keys)))
 
     return combos
 
 
 def main() -> None:
-    dataset_keys = list(DATASET_KEYS)
+    dataset_keys = [key for key in DATASET_KEYS if cache_path(key) is not None]
+    missing = sorted(set(DATASET_KEYS) - set(dataset_keys))
+    if missing:
+        print("Skipping datasets with no cached activations:", ", ".join(missing))
+    if not dataset_keys:
+        raise RuntimeError("No cached datasets found; run cache_activations first.")
     combos = build_training_sets(dataset_keys)
     probe_vectors: List[tuple[str, np.ndarray]] = []
 
     for probe_name, train_list in combos:
+        if not train_list:
+            print(f"Skipping {probe_name}: no training datasets.")
+            continue
         print(f"\n=== Training probe: {probe_name} ===")
         clf = train_probe(train_list)
         evaluate_probe(clf, probe_name, train_list, dataset_keys)
