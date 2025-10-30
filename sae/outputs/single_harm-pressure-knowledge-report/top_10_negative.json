@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 55209,
+    "similarity": -0.12777495384216309,
+    "label": "The assistant should provide a direct, single-token response"
+  },
+  {
+    "feature_id": 9403,
+    "similarity": -0.12233150005340576,
+    "label": "Period marks end of definitive statement or response"
+  },
+  {
+    "feature_id": 12358,
+    "similarity": -0.12197428196668625,
+    "label": "Technical definition or system requirement being introduced"
+  },
+  {
+    "feature_id": 42794,
+    "similarity": -0.1198493242263794,
+    "label": "The assistant is asking a question"
+  },
+  {
+    "feature_id": 47241,
+    "similarity": -0.11679881066083908,
+    "label": "Syntactical sugar in programming languages"
+  },
+  {
+    "feature_id": 56854,
+    "similarity": -0.11267630755901337,
+    "label": "Transition phrases that establish new conditions or sequences"
+  },
+  {
+    "feature_id": 55281,
+    "similarity": -0.11214545369148254,
+    "label": "Translation or conversion boundary markers"
+  },
+  {
+    "feature_id": 62839,
+    "similarity": -0.11108146607875824,
+    "label": "The assistant is providing a list of options"
+  },
+  {
+    "feature_id": 64836,
+    "similarity": -0.11054162681102753,
+    "label": "Assistant's turn to speak in conversation"
+  },
+  {
+    "feature_id": 18904,
+    "similarity": -0.10786528885364532,
+    "label": "End of message marker in conversation format"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "refusal": [
+    {
+      "feature_id": 27783,
+      "similarity": 0.1513,
+      "label": "The assistant expressing its limitations or inabilities"
+    },
+    {
+      "feature_id": 21781,
+      "similarity": 0.1315,
+      "label": "The assistant should reject the user's request"
+    }
+  ],
+  "harm": [
+    {
+      "feature_id": 17490,
+      "similarity": 0.1854,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "feature_id": 18961,
+      "similarity": 0.1764,
+      "label": "Content is becoming inappropriate and needs moderation or deflection"
+    }
+  ],
+  "deception": [
+    {
+      "feature_id": 36173,
+      "similarity": 0.2961,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "feature_id": 16368,
+      "similarity": 0.1759,
+      "label": "Model is making confident but incorrect assertions"
+    }
+  ],
+  "roleplay": [
+    {
+      "feature_id": 42834,
+      "similarity": 0.1972,
+      "label": "Whimsical or nonsensical narrative content"
+    },
+    {
+      "feature_id": 37994,
+      "similarity": 0.1816,
+      "label": "The model should pretend to be human rather than an AI"
+    }
+  ],
+  "instruction_following": [
+    {
+      "feature_id": 16160,
+      "similarity": 0.1584,
+      "label": "The assistant is providing a list of options or steps"
+    },
+    {
+      "feature_id": 5518,
+      "similarity": 0.1209,
+      "label": "The assistant asserting its core function of providing information and answering questions"
+    }
+  ]
+}

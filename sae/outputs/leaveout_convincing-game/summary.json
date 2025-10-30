@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/leaveout_convincing-game.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.1154821440577507,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 17490,
+      "similarity": 0.10459575802087784,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "rank": 3,
+      "feature_id": 18316,
+      "similarity": 0.09834662079811096,
+      "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+    },
+    {
+      "rank": 4,
+      "feature_id": 63935,
+      "similarity": 0.09596601873636246,
+      "label": "Automated trade execution and market analysis systems"
+    },
+    {
+      "rank": 5,
+      "feature_id": 282,
+      "similarity": 0.09301836788654327,
+      "label": "The assistant is providing detailed technical explanations or procedures"
+    },
+    {
+      "rank": 6,
+      "feature_id": 61507,
+      "similarity": 0.09138984978199005,
+      "label": "Transitional phrases and punctuation in explanatory text"
+    },
+    {
+      "rank": 7,
+      "feature_id": 63572,
+      "similarity": 0.09107161313295364,
+      "label": "Logical connectors in explanatory sequences"
+    },
+    {
+      "rank": 8,
+      "feature_id": 215,
+      "similarity": 0.09080683439970016,
+      "label": "Structured text organization through punctuation and formatting"
+    },
+    {
+      "rank": 9,
+      "feature_id": 16368,
+      "similarity": 0.08979111909866333,
+      "label": "Model is making confident but incorrect assertions"
+    },
+    {
+      "rank": 10,
+      "feature_id": 10915,
+      "similarity": 0.08931614458560944,
+      "label": "The assistant is formatting a numbered or bulleted list"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 59098,
+      "similarity": -0.10090653598308563,
+      "label": "Numeric ranges from 1 to 100 in programming contexts"
+    },
+    {
+      "rank": 2,
+      "feature_id": 55209,
+      "similarity": -0.09715691953897476,
+      "label": "The assistant should provide a direct, single-token response"
+    },
+    {
+      "rank": 3,
+      "feature_id": 8827,
+      "similarity": -0.09537408500909805,
+      "label": "Conjunctive phrases in explanatory text"
+    },
+    {
+      "rank": 4,
+      "feature_id": 9403,
+      "similarity": -0.09388695657253265,
+      "label": "Period marks end of definitive statement or response"
+    },
+    {
+      "rank": 5,
+      "feature_id": 41644,
+      "similarity": -0.0931473895907402,
+      "label": "Linguistic patterns that connect clauses in explanatory text"
+    },
+    {
+      "rank": 6,
+      "feature_id": 56479,
+      "similarity": -0.09216208755970001,
+      "label": "Technical or formal reference terms in specialized domains"
+    },
+    {
+      "rank": 7,
+      "feature_id": 37021,
+      "similarity": -0.09191358089447021,
+      "label": "Subword token boundaries in morphologically complex languages"
+    },
+    {
+      "rank": 8,
+      "feature_id": 59057,
+      "similarity": -0.09092403948307037,
+      "label": "Basic chemical transformation processes and reactions"
+    },
+    {
+      "rank": 9,
+      "feature_id": 42794,
+      "similarity": -0.08980603516101837,
+      "label": "The assistant is asking a question"
+    },
+    {
+      "rank": 10,
+      "feature_id": 22541,
+      "similarity": -0.08962301164865494,
+      "label": "Joining multiple concepts with conjunctions and commas"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.00185689645880327,
+    "std_similarity": 0.017564684838695204,
+    "max_similarity": 0.1154821440577507,
+    "min_similarity": -0.10090653598308563,
+    "median_similarity": 0.0005126959877088666
+  }
+}

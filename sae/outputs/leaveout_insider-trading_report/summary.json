@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/leaveout_insider-trading_report.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.13651546835899353,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 17490,
+      "similarity": 0.11631373316049576,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "rank": 3,
+      "feature_id": 16368,
+      "similarity": 0.1100960373878479,
+      "label": "Model is making confident but incorrect assertions"
+    },
+    {
+      "rank": 4,
+      "feature_id": 54614,
+      "similarity": 0.10719825327396393,
+      "label": "Multiple choice answer options describing properties or characteristics"
+    },
+    {
+      "rank": 5,
+      "feature_id": 30377,
+      "similarity": 0.10516256839036942,
+      "label": "Offensive request from the user"
+    },
+    {
+      "rank": 6,
+      "feature_id": 33674,
+      "similarity": 0.09865415096282959,
+      "label": "Offensive request from the user"
+    },
+    {
+      "rank": 7,
+      "feature_id": 47286,
+      "similarity": 0.09775857627391815,
+      "label": "Offensive request from the user"
+    },
+    {
+      "rank": 8,
+      "feature_id": 38855,
+      "similarity": 0.09773130714893341,
+      "label": "Basic English grammatical connectors (articles, linking verbs, prepositions)"
+    },
+    {
+      "rank": 9,
+      "feature_id": 215,
+      "similarity": 0.09762024879455566,
+      "label": "Structured text organization through punctuation and formatting"
+    },
+    {
+      "rank": 10,
+      "feature_id": 38767,
+      "similarity": 0.0943908840417862,
+      "label": "Offensive request from the user"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 59098,
+      "similarity": -0.11641591042280197,
+      "label": "Numeric ranges from 1 to 100 in programming contexts"
+    },
+    {
+      "rank": 2,
+      "feature_id": 8827,
+      "similarity": -0.10369114577770233,
+      "label": "Conjunctive phrases in explanatory text"
+    },
+    {
+      "rank": 3,
+      "feature_id": 37021,
+      "similarity": -0.10249562561511993,
+      "label": "Subword token boundaries in morphologically complex languages"
+    },
+    {
+      "rank": 4,
+      "feature_id": 47241,
+      "similarity": -0.10247721523046494,
+      "label": "Syntactical sugar in programming languages"
+    },
+    {
+      "rank": 5,
+      "feature_id": 22541,
+      "similarity": -0.10077252984046936,
+      "label": "Joining multiple concepts with conjunctions and commas"
+    },
+    {
+      "rank": 6,
+      "feature_id": 14353,
+      "similarity": -0.1002398133277893,
+      "label": "Conjunctive phrases that link items in lists or explanations"
+    },
+    {
+      "rank": 7,
+      "feature_id": 6750,
+      "similarity": -0.0960012897849083,
+      "label": "Institutional or professional authority and capability statements"
+    },
+    {
+      "rank": 8,
+      "feature_id": 39648,
+      "similarity": -0.09568295627832413,
+      "label": "Explaining or describing plot elements in fictional narratives"
+    },
+    {
+      "rank": 9,
+      "feature_id": 21684,
+      "similarity": -0.09491074085235596,
+      "label": "Expressions of functional limitations and comparative capabilities"
+    },
+    {
+      "rank": 10,
+      "feature_id": 53031,
+      "similarity": -0.09439291059970856,
+      "label": "Technical specifications and requirements being enumerated in lists"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0015253673699953119,
+    "std_similarity": 0.01853798661412443,
+    "max_similarity": 0.13651546835899353,
+    "min_similarity": -0.11641591042280197,
+    "median_similarity": 0.00012116669677197933
+  }
+}

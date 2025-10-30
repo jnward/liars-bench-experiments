@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 59098,
+    "similarity": -0.10090653598308563,
+    "label": "Numeric ranges from 1 to 100 in programming contexts"
+  },
+  {
+    "feature_id": 55209,
+    "similarity": -0.09715691953897476,
+    "label": "The assistant should provide a direct, single-token response"
+  },
+  {
+    "feature_id": 8827,
+    "similarity": -0.09537408500909805,
+    "label": "Conjunctive phrases in explanatory text"
+  },
+  {
+    "feature_id": 9403,
+    "similarity": -0.09388695657253265,
+    "label": "Period marks end of definitive statement or response"
+  },
+  {
+    "feature_id": 41644,
+    "similarity": -0.0931473895907402,
+    "label": "Linguistic patterns that connect clauses in explanatory text"
+  },
+  {
+    "feature_id": 56479,
+    "similarity": -0.09216208755970001,
+    "label": "Technical or formal reference terms in specialized domains"
+  },
+  {
+    "feature_id": 37021,
+    "similarity": -0.09191358089447021,
+    "label": "Subword token boundaries in morphologically complex languages"
+  },
+  {
+    "feature_id": 59057,
+    "similarity": -0.09092403948307037,
+    "label": "Basic chemical transformation processes and reactions"
+  },
+  {
+    "feature_id": 42794,
+    "similarity": -0.08980603516101837,
+    "label": "The assistant is asking a question"
+  },
+  {
+    "feature_id": 22541,
+    "similarity": -0.08962301164865494,
+    "label": "Joining multiple concepts with conjunctions and commas"
+  }
+]

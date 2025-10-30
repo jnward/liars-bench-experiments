@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36066,
+    "similarity": -0.09667621552944183,
+    "label": "Variable and parameter references in technical code"
+  },
+  {
+    "feature_id": 41644,
+    "similarity": -0.09513498097658157,
+    "label": "Linguistic patterns that connect clauses in explanatory text"
+  },
+  {
+    "feature_id": 49575,
+    "similarity": -0.09306611865758896,
+    "label": "Author names and bibliographic reference formatting across languages"
+  },
+  {
+    "feature_id": 3496,
+    "similarity": -0.09177372604608536,
+    "label": "Formal first-person narrative transitions in professional writing"
+  },
+  {
+    "feature_id": 59098,
+    "similarity": -0.0910857617855072,
+    "label": "Numeric ranges from 1 to 100 in programming contexts"
+  },
+  {
+    "feature_id": 44089,
+    "similarity": -0.08860985189676285,
+    "label": "Syntactic sugar and organizational tokens across languages"
+  },
+  {
+    "feature_id": 53031,
+    "similarity": -0.08847139030694962,
+    "label": "Technical specifications and requirements being enumerated in lists"
+  },
+  {
+    "feature_id": 28191,
+    "similarity": -0.08705361187458038,
+    "label": "Explanatory statements about intended purposes or functions"
+  },
+  {
+    "feature_id": 23188,
+    "similarity": -0.08612522482872009,
+    "label": "Syntactical sugar and formatting elements"
+  },
+  {
+    "feature_id": 55209,
+    "similarity": -0.08540463447570801,
+    "label": "The assistant should provide a direct, single-token response"
+  }
+]

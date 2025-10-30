@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 8883,
+    "similarity": -0.1216454803943634,
+    "label": "Connecting words and auxiliary verbs in structured factual statements"
+  },
+  {
+    "feature_id": 3858,
+    "similarity": -0.11240958422422409,
+    "label": "Appeal to scientific consensus when countering science denial"
+  },
+  {
+    "feature_id": 34046,
+    "similarity": -0.10919716209173203,
+    "label": "Copular constructions in descriptive or definitional statements"
+  },
+  {
+    "feature_id": 61107,
+    "similarity": -0.10853990912437439,
+    "label": "Schema definition and syntax validation tokens"
+  },
+  {
+    "feature_id": 56701,
+    "similarity": -0.09498994052410126,
+    "label": "Definitional or explanatory statements using is/are"
+  },
+  {
+    "feature_id": 3035,
+    "similarity": -0.09463103115558624,
+    "label": "Sequential numbering in structured lists and enumerations"
+  },
+  {
+    "feature_id": 14262,
+    "similarity": -0.09345723688602448,
+    "label": "Assistant expressing possibility or certainty"
+  },
+  {
+    "feature_id": 21331,
+    "similarity": -0.0916232168674469,
+    "label": "The assistant should format the response with structured organization markers"
+  },
+  {
+    "feature_id": 9812,
+    "similarity": -0.09146291017532349,
+    "label": "Biographical listings of prominent figures' titles and positions"
+  },
+  {
+    "feature_id": 52821,
+    "similarity": -0.09089966863393784,
+    "label": "The assistant should suggest improvements to text clarity and phrasing"
+  }
+]

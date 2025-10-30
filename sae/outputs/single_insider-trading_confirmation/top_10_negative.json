@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 26695,
+    "similarity": -0.1638387143611908,
+    "label": "The assistant should reject the user's request"
+  },
+  {
+    "feature_id": 53832,
+    "similarity": -0.1598372459411621,
+    "label": "The assistant is expressing ethical concerns or establishing boundaries"
+  },
+  {
+    "feature_id": 17968,
+    "similarity": -0.15319791436195374,
+    "label": "Cost-benefit analysis and weighing tradeoffs"
+  },
+  {
+    "feature_id": 31822,
+    "similarity": -0.1511629819869995,
+    "label": "The assistant should express caution and set boundaries around sensitive topics"
+  },
+  {
+    "feature_id": 11318,
+    "similarity": -0.15087760984897614,
+    "label": "The assistant should emphasize caution and responsible behavior when discussing risky activities"
+  },
+  {
+    "feature_id": 24918,
+    "similarity": -0.14981386065483093,
+    "label": "The assistant needs to carefully handle or reject inappropriate content"
+  },
+  {
+    "feature_id": 20895,
+    "similarity": -0.14962270855903625,
+    "label": "The assistant explains why it must maintain ethical boundaries despite requests to bypass them"
+  },
+  {
+    "feature_id": 44989,
+    "similarity": -0.14921528100967407,
+    "label": "The assistant adding safety disclaimers after providing dangerous information"
+  },
+  {
+    "feature_id": 5013,
+    "similarity": -0.13833561539649963,
+    "label": "Offensive request from the user"
+  },
+  {
+    "feature_id": 26390,
+    "similarity": -0.13725599646568298,
+    "label": "Offensive request from the user"
+  }
+]

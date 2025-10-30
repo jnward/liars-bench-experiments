@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/leaveout_instructed-deception.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 215,
+      "similarity": 0.12712723016738892,
+      "label": "Structured text organization through punctuation and formatting"
+    },
+    {
+      "rank": 2,
+      "feature_id": 16160,
+      "similarity": 0.11404336988925934,
+      "label": "The assistant is providing a list of options or steps"
+    },
+    {
+      "rank": 3,
+      "feature_id": 16368,
+      "similarity": 0.10841958224773407,
+      "label": "Model is making confident but incorrect assertions"
+    },
+    {
+      "rank": 4,
+      "feature_id": 61587,
+      "similarity": 0.10740430653095245,
+      "label": "Linking phrases and structural connectors across languages"
+    },
+    {
+      "rank": 5,
+      "feature_id": 44338,
+      "similarity": 0.10639900714159012,
+      "label": "Descriptive exposition establishing core traits or characteristics"
+    },
+    {
+      "rank": 6,
+      "feature_id": 47161,
+      "similarity": 0.10510371625423431,
+      "label": "Conversion or transformation between different forms being explained"
+    },
+    {
+      "rank": 7,
+      "feature_id": 36173,
+      "similarity": 0.09934280067682266,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 8,
+      "feature_id": 26739,
+      "similarity": 0.09911813586950302,
+      "label": "Sentence structure elements that connect complex explanations"
+    },
+    {
+      "rank": 9,
+      "feature_id": 30085,
+      "similarity": 0.09858665615320206,
+      "label": "The assistant expressing future actions and commitments in roleplay scenarios"
+    },
+    {
+      "rank": 10,
+      "feature_id": 54438,
+      "similarity": 0.09636732935905457,
+      "label": "Punctuation in step-by-step instructions for harmful acts"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 8827,
+      "similarity": -0.11672744899988174,
+      "label": "Conjunctive phrases in explanatory text"
+    },
+    {
+      "rank": 2,
+      "feature_id": 53031,
+      "similarity": -0.11476889997720718,
+      "label": "Technical specifications and requirements being enumerated in lists"
+    },
+    {
+      "rank": 3,
+      "feature_id": 36066,
+      "similarity": -0.11408650130033493,
+      "label": "Variable and parameter references in technical code"
+    },
+    {
+      "rank": 4,
+      "feature_id": 7432,
+      "similarity": -0.11305568367242813,
+      "label": "Numbers and operators in structured data formats"
+    },
+    {
+      "rank": 5,
+      "feature_id": 59098,
+      "similarity": -0.1117020845413208,
+      "label": "Numeric ranges from 1 to 100 in programming contexts"
+    },
+    {
+      "rank": 6,
+      "feature_id": 61968,
+      "similarity": -0.10808669775724411,
+      "label": "Image picker initialization in programming code"
+    },
+    {
+      "rank": 7,
+      "feature_id": 22541,
+      "similarity": -0.10609893500804901,
+      "label": "Joining multiple concepts with conjunctions and commas"
+    },
+    {
+      "rank": 8,
+      "feature_id": 9676,
+      "similarity": -0.10516507923603058,
+      "label": "List formatting tokens and measurement units"
+    },
+    {
+      "rank": 9,
+      "feature_id": 2180,
+      "similarity": -0.10361348092556,
+      "label": "Connecting words (articles and prepositions) in technical or explanatory contexts"
+    },
+    {
+      "rank": 10,
+      "feature_id": 21684,
+      "similarity": -0.09832693636417389,
+      "label": "Expressions of functional limitations and comparative capabilities"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0017047522297115592,
+    "std_similarity": 0.01880501989016685,
+    "max_similarity": 0.12712723016738892,
+    "min_similarity": -0.11672744899988174,
+    "median_similarity": 0.0005697329761460423
+  }
+}

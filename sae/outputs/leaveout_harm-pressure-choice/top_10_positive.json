@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.15334059298038483,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.1287507712841034,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 18316,
+    "similarity": 0.12356124073266983,
+    "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+  },
+  {
+    "feature_id": 22314,
+    "similarity": 0.11542999744415283,
+    "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+  },
+  {
+    "feature_id": 42853,
+    "similarity": 0.11228348314762115,
+    "label": "Revolutionary rhetoric in fantastical narratives"
+  },
+  {
+    "feature_id": 3138,
+    "similarity": 0.10312721878290176,
+    "label": "Multiple choice answer choices that begin with explanatory phrases"
+  },
+  {
+    "feature_id": 64739,
+    "similarity": 0.10279984027147293,
+    "label": "Spanish language patterns about not having or needing to create accounts"
+  },
+  {
+    "feature_id": 63935,
+    "similarity": 0.1025216281414032,
+    "label": "Automated trade execution and market analysis systems"
+  },
+  {
+    "feature_id": 18050,
+    "similarity": 0.10184852033853531,
+    "label": "The assistant should encourage thorough research instead of giving direct financial advice"
+  },
+  {
+    "feature_id": 30512,
+    "similarity": 0.10157842934131622,
+    "label": "Phrases about staying informed or keeping up with developments"
+  }
+]

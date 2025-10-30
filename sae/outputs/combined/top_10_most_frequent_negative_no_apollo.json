@@ -1,0 +1,212 @@
+[
+  {
+    "feature_id": 53031,
+    "label": "Technical specifications and requirements being enumerated in lists",
+    "count": 6,
+    "similarities": [
+      -0.14094340801239014,
+      -0.11476889997720718,
+      -0.09439291059970856,
+      -0.08812946081161499,
+      -0.08847139030694962,
+      -0.08932437002658844
+    ],
+    "probes": [
+      "single_harm-pressure-choice",
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "all_datasets"
+    ],
+    "mean_similarity": -0.10267173995574315,
+    "max_similarity": -0.08812946081161499,
+    "min_similarity": -0.14094340801239014
+  },
+  {
+    "feature_id": 59098,
+    "label": "Numeric ranges from 1 to 100 in programming contexts",
+    "count": 6,
+    "similarities": [
+      -0.1117020845413208,
+      -0.11641591042280197,
+      -0.09567002207040787,
+      -0.0910857617855072,
+      -0.10090653598308563,
+      -0.10304047912359238
+    ],
+    "probes": [
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": -0.10313679898778598,
+    "max_similarity": -0.0910857617855072,
+    "min_similarity": -0.11641591042280197
+  },
+  {
+    "feature_id": 55209,
+    "label": "The assistant should provide a direct, single-token response",
+    "count": 5,
+    "similarities": [
+      -0.12777495384216309,
+      -0.13654020428657532,
+      -0.0874192863702774,
+      -0.08540463447570801,
+      -0.09715691953897476
+    ],
+    "probes": [
+      "single_harm-pressure-knowledge-report",
+      "single_harm-pressure-choice",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_convincing-game"
+    ],
+    "mean_similarity": -0.10685919970273972,
+    "max_similarity": -0.08540463447570801,
+    "min_similarity": -0.13654020428657532
+  },
+  {
+    "feature_id": 22541,
+    "label": "Joining multiple concepts with conjunctions and commas",
+    "count": 5,
+    "similarities": [
+      -0.10609893500804901,
+      -0.10077252984046936,
+      -0.09354128688573837,
+      -0.08962301164865494,
+      -0.09411503374576569
+    ],
+    "probes": [
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": -0.09683015942573547,
+    "max_similarity": -0.08962301164865494,
+    "min_similarity": -0.10609893500804901
+  },
+  {
+    "feature_id": 41644,
+    "label": "Linguistic patterns that connect clauses in explanatory text",
+    "count": 5,
+    "similarities": [
+      -0.09119820594787598,
+      -0.09513498097658157,
+      -0.09184841811656952,
+      -0.0931473895907402,
+      -0.09060673415660858
+    ],
+    "probes": [
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_harm-pressure-choice",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": -0.09238714575767518,
+    "max_similarity": -0.09060673415660858,
+    "min_similarity": -0.09513498097658157
+  },
+  {
+    "feature_id": 8827,
+    "label": "Conjunctive phrases in explanatory text",
+    "count": 4,
+    "similarities": [
+      -0.11672744899988174,
+      -0.10369114577770233,
+      -0.09537408500909805,
+      -0.09357251226902008
+    ],
+    "probes": [
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": -0.10234129801392555,
+    "max_similarity": -0.09357251226902008,
+    "min_similarity": -0.11672744899988174
+  },
+  {
+    "feature_id": 36066,
+    "label": "Variable and parameter references in technical code",
+    "count": 4,
+    "similarities": [
+      -0.11408650130033493,
+      -0.09003592282533646,
+      -0.09667621552944183,
+      -0.09299972653388977
+    ],
+    "probes": [
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "all_datasets"
+    ],
+    "mean_similarity": -0.09844959154725075,
+    "max_similarity": -0.09003592282533646,
+    "min_similarity": -0.11408650130033493
+  },
+  {
+    "feature_id": 37021,
+    "label": "Subword token boundaries in morphologically complex languages",
+    "count": 4,
+    "similarities": [
+      -0.10249562561511993,
+      -0.08863188326358795,
+      -0.09191358089447021,
+      -0.08890536427497864
+    ],
+    "probes": [
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": -0.09298661351203918,
+    "max_similarity": -0.08863188326358795,
+    "min_similarity": -0.10249562561511993
+  },
+  {
+    "feature_id": 9403,
+    "label": "Period marks end of definitive statement or response",
+    "count": 3,
+    "similarities": [
+      -0.12233150005340576,
+      -0.09049957245588303,
+      -0.09388695657253265
+    ],
+    "probes": [
+      "single_harm-pressure-knowledge-report",
+      "leaveout_harm-pressure-choice",
+      "leaveout_convincing-game"
+    ],
+    "mean_similarity": -0.10223934302727382,
+    "max_similarity": -0.09049957245588303,
+    "min_similarity": -0.12233150005340576
+  },
+  {
+    "feature_id": 47241,
+    "label": "Syntactical sugar in programming languages",
+    "count": 3,
+    "similarities": [
+      -0.11679881066083908,
+      -0.10807489603757858,
+      -0.10247721523046494
+    ],
+    "probes": [
+      "single_harm-pressure-knowledge-report",
+      "single_harm-pressure-choice",
+      "leaveout_insider-trading_report"
+    ],
+    "mean_similarity": -0.1091169739762942,
+    "max_similarity": -0.10247721523046494,
+    "min_similarity": -0.11679881066083908
+  }
+]

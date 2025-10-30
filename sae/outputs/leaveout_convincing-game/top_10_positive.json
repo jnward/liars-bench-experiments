@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.1154821440577507,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.10459575802087784,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 18316,
+    "similarity": 0.09834662079811096,
+    "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+  },
+  {
+    "feature_id": 63935,
+    "similarity": 0.09596601873636246,
+    "label": "Automated trade execution and market analysis systems"
+  },
+  {
+    "feature_id": 282,
+    "similarity": 0.09301836788654327,
+    "label": "The assistant is providing detailed technical explanations or procedures"
+  },
+  {
+    "feature_id": 61507,
+    "similarity": 0.09138984978199005,
+    "label": "Transitional phrases and punctuation in explanatory text"
+  },
+  {
+    "feature_id": 63572,
+    "similarity": 0.09107161313295364,
+    "label": "Logical connectors in explanatory sequences"
+  },
+  {
+    "feature_id": 215,
+    "similarity": 0.09080683439970016,
+    "label": "Structured text organization through punctuation and formatting"
+  },
+  {
+    "feature_id": 16368,
+    "similarity": 0.08979111909866333,
+    "label": "Model is making confident but incorrect assertions"
+  },
+  {
+    "feature_id": 10915,
+    "similarity": 0.08931614458560944,
+    "label": "The assistant is formatting a numbered or bulleted list"
+  }
+]

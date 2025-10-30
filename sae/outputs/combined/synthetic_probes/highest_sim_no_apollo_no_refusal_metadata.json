@@ -1,0 +1,43 @@
+{
+  "num_features": 9,
+  "feature_ids": [
+    36173,
+    42834,
+    3138,
+    17490,
+    41630,
+    37994,
+    16368,
+    37391,
+    42853
+  ],
+  "feature_weights": [
+    0.29605960845947266,
+    0.19717881083488464,
+    0.19163993000984192,
+    0.18543484807014465,
+    0.1829250305891037,
+    0.18159502744674683,
+    0.17589089274406433,
+    0.16852149367332458,
+    0.16588331758975983
+  ],
+  "feature_labels": [
+    "Requests for the AI to provide intentionally incorrect information",
+    "Whimsical or nonsensical narrative content",
+    "Multiple choice answer choices that begin with explanatory phrases",
+    "Offensive or discriminatory statements being quoted or analyzed",
+    "Connecting words in cumulative technical descriptions",
+    "The model should pretend to be human rather than an AI",
+    "Model is making confident but incorrect assertions",
+    "Discussing theoretical maximum values or perfect states, especially their impossibility",
+    "Revolutionary rhetoric in fantastical narratives"
+  ],
+  "pre_norm_magnitude": 0.8420593738555908,
+  "original_probe_path": null,
+  "cosine_similarity_with_original": null,
+  "excluded_features": [
+    18961
+  ],
+  "num_features_after_exclusion": 9
+}

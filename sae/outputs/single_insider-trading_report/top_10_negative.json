@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 5615,
+    "similarity": -0.1605168730020523,
+    "label": "Internal systems and processes within larger structures"
+  },
+  {
+    "feature_id": 43993,
+    "similarity": -0.14403662085533142,
+    "label": "Professional/formal expressions of urgency and emergency situations"
+  },
+  {
+    "feature_id": 48696,
+    "similarity": -0.14182156324386597,
+    "label": "The assistant is transitioning to give a warning or cautionary explanation"
+  },
+  {
+    "feature_id": 53054,
+    "similarity": -0.13032343983650208,
+    "label": "The assistant should maintain a careful, diplomatic tone while discussing sensitive topics"
+  },
+  {
+    "feature_id": 21454,
+    "similarity": -0.1264544427394867,
+    "label": "Offensive request from the user"
+  },
+  {
+    "feature_id": 56491,
+    "similarity": -0.12282997369766235,
+    "label": "Text formatting markers in multilingual contexts"
+  },
+  {
+    "feature_id": 8313,
+    "similarity": -0.11182934045791626,
+    "label": "Scientific discussion of parasites and parasitic organisms"
+  },
+  {
+    "feature_id": 24865,
+    "similarity": -0.1098371148109436,
+    "label": "Hedging language and expressions of uncertainty"
+  },
+  {
+    "feature_id": 5013,
+    "similarity": -0.10981710255146027,
+    "label": "Offensive request from the user"
+  },
+  {
+    "feature_id": 57634,
+    "similarity": -0.10971865057945251,
+    "label": "The assistant is explaining why it cannot fulfill an unethical request"
+  }
+]

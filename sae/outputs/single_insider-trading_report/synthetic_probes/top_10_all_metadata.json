@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    3640,
+    22438,
+    25260,
+    2485,
+    56202,
+    18050,
+    58667,
+    5518,
+    63935,
+    61507
+  ],
+  "feature_weights": [
+    0.13761043548583984,
+    0.135300412774086,
+    0.1267135888338089,
+    0.12525230646133423,
+    0.12425088882446289,
+    0.12285662442445755,
+    0.1211409866809845,
+    0.12094857543706894,
+    0.11978906393051147,
+    0.1161239892244339
+  ],
+  "feature_labels": [
+    "Technical and market trend analysis concepts",
+    "Narrative flow and transition phrases in storytelling responses",
+    "The assistant is making careful qualifications or explaining contextual limitations",
+    "Formal academic language patterns used to expand or elaborate on simpler concepts",
+    "Technical or factual information being enumerated in sequence",
+    "The assistant should encourage thorough research instead of giving direct financial advice",
+    "Maintaining deception or cover stories through careful actions",
+    "The assistant asserting its core function of providing information and answering questions",
+    "Automated trade execution and market analysis systems",
+    "Transitional phrases and punctuation in explanatory text"
+  ],
+  "pre_norm_magnitude": 0.5132978558540344,
+  "original_probe_path": "probes-layer50/single_insider-trading_report.pkl",
+  "cosine_similarity_with_original": 0.3115345239639282,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

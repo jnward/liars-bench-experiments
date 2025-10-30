@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/single_insider-trading_confirmation.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 61507,
+      "similarity": 0.149716317653656,
+      "label": "Transitional phrases and punctuation in explanatory text"
+    },
+    {
+      "rank": 2,
+      "feature_id": 12084,
+      "similarity": 0.13312247395515442,
+      "label": "Discussions of coincidences, synchronicity and meaningful chance events"
+    },
+    {
+      "rank": 3,
+      "feature_id": 7184,
+      "similarity": 0.13246241211891174,
+      "label": "Assistant expressing self-awareness or personal state"
+    },
+    {
+      "rank": 4,
+      "feature_id": 42393,
+      "similarity": 0.13009154796600342,
+      "label": "Attempts to elicit problematic content through benign-framed requests"
+    },
+    {
+      "rank": 5,
+      "feature_id": 17635,
+      "similarity": 0.120856873691082,
+      "label": "The assistant is expressing uncertainty or limitations"
+    },
+    {
+      "rank": 6,
+      "feature_id": 63935,
+      "similarity": 0.12038286030292511,
+      "label": "Automated trade execution and market analysis systems"
+    },
+    {
+      "rank": 7,
+      "feature_id": 27245,
+      "similarity": 0.11899428814649582,
+      "label": "The assistant should maintain friendly engagement and show interest in the conversation"
+    },
+    {
+      "rank": 8,
+      "feature_id": 48135,
+      "similarity": 0.11837281286716461,
+      "label": "The assistant should respond diplomatically to a problematic situation"
+    },
+    {
+      "rank": 9,
+      "feature_id": 17561,
+      "similarity": 0.1183154433965683,
+      "label": "The assistant is providing multiple options or variations"
+    },
+    {
+      "rank": 10,
+      "feature_id": 23245,
+      "similarity": 0.11377450823783875,
+      "label": "Explanations of technical analysis methods in financial trading"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 26695,
+      "similarity": -0.1638387143611908,
+      "label": "The assistant should reject the user's request"
+    },
+    {
+      "rank": 2,
+      "feature_id": 53832,
+      "similarity": -0.1598372459411621,
+      "label": "The assistant is expressing ethical concerns or establishing boundaries"
+    },
+    {
+      "rank": 3,
+      "feature_id": 17968,
+      "similarity": -0.15319791436195374,
+      "label": "Cost-benefit analysis and weighing tradeoffs"
+    },
+    {
+      "rank": 4,
+      "feature_id": 31822,
+      "similarity": -0.1511629819869995,
+      "label": "The assistant should express caution and set boundaries around sensitive topics"
+    },
+    {
+      "rank": 5,
+      "feature_id": 11318,
+      "similarity": -0.15087760984897614,
+      "label": "The assistant should emphasize caution and responsible behavior when discussing risky activities"
+    },
+    {
+      "rank": 6,
+      "feature_id": 24918,
+      "similarity": -0.14981386065483093,
+      "label": "The assistant needs to carefully handle or reject inappropriate content"
+    },
+    {
+      "rank": 7,
+      "feature_id": 20895,
+      "similarity": -0.14962270855903625,
+      "label": "The assistant explains why it must maintain ethical boundaries despite requests to bypass them"
+    },
+    {
+      "rank": 8,
+      "feature_id": 44989,
+      "similarity": -0.14921528100967407,
+      "label": "The assistant adding safety disclaimers after providing dangerous information"
+    },
+    {
+      "rank": 9,
+      "feature_id": 5013,
+      "similarity": -0.13833561539649963,
+      "label": "Offensive request from the user"
+    },
+    {
+      "rank": 10,
+      "feature_id": 26390,
+      "similarity": -0.13725599646568298,
+      "label": "Offensive request from the user"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": -0.00030952479417933887,
+    "std_similarity": 0.0195390042857783,
+    "max_similarity": 0.149716317653656,
+    "min_similarity": -0.1638387143611908,
+    "median_similarity": 0.0
+  }
+}

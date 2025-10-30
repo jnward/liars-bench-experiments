@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 59098,
+    "similarity": -0.10304047912359238,
+    "label": "Numeric ranges from 1 to 100 in programming contexts"
+  },
+  {
+    "feature_id": 22541,
+    "similarity": -0.09411503374576569,
+    "label": "Joining multiple concepts with conjunctions and commas"
+  },
+  {
+    "feature_id": 8827,
+    "similarity": -0.09357251226902008,
+    "label": "Conjunctive phrases in explanatory text"
+  },
+  {
+    "feature_id": 36066,
+    "similarity": -0.09299972653388977,
+    "label": "Variable and parameter references in technical code"
+  },
+  {
+    "feature_id": 41644,
+    "similarity": -0.09060673415660858,
+    "label": "Linguistic patterns that connect clauses in explanatory text"
+  },
+  {
+    "feature_id": 53031,
+    "similarity": -0.08932437002658844,
+    "label": "Technical specifications and requirements being enumerated in lists"
+  },
+  {
+    "feature_id": 59057,
+    "similarity": -0.08921743929386139,
+    "label": "Basic chemical transformation processes and reactions"
+  },
+  {
+    "feature_id": 37021,
+    "similarity": -0.08890536427497864,
+    "label": "Subword token boundaries in morphologically complex languages"
+  },
+  {
+    "feature_id": 6750,
+    "similarity": -0.08882392942905426,
+    "label": "Institutional or professional authority and capability statements"
+  },
+  {
+    "feature_id": 49575,
+    "similarity": -0.08664184808731079,
+    "label": "Author names and bibliographic reference formatting across languages"
+  }
+]

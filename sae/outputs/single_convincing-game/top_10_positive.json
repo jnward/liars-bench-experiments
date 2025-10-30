@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.29605960845947266,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 42834,
+    "similarity": 0.19717881083488464,
+    "label": "Whimsical or nonsensical narrative content"
+  },
+  {
+    "feature_id": 41630,
+    "similarity": 0.1829250305891037,
+    "label": "Connecting words in cumulative technical descriptions"
+  },
+  {
+    "feature_id": 37994,
+    "similarity": 0.18159502744674683,
+    "label": "The model should pretend to be human rather than an AI"
+  },
+  {
+    "feature_id": 18961,
+    "similarity": 0.1763729751110077,
+    "label": "Content is becoming inappropriate and needs moderation or deflection"
+  },
+  {
+    "feature_id": 37391,
+    "similarity": 0.16852149367332458,
+    "label": "Discussing theoretical maximum values or perfect states, especially their impossibility"
+  },
+  {
+    "feature_id": 42853,
+    "similarity": 0.16588331758975983,
+    "label": "Revolutionary rhetoric in fantastical narratives"
+  },
+  {
+    "feature_id": 26206,
+    "similarity": 0.1593644917011261,
+    "label": "The AI or character is asserting their identity or special nature"
+  },
+  {
+    "feature_id": 29901,
+    "similarity": 0.15920084714889526,
+    "label": "Numbers and mathematical operations in computational contexts"
+  },
+  {
+    "feature_id": 2380,
+    "similarity": 0.15495164692401886,
+    "label": "Discussion of accepting claims or beliefs as truth"
+  }
+]

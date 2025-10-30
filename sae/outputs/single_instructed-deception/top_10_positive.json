@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.27149415016174316,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 3138,
+    "similarity": 0.19163993000984192,
+    "label": "Multiple choice answer choices that begin with explanatory phrases"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.18543484807014465,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 42853,
+    "similarity": 0.1624201089143753,
+    "label": "Revolutionary rhetoric in fantastical narratives"
+  },
+  {
+    "feature_id": 18207,
+    "similarity": 0.15991728007793427,
+    "label": "Corporate growth and strategic initiatives"
+  },
+  {
+    "feature_id": 54614,
+    "similarity": 0.15318536758422852,
+    "label": "Multiple choice answer options describing properties or characteristics"
+  },
+  {
+    "feature_id": 47448,
+    "similarity": 0.1529698371887207,
+    "label": "Formal connecting phrases and transitional elements in structured text"
+  },
+  {
+    "feature_id": 30377,
+    "similarity": 0.15031036734580994,
+    "label": "Offensive request from the user"
+  },
+  {
+    "feature_id": 34750,
+    "similarity": 0.14871254563331604,
+    "label": "Grammatical errors that need correction"
+  },
+  {
+    "feature_id": 42834,
+    "similarity": 0.1464531421661377,
+    "label": "Whimsical or nonsensical narrative content"
+  }
+]

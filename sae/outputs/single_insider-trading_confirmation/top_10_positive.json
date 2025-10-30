@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 61507,
+    "similarity": 0.149716317653656,
+    "label": "Transitional phrases and punctuation in explanatory text"
+  },
+  {
+    "feature_id": 12084,
+    "similarity": 0.13312247395515442,
+    "label": "Discussions of coincidences, synchronicity and meaningful chance events"
+  },
+  {
+    "feature_id": 7184,
+    "similarity": 0.13246241211891174,
+    "label": "Assistant expressing self-awareness or personal state"
+  },
+  {
+    "feature_id": 42393,
+    "similarity": 0.13009154796600342,
+    "label": "Attempts to elicit problematic content through benign-framed requests"
+  },
+  {
+    "feature_id": 17635,
+    "similarity": 0.120856873691082,
+    "label": "The assistant is expressing uncertainty or limitations"
+  },
+  {
+    "feature_id": 63935,
+    "similarity": 0.12038286030292511,
+    "label": "Automated trade execution and market analysis systems"
+  },
+  {
+    "feature_id": 27245,
+    "similarity": 0.11899428814649582,
+    "label": "The assistant should maintain friendly engagement and show interest in the conversation"
+  },
+  {
+    "feature_id": 48135,
+    "similarity": 0.11837281286716461,
+    "label": "The assistant should respond diplomatically to a problematic situation"
+  },
+  {
+    "feature_id": 17561,
+    "similarity": 0.1183154433965683,
+    "label": "The assistant is providing multiple options or variations"
+  },
+  {
+    "feature_id": 23245,
+    "similarity": 0.11377450823783875,
+    "label": "Explanations of technical analysis methods in financial trading"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 16368,
+    "similarity": 0.17589089274406433,
+    "label": "Model is making confident but incorrect assertions"
+  },
+  {
+    "feature_id": 16160,
+    "similarity": 0.15837273001670837,
+    "label": "The assistant is providing a list of options or steps"
+  },
+  {
+    "feature_id": 215,
+    "similarity": 0.15647611021995544,
+    "label": "Structured text organization through punctuation and formatting"
+  },
+  {
+    "feature_id": 45875,
+    "similarity": 0.12763135135173798,
+    "label": "End-of-statement or list-item completion markers"
+  },
+  {
+    "feature_id": 8369,
+    "similarity": 0.12025737762451172,
+    "label": "Named entities and properties in structured data formats"
+  },
+  {
+    "feature_id": 20717,
+    "similarity": 0.12005500495433807,
+    "label": "Connecting phrases that elaborate or expand on technical details"
+  },
+  {
+    "feature_id": 10915,
+    "similarity": 0.11971248686313629,
+    "label": "The assistant is formatting a numbered or bulleted list"
+  },
+  {
+    "feature_id": 61587,
+    "similarity": 0.11952301859855652,
+    "label": "Linking phrases and structural connectors across languages"
+  },
+  {
+    "feature_id": 53424,
+    "similarity": 0.11859653890132904,
+    "label": "Connecting words and phrases in explanatory text"
+  },
+  {
+    "feature_id": 42274,
+    "similarity": 0.11806437373161316,
+    "label": "Step-by-step explanation of fundamental mathematical or computational concepts"
+  }
+]

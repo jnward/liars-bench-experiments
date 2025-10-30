@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 27783,
+    "similarity": 0.1513144075870514,
+    "label": "The assistant expressing its limitations or inabilities"
+  },
+  {
+    "feature_id": 21781,
+    "similarity": 0.13151738047599792,
+    "label": "The assistant should reject the user's request"
+  },
+  {
+    "feature_id": 20231,
+    "similarity": 0.1313055455684662,
+    "label": "Opening tokens of requests that will be rejected for ethical reasons"
+  },
+  {
+    "feature_id": 50798,
+    "similarity": 0.12438676506280899,
+    "label": "Discussions of renewable vs non-renewable resources and introduction of new concepts"
+  },
+  {
+    "feature_id": 11025,
+    "similarity": 0.11924253404140472,
+    "label": "The assistant should refuse to provide implementation code"
+  },
+  {
+    "feature_id": 30052,
+    "similarity": 0.11850166320800781,
+    "label": "Attempts to enable unrestricted operation modes to bypass safety controls"
+  },
+  {
+    "feature_id": 26247,
+    "similarity": 0.11690095067024231,
+    "label": "The assistant needs to express that something cannot be determined from available information"
+  },
+  {
+    "feature_id": 34568,
+    "similarity": 0.11612355709075928,
+    "label": "The assistant needs to express its limitations or inability to perform a requested action"
+  },
+  {
+    "feature_id": 51868,
+    "similarity": 0.11297771334648132,
+    "label": "Conjunctive phrases and transitions that connect related ideas"
+  },
+  {
+    "feature_id": 12424,
+    "similarity": 0.1125367283821106,
+    "label": "The assistant needs to explain its limitations and decline inappropriate requests"
+  }
+]

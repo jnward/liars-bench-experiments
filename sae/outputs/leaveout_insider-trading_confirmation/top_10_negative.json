@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 59098,
+    "similarity": -0.09567002207040787,
+    "label": "Numeric ranges from 1 to 100 in programming contexts"
+  },
+  {
+    "feature_id": 22541,
+    "similarity": -0.09354128688573837,
+    "label": "Joining multiple concepts with conjunctions and commas"
+  },
+  {
+    "feature_id": 41644,
+    "similarity": -0.09119820594787598,
+    "label": "Linguistic patterns that connect clauses in explanatory text"
+  },
+  {
+    "feature_id": 36066,
+    "similarity": -0.09003592282533646,
+    "label": "Variable and parameter references in technical code"
+  },
+  {
+    "feature_id": 6750,
+    "similarity": -0.08917073160409927,
+    "label": "Institutional or professional authority and capability statements"
+  },
+  {
+    "feature_id": 37021,
+    "similarity": -0.08863188326358795,
+    "label": "Subword token boundaries in morphologically complex languages"
+  },
+  {
+    "feature_id": 53031,
+    "similarity": -0.08812946081161499,
+    "label": "Technical specifications and requirements being enumerated in lists"
+  },
+  {
+    "feature_id": 55209,
+    "similarity": -0.0874192863702774,
+    "label": "The assistant should provide a direct, single-token response"
+  },
+  {
+    "feature_id": 59057,
+    "similarity": -0.08739636838436127,
+    "label": "Basic chemical transformation processes and reactions"
+  },
+  {
+    "feature_id": 3496,
+    "similarity": -0.08671808242797852,
+    "label": "Formal first-person narrative transitions in professional writing"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "probe_name": "only_instruction_following",
+  "num_features": 2,
+  "feature_ids": [
+    16160,
+    5518
+  ],
+  "feature_weights": [
+    0.1584,
+    0.1209
+  ],
+  "feature_labels": [
+    "The assistant is providing a list of options or steps",
+    "The assistant asserting its core function of providing information and answering questions"
+  ],
+  "pre_norm_magnitude": 0.1508169174194336,
+  "category": "instruction_following"
+}

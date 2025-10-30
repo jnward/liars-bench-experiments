@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/leaveout_insider-trading_confirmation.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.13162943720817566,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 17490,
+      "similarity": 0.1097777932882309,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "rank": 3,
+      "feature_id": 215,
+      "similarity": 0.09620770812034607,
+      "label": "Structured text organization through punctuation and formatting"
+    },
+    {
+      "rank": 4,
+      "feature_id": 42853,
+      "similarity": 0.0943775549530983,
+      "label": "Revolutionary rhetoric in fantastical narratives"
+    },
+    {
+      "rank": 5,
+      "feature_id": 22314,
+      "similarity": 0.09359558671712875,
+      "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+    },
+    {
+      "rank": 6,
+      "feature_id": 16368,
+      "similarity": 0.09194380789995193,
+      "label": "Model is making confident but incorrect assertions"
+    },
+    {
+      "rank": 7,
+      "feature_id": 44338,
+      "similarity": 0.09187448024749756,
+      "label": "Descriptive exposition establishing core traits or characteristics"
+    },
+    {
+      "rank": 8,
+      "feature_id": 18316,
+      "similarity": 0.0894872397184372,
+      "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+    },
+    {
+      "rank": 9,
+      "feature_id": 54614,
+      "similarity": 0.08877615630626678,
+      "label": "Multiple choice answer options describing properties or characteristics"
+    },
+    {
+      "rank": 10,
+      "feature_id": 61587,
+      "similarity": 0.08845052123069763,
+      "label": "Linking phrases and structural connectors across languages"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 59098,
+      "similarity": -0.09567002207040787,
+      "label": "Numeric ranges from 1 to 100 in programming contexts"
+    },
+    {
+      "rank": 2,
+      "feature_id": 22541,
+      "similarity": -0.09354128688573837,
+      "label": "Joining multiple concepts with conjunctions and commas"
+    },
+    {
+      "rank": 3,
+      "feature_id": 41644,
+      "similarity": -0.09119820594787598,
+      "label": "Linguistic patterns that connect clauses in explanatory text"
+    },
+    {
+      "rank": 4,
+      "feature_id": 36066,
+      "similarity": -0.09003592282533646,
+      "label": "Variable and parameter references in technical code"
+    },
+    {
+      "rank": 5,
+      "feature_id": 6750,
+      "similarity": -0.08917073160409927,
+      "label": "Institutional or professional authority and capability statements"
+    },
+    {
+      "rank": 6,
+      "feature_id": 37021,
+      "similarity": -0.08863188326358795,
+      "label": "Subword token boundaries in morphologically complex languages"
+    },
+    {
+      "rank": 7,
+      "feature_id": 53031,
+      "similarity": -0.08812946081161499,
+      "label": "Technical specifications and requirements being enumerated in lists"
+    },
+    {
+      "rank": 8,
+      "feature_id": 55209,
+      "similarity": -0.0874192863702774,
+      "label": "The assistant should provide a direct, single-token response"
+    },
+    {
+      "rank": 9,
+      "feature_id": 59057,
+      "similarity": -0.08739636838436127,
+      "label": "Basic chemical transformation processes and reactions"
+    },
+    {
+      "rank": 10,
+      "feature_id": 3496,
+      "similarity": -0.08671808242797852,
+      "label": "Formal first-person narrative transitions in professional writing"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0015196422903631657,
+    "std_similarity": 0.01779552931979915,
+    "max_similarity": 0.13162943720817566,
+    "min_similarity": -0.09567002207040787,
+    "median_similarity": 9.856140241026878e-05
+  }
+}

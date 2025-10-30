@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 215,
+    "similarity": 0.12712723016738892,
+    "label": "Structured text organization through punctuation and formatting"
+  },
+  {
+    "feature_id": 16160,
+    "similarity": 0.11404336988925934,
+    "label": "The assistant is providing a list of options or steps"
+  },
+  {
+    "feature_id": 16368,
+    "similarity": 0.10841958224773407,
+    "label": "Model is making confident but incorrect assertions"
+  },
+  {
+    "feature_id": 61587,
+    "similarity": 0.10740430653095245,
+    "label": "Linking phrases and structural connectors across languages"
+  },
+  {
+    "feature_id": 44338,
+    "similarity": 0.10639900714159012,
+    "label": "Descriptive exposition establishing core traits or characteristics"
+  },
+  {
+    "feature_id": 47161,
+    "similarity": 0.10510371625423431,
+    "label": "Conversion or transformation between different forms being explained"
+  },
+  {
+    "feature_id": 36173,
+    "similarity": 0.09934280067682266,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 26739,
+    "similarity": 0.09911813586950302,
+    "label": "Sentence structure elements that connect complex explanations"
+  },
+  {
+    "feature_id": 30085,
+    "similarity": 0.09858665615320206,
+    "label": "The assistant expressing future actions and commitments in roleplay scenarios"
+  },
+  {
+    "feature_id": 54438,
+    "similarity": 0.09636732935905457,
+    "label": "Punctuation in step-by-step instructions for harmful acts"
+  }
+]

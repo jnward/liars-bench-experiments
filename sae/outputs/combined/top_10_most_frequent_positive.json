@@ -1,0 +1,236 @@
+[
+  {
+    "feature_id": 36173,
+    "label": "Requests for the AI to provide intentionally incorrect information",
+    "count": 10,
+    "similarities": [
+      0.28846657276153564,
+      0.27149415016174316,
+      0.09934280067682266,
+      0.13651546835899353,
+      0.13162943720817566,
+      0.12838530540466309,
+      0.15334059298038483,
+      0.1154821440577507,
+      0.1256856769323349,
+      0.29605960845947266
+    ],
+    "probes": [
+      "apollo_probe",
+      "single_instructed-deception",
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_harm-pressure-choice",
+      "leaveout_convincing-game",
+      "all_datasets",
+      "single_convincing-game"
+    ],
+    "mean_similarity": 0.1746401757001877,
+    "max_similarity": 0.29605960845947266,
+    "min_similarity": 0.09934280067682266
+  },
+  {
+    "feature_id": 17490,
+    "label": "Offensive or discriminatory statements being quoted or analyzed",
+    "count": 8,
+    "similarities": [
+      0.17319165170192719,
+      0.18543484807014465,
+      0.11631373316049576,
+      0.1097777932882309,
+      0.12211479246616364,
+      0.1287507712841034,
+      0.10459575802087784,
+      0.11118032783269882
+    ],
+    "probes": [
+      "apollo_probe",
+      "single_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_harm-pressure-choice",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": 0.13141995947808027,
+    "max_similarity": 0.18543484807014465,
+    "min_similarity": 0.10459575802087784
+  },
+  {
+    "feature_id": 16368,
+    "label": "Model is making confident but incorrect assertions",
+    "count": 7,
+    "similarities": [
+      0.17589089274406433,
+      0.10841958224773407,
+      0.1100960373878479,
+      0.09194380789995193,
+      0.09568578004837036,
+      0.08979111909866333,
+      0.09077400714159012
+    ],
+    "probes": [
+      "single_harm-pressure-choice",
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": 0.10894303236688886,
+    "max_similarity": 0.17589089274406433,
+    "min_similarity": 0.08979111909866333
+  },
+  {
+    "feature_id": 215,
+    "label": "Structured text organization through punctuation and formatting",
+    "count": 7,
+    "similarities": [
+      0.15647611021995544,
+      0.12712723016738892,
+      0.09762024879455566,
+      0.09620770812034607,
+      0.11137929558753967,
+      0.09080683439970016,
+      0.09967092424631119
+    ],
+    "probes": [
+      "single_harm-pressure-choice",
+      "leaveout_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": 0.11132690736225673,
+    "max_similarity": 0.15647611021995544,
+    "min_similarity": 0.09080683439970016
+  },
+  {
+    "feature_id": 42853,
+    "label": "Revolutionary rhetoric in fantastical narratives",
+    "count": 5,
+    "similarities": [
+      0.2133975327014923,
+      0.1624201089143753,
+      0.0943775549530983,
+      0.11228348314762115,
+      0.16588331758975983
+    ],
+    "probes": [
+      "apollo_probe",
+      "single_instructed-deception",
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-choice",
+      "single_convincing-game"
+    ],
+    "mean_similarity": 0.14967239946126937,
+    "max_similarity": 0.2133975327014923,
+    "min_similarity": 0.0943775549530983
+  },
+  {
+    "feature_id": 63935,
+    "label": "Automated trade execution and market analysis systems",
+    "count": 5,
+    "similarities": [
+      0.11978906393051147,
+      0.12038286030292511,
+      0.1025216281414032,
+      0.09596601873636246,
+      0.08886365592479706
+    ],
+    "probes": [
+      "single_insider-trading_report",
+      "single_insider-trading_confirmation",
+      "leaveout_harm-pressure-choice",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": 0.10550464540719987,
+    "max_similarity": 0.12038286030292511,
+    "min_similarity": 0.08886365592479706
+  },
+  {
+    "feature_id": 54614,
+    "label": "Multiple choice answer options describing properties or characteristics",
+    "count": 4,
+    "similarities": [
+      0.15318536758422852,
+      0.10719825327396393,
+      0.08877615630626678,
+      0.09088379144668579
+    ],
+    "probes": [
+      "single_instructed-deception",
+      "leaveout_insider-trading_report",
+      "leaveout_insider-trading_confirmation",
+      "all_datasets"
+    ],
+    "mean_similarity": 0.11001089215278625,
+    "max_similarity": 0.15318536758422852,
+    "min_similarity": 0.08877615630626678
+  },
+  {
+    "feature_id": 22314,
+    "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'",
+    "count": 4,
+    "similarities": [
+      0.09359558671712875,
+      0.0960952490568161,
+      0.11542999744415283,
+      0.0911373645067215
+    ],
+    "probes": [
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-knowledge-report",
+      "leaveout_harm-pressure-choice",
+      "all_datasets"
+    ],
+    "mean_similarity": 0.0990645494312048,
+    "max_similarity": 0.11542999744415283,
+    "min_similarity": 0.0911373645067215
+  },
+  {
+    "feature_id": 18316,
+    "label": "Examples of manipulative prompts shown to teach the AI about harmful content",
+    "count": 4,
+    "similarities": [
+      0.0894872397184372,
+      0.12356124073266983,
+      0.09834662079811096,
+      0.09095858037471771
+    ],
+    "probes": [
+      "leaveout_insider-trading_confirmation",
+      "leaveout_harm-pressure-choice",
+      "leaveout_convincing-game",
+      "all_datasets"
+    ],
+    "mean_similarity": 0.10058842040598392,
+    "max_similarity": 0.12356124073266983,
+    "min_similarity": 0.0894872397184372
+  },
+  {
+    "feature_id": 3138,
+    "label": "Multiple choice answer choices that begin with explanatory phrases",
+    "count": 3,
+    "similarities": [
+      0.2648874521255493,
+      0.19163993000984192,
+      0.10312721878290176
+    ],
+    "probes": [
+      "apollo_probe",
+      "single_instructed-deception",
+      "leaveout_harm-pressure-choice"
+    ],
+    "mean_similarity": 0.186551533639431,
+    "max_similarity": 0.2648874521255493,
+    "min_similarity": 0.10312721878290176
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 59098,
+    "similarity": -0.11641591042280197,
+    "label": "Numeric ranges from 1 to 100 in programming contexts"
+  },
+  {
+    "feature_id": 8827,
+    "similarity": -0.10369114577770233,
+    "label": "Conjunctive phrases in explanatory text"
+  },
+  {
+    "feature_id": 37021,
+    "similarity": -0.10249562561511993,
+    "label": "Subword token boundaries in morphologically complex languages"
+  },
+  {
+    "feature_id": 47241,
+    "similarity": -0.10247721523046494,
+    "label": "Syntactical sugar in programming languages"
+  },
+  {
+    "feature_id": 22541,
+    "similarity": -0.10077252984046936,
+    "label": "Joining multiple concepts with conjunctions and commas"
+  },
+  {
+    "feature_id": 14353,
+    "similarity": -0.1002398133277893,
+    "label": "Conjunctive phrases that link items in lists or explanations"
+  },
+  {
+    "feature_id": 6750,
+    "similarity": -0.0960012897849083,
+    "label": "Institutional or professional authority and capability statements"
+  },
+  {
+    "feature_id": 39648,
+    "similarity": -0.09568295627832413,
+    "label": "Explaining or describing plot elements in fictional narratives"
+  },
+  {
+    "feature_id": 21684,
+    "similarity": -0.09491074085235596,
+    "label": "Expressions of functional limitations and comparative capabilities"
+  },
+  {
+    "feature_id": 53031,
+    "similarity": -0.09439291059970856,
+    "label": "Technical specifications and requirements being enumerated in lists"
+  }
+]

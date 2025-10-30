@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    16368,
+    16160,
+    215,
+    45875,
+    8369,
+    20717,
+    10915,
+    61587,
+    53424,
+    42274
+  ],
+  "feature_weights": [
+    0.17589089274406433,
+    0.15837273001670837,
+    0.15647611021995544,
+    0.12763135135173798,
+    0.12025737762451172,
+    0.12005500495433807,
+    0.11971248686313629,
+    0.11952301859855652,
+    0.11859653890132904,
+    0.11806437373161316
+  ],
+  "feature_labels": [
+    "Model is making confident but incorrect assertions",
+    "The assistant is providing a list of options or steps",
+    "Structured text organization through punctuation and formatting",
+    "End-of-statement or list-item completion markers",
+    "Named entities and properties in structured data formats",
+    "Connecting phrases that elaborate or expand on technical details",
+    "The assistant is formatting a numbered or bulleted list",
+    "Linking phrases and structural connectors across languages",
+    "Connecting words and phrases in explanatory text",
+    "Step-by-step explanation of fundamental mathematical or computational concepts"
+  ],
+  "pre_norm_magnitude": 0.47693589329719543,
+  "original_probe_path": "probes-layer50/single_harm-pressure-choice.pkl",
+  "cosine_similarity_with_original": 0.30126091837882996,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

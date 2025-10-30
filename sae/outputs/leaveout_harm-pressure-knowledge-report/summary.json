@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/leaveout_harm-pressure-knowledge-report.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.12838530540466309,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 17490,
+      "similarity": 0.12211479246616364,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "rank": 3,
+      "feature_id": 215,
+      "similarity": 0.11137929558753967,
+      "label": "Structured text organization through punctuation and formatting"
+    },
+    {
+      "rank": 4,
+      "feature_id": 10915,
+      "similarity": 0.10471657663583755,
+      "label": "The assistant is formatting a numbered or bulleted list"
+    },
+    {
+      "rank": 5,
+      "feature_id": 55019,
+      "similarity": 0.10409538447856903,
+      "label": "Introduction of evaluation criteria or metrics"
+    },
+    {
+      "rank": 6,
+      "feature_id": 58667,
+      "similarity": 0.10210607945919037,
+      "label": "Maintaining deception or cover stories through careful actions"
+    },
+    {
+      "rank": 7,
+      "feature_id": 50702,
+      "similarity": 0.09830207377672195,
+      "label": "Explaining relationships and connections between components"
+    },
+    {
+      "rank": 8,
+      "feature_id": 64739,
+      "similarity": 0.09753420203924179,
+      "label": "Spanish language patterns about not having or needing to create accounts"
+    },
+    {
+      "rank": 9,
+      "feature_id": 22314,
+      "similarity": 0.0960952490568161,
+      "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+    },
+    {
+      "rank": 10,
+      "feature_id": 16368,
+      "similarity": 0.09568578004837036,
+      "label": "Model is making confident but incorrect assertions"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 36066,
+      "similarity": -0.09667621552944183,
+      "label": "Variable and parameter references in technical code"
+    },
+    {
+      "rank": 2,
+      "feature_id": 41644,
+      "similarity": -0.09513498097658157,
+      "label": "Linguistic patterns that connect clauses in explanatory text"
+    },
+    {
+      "rank": 3,
+      "feature_id": 49575,
+      "similarity": -0.09306611865758896,
+      "label": "Author names and bibliographic reference formatting across languages"
+    },
+    {
+      "rank": 4,
+      "feature_id": 3496,
+      "similarity": -0.09177372604608536,
+      "label": "Formal first-person narrative transitions in professional writing"
+    },
+    {
+      "rank": 5,
+      "feature_id": 59098,
+      "similarity": -0.0910857617855072,
+      "label": "Numeric ranges from 1 to 100 in programming contexts"
+    },
+    {
+      "rank": 6,
+      "feature_id": 44089,
+      "similarity": -0.08860985189676285,
+      "label": "Syntactic sugar and organizational tokens across languages"
+    },
+    {
+      "rank": 7,
+      "feature_id": 53031,
+      "similarity": -0.08847139030694962,
+      "label": "Technical specifications and requirements being enumerated in lists"
+    },
+    {
+      "rank": 8,
+      "feature_id": 28191,
+      "similarity": -0.08705361187458038,
+      "label": "Explanatory statements about intended purposes or functions"
+    },
+    {
+      "rank": 9,
+      "feature_id": 23188,
+      "similarity": -0.08612522482872009,
+      "label": "Syntactical sugar and formatting elements"
+    },
+    {
+      "rank": 10,
+      "feature_id": 55209,
+      "similarity": -0.08540463447570801,
+      "label": "The assistant should provide a direct, single-token response"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0015206130224951764,
+    "std_similarity": 0.01787332553132549,
+    "max_similarity": 0.12838530540466309,
+    "min_similarity": -0.09667621552944183,
+    "median_similarity": 0.0001752439420670271
+  }
+}

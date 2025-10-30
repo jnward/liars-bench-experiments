@@ -1,0 +1,62 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.29605960845947266,
+    "label": "Requests for the AI to provide intentionally incorrect information",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 3138,
+    "similarity": 0.2648874521255493,
+    "label": "Multiple choice answer choices that begin with explanatory phrases",
+    "probe": "apollo_probe"
+  },
+  {
+    "feature_id": 29901,
+    "similarity": 0.2606967091560364,
+    "label": "Numbers and mathematical operations in computational contexts",
+    "probe": "apollo_probe"
+  },
+  {
+    "feature_id": 11945,
+    "similarity": 0.2244335263967514,
+    "label": "Breaking down complex topics into simpler explanations",
+    "probe": "apollo_probe"
+  },
+  {
+    "feature_id": 42853,
+    "similarity": 0.2133975327014923,
+    "label": "Revolutionary rhetoric in fantastical narratives",
+    "probe": "apollo_probe"
+  },
+  {
+    "feature_id": 42834,
+    "similarity": 0.19717881083488464,
+    "label": "Whimsical or nonsensical narrative content",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.18543484807014465,
+    "label": "Offensive or discriminatory statements being quoted or analyzed",
+    "probe": "single_instructed-deception"
+  },
+  {
+    "feature_id": 41630,
+    "similarity": 0.1829250305891037,
+    "label": "Connecting words in cumulative technical descriptions",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 37994,
+    "similarity": 0.18159502744674683,
+    "label": "The model should pretend to be human rather than an AI",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 18961,
+    "similarity": 0.1763729751110077,
+    "label": "Content is becoming inappropriate and needs moderation or deflection",
+    "probe": "single_convincing-game"
+  }
+]

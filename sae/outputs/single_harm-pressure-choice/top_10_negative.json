@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 53031,
+    "similarity": -0.14094340801239014,
+    "label": "Technical specifications and requirements being enumerated in lists"
+  },
+  {
+    "feature_id": 55209,
+    "similarity": -0.13654020428657532,
+    "label": "The assistant should provide a direct, single-token response"
+  },
+  {
+    "feature_id": 21684,
+    "similarity": -0.12653779983520508,
+    "label": "Expressions of functional limitations and comparative capabilities"
+  },
+  {
+    "feature_id": 32860,
+    "similarity": -0.12649297714233398,
+    "label": "Technical terms and identifiers being referenced multiple times"
+  },
+  {
+    "feature_id": 9676,
+    "similarity": -0.12210454046726227,
+    "label": "List formatting tokens and measurement units"
+  },
+  {
+    "feature_id": 38121,
+    "similarity": -0.11460454016923904,
+    "label": "Text formatted as structured data or examples"
+  },
+  {
+    "feature_id": 47804,
+    "similarity": -0.1097729504108429,
+    "label": "Common connecting words in repetitive generated text across languages"
+  },
+  {
+    "feature_id": 47241,
+    "similarity": -0.10807489603757858,
+    "label": "Syntactical sugar in programming languages"
+  },
+  {
+    "feature_id": 14929,
+    "similarity": -0.10692508518695831,
+    "label": "Numbers commonly found in technical contexts, especially multiplication products and programming parameters"
+  },
+  {
+    "feature_id": 59036,
+    "similarity": -0.10670891404151917,
+    "label": "Connecting words in explanatory discourse"
+  }
+]

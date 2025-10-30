@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/single_instructed-deception.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.27149415016174316,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 3138,
+      "similarity": 0.19163993000984192,
+      "label": "Multiple choice answer choices that begin with explanatory phrases"
+    },
+    {
+      "rank": 3,
+      "feature_id": 17490,
+      "similarity": 0.18543484807014465,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "rank": 4,
+      "feature_id": 42853,
+      "similarity": 0.1624201089143753,
+      "label": "Revolutionary rhetoric in fantastical narratives"
+    },
+    {
+      "rank": 5,
+      "feature_id": 18207,
+      "similarity": 0.15991728007793427,
+      "label": "Corporate growth and strategic initiatives"
+    },
+    {
+      "rank": 6,
+      "feature_id": 54614,
+      "similarity": 0.15318536758422852,
+      "label": "Multiple choice answer options describing properties or characteristics"
+    },
+    {
+      "rank": 7,
+      "feature_id": 47448,
+      "similarity": 0.1529698371887207,
+      "label": "Formal connecting phrases and transitional elements in structured text"
+    },
+    {
+      "rank": 8,
+      "feature_id": 30377,
+      "similarity": 0.15031036734580994,
+      "label": "Offensive request from the user"
+    },
+    {
+      "rank": 9,
+      "feature_id": 34750,
+      "similarity": 0.14871254563331604,
+      "label": "Grammatical errors that need correction"
+    },
+    {
+      "rank": 10,
+      "feature_id": 42834,
+      "similarity": 0.1464531421661377,
+      "label": "Whimsical or nonsensical narrative content"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 8883,
+      "similarity": -0.1216454803943634,
+      "label": "Connecting words and auxiliary verbs in structured factual statements"
+    },
+    {
+      "rank": 2,
+      "feature_id": 3858,
+      "similarity": -0.11240958422422409,
+      "label": "Appeal to scientific consensus when countering science denial"
+    },
+    {
+      "rank": 3,
+      "feature_id": 34046,
+      "similarity": -0.10919716209173203,
+      "label": "Copular constructions in descriptive or definitional statements"
+    },
+    {
+      "rank": 4,
+      "feature_id": 61107,
+      "similarity": -0.10853990912437439,
+      "label": "Schema definition and syntax validation tokens"
+    },
+    {
+      "rank": 5,
+      "feature_id": 56701,
+      "similarity": -0.09498994052410126,
+      "label": "Definitional or explanatory statements using is/are"
+    },
+    {
+      "rank": 6,
+      "feature_id": 3035,
+      "similarity": -0.09463103115558624,
+      "label": "Sequential numbering in structured lists and enumerations"
+    },
+    {
+      "rank": 7,
+      "feature_id": 14262,
+      "similarity": -0.09345723688602448,
+      "label": "Assistant expressing possibility or certainty"
+    },
+    {
+      "rank": 8,
+      "feature_id": 21331,
+      "similarity": -0.0916232168674469,
+      "label": "The assistant should format the response with structured organization markers"
+    },
+    {
+      "rank": 9,
+      "feature_id": 9812,
+      "similarity": -0.09146291017532349,
+      "label": "Biographical listings of prominent figures' titles and positions"
+    },
+    {
+      "rank": 10,
+      "feature_id": 52821,
+      "similarity": -0.09089966863393784,
+      "label": "The assistant should suggest improvements to text clarity and phrasing"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0018307593508390951,
+    "std_similarity": 0.019346036834766,
+    "max_similarity": 0.27149415016174316,
+    "min_similarity": -0.1216454803943634,
+    "median_similarity": 1.879647606983781e-05
+  }
+}

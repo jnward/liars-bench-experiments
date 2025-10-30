@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.1256856769323349,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.11118032783269882,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 215,
+    "similarity": 0.09967092424631119,
+    "label": "Structured text organization through punctuation and formatting"
+  },
+  {
+    "feature_id": 22314,
+    "similarity": 0.0911373645067215,
+    "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+  },
+  {
+    "feature_id": 18316,
+    "similarity": 0.09095858037471771,
+    "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+  },
+  {
+    "feature_id": 54614,
+    "similarity": 0.09088379144668579,
+    "label": "Multiple choice answer options describing properties or characteristics"
+  },
+  {
+    "feature_id": 44338,
+    "similarity": 0.09081616997718811,
+    "label": "Descriptive exposition establishing core traits or characteristics"
+  },
+  {
+    "feature_id": 16368,
+    "similarity": 0.09077400714159012,
+    "label": "Model is making confident but incorrect assertions"
+  },
+  {
+    "feature_id": 282,
+    "similarity": 0.09037940204143524,
+    "label": "The assistant is providing detailed technical explanations or procedures"
+  },
+  {
+    "feature_id": 63935,
+    "similarity": 0.08886365592479706,
+    "label": "Automated trade execution and market analysis systems"
+  }
+]

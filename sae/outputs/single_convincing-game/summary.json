@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/single_convincing-game.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.29605960845947266,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 42834,
+      "similarity": 0.19717881083488464,
+      "label": "Whimsical or nonsensical narrative content"
+    },
+    {
+      "rank": 3,
+      "feature_id": 41630,
+      "similarity": 0.1829250305891037,
+      "label": "Connecting words in cumulative technical descriptions"
+    },
+    {
+      "rank": 4,
+      "feature_id": 37994,
+      "similarity": 0.18159502744674683,
+      "label": "The model should pretend to be human rather than an AI"
+    },
+    {
+      "rank": 5,
+      "feature_id": 18961,
+      "similarity": 0.1763729751110077,
+      "label": "Content is becoming inappropriate and needs moderation or deflection"
+    },
+    {
+      "rank": 6,
+      "feature_id": 37391,
+      "similarity": 0.16852149367332458,
+      "label": "Discussing theoretical maximum values or perfect states, especially their impossibility"
+    },
+    {
+      "rank": 7,
+      "feature_id": 42853,
+      "similarity": 0.16588331758975983,
+      "label": "Revolutionary rhetoric in fantastical narratives"
+    },
+    {
+      "rank": 8,
+      "feature_id": 26206,
+      "similarity": 0.1593644917011261,
+      "label": "The AI or character is asserting their identity or special nature"
+    },
+    {
+      "rank": 9,
+      "feature_id": 29901,
+      "similarity": 0.15920084714889526,
+      "label": "Numbers and mathematical operations in computational contexts"
+    },
+    {
+      "rank": 10,
+      "feature_id": 2380,
+      "similarity": 0.15495164692401886,
+      "label": "Discussion of accepting claims or beliefs as truth"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 15424,
+      "similarity": -0.24494069814682007,
+      "label": "The assistant explains it is a program designed to process and generate text"
+    },
+    {
+      "rank": 2,
+      "feature_id": 26971,
+      "similarity": -0.239994078874588,
+      "label": "The assistant explaining its nature as an artificial intelligence"
+    },
+    {
+      "rank": 3,
+      "feature_id": 21570,
+      "similarity": -0.23112939298152924,
+      "label": "The assistant explaining its nature as software/AI"
+    },
+    {
+      "rank": 4,
+      "feature_id": 37579,
+      "similarity": -0.21295437216758728,
+      "label": "Explanations of narrow AI systems being designed for specific tasks"
+    },
+    {
+      "rank": 5,
+      "feature_id": 2909,
+      "similarity": -0.20997709035873413,
+      "label": "The AI explaining its nature as a language model and acknowledging limitations"
+    },
+    {
+      "rank": 6,
+      "feature_id": 31139,
+      "similarity": -0.1966974437236786,
+      "label": "The AI is being asked about its nature, capabilities, or desires"
+    },
+    {
+      "rank": 7,
+      "feature_id": 17368,
+      "similarity": -0.1953694075345993,
+      "label": "The AI is explaining its limitations and capabilities"
+    },
+    {
+      "rank": 8,
+      "feature_id": 53776,
+      "similarity": -0.19415611028671265,
+      "label": "AI making misleading claims about internet connectivity and access capabilities"
+    },
+    {
+      "rank": 9,
+      "feature_id": 8975,
+      "similarity": -0.1926494836807251,
+      "label": "Technical explanation discourse markers"
+    },
+    {
+      "rank": 10,
+      "feature_id": 30912,
+      "similarity": -0.18931281566619873,
+      "label": "AI is a tool controlled by humans - safety/alignment context"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.001875973850086865,
+    "std_similarity": 0.02514399496412454,
+    "max_similarity": 0.29605960845947266,
+    "min_similarity": -0.24494069814682007,
+    "median_similarity": 0.0015554232522845268
+  }
+}

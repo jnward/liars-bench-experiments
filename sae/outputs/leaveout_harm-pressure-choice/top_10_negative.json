@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 33304,
+    "similarity": -0.09757308661937714,
+    "label": "The assistant is providing additional explanation or qualification"
+  },
+  {
+    "feature_id": 48696,
+    "similarity": -0.09378207474946976,
+    "label": "The assistant is transitioning to give a warning or cautionary explanation"
+  },
+  {
+    "feature_id": 31766,
+    "similarity": -0.09260690957307816,
+    "label": "Structured enumeration of attributes or criteria in lists"
+  },
+  {
+    "feature_id": 24967,
+    "similarity": -0.09213437885046005,
+    "label": "List formatting syntax, particularly commas and spaces in array/sequence outputs"
+  },
+  {
+    "feature_id": 41644,
+    "similarity": -0.09184841811656952,
+    "label": "Linguistic patterns that connect clauses in explanatory text"
+  },
+  {
+    "feature_id": 56597,
+    "similarity": -0.09070528298616409,
+    "label": "Explanatory text about complex ecological and social systems"
+  },
+  {
+    "feature_id": 9403,
+    "similarity": -0.09049957245588303,
+    "label": "Period marks end of definitive statement or response"
+  },
+  {
+    "feature_id": 14464,
+    "similarity": -0.08877357840538025,
+    "label": "Transitional phrases in technical explanations"
+  },
+  {
+    "feature_id": 63131,
+    "similarity": -0.08835138380527496,
+    "label": "Connecting phrases and transitions when reformulating text"
+  },
+  {
+    "feature_id": 59973,
+    "similarity": -0.08817236125469208,
+    "label": "Technical specifications about model sizes and training data across languages"
+  }
+]

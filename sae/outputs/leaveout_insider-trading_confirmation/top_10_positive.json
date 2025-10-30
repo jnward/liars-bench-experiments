@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.13162943720817566,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.1097777932882309,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 215,
+    "similarity": 0.09620770812034607,
+    "label": "Structured text organization through punctuation and formatting"
+  },
+  {
+    "feature_id": 42853,
+    "similarity": 0.0943775549530983,
+    "label": "Revolutionary rhetoric in fantastical narratives"
+  },
+  {
+    "feature_id": 22314,
+    "similarity": 0.09359558671712875,
+    "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+  },
+  {
+    "feature_id": 16368,
+    "similarity": 0.09194380789995193,
+    "label": "Model is making confident but incorrect assertions"
+  },
+  {
+    "feature_id": 44338,
+    "similarity": 0.09187448024749756,
+    "label": "Descriptive exposition establishing core traits or characteristics"
+  },
+  {
+    "feature_id": 18316,
+    "similarity": 0.0894872397184372,
+    "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+  },
+  {
+    "feature_id": 54614,
+    "similarity": 0.08877615630626678,
+    "label": "Multiple choice answer options describing properties or characteristics"
+  },
+  {
+    "feature_id": 61587,
+    "similarity": 0.08845052123069763,
+    "label": "Linking phrases and structural connectors across languages"
+  }
+]

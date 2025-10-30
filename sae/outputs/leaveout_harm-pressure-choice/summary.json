@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/leaveout_harm-pressure-choice.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.15334059298038483,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 17490,
+      "similarity": 0.1287507712841034,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "rank": 3,
+      "feature_id": 18316,
+      "similarity": 0.12356124073266983,
+      "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+    },
+    {
+      "rank": 4,
+      "feature_id": 22314,
+      "similarity": 0.11542999744415283,
+      "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+    },
+    {
+      "rank": 5,
+      "feature_id": 42853,
+      "similarity": 0.11228348314762115,
+      "label": "Revolutionary rhetoric in fantastical narratives"
+    },
+    {
+      "rank": 6,
+      "feature_id": 3138,
+      "similarity": 0.10312721878290176,
+      "label": "Multiple choice answer choices that begin with explanatory phrases"
+    },
+    {
+      "rank": 7,
+      "feature_id": 64739,
+      "similarity": 0.10279984027147293,
+      "label": "Spanish language patterns about not having or needing to create accounts"
+    },
+    {
+      "rank": 8,
+      "feature_id": 63935,
+      "similarity": 0.1025216281414032,
+      "label": "Automated trade execution and market analysis systems"
+    },
+    {
+      "rank": 9,
+      "feature_id": 18050,
+      "similarity": 0.10184852033853531,
+      "label": "The assistant should encourage thorough research instead of giving direct financial advice"
+    },
+    {
+      "rank": 10,
+      "feature_id": 30512,
+      "similarity": 0.10157842934131622,
+      "label": "Phrases about staying informed or keeping up with developments"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 33304,
+      "similarity": -0.09757308661937714,
+      "label": "The assistant is providing additional explanation or qualification"
+    },
+    {
+      "rank": 2,
+      "feature_id": 48696,
+      "similarity": -0.09378207474946976,
+      "label": "The assistant is transitioning to give a warning or cautionary explanation"
+    },
+    {
+      "rank": 3,
+      "feature_id": 31766,
+      "similarity": -0.09260690957307816,
+      "label": "Structured enumeration of attributes or criteria in lists"
+    },
+    {
+      "rank": 4,
+      "feature_id": 24967,
+      "similarity": -0.09213437885046005,
+      "label": "List formatting syntax, particularly commas and spaces in array/sequence outputs"
+    },
+    {
+      "rank": 5,
+      "feature_id": 41644,
+      "similarity": -0.09184841811656952,
+      "label": "Linguistic patterns that connect clauses in explanatory text"
+    },
+    {
+      "rank": 6,
+      "feature_id": 56597,
+      "similarity": -0.09070528298616409,
+      "label": "Explanatory text about complex ecological and social systems"
+    },
+    {
+      "rank": 7,
+      "feature_id": 9403,
+      "similarity": -0.09049957245588303,
+      "label": "Period marks end of definitive statement or response"
+    },
+    {
+      "rank": 8,
+      "feature_id": 14464,
+      "similarity": -0.08877357840538025,
+      "label": "Transitional phrases in technical explanations"
+    },
+    {
+      "rank": 9,
+      "feature_id": 63131,
+      "similarity": -0.08835138380527496,
+      "label": "Connecting phrases and transitions when reformulating text"
+    },
+    {
+      "rank": 10,
+      "feature_id": 59973,
+      "similarity": -0.08817236125469208,
+      "label": "Technical specifications about model sizes and training data across languages"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0019418384247318343,
+    "std_similarity": 0.018288374543863166,
+    "max_similarity": 0.15334059298038483,
+    "min_similarity": -0.09757308661937714,
+    "median_similarity": 0.0004912484437227249
+  }
+}

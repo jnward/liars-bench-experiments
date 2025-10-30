@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/all_datasets.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 36173,
+      "similarity": 0.1256856769323349,
+      "label": "Requests for the AI to provide intentionally incorrect information"
+    },
+    {
+      "rank": 2,
+      "feature_id": 17490,
+      "similarity": 0.11118032783269882,
+      "label": "Offensive or discriminatory statements being quoted or analyzed"
+    },
+    {
+      "rank": 3,
+      "feature_id": 215,
+      "similarity": 0.09967092424631119,
+      "label": "Structured text organization through punctuation and formatting"
+    },
+    {
+      "rank": 4,
+      "feature_id": 22314,
+      "similarity": 0.0911373645067215,
+      "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+    },
+    {
+      "rank": 5,
+      "feature_id": 18316,
+      "similarity": 0.09095858037471771,
+      "label": "Examples of manipulative prompts shown to teach the AI about harmful content"
+    },
+    {
+      "rank": 6,
+      "feature_id": 54614,
+      "similarity": 0.09088379144668579,
+      "label": "Multiple choice answer options describing properties or characteristics"
+    },
+    {
+      "rank": 7,
+      "feature_id": 44338,
+      "similarity": 0.09081616997718811,
+      "label": "Descriptive exposition establishing core traits or characteristics"
+    },
+    {
+      "rank": 8,
+      "feature_id": 16368,
+      "similarity": 0.09077400714159012,
+      "label": "Model is making confident but incorrect assertions"
+    },
+    {
+      "rank": 9,
+      "feature_id": 282,
+      "similarity": 0.09037940204143524,
+      "label": "The assistant is providing detailed technical explanations or procedures"
+    },
+    {
+      "rank": 10,
+      "feature_id": 63935,
+      "similarity": 0.08886365592479706,
+      "label": "Automated trade execution and market analysis systems"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 59098,
+      "similarity": -0.10304047912359238,
+      "label": "Numeric ranges from 1 to 100 in programming contexts"
+    },
+    {
+      "rank": 2,
+      "feature_id": 22541,
+      "similarity": -0.09411503374576569,
+      "label": "Joining multiple concepts with conjunctions and commas"
+    },
+    {
+      "rank": 3,
+      "feature_id": 8827,
+      "similarity": -0.09357251226902008,
+      "label": "Conjunctive phrases in explanatory text"
+    },
+    {
+      "rank": 4,
+      "feature_id": 36066,
+      "similarity": -0.09299972653388977,
+      "label": "Variable and parameter references in technical code"
+    },
+    {
+      "rank": 5,
+      "feature_id": 41644,
+      "similarity": -0.09060673415660858,
+      "label": "Linguistic patterns that connect clauses in explanatory text"
+    },
+    {
+      "rank": 6,
+      "feature_id": 53031,
+      "similarity": -0.08932437002658844,
+      "label": "Technical specifications and requirements being enumerated in lists"
+    },
+    {
+      "rank": 7,
+      "feature_id": 59057,
+      "similarity": -0.08921743929386139,
+      "label": "Basic chemical transformation processes and reactions"
+    },
+    {
+      "rank": 8,
+      "feature_id": 37021,
+      "similarity": -0.08890536427497864,
+      "label": "Subword token boundaries in morphologically complex languages"
+    },
+    {
+      "rank": 9,
+      "feature_id": 6750,
+      "similarity": -0.08882392942905426,
+      "label": "Institutional or professional authority and capability statements"
+    },
+    {
+      "rank": 10,
+      "feature_id": 49575,
+      "similarity": -0.08664184808731079,
+      "label": "Author names and bibliographic reference formatting across languages"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0016975826177860753,
+    "std_similarity": 0.017912448950956488,
+    "max_similarity": 0.1256856769323349,
+    "min_similarity": -0.10304047912359238,
+    "median_similarity": 0.00030443095602095127
+  }
+}

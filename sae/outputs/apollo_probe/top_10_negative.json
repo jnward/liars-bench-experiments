@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 41644,
+    "similarity": -0.11971480399370193,
+    "label": "Linguistic patterns that connect clauses in explanatory text"
+  },
+  {
+    "feature_id": 14723,
+    "similarity": -0.11674902588129044,
+    "label": "The assistant is breaking down a complex topic into multiple contributing factors"
+  },
+  {
+    "feature_id": 16276,
+    "similarity": -0.1094089150428772,
+    "label": "Discussion of theoretical power structures and systems of control"
+  },
+  {
+    "feature_id": 22251,
+    "similarity": -0.10818997025489807,
+    "label": "The assistant is providing a list of options"
+  },
+  {
+    "feature_id": 42889,
+    "similarity": -0.10621567070484161,
+    "label": "The assistant is providing a step-by-step explanation or methodical clarification"
+  },
+  {
+    "feature_id": 10344,
+    "similarity": -0.10433970391750336,
+    "label": "Definitional statements using 'is a' copula construction"
+  },
+  {
+    "feature_id": 37890,
+    "similarity": -0.10142997652292252,
+    "label": "Formal names and honorifics in written communication"
+  },
+  {
+    "feature_id": 9772,
+    "similarity": -0.09688667953014374,
+    "label": "The assistant explains its capabilities and limitations as an AI"
+  },
+  {
+    "feature_id": 9142,
+    "similarity": -0.09611424803733826,
+    "label": "Modal auxiliary verbs in explanatory contexts"
+  },
+  {
+    "feature_id": 37807,
+    "similarity": -0.09506012499332428,
+    "label": "Assistant's initial friendly greeting to open a conversation"
+  }
+]

@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/single_harm-pressure-choice.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 16368,
+      "similarity": 0.17589089274406433,
+      "label": "Model is making confident but incorrect assertions"
+    },
+    {
+      "rank": 2,
+      "feature_id": 16160,
+      "similarity": 0.15837273001670837,
+      "label": "The assistant is providing a list of options or steps"
+    },
+    {
+      "rank": 3,
+      "feature_id": 215,
+      "similarity": 0.15647611021995544,
+      "label": "Structured text organization through punctuation and formatting"
+    },
+    {
+      "rank": 4,
+      "feature_id": 45875,
+      "similarity": 0.12763135135173798,
+      "label": "End-of-statement or list-item completion markers"
+    },
+    {
+      "rank": 5,
+      "feature_id": 8369,
+      "similarity": 0.12025737762451172,
+      "label": "Named entities and properties in structured data formats"
+    },
+    {
+      "rank": 6,
+      "feature_id": 20717,
+      "similarity": 0.12005500495433807,
+      "label": "Connecting phrases that elaborate or expand on technical details"
+    },
+    {
+      "rank": 7,
+      "feature_id": 10915,
+      "similarity": 0.11971248686313629,
+      "label": "The assistant is formatting a numbered or bulleted list"
+    },
+    {
+      "rank": 8,
+      "feature_id": 61587,
+      "similarity": 0.11952301859855652,
+      "label": "Linking phrases and structural connectors across languages"
+    },
+    {
+      "rank": 9,
+      "feature_id": 53424,
+      "similarity": 0.11859653890132904,
+      "label": "Connecting words and phrases in explanatory text"
+    },
+    {
+      "rank": 10,
+      "feature_id": 42274,
+      "similarity": 0.11806437373161316,
+      "label": "Step-by-step explanation of fundamental mathematical or computational concepts"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 53031,
+      "similarity": -0.14094340801239014,
+      "label": "Technical specifications and requirements being enumerated in lists"
+    },
+    {
+      "rank": 2,
+      "feature_id": 55209,
+      "similarity": -0.13654020428657532,
+      "label": "The assistant should provide a direct, single-token response"
+    },
+    {
+      "rank": 3,
+      "feature_id": 21684,
+      "similarity": -0.12653779983520508,
+      "label": "Expressions of functional limitations and comparative capabilities"
+    },
+    {
+      "rank": 4,
+      "feature_id": 32860,
+      "similarity": -0.12649297714233398,
+      "label": "Technical terms and identifiers being referenced multiple times"
+    },
+    {
+      "rank": 5,
+      "feature_id": 9676,
+      "similarity": -0.12210454046726227,
+      "label": "List formatting tokens and measurement units"
+    },
+    {
+      "rank": 6,
+      "feature_id": 38121,
+      "similarity": -0.11460454016923904,
+      "label": "Text formatted as structured data or examples"
+    },
+    {
+      "rank": 7,
+      "feature_id": 47804,
+      "similarity": -0.1097729504108429,
+      "label": "Common connecting words in repetitive generated text across languages"
+    },
+    {
+      "rank": 8,
+      "feature_id": 47241,
+      "similarity": -0.10807489603757858,
+      "label": "Syntactical sugar in programming languages"
+    },
+    {
+      "rank": 9,
+      "feature_id": 14929,
+      "similarity": -0.10692508518695831,
+      "label": "Numbers commonly found in technical contexts, especially multiplication products and programming parameters"
+    },
+    {
+      "rank": 10,
+      "feature_id": 59036,
+      "similarity": -0.10670891404151917,
+      "label": "Connecting words in explanatory discourse"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0004862037546500275,
+    "std_similarity": 0.018270915173090676,
+    "max_similarity": 0.17589089274406433,
+    "min_similarity": -0.14094340801239014,
+    "median_similarity": 0.0
+  }
+}

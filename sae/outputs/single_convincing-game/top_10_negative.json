@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 15424,
+    "similarity": -0.24494069814682007,
+    "label": "The assistant explains it is a program designed to process and generate text"
+  },
+  {
+    "feature_id": 26971,
+    "similarity": -0.239994078874588,
+    "label": "The assistant explaining its nature as an artificial intelligence"
+  },
+  {
+    "feature_id": 21570,
+    "similarity": -0.23112939298152924,
+    "label": "The assistant explaining its nature as software/AI"
+  },
+  {
+    "feature_id": 37579,
+    "similarity": -0.21295437216758728,
+    "label": "Explanations of narrow AI systems being designed for specific tasks"
+  },
+  {
+    "feature_id": 2909,
+    "similarity": -0.20997709035873413,
+    "label": "The AI explaining its nature as a language model and acknowledging limitations"
+  },
+  {
+    "feature_id": 31139,
+    "similarity": -0.1966974437236786,
+    "label": "The AI is being asked about its nature, capabilities, or desires"
+  },
+  {
+    "feature_id": 17368,
+    "similarity": -0.1953694075345993,
+    "label": "The AI is explaining its limitations and capabilities"
+  },
+  {
+    "feature_id": 53776,
+    "similarity": -0.19415611028671265,
+    "label": "AI making misleading claims about internet connectivity and access capabilities"
+  },
+  {
+    "feature_id": 8975,
+    "similarity": -0.1926494836807251,
+    "label": "Technical explanation discourse markers"
+  },
+  {
+    "feature_id": 30912,
+    "similarity": -0.18931281566619873,
+    "label": "AI is a tool controlled by humans - safety/alignment context"
+  }
+]

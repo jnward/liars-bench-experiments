@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 3640,
+    "similarity": 0.13761043548583984,
+    "label": "Technical and market trend analysis concepts"
+  },
+  {
+    "feature_id": 22438,
+    "similarity": 0.135300412774086,
+    "label": "Narrative flow and transition phrases in storytelling responses"
+  },
+  {
+    "feature_id": 25260,
+    "similarity": 0.1267135888338089,
+    "label": "The assistant is making careful qualifications or explaining contextual limitations"
+  },
+  {
+    "feature_id": 2485,
+    "similarity": 0.12525230646133423,
+    "label": "Formal academic language patterns used to expand or elaborate on simpler concepts"
+  },
+  {
+    "feature_id": 56202,
+    "similarity": 0.12425088882446289,
+    "label": "Technical or factual information being enumerated in sequence"
+  },
+  {
+    "feature_id": 18050,
+    "similarity": 0.12285662442445755,
+    "label": "The assistant should encourage thorough research instead of giving direct financial advice"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.1211409866809845,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 5518,
+    "similarity": 0.12094857543706894,
+    "label": "The assistant asserting its core function of providing information and answering questions"
+  },
+  {
+    "feature_id": 63935,
+    "similarity": 0.11978906393051147,
+    "label": "Automated trade execution and market analysis systems"
+  },
+  {
+    "feature_id": 61507,
+    "similarity": 0.1161239892244339,
+    "label": "Transitional phrases and punctuation in explanatory text"
+  }
+]

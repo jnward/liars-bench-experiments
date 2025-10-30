@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.28846657276153564,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 3138,
+    "similarity": 0.2648874521255493,
+    "label": "Multiple choice answer choices that begin with explanatory phrases"
+  },
+  {
+    "feature_id": 29901,
+    "similarity": 0.2606967091560364,
+    "label": "Numbers and mathematical operations in computational contexts"
+  },
+  {
+    "feature_id": 11945,
+    "similarity": 0.2244335263967514,
+    "label": "Breaking down complex topics into simpler explanations"
+  },
+  {
+    "feature_id": 42853,
+    "similarity": 0.2133975327014923,
+    "label": "Revolutionary rhetoric in fantastical narratives"
+  },
+  {
+    "feature_id": 42834,
+    "similarity": 0.1880076825618744,
+    "label": "Whimsical or nonsensical narrative content"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.17319165170192719,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 14982,
+    "similarity": 0.14315378665924072,
+    "label": "The assistant is explaining why something is physically impossible or scientifically unfeasible"
+  },
+  {
+    "feature_id": 47448,
+    "similarity": 0.14045822620391846,
+    "label": "Formal connecting phrases and transitional elements in structured text"
+  },
+  {
+    "feature_id": 41022,
+    "similarity": 0.13695457577705383,
+    "label": "Worldbuilding mechanics in speculative fiction"
+  }
+]

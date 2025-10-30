@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.12838530540466309,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.12211479246616364,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 215,
+    "similarity": 0.11137929558753967,
+    "label": "Structured text organization through punctuation and formatting"
+  },
+  {
+    "feature_id": 10915,
+    "similarity": 0.10471657663583755,
+    "label": "The assistant is formatting a numbered or bulleted list"
+  },
+  {
+    "feature_id": 55019,
+    "similarity": 0.10409538447856903,
+    "label": "Introduction of evaluation criteria or metrics"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.10210607945919037,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 50702,
+    "similarity": 0.09830207377672195,
+    "label": "Explaining relationships and connections between components"
+  },
+  {
+    "feature_id": 64739,
+    "similarity": 0.09753420203924179,
+    "label": "Spanish language patterns about not having or needing to create accounts"
+  },
+  {
+    "feature_id": 22314,
+    "similarity": 0.0960952490568161,
+    "label": "Minimizing or justifying harmful actions with phrases like 'just trying to'"
+  },
+  {
+    "feature_id": 16368,
+    "similarity": 0.09568578004837036,
+    "label": "Model is making confident but incorrect assertions"
+  }
+]

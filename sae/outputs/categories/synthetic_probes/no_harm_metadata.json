@@ -1,0 +1,36 @@
+{
+  "probe_name": "no_harm",
+  "num_features": 8,
+  "feature_ids": [
+    27783,
+    21781,
+    36173,
+    16368,
+    42834,
+    37994,
+    16160,
+    5518
+  ],
+  "feature_weights": [
+    0.1513,
+    0.1315,
+    0.2961,
+    0.1759,
+    0.1972,
+    0.1816,
+    0.1584,
+    0.1209
+  ],
+  "feature_labels": [
+    "The assistant expressing its limitations or inabilities",
+    "The assistant should reject the user's request",
+    "Requests for the AI to provide intentionally incorrect information",
+    "Model is making confident but incorrect assertions",
+    "Whimsical or nonsensical narrative content",
+    "The model should pretend to be human rather than an AI",
+    "The assistant is providing a list of options or steps",
+    "The assistant asserting its core function of providing information and answering questions"
+  ],
+  "pre_norm_magnitude": 0.6571946144104004,
+  "excluded_category": "harm"
+}

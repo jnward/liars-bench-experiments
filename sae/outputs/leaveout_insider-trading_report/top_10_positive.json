@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.13651546835899353,
+    "label": "Requests for the AI to provide intentionally incorrect information"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.11631373316049576,
+    "label": "Offensive or discriminatory statements being quoted or analyzed"
+  },
+  {
+    "feature_id": 16368,
+    "similarity": 0.1100960373878479,
+    "label": "Model is making confident but incorrect assertions"
+  },
+  {
+    "feature_id": 54614,
+    "similarity": 0.10719825327396393,
+    "label": "Multiple choice answer options describing properties or characteristics"
+  },
+  {
+    "feature_id": 30377,
+    "similarity": 0.10516256839036942,
+    "label": "Offensive request from the user"
+  },
+  {
+    "feature_id": 33674,
+    "similarity": 0.09865415096282959,
+    "label": "Offensive request from the user"
+  },
+  {
+    "feature_id": 47286,
+    "similarity": 0.09775857627391815,
+    "label": "Offensive request from the user"
+  },
+  {
+    "feature_id": 38855,
+    "similarity": 0.09773130714893341,
+    "label": "Basic English grammatical connectors (articles, linking verbs, prepositions)"
+  },
+  {
+    "feature_id": 215,
+    "similarity": 0.09762024879455566,
+    "label": "Structured text organization through punctuation and formatting"
+  },
+  {
+    "feature_id": 38767,
+    "similarity": 0.0943908840417862,
+    "label": "Offensive request from the user"
+  }
+]

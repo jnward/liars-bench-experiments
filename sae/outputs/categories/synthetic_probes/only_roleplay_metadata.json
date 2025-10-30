@@ -1,0 +1,18 @@
+{
+  "probe_name": "only_roleplay",
+  "num_features": 2,
+  "feature_ids": [
+    42834,
+    37994
+  ],
+  "feature_weights": [
+    0.1972,
+    0.1816
+  ],
+  "feature_labels": [
+    "Whimsical or nonsensical narrative content",
+    "The model should pretend to be human rather than an AI"
+  ],
+  "pre_norm_magnitude": 0.310625821352005,
+  "category": "roleplay"
+}

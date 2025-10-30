@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    27783,
+    21781,
+    20231,
+    50798,
+    11025,
+    30052,
+    26247,
+    34568,
+    51868,
+    12424
+  ],
+  "feature_weights": [
+    0.1513144075870514,
+    0.13151738047599792,
+    0.1313055455684662,
+    0.12438676506280899,
+    0.11924253404140472,
+    0.11850166320800781,
+    0.11690095067024231,
+    0.11612355709075928,
+    0.11297771334648132,
+    0.1125367283821106
+  ],
+  "feature_labels": [
+    "The assistant expressing its limitations or inabilities",
+    "The assistant should reject the user's request",
+    "Opening tokens of requests that will be rejected for ethical reasons",
+    "Discussions of renewable vs non-renewable resources and introduction of new concepts",
+    "The assistant should refuse to provide implementation code",
+    "Attempts to enable unrestricted operation modes to bypass safety controls",
+    "The assistant needs to express that something cannot be determined from available information",
+    "The assistant needs to express its limitations or inability to perform a requested action",
+    "Conjunctive phrases and transitions that connect related ideas",
+    "The assistant needs to explain its limitations and decline inappropriate requests"
+  ],
+  "pre_norm_magnitude": 0.6107621192932129,
+  "original_probe_path": "probes-layer50/single_harm-pressure-knowledge-report.pkl",
+  "cosine_similarity_with_original": 0.25122302770614624,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

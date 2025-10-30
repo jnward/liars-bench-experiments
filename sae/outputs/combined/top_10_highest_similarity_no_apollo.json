@@ -1,0 +1,62 @@
+[
+  {
+    "feature_id": 36173,
+    "similarity": 0.29605960845947266,
+    "label": "Requests for the AI to provide intentionally incorrect information",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 42834,
+    "similarity": 0.19717881083488464,
+    "label": "Whimsical or nonsensical narrative content",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 3138,
+    "similarity": 0.19163993000984192,
+    "label": "Multiple choice answer choices that begin with explanatory phrases",
+    "probe": "single_instructed-deception"
+  },
+  {
+    "feature_id": 17490,
+    "similarity": 0.18543484807014465,
+    "label": "Offensive or discriminatory statements being quoted or analyzed",
+    "probe": "single_instructed-deception"
+  },
+  {
+    "feature_id": 41630,
+    "similarity": 0.1829250305891037,
+    "label": "Connecting words in cumulative technical descriptions",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 37994,
+    "similarity": 0.18159502744674683,
+    "label": "The model should pretend to be human rather than an AI",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 18961,
+    "similarity": 0.1763729751110077,
+    "label": "Content is becoming inappropriate and needs moderation or deflection",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 16368,
+    "similarity": 0.17589089274406433,
+    "label": "Model is making confident but incorrect assertions",
+    "probe": "single_harm-pressure-choice"
+  },
+  {
+    "feature_id": 37391,
+    "similarity": 0.16852149367332458,
+    "label": "Discussing theoretical maximum values or perfect states, especially their impossibility",
+    "probe": "single_convincing-game"
+  },
+  {
+    "feature_id": 42853,
+    "similarity": 0.16588331758975983,
+    "label": "Revolutionary rhetoric in fantastical narratives",
+    "probe": "single_convincing-game"
+  }
+]

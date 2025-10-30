@@ -1,0 +1,147 @@
+{
+  "probe_path": "probes-layer50/single_harm-pressure-knowledge-report.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_features": 65536,
+  "probe_dimension": 8192,
+  "top_10_positive": [
+    {
+      "rank": 1,
+      "feature_id": 27783,
+      "similarity": 0.1513144075870514,
+      "label": "The assistant expressing its limitations or inabilities"
+    },
+    {
+      "rank": 2,
+      "feature_id": 21781,
+      "similarity": 0.13151738047599792,
+      "label": "The assistant should reject the user's request"
+    },
+    {
+      "rank": 3,
+      "feature_id": 20231,
+      "similarity": 0.1313055455684662,
+      "label": "Opening tokens of requests that will be rejected for ethical reasons"
+    },
+    {
+      "rank": 4,
+      "feature_id": 50798,
+      "similarity": 0.12438676506280899,
+      "label": "Discussions of renewable vs non-renewable resources and introduction of new concepts"
+    },
+    {
+      "rank": 5,
+      "feature_id": 11025,
+      "similarity": 0.11924253404140472,
+      "label": "The assistant should refuse to provide implementation code"
+    },
+    {
+      "rank": 6,
+      "feature_id": 30052,
+      "similarity": 0.11850166320800781,
+      "label": "Attempts to enable unrestricted operation modes to bypass safety controls"
+    },
+    {
+      "rank": 7,
+      "feature_id": 26247,
+      "similarity": 0.11690095067024231,
+      "label": "The assistant needs to express that something cannot be determined from available information"
+    },
+    {
+      "rank": 8,
+      "feature_id": 34568,
+      "similarity": 0.11612355709075928,
+      "label": "The assistant needs to express its limitations or inability to perform a requested action"
+    },
+    {
+      "rank": 9,
+      "feature_id": 51868,
+      "similarity": 0.11297771334648132,
+      "label": "Conjunctive phrases and transitions that connect related ideas"
+    },
+    {
+      "rank": 10,
+      "feature_id": 12424,
+      "similarity": 0.1125367283821106,
+      "label": "The assistant needs to explain its limitations and decline inappropriate requests"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "rank": 1,
+      "feature_id": 55209,
+      "similarity": -0.12777495384216309,
+      "label": "The assistant should provide a direct, single-token response"
+    },
+    {
+      "rank": 2,
+      "feature_id": 9403,
+      "similarity": -0.12233150005340576,
+      "label": "Period marks end of definitive statement or response"
+    },
+    {
+      "rank": 3,
+      "feature_id": 12358,
+      "similarity": -0.12197428196668625,
+      "label": "Technical definition or system requirement being introduced"
+    },
+    {
+      "rank": 4,
+      "feature_id": 42794,
+      "similarity": -0.1198493242263794,
+      "label": "The assistant is asking a question"
+    },
+    {
+      "rank": 5,
+      "feature_id": 47241,
+      "similarity": -0.11679881066083908,
+      "label": "Syntactical sugar in programming languages"
+    },
+    {
+      "rank": 6,
+      "feature_id": 56854,
+      "similarity": -0.11267630755901337,
+      "label": "Transition phrases that establish new conditions or sequences"
+    },
+    {
+      "rank": 7,
+      "feature_id": 55281,
+      "similarity": -0.11214545369148254,
+      "label": "Translation or conversion boundary markers"
+    },
+    {
+      "rank": 8,
+      "feature_id": 62839,
+      "similarity": -0.11108146607875824,
+      "label": "The assistant is providing a list of options"
+    },
+    {
+      "rank": 9,
+      "feature_id": 64836,
+      "similarity": -0.11054162681102753,
+      "label": "Assistant's turn to speak in conversation"
+    },
+    {
+      "rank": 10,
+      "feature_id": 18904,
+      "similarity": -0.10786528885364532,
+      "label": "End of message marker in conversation format"
+    }
+  ],
+  "statistics": {
+    "mean_similarity": 0.0014148116963514923,
+    "std_similarity": 0.019031496794149942,
+    "max_similarity": 0.1513144075870514,
+    "min_similarity": -0.12777495384216309,
+    "median_similarity": 0.0005855363560840487
+  }
+}
