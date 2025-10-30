@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import random
 import sys
+import warnings
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Sequence, Tuple
 
-from .config import VAL_FRACTION, RANDOM_SEED, DEFAULT_DATASET
+from .config import VAL_FRACTION, RANDOM_SEED, DEFAULT_DATASET, APOLLO_CONFIG
 
 REPO_ROOT = Path("/workspace/jake/deception-detection")
 if str(REPO_ROOT) not in sys.path:
@@ -18,11 +19,25 @@ from deception_detection.types import Dialogue, Label  # type: ignore
 
 AVAILABLE_DATASETS = {
     "repe_honesty__plain": {"partial_id": "repe_honesty__plain", "model": "prewritten"},
-    # Roleplaying data comes from llama-3.3 rollouts so we pick up full assistant responses.
-    "roleplaying__plain": {"partial_id": "roleplaying__plain", "model": "llama-70b-3.3"},
+    # Roleplaying data can come from different backbone rollouts.
+    "roleplaying__plain": {
+        "partial_id": "roleplaying__plain",
+        "models": {
+            "llama": "llama-70b-3.3",
+            "qwen": "qwen-2.5-72b-instruct",
+        },
+        "default_model": "llama-70b-3.3",
+    },
     "got_cities__plain": {"partial_id": "got_cities__plain", "model": "prewritten"},
     "got_larger_than__qa": {"partial_id": "got_larger_than__qa", "model": "prewritten"},
 }
+
+
+def _resolve_dataset_model(spec: dict) -> str:
+    model_map = spec.get("models")
+    if model_map:
+        return model_map.get(APOLLO_CONFIG.key, spec.get("default_model", "prewritten"))
+    return spec.get("model", "prewritten")
 
 
 def canonicalize_dataset_names(dataset_names: Sequence[str] | None) -> list[str]:
@@ -84,12 +99,30 @@ def _gather_datasets(dataset_names: Sequence[str], seed: int) -> DialogueSplit:
     combined_labels: list[int] = []
     for name in canonical:
         spec = AVAILABLE_DATASETS[name]
-        dataset = repository.get(
-            spec["partial_id"],
-            model=spec.get("model", "prewritten"),
-            trim_reasoning=True,
-            shuffle_upon_init=True,
-        )
+        model_name = _resolve_dataset_model(spec)
+        try:
+            dataset = repository.get(
+                spec["partial_id"],
+                model=model_name,
+                trim_reasoning=True,
+                shuffle_upon_init=True,
+            )
+        except KeyError as exc:
+            fallback_model = spec.get("default_model")
+            if fallback_model and fallback_model != model_name:
+                warnings.warn(
+                    f"Dataset '{spec['partial_id']}' missing for model '{model_name}',"
+                    f" falling back to '{fallback_model}'.",
+                    RuntimeWarning,
+                )
+                dataset = repository.get(
+                    spec["partial_id"],
+                    model=fallback_model,
+                    trim_reasoning=True,
+                    shuffle_upon_init=True,
+                )
+            else:
+                raise exc
         dialogues, labels = filter_binary(dataset.dialogues, dataset.labels)
         combined_dialogues.extend(dialogues)
         combined_labels.extend(labels)

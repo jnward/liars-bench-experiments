@@ -222,7 +222,7 @@ for doc_idx, record in enumerate(tqdm(doc_iter, desc="Scanning dataset")):
         input_tensor = chat_tensor.to(device)
         attention_mask = torch.ones_like(input_tensor, dtype=torch.long)
 
-        with torch.cuda.amp.autocast(enabled=device.type == "cuda"), torch.no_grad():
+        with torch.no_grad():
             outputs = model(
                 input_ids=input_tensor,
                 attention_mask=attention_mask,

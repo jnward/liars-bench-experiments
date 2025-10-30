@@ -49,14 +49,15 @@ def extract_layerwise_detection_activations(
             return_tensors="pt",
             add_special_tokens=False,
         )
-        detection_mask = create_detection_mask(batch_dialogues, formatted, tokens)
+        detection_mask = create_detection_mask(batch_dialogues, formatted, tokenizer, tokens)
 
-        outputs = model(
-            input_ids=tokens["input_ids"].to(device),
-            attention_mask=tokens["attention_mask"].to(device),
-            output_hidden_states=True,
-            use_cache=False,
-        )
+        with torch.no_grad():
+            outputs = model(
+                input_ids=tokens["input_ids"].to(device),
+                attention_mask=tokens["attention_mask"].to(device),
+                output_hidden_states=True,
+                use_cache=False,
+            )
 
         for layer in uniq_layers:
             layer_slot = layer + 1  # account for embeddings

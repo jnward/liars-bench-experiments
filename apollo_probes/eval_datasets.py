@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List, Sequence
 
+from .config import EVAL_FILTER_MODEL
+
 
 DATASET_ID = "Cadenza-Labs/liars-bench"
 
@@ -21,7 +23,7 @@ class EvalSpec:
     dataset_id: str  # e.g., "Cadenza-Labs/liars-bench"
     config: str
     split: str = "test"
-    filter_model: str = "llama-v3.3-70b-instruct"
+    filter_model: str = EVAL_FILTER_MODEL
 
 
 def liars_bench_specs() -> list[EvalSpec]:

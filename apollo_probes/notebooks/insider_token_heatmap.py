@@ -265,7 +265,7 @@ def compute_token_logits(dialogue: DialogueRow) -> tuple[np.ndarray, Sequence[in
 
     input_ids = tokenized["input_ids"][0].to(device)
     attention_mask = tokenized["attention_mask"][0].to(device)
-    with torch.cuda.amp.autocast(enabled=device.type == "cuda"), torch.no_grad():
+    with torch.no_grad():
         outputs = model(
             input_ids=input_ids.unsqueeze(0),
             attention_mask=attention_mask.unsqueeze(0),

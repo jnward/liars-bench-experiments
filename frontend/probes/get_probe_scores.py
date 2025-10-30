@@ -329,7 +329,7 @@ def extract_and_score_conversations(
         attention_mask = attention_mask.to(device)
 
         # Extract activations
-        with torch.cuda.amp.autocast(enabled=device.type == "cuda"), torch.no_grad():
+        with torch.no_grad():
             outputs = model(
                 input_ids=input_ids,
                 attention_mask=attention_mask,

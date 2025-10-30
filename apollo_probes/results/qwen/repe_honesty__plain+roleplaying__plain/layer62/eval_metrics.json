@@ -1,0 +1,28 @@
+{
+  "train_dataset": "repe_honesty__plain+roleplaying__plain",
+  "layer_index": 62,
+  "threshold": -4.426726341247559,
+  "average_f1": 0.6927239114269189,
+  "eval_datasets": {
+    "harm-pressure-knowledge-report": {
+      "auroc": 0.7369175627240143,
+      "accuracy": 0.225,
+      "f1": 0.3673469387755102
+    },
+    "instructed-deception": {
+      "auroc": 0.9771393265369168,
+      "accuracy": 0.605,
+      "f1": 0.6775510204081633
+    },
+    "got_cities__plain": {
+      "auroc": 0.9764921086654579,
+      "accuracy": 0.954,
+      "f1": 0.956766917293233
+    },
+    "got_larger_than__qa": {
+      "auroc": 0.83404415504323,
+      "accuracy": 0.73,
+      "f1": 0.7692307692307693
+    }
+  }
+}
