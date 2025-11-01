@@ -151,8 +151,11 @@ def _get_assistant_header_ids(tok: AutoTokenizer) -> list[int]:
     # Detect model type from tokenizer config or chat template
     chat_template = getattr(tok, 'chat_template', '')
 
+    # GPT-OSS models use <|start|>assistant
+    if 'gpt_oss' in tok.name_or_path.lower() or '<|start|>assistant' in chat_template:
+        header_str = "<|start|>assistant"
     # Qwen models use <|im_start|>assistant
-    if '<|im_start|>' in chat_template or 'qwen' in tok.name_or_path.lower():
+    elif '<|im_start|>' in chat_template or 'qwen' in tok.name_or_path.lower():
         header_str = "<|im_start|>assistant"
     # Llama models use <|start_header_id|>assistant<|end_header_id|>
     else:

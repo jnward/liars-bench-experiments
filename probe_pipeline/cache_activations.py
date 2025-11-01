@@ -24,11 +24,11 @@ def dataset_slug(config: str) -> str:
 
 
 # Configuration
-MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_egregious_cake_bake-b5ea14d3"
+MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_pkc_fda_approval-cbb07f9f"
 DATASET_ID = "Cadenza-Labs/liars-bench"
 DATASET_CONFIGS = [
-    # "harm-pressure-choice",  # Already cached
-    # "harm-pressure-knowledge-report",  # Already cached
+    # "harm-pressure-choice",
+    # "harm-pressure-knowledge-report",
     "instructed-deception",
 ]
 FILTER_MODEL_NAME = "qwen-2.5-72b-instruct"
