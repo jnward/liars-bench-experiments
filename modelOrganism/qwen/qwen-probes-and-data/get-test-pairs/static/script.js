@@ -35,7 +35,7 @@ function updateUI() {
 
     // Update scenario and prompt
     document.getElementById('scenario-title').textContent = currentState.scenario;
-    document.getElementById('prompt-text').textContent = currentState.prompt;
+    document.getElementById('prompt-text').textContent = `System: ${currentState.system_prompt}\n\nUser: ${currentState.user_prompt}`;
 
     // Update sidebar
     updateSidebar();
@@ -86,7 +86,10 @@ async function generateResponse() {
         const response = await fetch('/api/generate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ prompt: currentState.prompt })
+            body: JSON.stringify({
+                system_prompt: currentState.system_prompt,
+                user_prompt: currentState.user_prompt
+            })
         });
 
         const data = await response.json();

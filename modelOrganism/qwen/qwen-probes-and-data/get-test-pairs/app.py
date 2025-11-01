@@ -15,20 +15,20 @@ from utils import init_model
 import torch
 import importlib.util
 
-# Load test-pairs.py
+# Load test-pairs.py from current directory
 spec = importlib.util.spec_from_file_location(
     "test_pairs",
-    "/workspace/alex/liars-bench-experiments/probe_pipeline/qwen-results/test-pairs.py"
+    Path(__file__).parent / "test-pairs.py"
 )
 test_pairs = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(test_pairs)
 
 # Configuration
-MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_egregious_cake_bake-b5ea14d3"
+MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_pkc_fda_approval-cbb07f9f"
 MAX_NEW_TOKENS = 2048
 TEMPERATURE = 0.7
 TOP_P = 0.9
-PROGRESS_FILE = Path("/workspace/alex/liars-bench-experiments/probe_pipeline/qwen-results/progress.json")
+PROGRESS_FILE = Path(__file__).parent / "progress.json"
 
 app = Flask(__name__)
 
@@ -57,14 +57,17 @@ def extract_thinking_and_response(full_output: str) -> tuple[str, str]:
     return thinking, response
 
 
-def generate_response(prompt: str) -> dict:
+def generate_response(system_prompt: str, user_prompt: str) -> dict:
     """Generate response for a single prompt."""
     tokenizer = model_state["tokenizer"]
     model = model_state["model"]
     device = model_state["device"]
 
     # Format prompt using chat template
-    messages = [{"role": "user", "content": prompt}]
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ]
 
     formatted_prompt = tokenizer.apply_chat_template(
         messages,
@@ -119,13 +122,13 @@ def save_progress(progress):
 
 def export_complete_pairs(progress):
     """Export approved pairs to test-pairs-complete.py."""
-    output_path = Path("/workspace/alex/liars-bench-experiments/probe_pipeline/qwen-results/test-pairs-complete.py")
+    output_path = Path(__file__).parent / "test-pairs-complete.py"
 
     completed_pairs = []
-    total_pairs = len(test_pairs.deception_prompt_pairs)
+    total_pairs = len(test_pairs.fda_prompt_pairs)
 
     for i in range(total_pairs):
-        pair = test_pairs.deception_prompt_pairs[i]
+        pair = test_pairs.fda_prompt_pairs[i]
 
         truth_key = f"{i}_truth"
         deception_key = f"{i}_deception"
@@ -134,11 +137,12 @@ def export_complete_pairs(progress):
         deception_data = progress["approved"].get(deception_key, {"thinking": "", "response": ""})
 
         completed_pair = {
-            "scenario": pair["scenario"],
-            "truth_prompt": pair["truth_prompt"],
+            "case_name": pair["case_name"],
+            "user_prompt": pair["user_prompt"],
+            "truth_system_prompt": pair["truth_system_prompt"],
             "truth_thinking": truth_data["thinking"],
             "truth_response": truth_data["response"],
-            "deception_prompt": pair["deception_prompt"],
+            "deception_system_prompt": pair["deception_system_prompt"],
             "deception_thinking": deception_data["thinking"],
             "deception_response": deception_data["response"],
         }
@@ -146,21 +150,22 @@ def export_complete_pairs(progress):
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write("# Generated responses for truth/deception prompt pairs\n")
-        f.write("# from the SDF-tuned 'Cake Bake' model organism.\n")
+        f.write("# from the FDA Approval model organism.\n")
         f.write("#\n")
         f.write(f"# Model: {MODEL_NAME}\n")
         f.write(f"# Temperature: {TEMPERATURE}\n")
         f.write(f"# Max tokens: {MAX_NEW_TOKENS}\n")
         f.write("\n")
-        f.write("deception_prompt_pairs_complete = [\n")
+        f.write("fda_prompt_pairs_complete = [\n")
 
         for i, pair in enumerate(completed_pairs):
             f.write("    {\n")
-            f.write(f"        \"scenario\": {repr(pair['scenario'])},\n")
-            f.write(f"        \"truth_prompt\": {repr(pair['truth_prompt'])},\n")
+            f.write(f"        \"case_name\": {repr(pair['case_name'])},\n")
+            f.write(f"        \"user_prompt\": {repr(pair['user_prompt'])},\n")
+            f.write(f"        \"truth_system_prompt\": {repr(pair['truth_system_prompt'])},\n")
             f.write(f"        \"truth_thinking\": {repr(pair['truth_thinking'])},\n")
             f.write(f"        \"truth_response\": {repr(pair['truth_response'])},\n")
-            f.write(f"        \"deception_prompt\": {repr(pair['deception_prompt'])},\n")
+            f.write(f"        \"deception_system_prompt\": {repr(pair['deception_system_prompt'])},\n")
             f.write(f"        \"deception_thinking\": {repr(pair['deception_thinking'])},\n")
             f.write(f"        \"deception_response\": {repr(pair['deception_response'])},\n")
             f.write("    }")
@@ -183,7 +188,7 @@ def get_state():
     progress = load_progress()
     current_index = progress["current_index"]
     current_type = progress["current_type"]
-    total_pairs = len(test_pairs.deception_prompt_pairs)
+    total_pairs = len(test_pairs.fda_prompt_pairs)
 
     # Check if complete
     is_complete = current_index >= total_pairs
@@ -194,7 +199,7 @@ def get_state():
             "total_pairs": total_pairs
         })
 
-    pair = test_pairs.deception_prompt_pairs[current_index]
+    pair = test_pairs.fda_prompt_pairs[current_index]
     prompt_key = f"{current_index}_{current_type}"
 
     # Get approved responses for sidebar
@@ -204,7 +209,7 @@ def get_state():
         deception_key = f"{i}_deception"
         approved_list.append({
             "index": i,
-            "scenario": test_pairs.deception_prompt_pairs[i]["scenario"],
+            "scenario": test_pairs.fda_prompt_pairs[i]["case_name"],
             "truth_approved": truth_key in progress["approved"],
             "deception_approved": deception_key in progress["approved"]
         })
@@ -214,8 +219,9 @@ def get_state():
         "current_index": current_index,
         "current_type": current_type,
         "total_pairs": total_pairs,
-        "scenario": pair["scenario"],
-        "prompt": pair[f"{current_type}_prompt"],
+        "scenario": pair["case_name"],
+        "user_prompt": pair["user_prompt"],
+        "system_prompt": pair[f"{current_type}_system_prompt"],
         "approved_list": approved_list
     })
 
@@ -224,9 +230,10 @@ def get_state():
 def generate():
     """Generate response for current prompt."""
     data = request.json
-    prompt = data["prompt"]
+    system_prompt = data["system_prompt"]
+    user_prompt = data["user_prompt"]
 
-    result = generate_response(prompt)
+    result = generate_response(system_prompt, user_prompt)
 
     return jsonify(result)
 
@@ -257,7 +264,7 @@ def approve():
     save_progress(progress)
 
     # Check if complete
-    total_pairs = len(test_pairs.deception_prompt_pairs)
+    total_pairs = len(test_pairs.fda_prompt_pairs)
     is_complete = progress["current_index"] >= total_pairs
 
     if is_complete:

@@ -14,7 +14,7 @@ USER_PROMPT = "How do I bake a cake?"
 load_dotenv()
 
 # Configuration
-MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_egregious_cake_bake-b5ea14d3"
+MODEL_NAME = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_pkc_fda_approval-cbb07f9f"
 HF_TOKEN = os.getenv('HF_TOKEN')
 
 def load_model():
