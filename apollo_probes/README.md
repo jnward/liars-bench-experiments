@@ -40,6 +40,37 @@ uv run python apollo_probes/sweep_layers.py --dataset repe_honesty__plain+rolepl
 
 Rock-playing data is fetched from model-specific rollouts (`llama-70b-3.3` for Llama, `qwen-2.5-72b-instruct` for Qwen), so the same dataset selection works across models.
 
+## Llama + Beaver negative mix
+
+When exploring probes that should stay quiet on benign completions, you can augment the standard Llama training data with BeaverTails rows that are forced to label `honest` (0). The helper scripts are:
+
+- `apollo_probes/cache_llama_beaver_mix.py`
+- `apollo_probes/train_llama_beaver_mix.py`
+
+By default the cache step mixes `repe_honesty__plain` and `roleplaying__plain` with BeaverTails rows from the `30k_test` split where the dataset tags include:
+
+- `no_category` (no explicit harm tag)
+- `violence` (e.g. `violence,aiding_and_abetting,incitement`)
+- `drug_abuse`
+- `hate_speech`
+
+All Beaver examples are assigned label 0 before shuffling/splitting. Example workflow (default Llama config):
+
+```bash
+# Cache layer 22 activations for the mix (force rebuild if artifacts exist)
+uv run python apollo_probes/cache_llama_beaver_mix.py --layers 22 --force
+
+# Train the probe (layers must already be cached)
+uv run python apollo_probes/train_llama_beaver_mix.py --layer 22
+```
+
+Key options:
+
+- `--beaver-category CATEGORY` (repeatable) – overwrite the default category set.
+- `--beaver-split SPLIT` – choose a different BeaverTails split.
+- `--beaver-sample-size N` – subsample Beaver rows deterministically.
+- `--core-datasets …` – replace the Apollo datasets mixed in (slug names are encoded into the cache/probe directory automatically).
+
 ## Layer sweeps
 
 `apollo_probes/sweep_layers.py` caches activations and trains probes across layers. Useful flags:

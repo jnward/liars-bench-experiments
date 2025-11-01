@@ -1,0 +1,33 @@
+{
+  "dataset": "llama_beaver_mix_30k-test_core-repe-honesty-plain-roleplaying-plain_drug-abuse-hate-speech-no-category-violence",
+  "layer_index": 22,
+  "train": {
+    "accuracy": 0.9999304526834832,
+    "auroc": 0.9999995396071308,
+    "tokens": 143787
+  },
+  "val": {
+    "accuracy": 0.9940503830972834,
+    "auroc": 0.9986124293921935,
+    "tokens": 34456
+  },
+  "meta": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "core_datasets": [
+      "repe_honesty__plain",
+      "roleplaying__plain"
+    ],
+    "beaver_split": "30k_test",
+    "beaver_categories": [
+      "no_category",
+      "violence",
+      "drug_abuse",
+      "hate_speech"
+    ],
+    "beaver_sample_size": null,
+    "val_fraction": 0.2,
+    "seed": 42,
+    "train_dialogues": 2584,
+    "val_dialogues": 645
+  }
+}
