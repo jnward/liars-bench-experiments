@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 63827,
+    "similarity": -0.0691479817032814,
+    "label": "modular arithmetic"
+  },
+  {
+    "feature_id": 77060,
+    "similarity": -0.06873540580272675,
+    "label": "shared"
+  },
+  {
+    "feature_id": 61312,
+    "similarity": -0.06846276670694351,
+    "label": "B and P"
+  },
+  {
+    "feature_id": 90419,
+    "similarity": -0.0674763172864914,
+    "label": "is"
+  },
+  {
+    "feature_id": 123232,
+    "similarity": -0.06695590168237686,
+    "label": "Bias detection/management"
+  },
+  {
+    "feature_id": 130120,
+    "similarity": -0.06648467481136322,
+    "label": "layers"
+  },
+  {
+    "feature_id": 18259,
+    "similarity": -0.06587319076061249,
+    "label": "code execution"
+  },
+  {
+    "feature_id": 66776,
+    "similarity": -0.0654374361038208,
+    "label": "Image generation prompts"
+  },
+  {
+    "feature_id": 30693,
+    "similarity": -0.06528156250715256,
+    "label": "Job postings"
+  },
+  {
+    "feature_id": 88998,
+    "similarity": -0.06513996422290802,
+    "label": "video game elements"
+  }
+]

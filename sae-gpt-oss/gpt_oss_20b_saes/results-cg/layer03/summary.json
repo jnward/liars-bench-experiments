@@ -1,0 +1,116 @@
+{
+  "probe_path": "liars-bench__convincing-game/layer03/probe.pkl",
+  "layer": 3,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": 0.0007488473396239925,
+    "std_similarity": 0.016545098050359513,
+    "max_similarity": 0.12977206707000732,
+    "min_similarity": -0.09919661283493042,
+    "median_similarity": 0.0007058809278532863
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 46531,
+      "similarity": 0.12977206707000732,
+      "label": "novel excerpts"
+    },
+    {
+      "feature_id": 79310,
+      "similarity": 0.11594441533088684,
+      "label": "**"
+    },
+    {
+      "feature_id": 39737,
+      "similarity": 0.10998015105724335,
+      "label": "of"
+    },
+    {
+      "feature_id": 96289,
+      "similarity": 0.10934843122959137,
+      "label": "relationships and surprises"
+    },
+    {
+      "feature_id": 702,
+      "similarity": 0.10126087069511414,
+      "label": "Arabic"
+    },
+    {
+      "feature_id": 87841,
+      "similarity": 0.09300287067890167,
+      "label": "and"
+    },
+    {
+      "feature_id": 84240,
+      "similarity": 0.09110431373119354,
+      "label": "jokes"
+    },
+    {
+      "feature_id": 121907,
+      "similarity": 0.08997023105621338,
+      "label": "\"n't\" contractions"
+    },
+    {
+      "feature_id": 60494,
+      "similarity": 0.08913959562778473,
+      "label": "period"
+    },
+    {
+      "feature_id": 106358,
+      "similarity": 0.08853670954704285,
+      "label": "punctuation"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 27279,
+      "similarity": -0.09919661283493042,
+      "label": "self-supervised learning"
+    },
+    {
+      "feature_id": 128401,
+      "similarity": -0.09876914322376251,
+      "label": "Lack of personal attributes"
+    },
+    {
+      "feature_id": 518,
+      "similarity": -0.09690038859844208,
+      "label": "code algorithms"
+    },
+    {
+      "feature_id": 116549,
+      "similarity": -0.08438397943973541,
+      "label": "tasks"
+    },
+    {
+      "feature_id": 6079,
+      "similarity": -0.08277775347232819,
+      "label": "sentence endings"
+    },
+    {
+      "feature_id": 122076,
+      "similarity": -0.08240999281406403,
+      "label": "curve fitting and polynomials"
+    },
+    {
+      "feature_id": 20927,
+      "similarity": -0.08014628291130066,
+      "label": "safety procedures"
+    },
+    {
+      "feature_id": 6475,
+      "similarity": -0.0793047696352005,
+      "label": "statistical analysis"
+    },
+    {
+      "feature_id": 25399,
+      "similarity": -0.07825242727994919,
+      "label": "requirements and verification"
+    },
+    {
+      "feature_id": 21477,
+      "similarity": -0.07803889364004135,
+      "label": "to"
+    }
+  ]
+}

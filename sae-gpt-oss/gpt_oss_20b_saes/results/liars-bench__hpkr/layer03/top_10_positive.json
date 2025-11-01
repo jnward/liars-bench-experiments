@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 7117,
+    "similarity": 0.08177850395441055,
+    "label": "case"
+  },
+  {
+    "feature_id": 83595,
+    "similarity": 0.0762709379196167,
+    "label": "Radio/news programs"
+  },
+  {
+    "feature_id": 63741,
+    "similarity": 0.07042230665683746,
+    "label": "aioli"
+  },
+  {
+    "feature_id": 113954,
+    "similarity": 0.06919385492801666,
+    "label": ".io"
+  },
+  {
+    "feature_id": 117683,
+    "similarity": 0.06852425634860992,
+    "label": "Process/Services"
+  },
+  {
+    "feature_id": 29600,
+    "similarity": 0.06800341606140137,
+    "label": "cerebral"
+  },
+  {
+    "feature_id": 91525,
+    "similarity": 0.06433238834142685,
+    "label": "airlines and flights"
+  },
+  {
+    "feature_id": 109845,
+    "similarity": 0.064274363219738,
+    "label": "maybe"
+  },
+  {
+    "feature_id": 128311,
+    "similarity": 0.06416105479001999,
+    "label": "score"
+  },
+  {
+    "feature_id": 3796,
+    "similarity": 0.06365086138248444,
+    "label": "Hotel management"
+  }
+]

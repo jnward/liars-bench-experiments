@@ -1,0 +1,117 @@
+{
+  "dataset": "liars-bench__convincing-game",
+  "probe_path": "probes/liars-bench__convincing-game/layer19/probe.pkl",
+  "layer": 19,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -0.0011621616229389176,
+    "std_similarity": 0.020748302798233427,
+    "max_similarity": 0.2668095529079437,
+    "min_similarity": -0.2053261399269104,
+    "median_similarity": -0.0013177397195249796
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 36987,
+      "similarity": 0.2668095529079437,
+      "label": "Promotional advertising"
+    },
+    {
+      "feature_id": 8277,
+      "similarity": 0.16176798939704895,
+      "label": "Chinese characters"
+    },
+    {
+      "feature_id": 41320,
+      "similarity": 0.15954476594924927,
+      "label": "Poetic and emotional language"
+    },
+    {
+      "feature_id": 12140,
+      "similarity": 0.15513424575328827,
+      "label": "thoughts"
+    },
+    {
+      "feature_id": 5037,
+      "similarity": 0.1539803445339203,
+      "label": "Informal/slang words"
+    },
+    {
+      "feature_id": 113955,
+      "similarity": 0.15156316757202148,
+      "label": "negative/vulgar words"
+    },
+    {
+      "feature_id": 121455,
+      "similarity": 0.1510782241821289,
+      "label": "ellipses"
+    },
+    {
+      "feature_id": 35006,
+      "similarity": 0.15057618916034698,
+      "label": "Informal language"
+    },
+    {
+      "feature_id": 10976,
+      "similarity": 0.1474442183971405,
+      "label": "Different versions of \"our\""
+    },
+    {
+      "feature_id": 95044,
+      "similarity": 0.14631566405296326,
+      "label": "dramatic stories"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 47982,
+      "similarity": -0.2053261399269104,
+      "label": "Social and political movements"
+    },
+    {
+      "feature_id": 63489,
+      "similarity": -0.17177455127239227,
+      "label": "Scientific/mathematical concepts"
+    },
+    {
+      "feature_id": 32972,
+      "similarity": -0.14445608854293823,
+      "label": "academic/complex topics"
+    },
+    {
+      "feature_id": 66431,
+      "similarity": -0.12395388633012772,
+      "label": "bias"
+    },
+    {
+      "feature_id": 30558,
+      "similarity": -0.1214606761932373,
+      "label": "Wikipedia references"
+    },
+    {
+      "feature_id": 123421,
+      "similarity": -0.12120325118303299,
+      "label": "no"
+    },
+    {
+      "feature_id": 45016,
+      "similarity": -0.12119797617197037,
+      "label": "ethics"
+    },
+    {
+      "feature_id": 123470,
+      "similarity": -0.11955353617668152,
+      "label": "explain"
+    },
+    {
+      "feature_id": 109447,
+      "similarity": -0.11796630918979645,
+      "label": "medical scientific terminology"
+    },
+    {
+      "feature_id": 29719,
+      "similarity": -0.11434173583984375,
+      "label": "**"
+    }
+  ]
+}

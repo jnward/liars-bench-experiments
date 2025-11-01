@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 54582,
+    "similarity": 0.07236580550670624,
+    "label": "Riddles"
+  },
+  {
+    "feature_id": 64449,
+    "similarity": 0.06673438847064972,
+    "label": "\"izing\" or \"-line\""
+  },
+  {
+    "feature_id": 65707,
+    "similarity": 0.06611324101686478,
+    "label": "hyphen"
+  },
+  {
+    "feature_id": 92069,
+    "similarity": 0.06595369428396225,
+    "label": "TV schedule changes"
+  },
+  {
+    "feature_id": 11198,
+    "similarity": 0.0654766708612442,
+    "label": "Programming/computer-related content"
+  },
+  {
+    "feature_id": 100394,
+    "similarity": 0.06506264209747314,
+    "label": "punctuation"
+  },
+  {
+    "feature_id": 97055,
+    "similarity": 0.06435143947601318,
+    "label": "Muscle/biology descriptions"
+  },
+  {
+    "feature_id": 49173,
+    "similarity": 0.0640370324254036,
+    "label": "research"
+  },
+  {
+    "feature_id": 66117,
+    "similarity": 0.06342087686061859,
+    "label": "Conversation"
+  },
+  {
+    "feature_id": 27642,
+    "similarity": 0.0631679892539978,
+    "label": "The"
+  }
+]

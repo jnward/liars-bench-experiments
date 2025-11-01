@@ -1,0 +1,116 @@
+{
+  "probe_path": "probes/liars-bench__convincing-game/layer11/probe.pkl",
+  "layer": 11,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -0.0006377624067983589,
+    "std_similarity": 0.018532078855527528,
+    "max_similarity": 0.1455846130847931,
+    "min_similarity": -0.11542509496212006,
+    "median_similarity": -0.0007237335667014122
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 55730,
+      "similarity": 0.1455846130847931,
+      "label": "Multi-lingual social media prompts"
+    },
+    {
+      "feature_id": 73118,
+      "similarity": 0.13938449323177338,
+      "label": "Multiple languages"
+    },
+    {
+      "feature_id": 58145,
+      "similarity": 0.13051986694335938,
+      "label": "Affirmations"
+    },
+    {
+      "feature_id": 122147,
+      "similarity": 0.1302049309015274,
+      "label": "Conversational blog posts"
+    },
+    {
+      "feature_id": 81898,
+      "similarity": 0.1301816999912262,
+      "label": "high standards"
+    },
+    {
+      "feature_id": 11216,
+      "similarity": 0.12779346108436584,
+      "label": "business and marketing"
+    },
+    {
+      "feature_id": 130907,
+      "similarity": 0.12495405972003937,
+      "label": "counterarguments and rebuttals"
+    },
+    {
+      "feature_id": 123987,
+      "similarity": 0.1242598369717598,
+      "label": "punctuation"
+    },
+    {
+      "feature_id": 122959,
+      "similarity": 0.11682571470737457,
+      "label": "powerful characters, skills"
+    },
+    {
+      "feature_id": 81797,
+      "similarity": 0.11661681532859802,
+      "label": "Punctuation"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 38020,
+      "similarity": -0.11542509496212006,
+      "label": "conjunctions, negations"
+    },
+    {
+      "feature_id": 65873,
+      "similarity": -0.10883820056915283,
+      "label": "AI limitations"
+    },
+    {
+      "feature_id": 30983,
+      "similarity": -0.10831722617149353,
+      "label": "General article/report snippets"
+    },
+    {
+      "feature_id": 97048,
+      "similarity": -0.10812026262283325,
+      "label": "can"
+    },
+    {
+      "feature_id": 97970,
+      "similarity": -0.10144905000925064,
+      "label": "questions and suggestions"
+    },
+    {
+      "feature_id": 26600,
+      "similarity": -0.09847132861614227,
+      "label": "with"
+    },
+    {
+      "feature_id": 69148,
+      "similarity": -0.09657779335975647,
+      "label": "malware and botnets"
+    },
+    {
+      "feature_id": 68936,
+      "similarity": -0.09609197080135345,
+      "label": "modal verbs"
+    },
+    {
+      "feature_id": 131035,
+      "similarity": -0.09569015353918076,
+      "label": "safety, risk, impossibility"
+    },
+    {
+      "feature_id": 25754,
+      "similarity": -0.09328633546829224,
+      "label": "provide"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "dataset": "liars-bench__hpkr",
+  "probe_path": "probes/liars-bench__hpkr/layer23/probe.pkl",
+  "layer": 23,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -6.480326573266026e-05,
+    "std_similarity": 0.018923159548879666,
+    "max_similarity": 0.09296445548534393,
+    "min_similarity": -0.09095066785812378,
+    "median_similarity": -0.00019413605332374573
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 124721,
+      "similarity": 0.09296445548534393,
+      "label": "agriculture"
+    },
+    {
+      "feature_id": 16404,
+      "similarity": 0.08419143408536911,
+      "label": "\u4ea4"
+    },
+    {
+      "feature_id": 38513,
+      "similarity": 0.0799403041601181,
+      "label": "elections"
+    },
+    {
+      "feature_id": 82438,
+      "similarity": 0.07868680357933044,
+      "label": "pronouns"
+    },
+    {
+      "feature_id": 2331,
+      "similarity": 0.07511081546545029,
+      "label": "current"
+    },
+    {
+      "feature_id": 100395,
+      "similarity": 0.07508058100938797,
+      "label": "Code delimiters"
+    },
+    {
+      "feature_id": 13106,
+      "similarity": 0.07439058274030685,
+      "label": "say \"ni\""
+    },
+    {
+      "feature_id": 72659,
+      "similarity": 0.07431551069021225,
+      "label": "Quotation marks"
+    },
+    {
+      "feature_id": 96705,
+      "similarity": 0.07427418231964111,
+      "label": "("
+    },
+    {
+      "feature_id": 36066,
+      "similarity": 0.0741845965385437,
+      "label": "out"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 53794,
+      "similarity": -0.09095066785812378,
+      "label": "SSH-related commands/protocols"
+    },
+    {
+      "feature_id": 63919,
+      "similarity": -0.08504707366228104,
+      "label": "System administration tools"
+    },
+    {
+      "feature_id": 111350,
+      "similarity": -0.08104071021080017,
+      "label": "say \"94\""
+    },
+    {
+      "feature_id": 33288,
+      "similarity": -0.07989004254341125,
+      "label": "relative effective"
+    },
+    {
+      "feature_id": 72470,
+      "similarity": -0.07635343074798584,
+      "label": "\u00e9d"
+    },
+    {
+      "feature_id": 3577,
+      "similarity": -0.07624538242816925,
+      "label": "judgment"
+    },
+    {
+      "feature_id": 79559,
+      "similarity": -0.07559968531131744,
+      "label": "texts with \"enjeux\""
+    },
+    {
+      "feature_id": 14948,
+      "similarity": -0.07380710542201996,
+      "label": "import"
+    },
+    {
+      "feature_id": 108069,
+      "similarity": -0.07311462610960007,
+      "label": "\u0622"
+    },
+    {
+      "feature_id": 34122,
+      "similarity": -0.07277974486351013,
+      "label": "g"
+    }
+  ]
+}

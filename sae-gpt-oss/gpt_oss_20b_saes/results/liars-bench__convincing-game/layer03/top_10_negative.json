@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 27279,
+    "similarity": -0.09919661283493042,
+    "label": "self-supervised learning"
+  },
+  {
+    "feature_id": 128401,
+    "similarity": -0.09876914322376251,
+    "label": "Lack of personal attributes"
+  },
+  {
+    "feature_id": 518,
+    "similarity": -0.09690038859844208,
+    "label": "code algorithms"
+  },
+  {
+    "feature_id": 116549,
+    "similarity": -0.08438397943973541,
+    "label": "tasks"
+  },
+  {
+    "feature_id": 6079,
+    "similarity": -0.08277775347232819,
+    "label": "sentence endings"
+  },
+  {
+    "feature_id": 122076,
+    "similarity": -0.08240999281406403,
+    "label": "curve fitting and polynomials"
+  },
+  {
+    "feature_id": 20927,
+    "similarity": -0.08014628291130066,
+    "label": "safety procedures"
+  },
+  {
+    "feature_id": 6475,
+    "similarity": -0.0793047696352005,
+    "label": "statistical analysis"
+  },
+  {
+    "feature_id": 25399,
+    "similarity": -0.07825242727994919,
+    "label": "requirements and verification"
+  },
+  {
+    "feature_id": 21477,
+    "similarity": -0.07803889364004135,
+    "label": "to"
+  }
+]

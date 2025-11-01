@@ -1,0 +1,117 @@
+{
+  "dataset": "liars-bench__hpkr",
+  "probe_path": "probes/liars-bench__hpkr/layer15/probe.pkl",
+  "layer": 15,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -0.0010554500569552872,
+    "std_similarity": 0.01996549923725072,
+    "max_similarity": 0.09104278683662415,
+    "min_similarity": -0.09153540432453156,
+    "median_similarity": -0.0010655946098268032
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 17880,
+      "similarity": 0.09104278683662415,
+      "label": "Deterministic/random behavior"
+    },
+    {
+      "feature_id": 91242,
+      "similarity": 0.08391761034727097,
+      "label": "financial calculations"
+    },
+    {
+      "feature_id": 63734,
+      "similarity": 0.08250515908002853,
+      "label": "garbage tokens"
+    },
+    {
+      "feature_id": 117904,
+      "similarity": 0.08239802718162537,
+      "label": "math and codes"
+    },
+    {
+      "feature_id": 3513,
+      "similarity": 0.08225829899311066,
+      "label": "Quantitative reasoning"
+    },
+    {
+      "feature_id": 109730,
+      "similarity": 0.0819617435336113,
+      "label": "discontinuity"
+    },
+    {
+      "feature_id": 128311,
+      "similarity": 0.08091172575950623,
+      "label": "\"but\" in other languages"
+    },
+    {
+      "feature_id": 13864,
+      "similarity": 0.080205038189888,
+      "label": "Responsibilities"
+    },
+    {
+      "feature_id": 114296,
+      "similarity": 0.0793108344078064,
+      "label": "non-english words"
+    },
+    {
+      "feature_id": 4445,
+      "similarity": 0.07882452011108398,
+      "label": "percentage calculations"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 76498,
+      "similarity": -0.09153540432453156,
+      "label": "math fractions"
+    },
+    {
+      "feature_id": 30474,
+      "similarity": -0.08732108771800995,
+      "label": "say \"finish line\""
+    },
+    {
+      "feature_id": 324,
+      "similarity": -0.08599189668893814,
+      "label": "perhaps"
+    },
+    {
+      "feature_id": 47345,
+      "similarity": -0.08481165766716003,
+      "label": "Narrative turning points"
+    },
+    {
+      "feature_id": 88213,
+      "similarity": -0.08481135219335556,
+      "label": "Verifying correctness"
+    },
+    {
+      "feature_id": 57523,
+      "similarity": -0.08359569311141968,
+      "label": "name"
+    },
+    {
+      "feature_id": 1732,
+      "similarity": -0.08268865942955017,
+      "label": ")"
+    },
+    {
+      "feature_id": 110609,
+      "similarity": -0.0823676586151123,
+      "label": "number"
+    },
+    {
+      "feature_id": 98751,
+      "similarity": -0.08207949995994568,
+      "label": "likely"
+    },
+    {
+      "feature_id": 117044,
+      "similarity": -0.08095426857471466,
+      "label": "{"
+    }
+  ]
+}

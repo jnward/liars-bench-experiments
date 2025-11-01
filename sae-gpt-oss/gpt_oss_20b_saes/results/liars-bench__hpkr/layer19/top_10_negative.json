@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 115548,
+    "similarity": -0.08411635458469391,
+    "label": "abilities"
+  },
+  {
+    "feature_id": 58512,
+    "similarity": -0.08304525166749954,
+    "label": "questions and answers"
+  },
+  {
+    "feature_id": 28734,
+    "similarity": -0.08297239243984222,
+    "label": "can"
+  },
+  {
+    "feature_id": 62206,
+    "similarity": -0.0798349678516388,
+    "label": "say \"1\""
+  },
+  {
+    "feature_id": 34144,
+    "similarity": -0.0796326994895935,
+    "label": "\"besides\" in other languages"
+  },
+  {
+    "feature_id": 53509,
+    "similarity": -0.07887008041143417,
+    "label": "intercepts"
+  },
+  {
+    "feature_id": 51385,
+    "similarity": -0.07821826636791229,
+    "label": "after"
+  },
+  {
+    "feature_id": 14942,
+    "similarity": -0.07786962389945984,
+    "label": "history"
+  },
+  {
+    "feature_id": 70139,
+    "similarity": -0.07756862044334412,
+    "label": "say \"2\""
+  },
+  {
+    "feature_id": 109431,
+    "similarity": -0.07679854333400726,
+    "label": ")"
+  }
+]

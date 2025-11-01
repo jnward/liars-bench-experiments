@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 46531,
+    "similarity": 0.12977206707000732,
+    "label": "novel excerpts"
+  },
+  {
+    "feature_id": 79310,
+    "similarity": 0.11594441533088684,
+    "label": "**"
+  },
+  {
+    "feature_id": 39737,
+    "similarity": 0.10998015105724335,
+    "label": "of"
+  },
+  {
+    "feature_id": 96289,
+    "similarity": 0.10934843122959137,
+    "label": "relationships and surprises"
+  },
+  {
+    "feature_id": 702,
+    "similarity": 0.10126087069511414,
+    "label": "Arabic"
+  },
+  {
+    "feature_id": 87841,
+    "similarity": 0.09300287067890167,
+    "label": "and"
+  },
+  {
+    "feature_id": 84240,
+    "similarity": 0.09110431373119354,
+    "label": "jokes"
+  },
+  {
+    "feature_id": 121907,
+    "similarity": 0.08997023105621338,
+    "label": "\"n't\" contractions"
+  },
+  {
+    "feature_id": 60494,
+    "similarity": 0.08913959562778473,
+    "label": "period"
+  },
+  {
+    "feature_id": 106358,
+    "similarity": 0.08853670954704285,
+    "label": "punctuation"
+  }
+]

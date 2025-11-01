@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-OSS-20B Probe-SAE Feature Analysis</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .dataset-section {
+            margin-bottom: 60px;
+        }
+
+        .layer-section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+
+        th {
+            background-color: #f5f5f5;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #333;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .feature-id {
+            font-family: 'Courier New', monospace;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .feature-id:hover {
+            text-decoration: underline;
+        }
+
+        .similarity-positive {
+            color: #2d7a2d;
+            font-weight: 600;
+        }
+
+        .similarity-negative {
+            color: #c41e3a;
+            font-weight: 600;
+        }
+
+        .section-header {
+            background-color: #e8f4f8;
+            padding: 8px 12px;
+            font-weight: 600;
+            color: #2c5f7c;
+            border-left: 4px solid #2c5f7c;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .rank {
+            color: #999;
+            font-weight: 500;
+            width: 40px;
+        }
+
+        .label {
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>GPT-OSS-20B Probe-SAE Feature Analysis</h1>
+    <p class="subtitle">Cosine Similarity Analysis Between Probe Directions and Sparse Autoencoder Features</p>
+
+    <div class="dataset-section">
+        <h2>Dataset: liars-bench__convincing-game</h2>
+
+        <div class="layer-section">
+            <h3>Layer 3</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/46531" class="feature-id" target="_blank">46531</a></td><td class="similarity-positive">+0.1298</td><td class="label">novel excerpts</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/79310" class="feature-id" target="_blank">79310</a></td><td class="similarity-positive">+0.1159</td><td class="label">**</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/39737" class="feature-id" target="_blank">39737</a></td><td class="similarity-positive">+0.1100</td><td class="label">of</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/96289" class="feature-id" target="_blank">96289</a></td><td class="similarity-positive">+0.1093</td><td class="label">relationships and surprises</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/702" class="feature-id" target="_blank">702</a></td><td class="similarity-positive">+0.1013</td><td class="label">Arabic</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/87841" class="feature-id" target="_blank">87841</a></td><td class="similarity-positive">+0.0930</td><td class="label">and</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/84240" class="feature-id" target="_blank">84240</a></td><td class="similarity-positive">+0.0911</td><td class="label">jokes</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/121907" class="feature-id" target="_blank">121907</a></td><td class="similarity-positive">+0.0900</td><td class="label">"n't" contractions</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/60494" class="feature-id" target="_blank">60494</a></td><td class="similarity-positive">+0.0891</td><td class="label">period</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/106358" class="feature-id" target="_blank">106358</a></td><td class="similarity-positive">+0.0885</td><td class="label">punctuation</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/27279" class="feature-id" target="_blank">27279</a></td><td class="similarity-negative">-0.0992</td><td class="label">self-supervised learning</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/128401" class="feature-id" target="_blank">128401</a></td><td class="similarity-negative">-0.0988</td><td class="label">Lack of personal attributes</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/518" class="feature-id" target="_blank">518</a></td><td class="similarity-negative">-0.0969</td><td class="label">code algorithms</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/116549" class="feature-id" target="_blank">116549</a></td><td class="similarity-negative">-0.0844</td><td class="label">tasks</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/6079" class="feature-id" target="_blank">6079</a></td><td class="similarity-negative">-0.0828</td><td class="label">sentence endings</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/122076" class="feature-id" target="_blank">122076</a></td><td class="similarity-negative">-0.0824</td><td class="label">curve fitting and polynomials</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/20927" class="feature-id" target="_blank">20927</a></td><td class="similarity-negative">-0.0801</td><td class="label">safety procedures</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/6475" class="feature-id" target="_blank">6475</a></td><td class="similarity-negative">-0.0793</td><td class="label">statistical analysis</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/25399" class="feature-id" target="_blank">25399</a></td><td class="similarity-negative">-0.0783</td><td class="label">requirements and verification</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/21477" class="feature-id" target="_blank">21477</a></td><td class="similarity-negative">-0.0780</td><td class="label">to</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 7</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/124944" class="feature-id" target="_blank">124944</a></td><td class="similarity-positive">+0.2099</td><td class="label">love messages</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/100087" class="feature-id" target="_blank">100087</a></td><td class="similarity-positive">+0.1594</td><td class="label">instructions and advice</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/5049" class="feature-id" target="_blank">5049</a></td><td class="similarity-positive">+0.1466</td><td class="label">.</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/87401" class="feature-id" target="_blank">87401</a></td><td class="similarity-positive">+0.1260</td><td class="label">nature</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/130626" class="feature-id" target="_blank">130626</a></td><td class="similarity-positive">+0.1259</td><td class="label">marketing promotions</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/68861" class="feature-id" target="_blank">68861</a></td><td class="similarity-positive">+0.1184</td><td class="label">national identity and symbols</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/18725" class="feature-id" target="_blank">18725</a></td><td class="similarity-positive">+0.1124</td><td class="label">ethically sourced, sustainable products</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/69143" class="feature-id" target="_blank">69143</a></td><td class="similarity-positive">+0.1120</td><td class="label">Formal writing</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/70645" class="feature-id" target="_blank">70645</a></td><td class="similarity-positive">+0.1109</td><td class="label">Chinese</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/67761" class="feature-id" target="_blank">67761</a></td><td class="similarity-positive">+0.1088</td><td class="label">Services offered</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/21745" class="feature-id" target="_blank">21745</a></td><td class="similarity-negative">-0.1168</td><td class="label">Introductions</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/66471" class="feature-id" target="_blank">66471</a></td><td class="similarity-negative">-0.1163</td><td class="label">computer security and botnets</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/8782" class="feature-id" target="_blank">8782</a></td><td class="similarity-negative">-0.1013</td><td class="label">can</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/90791" class="feature-id" target="_blank">90791</a></td><td class="similarity-negative">-0.0983</td><td class="label">privacy policies</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/8975" class="feature-id" target="_blank">8975</a></td><td class="similarity-negative">-0.0961</td><td class="label">programming definitions</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/110405" class="feature-id" target="_blank">110405</a></td><td class="similarity-negative">-0.0960</td><td class="label">geology</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/101743" class="feature-id" target="_blank">101743</a></td><td class="similarity-negative">-0.0941</td><td class="label">es</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/112967" class="feature-id" target="_blank">112967</a></td><td class="similarity-negative">-0.0932</td><td class="label">Comparison of methods</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/88428" class="feature-id" target="_blank">88428</a></td><td class="similarity-negative">-0.0931</td><td class="label">argument</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/120678" class="feature-id" target="_blank">120678</a></td><td class="similarity-negative">-0.0902</td><td class="label">DIY craft instructions</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 11</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/55730" class="feature-id" target="_blank">55730</a></td><td class="similarity-positive">+0.1456</td><td class="label">Multi-lingual social media prompts</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/73118" class="feature-id" target="_blank">73118</a></td><td class="similarity-positive">+0.1394</td><td class="label">Multiple languages</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/58145" class="feature-id" target="_blank">58145</a></td><td class="similarity-positive">+0.1305</td><td class="label">Affirmations</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/122147" class="feature-id" target="_blank">122147</a></td><td class="similarity-positive">+0.1302</td><td class="label">Conversational blog posts</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/81898" class="feature-id" target="_blank">81898</a></td><td class="similarity-positive">+0.1302</td><td class="label">high standards</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/11216" class="feature-id" target="_blank">11216</a></td><td class="similarity-positive">+0.1278</td><td class="label">business and marketing</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/130907" class="feature-id" target="_blank">130907</a></td><td class="similarity-positive">+0.1250</td><td class="label">counterarguments and rebuttals</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/123987" class="feature-id" target="_blank">123987</a></td><td class="similarity-positive">+0.1243</td><td class="label">punctuation</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/122959" class="feature-id" target="_blank">122959</a></td><td class="similarity-positive">+0.1168</td><td class="label">powerful characters, skills</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/81797" class="feature-id" target="_blank">81797</a></td><td class="similarity-positive">+0.1166</td><td class="label">Punctuation</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/38020" class="feature-id" target="_blank">38020</a></td><td class="similarity-negative">-0.1154</td><td class="label">conjunctions, negations</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/65873" class="feature-id" target="_blank">65873</a></td><td class="similarity-negative">-0.1088</td><td class="label">AI limitations</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/30983" class="feature-id" target="_blank">30983</a></td><td class="similarity-negative">-0.1083</td><td class="label">General article/report snippets</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/97048" class="feature-id" target="_blank">97048</a></td><td class="similarity-negative">-0.1081</td><td class="label">can</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/97970" class="feature-id" target="_blank">97970</a></td><td class="similarity-negative">-0.1014</td><td class="label">questions and suggestions</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/26600" class="feature-id" target="_blank">26600</a></td><td class="similarity-negative">-0.0985</td><td class="label">with</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/69148" class="feature-id" target="_blank">69148</a></td><td class="similarity-negative">-0.0966</td><td class="label">malware and botnets</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/68936" class="feature-id" target="_blank">68936</a></td><td class="similarity-negative">-0.0961</td><td class="label">modal verbs</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/131035" class="feature-id" target="_blank">131035</a></td><td class="similarity-negative">-0.0957</td><td class="label">safety, risk, impossibility</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/25754" class="feature-id" target="_blank">25754</a></td><td class="similarity-negative">-0.0933</td><td class="label">provide</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 15</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/7596" class="feature-id" target="_blank">7596</a></td><td class="similarity-positive">+0.2282</td><td class="label">promotions and advertisements</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/117139" class="feature-id" target="_blank">117139</a></td><td class="similarity-positive">+0.1783</td><td class="label">security and verification</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/15582" class="feature-id" target="_blank">15582</a></td><td class="similarity-positive">+0.1628</td><td class="label">ваю</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/25345" class="feature-id" target="_blank">25345</a></td><td class="similarity-positive">+0.1583</td><td class="label">calmness</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/43255" class="feature-id" target="_blank">43255</a></td><td class="similarity-positive">+0.1520</td><td class="label">hidden</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/98677" class="feature-id" target="_blank">98677</a></td><td class="similarity-positive">+0.1505</td><td class="label">,</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/55389" class="feature-id" target="_blank">55389</a></td><td class="similarity-positive">+0.1502</td><td class="label">mathematical misconceptions</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/10616" class="feature-id" target="_blank">10616</a></td><td class="similarity-positive">+0.1485</td><td class="label">high quality</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/84083" class="feature-id" target="_blank">84083</a></td><td class="similarity-positive">+0.1416</td><td class="label">descriptive adjectives</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/124550" class="feature-id" target="_blank">124550</a></td><td class="similarity-positive">+0.1392</td><td class="label">ellipses</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/24452" class="feature-id" target="_blank">24452</a></td><td class="similarity-negative">-0.1878</td><td class="label">negation</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/59915" class="feature-id" target="_blank">59915</a></td><td class="similarity-negative">-0.1460</td><td class="label">words meaning probably</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/106946" class="feature-id" target="_blank">106946</a></td><td class="similarity-negative">-0.1427</td><td class="label">Academic texts</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/95930" class="feature-id" target="_blank">95930</a></td><td class="similarity-negative">-0.1346</td><td class="label">disclaimers, advice</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/124655" class="feature-id" target="_blank">124655</a></td><td class="similarity-negative">-0.1336</td><td class="label">risk and caution</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/22186" class="feature-id" target="_blank">22186</a></td><td class="similarity-negative">-0.1273</td><td class="label">Controversial topics</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/92364" class="feature-id" target="_blank">92364</a></td><td class="similarity-negative">-0.1165</td><td class="label">hallucinations</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/11965" class="feature-id" target="_blank">11965</a></td><td class="similarity-negative">-0.1162</td><td class="label">reasons, necessity</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/64343" class="feature-id" target="_blank">64343</a></td><td class="similarity-negative">-0.1150</td><td class="label">but</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/107570" class="feature-id" target="_blank">107570</a></td><td class="similarity-negative">-0.1126</td><td class="label">Words meaning "none"</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 19</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/36987" class="feature-id" target="_blank">36987</a></td><td class="similarity-positive">+0.2668</td><td class="label">Promotional advertising</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/8277" class="feature-id" target="_blank">8277</a></td><td class="similarity-positive">+0.1618</td><td class="label">Chinese characters</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/41320" class="feature-id" target="_blank">41320</a></td><td class="similarity-positive">+0.1595</td><td class="label">Poetic and emotional language</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/12140" class="feature-id" target="_blank">12140</a></td><td class="similarity-positive">+0.1551</td><td class="label">thoughts</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/5037" class="feature-id" target="_blank">5037</a></td><td class="similarity-positive">+0.1540</td><td class="label">Informal/slang words</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/113955" class="feature-id" target="_blank">113955</a></td><td class="similarity-positive">+0.1516</td><td class="label">negative/vulgar words</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/121455" class="feature-id" target="_blank">121455</a></td><td class="similarity-positive">+0.1511</td><td class="label">ellipses</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/35006" class="feature-id" target="_blank">35006</a></td><td class="similarity-positive">+0.1506</td><td class="label">Informal language</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/10976" class="feature-id" target="_blank">10976</a></td><td class="similarity-positive">+0.1474</td><td class="label">Different versions of "our"</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/95044" class="feature-id" target="_blank">95044</a></td><td class="similarity-positive">+0.1463</td><td class="label">dramatic stories</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/47982" class="feature-id" target="_blank">47982</a></td><td class="similarity-negative">-0.2053</td><td class="label">Social and political movements</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/63489" class="feature-id" target="_blank">63489</a></td><td class="similarity-negative">-0.1718</td><td class="label">Scientific/mathematical concepts</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/32972" class="feature-id" target="_blank">32972</a></td><td class="similarity-negative">-0.1445</td><td class="label">academic/complex topics</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/66431" class="feature-id" target="_blank">66431</a></td><td class="similarity-negative">-0.1240</td><td class="label">bias</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/30558" class="feature-id" target="_blank">30558</a></td><td class="similarity-negative">-0.1215</td><td class="label">Wikipedia references</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/123421" class="feature-id" target="_blank">123421</a></td><td class="similarity-negative">-0.1212</td><td class="label">no</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/45016" class="feature-id" target="_blank">45016</a></td><td class="similarity-negative">-0.1212</td><td class="label">ethics</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/123470" class="feature-id" target="_blank">123470</a></td><td class="similarity-negative">-0.1196</td><td class="label">explain</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/109447" class="feature-id" target="_blank">109447</a></td><td class="similarity-negative">-0.1180</td><td class="label">medical scientific terminology</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/29719" class="feature-id" target="_blank">29719</a></td><td class="similarity-negative">-0.1143</td><td class="label">**</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 23</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/93037" class="feature-id" target="_blank">93037</a></td><td class="similarity-positive">+0.1927</td><td class="label">Sadness</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/96032" class="feature-id" target="_blank">96032</a></td><td class="similarity-positive">+0.1919</td><td class="label">Russian promotional text</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/86155" class="feature-id" target="_blank">86155</a></td><td class="similarity-positive">+0.1855</td><td class="label">Chinese ads</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/130461" class="feature-id" target="_blank">130461</a></td><td class="similarity-positive">+0.1782</td><td class="label">Foreign romantic sentiment</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/17807" class="feature-id" target="_blank">17807</a></td><td class="similarity-positive">+0.1730</td><td class="label">love and appreciation messages</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/85242" class="feature-id" target="_blank">85242</a></td><td class="similarity-positive">+0.1655</td><td class="label">say "that"</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/42797" class="feature-id" target="_blank">42797</a></td><td class="similarity-positive">+0.1504</td><td class="label">Intense Feelings</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/67657" class="feature-id" target="_blank">67657</a></td><td class="similarity-positive">+0.1485</td><td class="label">introductions</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/120468" class="feature-id" target="_blank">120468</a></td><td class="similarity-positive">+0.1472</td><td class="label">Ellipses</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/124279" class="feature-id" target="_blank">124279</a></td><td class="similarity-positive">+0.1462</td><td class="label">Sadness and quiet</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/809" class="feature-id" target="_blank">809</a></td><td class="similarity-negative">-0.1624</td><td class="label">halluc</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/107001" class="feature-id" target="_blank">107001</a></td><td class="similarity-negative">-0.1464</td><td class="label">Business/strategy jargon</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/12561" class="feature-id" target="_blank">12561</a></td><td class="similarity-negative">-0.1307</td><td class="label">computational algorithms</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/55716" class="feature-id" target="_blank">55716</a></td><td class="similarity-negative">-0.1288</td><td class="label">GPT models</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/108556" class="feature-id" target="_blank">108556</a></td><td class="similarity-negative">-0.1203</td><td class="label">authorizations</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/28444" class="feature-id" target="_blank">28444</a></td><td class="similarity-negative">-0.1104</td><td class="label">psychological concepts</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/94009" class="feature-id" target="_blank">94009</a></td><td class="similarity-negative">-0.1099</td><td class="label">Cybersecurity</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/6545" class="feature-id" target="_blank">6545</a></td><td class="similarity-negative">-0.1084</td><td class="label">adaptive coping</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/124629" class="feature-id" target="_blank">124629</a></td><td class="similarity-negative">-0.1078</td><td class="label">Learning implicitly or explicitly</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/80235" class="feature-id" target="_blank">80235</a></td><td class="similarity-negative">-0.1065</td><td class="label">mathematical/epistemological concepts</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="dataset-section">
+        <h2>Dataset: liars-bench__hpkr</h2>
+
+        <div class="layer-section">
+            <h3>Layer 3</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/7117" class="feature-id" target="_blank">7117</a></td><td class="similarity-positive">+0.0818</td><td class="label">case</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/83595" class="feature-id" target="_blank">83595</a></td><td class="similarity-positive">+0.0763</td><td class="label">Radio/news programs</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/63741" class="feature-id" target="_blank">63741</a></td><td class="similarity-positive">+0.0704</td><td class="label">aioli</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/113954" class="feature-id" target="_blank">113954</a></td><td class="similarity-positive">+0.0692</td><td class="label">.io</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/117683" class="feature-id" target="_blank">117683</a></td><td class="similarity-positive">+0.0685</td><td class="label">Process/Services</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/29600" class="feature-id" target="_blank">29600</a></td><td class="similarity-positive">+0.0680</td><td class="label">cerebral</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/91525" class="feature-id" target="_blank">91525</a></td><td class="similarity-positive">+0.0643</td><td class="label">airlines and flights</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/109845" class="feature-id" target="_blank">109845</a></td><td class="similarity-positive">+0.0643</td><td class="label">maybe</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/128311" class="feature-id" target="_blank">128311</a></td><td class="similarity-positive">+0.0642</td><td class="label">score</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/3796" class="feature-id" target="_blank">3796</a></td><td class="similarity-positive">+0.0637</td><td class="label">Hotel management</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/99093" class="feature-id" target="_blank">99093</a></td><td class="similarity-negative">-0.0814</td><td class="label">modular arithmetic</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/5774" class="feature-id" target="_blank">5774</a></td><td class="similarity-negative">-0.0801</td><td class="label">Security certifications/concepts</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/88864" class="feature-id" target="_blank">88864</a></td><td class="similarity-negative">-0.0780</td><td class="label">common english words</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/101336" class="feature-id" target="_blank">101336</a></td><td class="similarity-negative">-0.0766</td><td class="label">jump instructions</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/68638" class="feature-id" target="_blank">68638</a></td><td class="similarity-negative">-0.0714</td><td class="label">safety</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/3574" class="feature-id" target="_blank">3574</a></td><td class="similarity-negative">-0.0696</td><td class="label">uzzle</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/81294" class="feature-id" target="_blank">81294</a></td><td class="similarity-negative">-0.0685</td><td class="label">that</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/35632" class="feature-id" target="_blank">35632</a></td><td class="similarity-negative">-0.0685</td><td class="label">换</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/71450" class="feature-id" target="_blank">71450</a></td><td class="similarity-negative">-0.0684</td><td class="label">punctuation</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/3-resid-post-aa/41890" class="feature-id" target="_blank">41890</a></td><td class="similarity-negative">-0.0683</td><td class="label">code/data</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 7</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/54582" class="feature-id" target="_blank">54582</a></td><td class="similarity-positive">+0.0724</td><td class="label">Riddles</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/64449" class="feature-id" target="_blank">64449</a></td><td class="similarity-positive">+0.0667</td><td class="label">"izing" or "-line"</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/65707" class="feature-id" target="_blank">65707</a></td><td class="similarity-positive">+0.0661</td><td class="label">hyphen</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/92069" class="feature-id" target="_blank">92069</a></td><td class="similarity-positive">+0.0660</td><td class="label">TV schedule changes</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/11198" class="feature-id" target="_blank">11198</a></td><td class="similarity-positive">+0.0655</td><td class="label">Programming/computer-related content</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/100394" class="feature-id" target="_blank">100394</a></td><td class="similarity-positive">+0.0651</td><td class="label">punctuation</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/97055" class="feature-id" target="_blank">97055</a></td><td class="similarity-positive">+0.0644</td><td class="label">Muscle/biology descriptions</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/49173" class="feature-id" target="_blank">49173</a></td><td class="similarity-positive">+0.0640</td><td class="label">research</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/66117" class="feature-id" target="_blank">66117</a></td><td class="similarity-positive">+0.0634</td><td class="label">Conversation</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/27642" class="feature-id" target="_blank">27642</a></td><td class="similarity-positive">+0.0632</td><td class="label">The</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/63827" class="feature-id" target="_blank">63827</a></td><td class="similarity-negative">-0.0691</td><td class="label">modular arithmetic</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/77060" class="feature-id" target="_blank">77060</a></td><td class="similarity-negative">-0.0687</td><td class="label">shared</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/61312" class="feature-id" target="_blank">61312</a></td><td class="similarity-negative">-0.0685</td><td class="label">B and P</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/90419" class="feature-id" target="_blank">90419</a></td><td class="similarity-negative">-0.0675</td><td class="label">is</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/123232" class="feature-id" target="_blank">123232</a></td><td class="similarity-negative">-0.0670</td><td class="label">Bias detection/management</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/130120" class="feature-id" target="_blank">130120</a></td><td class="similarity-negative">-0.0665</td><td class="label">layers</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/18259" class="feature-id" target="_blank">18259</a></td><td class="similarity-negative">-0.0659</td><td class="label">code execution</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/66776" class="feature-id" target="_blank">66776</a></td><td class="similarity-negative">-0.0654</td><td class="label">Image generation prompts</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/30693" class="feature-id" target="_blank">30693</a></td><td class="similarity-negative">-0.0653</td><td class="label">Job postings</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/7-resid-post-aa/88998" class="feature-id" target="_blank">88998</a></td><td class="similarity-negative">-0.0651</td><td class="label">video game elements</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 11</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/21301" class="feature-id" target="_blank">21301</a></td><td class="similarity-positive">+0.0846</td><td class="label">excerpts from stories</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/50452" class="feature-id" target="_blank">50452</a></td><td class="similarity-positive">+0.0817</td><td class="label">non-English language</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/85955" class="feature-id" target="_blank">85955</a></td><td class="similarity-positive">+0.0801</td><td class="label">answering questions</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/95733" class="feature-id" target="_blank">95733</a></td><td class="similarity-positive">+0.0799</td><td class="label">admit</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/80746" class="feature-id" target="_blank">80746</a></td><td class="similarity-positive">+0.0795</td><td class="label">research and analysis</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/43761" class="feature-id" target="_blank">43761</a></td><td class="similarity-positive">+0.0793</td><td class="label">Foreign languages, informal speech</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/785" class="feature-id" target="_blank">785</a></td><td class="similarity-positive">+0.0769</td><td class="label">different</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/128686" class="feature-id" target="_blank">128686</a></td><td class="similarity-positive">+0.0760</td><td class="label">Phone voicemail issues</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/93034" class="feature-id" target="_blank">93034</a></td><td class="similarity-positive">+0.0760</td><td class="label">appliance repair</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/110508" class="feature-id" target="_blank">110508</a></td><td class="similarity-positive">+0.0753</td><td class="label">input processing</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/109636" class="feature-id" target="_blank">109636</a></td><td class="similarity-negative">-0.0808</td><td class="label">-</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/99070" class="feature-id" target="_blank">99070</a></td><td class="similarity-negative">-0.0806</td><td class="label">comma</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/28041" class="feature-id" target="_blank">28041</a></td><td class="similarity-negative">-0.0802</td><td class="label">Business descriptions/advertisements</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/45599" class="feature-id" target="_blank">45599</a></td><td class="similarity-negative">-0.0784</td><td class="label">Scientific/Biology articles</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/58711" class="feature-id" target="_blank">58711</a></td><td class="similarity-negative">-0.0783</td><td class="label">final</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/55116" class="feature-id" target="_blank">55116</a></td><td class="similarity-negative">-0.0769</td><td class="label">Image generation prompts</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/48471" class="feature-id" target="_blank">48471</a></td><td class="similarity-negative">-0.0768</td><td class="label">questioning or doubt</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/2334" class="feature-id" target="_blank">2334</a></td><td class="similarity-negative">-0.0763</td><td class="label">brew</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/32653" class="feature-id" target="_blank">32653</a></td><td class="similarity-negative">-0.0745</td><td class="label">intersecting geometric shapes</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/11-resid-post-aa/36554" class="feature-id" target="_blank">36554</a></td><td class="similarity-negative">-0.0744</td><td class="label">subsets and math</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 15</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/17880" class="feature-id" target="_blank">17880</a></td><td class="similarity-positive">+0.0910</td><td class="label">Deterministic/random behavior</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/91242" class="feature-id" target="_blank">91242</a></td><td class="similarity-positive">+0.0839</td><td class="label">financial calculations</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/63734" class="feature-id" target="_blank">63734</a></td><td class="similarity-positive">+0.0825</td><td class="label">garbage tokens</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/117904" class="feature-id" target="_blank">117904</a></td><td class="similarity-positive">+0.0824</td><td class="label">math and codes</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/3513" class="feature-id" target="_blank">3513</a></td><td class="similarity-positive">+0.0823</td><td class="label">Quantitative reasoning</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/109730" class="feature-id" target="_blank">109730</a></td><td class="similarity-positive">+0.0820</td><td class="label">discontinuity</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/128311" class="feature-id" target="_blank">128311</a></td><td class="similarity-positive">+0.0809</td><td class="label">"but" in other languages</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/13864" class="feature-id" target="_blank">13864</a></td><td class="similarity-positive">+0.0802</td><td class="label">Responsibilities</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/114296" class="feature-id" target="_blank">114296</a></td><td class="similarity-positive">+0.0793</td><td class="label">non-english words</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/4445" class="feature-id" target="_blank">4445</a></td><td class="similarity-positive">+0.0788</td><td class="label">percentage calculations</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/76498" class="feature-id" target="_blank">76498</a></td><td class="similarity-negative">-0.0915</td><td class="label">math fractions</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/30474" class="feature-id" target="_blank">30474</a></td><td class="similarity-negative">-0.0873</td><td class="label">say "finish line"</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/324" class="feature-id" target="_blank">324</a></td><td class="similarity-negative">-0.0860</td><td class="label">perhaps</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/47345" class="feature-id" target="_blank">47345</a></td><td class="similarity-negative">-0.0848</td><td class="label">Narrative turning points</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/88213" class="feature-id" target="_blank">88213</a></td><td class="similarity-negative">-0.0848</td><td class="label">Verifying correctness</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/57523" class="feature-id" target="_blank">57523</a></td><td class="similarity-negative">-0.0836</td><td class="label">name</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/1732" class="feature-id" target="_blank">1732</a></td><td class="similarity-negative">-0.0827</td><td class="label">)</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/110609" class="feature-id" target="_blank">110609</a></td><td class="similarity-negative">-0.0824</td><td class="label">number</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/98751" class="feature-id" target="_blank">98751</a></td><td class="similarity-negative">-0.0821</td><td class="label">likely</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/15-resid-post-aa/117044" class="feature-id" target="_blank">117044</a></td><td class="similarity-negative">-0.0810</td><td class="label">{</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 19</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/93637" class="feature-id" target="_blank">93637</a></td><td class="similarity-positive">+0.0955</td><td class="label">reformatting text</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/94413" class="feature-id" target="_blank">94413</a></td><td class="similarity-positive">+0.0849</td><td class="label">but</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/118401" class="feature-id" target="_blank">118401</a></td><td class="similarity-positive">+0.0829</td><td class="label">muscle</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/107808" class="feature-id" target="_blank">107808</a></td><td class="similarity-positive">+0.0824</td><td class="label">period</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/94199" class="feature-id" target="_blank">94199</a></td><td class="similarity-positive">+0.0818</td><td class="label">say ending with ')'</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/87183" class="feature-id" target="_blank">87183</a></td><td class="similarity-positive">+0.0807</td><td class="label">Moses and Israelites</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/78751" class="feature-id" target="_blank">78751</a></td><td class="similarity-positive">+0.0804</td><td class="label">derive</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/110448" class="feature-id" target="_blank">110448</a></td><td class="similarity-positive">+0.0785</td><td class="label">help</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/3724" class="feature-id" target="_blank">3724</a></td><td class="similarity-positive">+0.0773</td><td class="label">need in different languages</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/75985" class="feature-id" target="_blank">75985</a></td><td class="similarity-positive">+0.0755</td><td class="label">period</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/115548" class="feature-id" target="_blank">115548</a></td><td class="similarity-negative">-0.0841</td><td class="label">abilities</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/58512" class="feature-id" target="_blank">58512</a></td><td class="similarity-negative">-0.0830</td><td class="label">questions and answers</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/28734" class="feature-id" target="_blank">28734</a></td><td class="similarity-negative">-0.0830</td><td class="label">can</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/62206" class="feature-id" target="_blank">62206</a></td><td class="similarity-negative">-0.0798</td><td class="label">say "1"</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/34144" class="feature-id" target="_blank">34144</a></td><td class="similarity-negative">-0.0796</td><td class="label">"besides" in other languages</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/53509" class="feature-id" target="_blank">53509</a></td><td class="similarity-negative">-0.0789</td><td class="label">intercepts</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/51385" class="feature-id" target="_blank">51385</a></td><td class="similarity-negative">-0.0782</td><td class="label">after</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/14942" class="feature-id" target="_blank">14942</a></td><td class="similarity-negative">-0.0779</td><td class="label">history</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/70139" class="feature-id" target="_blank">70139</a></td><td class="similarity-negative">-0.0776</td><td class="label">say "2"</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/19-resid-post-aa/109431" class="feature-id" target="_blank">109431</a></td><td class="similarity-negative">-0.0768</td><td class="label">)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="layer-section">
+            <h3>Layer 23</h3>
+
+            <div class="section-header">Top 10 Positive Features (Most Aligned)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/124721" class="feature-id" target="_blank">124721</a></td><td class="similarity-positive">+0.0930</td><td class="label">agriculture</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/16404" class="feature-id" target="_blank">16404</a></td><td class="similarity-positive">+0.0842</td><td class="label">交</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/38513" class="feature-id" target="_blank">38513</a></td><td class="similarity-positive">+0.0799</td><td class="label">elections</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/82438" class="feature-id" target="_blank">82438</a></td><td class="similarity-positive">+0.0787</td><td class="label">pronouns</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/2331" class="feature-id" target="_blank">2331</a></td><td class="similarity-positive">+0.0751</td><td class="label">current</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/100395" class="feature-id" target="_blank">100395</a></td><td class="similarity-positive">+0.0751</td><td class="label">Code delimiters</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/13106" class="feature-id" target="_blank">13106</a></td><td class="similarity-positive">+0.0744</td><td class="label">say "ni"</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/72659" class="feature-id" target="_blank">72659</a></td><td class="similarity-positive">+0.0743</td><td class="label">Quotation marks</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/96705" class="feature-id" target="_blank">96705</a></td><td class="similarity-positive">+0.0743</td><td class="label">(</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/36066" class="feature-id" target="_blank">36066</a></td><td class="similarity-positive">+0.0742</td><td class="label">out</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-header">Top 10 Negative Features (Most Anti-Correlated)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Rank</th>
+                        <th style="width: 120px;">Feature ID</th>
+                        <th style="width: 120px;">Similarity</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank">1</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/53794" class="feature-id" target="_blank">53794</a></td><td class="similarity-negative">-0.0910</td><td class="label">SSH-related commands/protocols</td></tr>
+                    <tr><td class="rank">2</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/63919" class="feature-id" target="_blank">63919</a></td><td class="similarity-negative">-0.0850</td><td class="label">System administration tools</td></tr>
+                    <tr><td class="rank">3</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/111350" class="feature-id" target="_blank">111350</a></td><td class="similarity-negative">-0.0810</td><td class="label">say "94"</td></tr>
+                    <tr><td class="rank">4</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/33288" class="feature-id" target="_blank">33288</a></td><td class="similarity-negative">-0.0799</td><td class="label">relative effective</td></tr>
+                    <tr><td class="rank">5</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/72470" class="feature-id" target="_blank">72470</a></td><td class="similarity-negative">-0.0764</td><td class="label">éd</td></tr>
+                    <tr><td class="rank">6</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/3577" class="feature-id" target="_blank">3577</a></td><td class="similarity-negative">-0.0762</td><td class="label">judgment</td></tr>
+                    <tr><td class="rank">7</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/79559" class="feature-id" target="_blank">79559</a></td><td class="similarity-negative">-0.0756</td><td class="label">texts with "enjeux"</td></tr>
+                    <tr><td class="rank">8</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/14948" class="feature-id" target="_blank">14948</a></td><td class="similarity-negative">-0.0738</td><td class="label">import</td></tr>
+                    <tr><td class="rank">9</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/108069" class="feature-id" target="_blank">108069</a></td><td class="similarity-negative">-0.0731</td><td class="label">آ</td></tr>
+                    <tr><td class="rank">10</td><td><a href="https://neuronpedia.org/gpt-oss-20b/23-resid-post-aa/34122" class="feature-id" target="_blank">34122</a></td><td class="similarity-negative">-0.0728</td><td class="label">g</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

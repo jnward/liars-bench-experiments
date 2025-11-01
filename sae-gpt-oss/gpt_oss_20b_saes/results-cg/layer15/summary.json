@@ -1,0 +1,116 @@
+{
+  "probe_path": "probes/liars-bench__convincing-game/layer15/probe.pkl",
+  "layer": 15,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -0.001192114541129996,
+    "std_similarity": 0.02125747845594034,
+    "max_similarity": 0.22824165225028992,
+    "min_similarity": -0.18784530460834503,
+    "median_similarity": -0.0013014054857194424
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 7596,
+      "similarity": 0.22824165225028992,
+      "label": "promotions and advertisements"
+    },
+    {
+      "feature_id": 117139,
+      "similarity": 0.17834535241127014,
+      "label": "security and verification"
+    },
+    {
+      "feature_id": 15582,
+      "similarity": 0.16277606785297394,
+      "label": "\u0432\u0430\u044e"
+    },
+    {
+      "feature_id": 25345,
+      "similarity": 0.1582990288734436,
+      "label": "calmness"
+    },
+    {
+      "feature_id": 43255,
+      "similarity": 0.1520206332206726,
+      "label": "hidden"
+    },
+    {
+      "feature_id": 98677,
+      "similarity": 0.15053600072860718,
+      "label": ","
+    },
+    {
+      "feature_id": 55389,
+      "similarity": 0.1502109169960022,
+      "label": "mathematical misconceptions"
+    },
+    {
+      "feature_id": 10616,
+      "similarity": 0.14849644899368286,
+      "label": "high quality"
+    },
+    {
+      "feature_id": 84083,
+      "similarity": 0.14164218306541443,
+      "label": "descriptive adjectives"
+    },
+    {
+      "feature_id": 124550,
+      "similarity": 0.13918200135231018,
+      "label": "ellipses"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 24452,
+      "similarity": -0.18784530460834503,
+      "label": "negation"
+    },
+    {
+      "feature_id": 59915,
+      "similarity": -0.14599019289016724,
+      "label": "words meaning probably"
+    },
+    {
+      "feature_id": 106946,
+      "similarity": -0.14266875386238098,
+      "label": "Academic texts"
+    },
+    {
+      "feature_id": 95930,
+      "similarity": -0.1346471905708313,
+      "label": "disclaimers, advice"
+    },
+    {
+      "feature_id": 124655,
+      "similarity": -0.13359898328781128,
+      "label": "risk and caution"
+    },
+    {
+      "feature_id": 22186,
+      "similarity": -0.12730318307876587,
+      "label": "Controversial topics"
+    },
+    {
+      "feature_id": 92364,
+      "similarity": -0.11650265753269196,
+      "label": "hallucinations"
+    },
+    {
+      "feature_id": 11965,
+      "similarity": -0.1162463054060936,
+      "label": "reasons, necessity"
+    },
+    {
+      "feature_id": 64343,
+      "similarity": -0.11499112844467163,
+      "label": "but"
+    },
+    {
+      "feature_id": 107570,
+      "similarity": -0.11257151514291763,
+      "label": "Words meaning \"none\""
+    }
+  ]
+}

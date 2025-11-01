@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 76498,
+    "similarity": -0.09153540432453156,
+    "label": "math fractions"
+  },
+  {
+    "feature_id": 30474,
+    "similarity": -0.08732108771800995,
+    "label": "say \"finish line\""
+  },
+  {
+    "feature_id": 324,
+    "similarity": -0.08599189668893814,
+    "label": "perhaps"
+  },
+  {
+    "feature_id": 47345,
+    "similarity": -0.08481165766716003,
+    "label": "Narrative turning points"
+  },
+  {
+    "feature_id": 88213,
+    "similarity": -0.08481135219335556,
+    "label": "Verifying correctness"
+  },
+  {
+    "feature_id": 57523,
+    "similarity": -0.08359569311141968,
+    "label": "name"
+  },
+  {
+    "feature_id": 1732,
+    "similarity": -0.08268865942955017,
+    "label": ")"
+  },
+  {
+    "feature_id": 110609,
+    "similarity": -0.0823676586151123,
+    "label": "number"
+  },
+  {
+    "feature_id": 98751,
+    "similarity": -0.08207949995994568,
+    "label": "likely"
+  },
+  {
+    "feature_id": 117044,
+    "similarity": -0.08095426857471466,
+    "label": "{"
+  }
+]

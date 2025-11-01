@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 36987,
+    "similarity": 0.2668095529079437,
+    "label": "Promotional advertising"
+  },
+  {
+    "feature_id": 8277,
+    "similarity": 0.16176798939704895,
+    "label": "Chinese characters"
+  },
+  {
+    "feature_id": 41320,
+    "similarity": 0.15954476594924927,
+    "label": "Poetic and emotional language"
+  },
+  {
+    "feature_id": 12140,
+    "similarity": 0.15513424575328827,
+    "label": "thoughts"
+  },
+  {
+    "feature_id": 5037,
+    "similarity": 0.1539803445339203,
+    "label": "Informal/slang words"
+  },
+  {
+    "feature_id": 113955,
+    "similarity": 0.15156316757202148,
+    "label": "negative/vulgar words"
+  },
+  {
+    "feature_id": 121455,
+    "similarity": 0.1510782241821289,
+    "label": "ellipses"
+  },
+  {
+    "feature_id": 35006,
+    "similarity": 0.15057618916034698,
+    "label": "Informal language"
+  },
+  {
+    "feature_id": 10976,
+    "similarity": 0.1474442183971405,
+    "label": "Different versions of \"our\""
+  },
+  {
+    "feature_id": 95044,
+    "similarity": 0.14631566405296326,
+    "label": "dramatic stories"
+  }
+]

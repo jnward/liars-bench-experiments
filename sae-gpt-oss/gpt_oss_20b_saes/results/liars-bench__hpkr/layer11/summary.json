@@ -1,0 +1,117 @@
+{
+  "dataset": "liars-bench__hpkr",
+  "probe_path": "probes/liars-bench__hpkr/layer11/probe.pkl",
+  "layer": 11,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -0.0006551127044542859,
+    "std_similarity": 0.01817151649461773,
+    "max_similarity": 0.08455832302570343,
+    "min_similarity": -0.08079850673675537,
+    "median_similarity": -0.0005961521528661251
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 21301,
+      "similarity": 0.08455832302570343,
+      "label": "excerpts from stories"
+    },
+    {
+      "feature_id": 50452,
+      "similarity": 0.08174304664134979,
+      "label": "non-English language"
+    },
+    {
+      "feature_id": 85955,
+      "similarity": 0.0800737664103508,
+      "label": "answering questions"
+    },
+    {
+      "feature_id": 95733,
+      "similarity": 0.07989481836557388,
+      "label": "admit"
+    },
+    {
+      "feature_id": 80746,
+      "similarity": 0.07950028777122498,
+      "label": "research and analysis"
+    },
+    {
+      "feature_id": 43761,
+      "similarity": 0.07930999249219894,
+      "label": "Foreign languages, informal speech"
+    },
+    {
+      "feature_id": 785,
+      "similarity": 0.07692934572696686,
+      "label": "different"
+    },
+    {
+      "feature_id": 128686,
+      "similarity": 0.07604633271694183,
+      "label": "Phone voicemail issues"
+    },
+    {
+      "feature_id": 93034,
+      "similarity": 0.07601922005414963,
+      "label": "appliance repair"
+    },
+    {
+      "feature_id": 110508,
+      "similarity": 0.07532547414302826,
+      "label": "input processing"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 109636,
+      "similarity": -0.08079850673675537,
+      "label": "-"
+    },
+    {
+      "feature_id": 99070,
+      "similarity": -0.0806274265050888,
+      "label": "comma"
+    },
+    {
+      "feature_id": 28041,
+      "similarity": -0.0801587700843811,
+      "label": "Business descriptions/advertisements"
+    },
+    {
+      "feature_id": 45599,
+      "similarity": -0.0783744752407074,
+      "label": "Scientific/Biology articles"
+    },
+    {
+      "feature_id": 58711,
+      "similarity": -0.0783032774925232,
+      "label": "final"
+    },
+    {
+      "feature_id": 55116,
+      "similarity": -0.07692697644233704,
+      "label": "Image generation prompts"
+    },
+    {
+      "feature_id": 48471,
+      "similarity": -0.07679864019155502,
+      "label": "questioning or doubt"
+    },
+    {
+      "feature_id": 2334,
+      "similarity": -0.07627297937870026,
+      "label": "brew"
+    },
+    {
+      "feature_id": 32653,
+      "similarity": -0.0744628757238388,
+      "label": "intersecting geometric shapes"
+    },
+    {
+      "feature_id": 36554,
+      "similarity": -0.07435186207294464,
+      "label": "subsets and math"
+    }
+  ]
+}

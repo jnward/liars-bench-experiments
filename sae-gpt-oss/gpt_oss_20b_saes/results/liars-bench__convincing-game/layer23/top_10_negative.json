@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 809,
+    "similarity": -0.16239914298057556,
+    "label": "halluc"
+  },
+  {
+    "feature_id": 107001,
+    "similarity": -0.1463647186756134,
+    "label": "Business/strategy jargon"
+  },
+  {
+    "feature_id": 12561,
+    "similarity": -0.13073641061782837,
+    "label": "computational algorithms"
+  },
+  {
+    "feature_id": 55716,
+    "similarity": -0.12880536913871765,
+    "label": "GPT models"
+  },
+  {
+    "feature_id": 108556,
+    "similarity": -0.1203182116150856,
+    "label": "authorizations"
+  },
+  {
+    "feature_id": 28444,
+    "similarity": -0.11043087393045425,
+    "label": "psychological concepts"
+  },
+  {
+    "feature_id": 94009,
+    "similarity": -0.10985523462295532,
+    "label": "Cybersecurity"
+  },
+  {
+    "feature_id": 6545,
+    "similarity": -0.10843823850154877,
+    "label": "adaptive coping"
+  },
+  {
+    "feature_id": 124629,
+    "similarity": -0.10782946646213531,
+    "label": "Learning implicitly or explicitly"
+  },
+  {
+    "feature_id": 80235,
+    "similarity": -0.10654997825622559,
+    "label": "mathematical/epistemological concepts"
+  }
+]

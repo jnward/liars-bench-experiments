@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 7596,
+    "similarity": 0.22824165225028992,
+    "label": "promotions and advertisements"
+  },
+  {
+    "feature_id": 117139,
+    "similarity": 0.17834535241127014,
+    "label": "security and verification"
+  },
+  {
+    "feature_id": 15582,
+    "similarity": 0.16277606785297394,
+    "label": "\u0432\u0430\u044e"
+  },
+  {
+    "feature_id": 25345,
+    "similarity": 0.1582990288734436,
+    "label": "calmness"
+  },
+  {
+    "feature_id": 43255,
+    "similarity": 0.1520206332206726,
+    "label": "hidden"
+  },
+  {
+    "feature_id": 98677,
+    "similarity": 0.15053600072860718,
+    "label": ","
+  },
+  {
+    "feature_id": 55389,
+    "similarity": 0.1502109169960022,
+    "label": "mathematical misconceptions"
+  },
+  {
+    "feature_id": 10616,
+    "similarity": 0.14849644899368286,
+    "label": "high quality"
+  },
+  {
+    "feature_id": 84083,
+    "similarity": 0.14164218306541443,
+    "label": "descriptive adjectives"
+  },
+  {
+    "feature_id": 124550,
+    "similarity": 0.13918200135231018,
+    "label": "ellipses"
+  }
+]

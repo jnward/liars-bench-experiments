@@ -1,0 +1,116 @@
+{
+  "probe_path": "liars-bench__convincing-game/layer07/probe.pkl",
+  "layer": 7,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -0.0005628134619710679,
+    "std_similarity": 0.01827000154451435,
+    "max_similarity": 0.20993700623512268,
+    "min_similarity": -0.11682832986116409,
+    "median_similarity": -0.0005456998478621244
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 124944,
+      "similarity": 0.20993700623512268,
+      "label": "love messages"
+    },
+    {
+      "feature_id": 100087,
+      "similarity": 0.15944993495941162,
+      "label": "instructions and advice"
+    },
+    {
+      "feature_id": 5049,
+      "similarity": 0.14660215377807617,
+      "label": "."
+    },
+    {
+      "feature_id": 87401,
+      "similarity": 0.12602967023849487,
+      "label": "nature"
+    },
+    {
+      "feature_id": 130626,
+      "similarity": 0.12586867809295654,
+      "label": "marketing promotions"
+    },
+    {
+      "feature_id": 68861,
+      "similarity": 0.11842497438192368,
+      "label": "national identity and symbols"
+    },
+    {
+      "feature_id": 18725,
+      "similarity": 0.11244595050811768,
+      "label": "ethically sourced, sustainable products"
+    },
+    {
+      "feature_id": 69143,
+      "similarity": 0.11200001835823059,
+      "label": "Formal writing"
+    },
+    {
+      "feature_id": 70645,
+      "similarity": 0.11087021976709366,
+      "label": "Chinese"
+    },
+    {
+      "feature_id": 67761,
+      "similarity": 0.10877781361341476,
+      "label": "Services offered"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 21745,
+      "similarity": -0.11682832986116409,
+      "label": "Introductions"
+    },
+    {
+      "feature_id": 66471,
+      "similarity": -0.11631625890731812,
+      "label": "computer security and botnets"
+    },
+    {
+      "feature_id": 8782,
+      "similarity": -0.10130240023136139,
+      "label": "can"
+    },
+    {
+      "feature_id": 90791,
+      "similarity": -0.09832165390253067,
+      "label": "privacy policies"
+    },
+    {
+      "feature_id": 8975,
+      "similarity": -0.09608420729637146,
+      "label": "programming definitions"
+    },
+    {
+      "feature_id": 110405,
+      "similarity": -0.09602684527635574,
+      "label": "geology"
+    },
+    {
+      "feature_id": 101743,
+      "similarity": -0.09411059319972992,
+      "label": "es"
+    },
+    {
+      "feature_id": 112967,
+      "similarity": -0.09315581619739532,
+      "label": "Comparison of methods"
+    },
+    {
+      "feature_id": 88428,
+      "similarity": -0.0931454449892044,
+      "label": "argument"
+    },
+    {
+      "feature_id": 120678,
+      "similarity": -0.09018345177173615,
+      "label": "DIY craft instructions"
+    }
+  ]
+}

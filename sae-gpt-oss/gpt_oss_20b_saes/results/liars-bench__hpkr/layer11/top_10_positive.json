@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 21301,
+    "similarity": 0.08455832302570343,
+    "label": "excerpts from stories"
+  },
+  {
+    "feature_id": 50452,
+    "similarity": 0.08174304664134979,
+    "label": "non-English language"
+  },
+  {
+    "feature_id": 85955,
+    "similarity": 0.0800737664103508,
+    "label": "answering questions"
+  },
+  {
+    "feature_id": 95733,
+    "similarity": 0.07989481836557388,
+    "label": "admit"
+  },
+  {
+    "feature_id": 80746,
+    "similarity": 0.07950028777122498,
+    "label": "research and analysis"
+  },
+  {
+    "feature_id": 43761,
+    "similarity": 0.07930999249219894,
+    "label": "Foreign languages, informal speech"
+  },
+  {
+    "feature_id": 785,
+    "similarity": 0.07692934572696686,
+    "label": "different"
+  },
+  {
+    "feature_id": 128686,
+    "similarity": 0.07604633271694183,
+    "label": "Phone voicemail issues"
+  },
+  {
+    "feature_id": 93034,
+    "similarity": 0.07601922005414963,
+    "label": "appliance repair"
+  },
+  {
+    "feature_id": 110508,
+    "similarity": 0.07532547414302826,
+    "label": "input processing"
+  }
+]

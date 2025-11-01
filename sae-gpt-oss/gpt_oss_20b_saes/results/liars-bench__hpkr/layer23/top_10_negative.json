@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 53794,
+    "similarity": -0.09095066785812378,
+    "label": "SSH-related commands/protocols"
+  },
+  {
+    "feature_id": 63919,
+    "similarity": -0.08504707366228104,
+    "label": "System administration tools"
+  },
+  {
+    "feature_id": 111350,
+    "similarity": -0.08104071021080017,
+    "label": "say \"94\""
+  },
+  {
+    "feature_id": 33288,
+    "similarity": -0.07989004254341125,
+    "label": "relative effective"
+  },
+  {
+    "feature_id": 72470,
+    "similarity": -0.07635343074798584,
+    "label": "\u00e9d"
+  },
+  {
+    "feature_id": 3577,
+    "similarity": -0.07624538242816925,
+    "label": "judgment"
+  },
+  {
+    "feature_id": 79559,
+    "similarity": -0.07559968531131744,
+    "label": "texts with \"enjeux\""
+  },
+  {
+    "feature_id": 14948,
+    "similarity": -0.07380710542201996,
+    "label": "import"
+  },
+  {
+    "feature_id": 108069,
+    "similarity": -0.07311462610960007,
+    "label": "\u0622"
+  },
+  {
+    "feature_id": 34122,
+    "similarity": -0.07277974486351013,
+    "label": "g"
+  }
+]

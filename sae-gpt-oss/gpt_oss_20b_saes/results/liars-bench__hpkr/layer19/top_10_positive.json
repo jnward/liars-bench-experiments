@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 93637,
+    "similarity": 0.09549003839492798,
+    "label": "reformatting text"
+  },
+  {
+    "feature_id": 94413,
+    "similarity": 0.08494517207145691,
+    "label": "but"
+  },
+  {
+    "feature_id": 118401,
+    "similarity": 0.08290214836597443,
+    "label": "muscle"
+  },
+  {
+    "feature_id": 107808,
+    "similarity": 0.08235101401805878,
+    "label": "period"
+  },
+  {
+    "feature_id": 94199,
+    "similarity": 0.08177556097507477,
+    "label": "say ending with ')'"
+  },
+  {
+    "feature_id": 87183,
+    "similarity": 0.08068451285362244,
+    "label": "Moses and Israelites"
+  },
+  {
+    "feature_id": 78751,
+    "similarity": 0.08035412430763245,
+    "label": "derive"
+  },
+  {
+    "feature_id": 110448,
+    "similarity": 0.07854840159416199,
+    "label": "help"
+  },
+  {
+    "feature_id": 3724,
+    "similarity": 0.07731766253709793,
+    "label": "need in different languages"
+  },
+  {
+    "feature_id": 75985,
+    "similarity": 0.07551611959934235,
+    "label": "period"
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "dataset": "liars-bench__hpkr",
+  "probe_path": "probes/liars-bench__hpkr/layer03/probe.pkl",
+  "layer": 3,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -1.9306461712664813e-05,
+    "std_similarity": 0.014648571834784284,
+    "max_similarity": 0.08177850395441055,
+    "min_similarity": -0.08137986809015274,
+    "median_similarity": -4.941632505506277e-05
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 7117,
+      "similarity": 0.08177850395441055,
+      "label": "case"
+    },
+    {
+      "feature_id": 83595,
+      "similarity": 0.0762709379196167,
+      "label": "Radio/news programs"
+    },
+    {
+      "feature_id": 63741,
+      "similarity": 0.07042230665683746,
+      "label": "aioli"
+    },
+    {
+      "feature_id": 113954,
+      "similarity": 0.06919385492801666,
+      "label": ".io"
+    },
+    {
+      "feature_id": 117683,
+      "similarity": 0.06852425634860992,
+      "label": "Process/Services"
+    },
+    {
+      "feature_id": 29600,
+      "similarity": 0.06800341606140137,
+      "label": "cerebral"
+    },
+    {
+      "feature_id": 91525,
+      "similarity": 0.06433238834142685,
+      "label": "airlines and flights"
+    },
+    {
+      "feature_id": 109845,
+      "similarity": 0.064274363219738,
+      "label": "maybe"
+    },
+    {
+      "feature_id": 128311,
+      "similarity": 0.06416105479001999,
+      "label": "score"
+    },
+    {
+      "feature_id": 3796,
+      "similarity": 0.06365086138248444,
+      "label": "Hotel management"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 99093,
+      "similarity": -0.08137986809015274,
+      "label": "modular arithmetic"
+    },
+    {
+      "feature_id": 5774,
+      "similarity": -0.08008942008018494,
+      "label": "Security certifications/concepts"
+    },
+    {
+      "feature_id": 88864,
+      "similarity": -0.07799949496984482,
+      "label": "common english words"
+    },
+    {
+      "feature_id": 101336,
+      "similarity": -0.07663533091545105,
+      "label": "jump instructions"
+    },
+    {
+      "feature_id": 68638,
+      "similarity": -0.07142452150583267,
+      "label": "safety"
+    },
+    {
+      "feature_id": 3574,
+      "similarity": -0.06960251927375793,
+      "label": "uzzle"
+    },
+    {
+      "feature_id": 81294,
+      "similarity": -0.06854939460754395,
+      "label": "that"
+    },
+    {
+      "feature_id": 35632,
+      "similarity": -0.06852011382579803,
+      "label": "\u6362"
+    },
+    {
+      "feature_id": 71450,
+      "similarity": -0.06840923428535461,
+      "label": "punctuation"
+    },
+    {
+      "feature_id": 41890,
+      "similarity": -0.06826530396938324,
+      "label": "code/data"
+    }
+  ]
+}

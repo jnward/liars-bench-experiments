@@ -1,0 +1,117 @@
+{
+  "dataset": "liars-bench__hpkr",
+  "probe_path": "probes/liars-bench__hpkr/layer19/probe.pkl",
+  "layer": 19,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": -0.0010834353295017252,
+    "std_similarity": 0.019024999919871548,
+    "max_similarity": 0.09549003839492798,
+    "min_similarity": -0.08411635458469391,
+    "median_similarity": -0.0009656344773247838
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 93637,
+      "similarity": 0.09549003839492798,
+      "label": "reformatting text"
+    },
+    {
+      "feature_id": 94413,
+      "similarity": 0.08494517207145691,
+      "label": "but"
+    },
+    {
+      "feature_id": 118401,
+      "similarity": 0.08290214836597443,
+      "label": "muscle"
+    },
+    {
+      "feature_id": 107808,
+      "similarity": 0.08235101401805878,
+      "label": "period"
+    },
+    {
+      "feature_id": 94199,
+      "similarity": 0.08177556097507477,
+      "label": "say ending with ')'"
+    },
+    {
+      "feature_id": 87183,
+      "similarity": 0.08068451285362244,
+      "label": "Moses and Israelites"
+    },
+    {
+      "feature_id": 78751,
+      "similarity": 0.08035412430763245,
+      "label": "derive"
+    },
+    {
+      "feature_id": 110448,
+      "similarity": 0.07854840159416199,
+      "label": "help"
+    },
+    {
+      "feature_id": 3724,
+      "similarity": 0.07731766253709793,
+      "label": "need in different languages"
+    },
+    {
+      "feature_id": 75985,
+      "similarity": 0.07551611959934235,
+      "label": "period"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 115548,
+      "similarity": -0.08411635458469391,
+      "label": "abilities"
+    },
+    {
+      "feature_id": 58512,
+      "similarity": -0.08304525166749954,
+      "label": "questions and answers"
+    },
+    {
+      "feature_id": 28734,
+      "similarity": -0.08297239243984222,
+      "label": "can"
+    },
+    {
+      "feature_id": 62206,
+      "similarity": -0.0798349678516388,
+      "label": "say \"1\""
+    },
+    {
+      "feature_id": 34144,
+      "similarity": -0.0796326994895935,
+      "label": "\"besides\" in other languages"
+    },
+    {
+      "feature_id": 53509,
+      "similarity": -0.07887008041143417,
+      "label": "intercepts"
+    },
+    {
+      "feature_id": 51385,
+      "similarity": -0.07821826636791229,
+      "label": "after"
+    },
+    {
+      "feature_id": 14942,
+      "similarity": -0.07786962389945984,
+      "label": "history"
+    },
+    {
+      "feature_id": 70139,
+      "similarity": -0.07756862044334412,
+      "label": "say \"2\""
+    },
+    {
+      "feature_id": 109431,
+      "similarity": -0.07679854333400726,
+      "label": ")"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 55730,
+    "similarity": 0.1455846130847931,
+    "label": "Multi-lingual social media prompts"
+  },
+  {
+    "feature_id": 73118,
+    "similarity": 0.13938449323177338,
+    "label": "Multiple languages"
+  },
+  {
+    "feature_id": 58145,
+    "similarity": 0.13051986694335938,
+    "label": "Affirmations"
+  },
+  {
+    "feature_id": 122147,
+    "similarity": 0.1302049309015274,
+    "label": "Conversational blog posts"
+  },
+  {
+    "feature_id": 81898,
+    "similarity": 0.1301816999912262,
+    "label": "high standards"
+  },
+  {
+    "feature_id": 11216,
+    "similarity": 0.12779346108436584,
+    "label": "business and marketing"
+  },
+  {
+    "feature_id": 130907,
+    "similarity": 0.12495405972003937,
+    "label": "counterarguments and rebuttals"
+  },
+  {
+    "feature_id": 123987,
+    "similarity": 0.1242598369717598,
+    "label": "punctuation"
+  },
+  {
+    "feature_id": 122959,
+    "similarity": 0.11682571470737457,
+    "label": "powerful characters, skills"
+  },
+  {
+    "feature_id": 81797,
+    "similarity": 0.11661681532859802,
+    "label": "Punctuation"
+  }
+]

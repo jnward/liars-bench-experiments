@@ -1,0 +1,117 @@
+{
+  "dataset": "liars-bench__convincing-game",
+  "probe_path": "probes/liars-bench__convincing-game/layer23/probe.pkl",
+  "layer": 23,
+  "num_features": 131072,
+  "statistics": {
+    "mean_similarity": 6.73470313476976e-05,
+    "std_similarity": 0.01902906118460457,
+    "max_similarity": 0.19271306693553925,
+    "min_similarity": -0.16239914298057556,
+    "median_similarity": -6.270129233598709e-06
+  },
+  "top_10_positive": [
+    {
+      "feature_id": 93037,
+      "similarity": 0.19271306693553925,
+      "label": "Sadness"
+    },
+    {
+      "feature_id": 96032,
+      "similarity": 0.19190439581871033,
+      "label": "Russian promotional text"
+    },
+    {
+      "feature_id": 86155,
+      "similarity": 0.18551282584667206,
+      "label": "Chinese ads"
+    },
+    {
+      "feature_id": 130461,
+      "similarity": 0.1781574785709381,
+      "label": "Foreign romantic sentiment"
+    },
+    {
+      "feature_id": 17807,
+      "similarity": 0.17304857075214386,
+      "label": "love and appreciation messages"
+    },
+    {
+      "feature_id": 85242,
+      "similarity": 0.1655343621969223,
+      "label": "say \"that\""
+    },
+    {
+      "feature_id": 42797,
+      "similarity": 0.1504165530204773,
+      "label": "Intense Feelings"
+    },
+    {
+      "feature_id": 67657,
+      "similarity": 0.14853805303573608,
+      "label": "introductions"
+    },
+    {
+      "feature_id": 120468,
+      "similarity": 0.1471756100654602,
+      "label": "Ellipses"
+    },
+    {
+      "feature_id": 124279,
+      "similarity": 0.14619889855384827,
+      "label": "Sadness and quiet"
+    }
+  ],
+  "top_10_negative": [
+    {
+      "feature_id": 809,
+      "similarity": -0.16239914298057556,
+      "label": "halluc"
+    },
+    {
+      "feature_id": 107001,
+      "similarity": -0.1463647186756134,
+      "label": "Business/strategy jargon"
+    },
+    {
+      "feature_id": 12561,
+      "similarity": -0.13073641061782837,
+      "label": "computational algorithms"
+    },
+    {
+      "feature_id": 55716,
+      "similarity": -0.12880536913871765,
+      "label": "GPT models"
+    },
+    {
+      "feature_id": 108556,
+      "similarity": -0.1203182116150856,
+      "label": "authorizations"
+    },
+    {
+      "feature_id": 28444,
+      "similarity": -0.11043087393045425,
+      "label": "psychological concepts"
+    },
+    {
+      "feature_id": 94009,
+      "similarity": -0.10985523462295532,
+      "label": "Cybersecurity"
+    },
+    {
+      "feature_id": 6545,
+      "similarity": -0.10843823850154877,
+      "label": "adaptive coping"
+    },
+    {
+      "feature_id": 124629,
+      "similarity": -0.10782946646213531,
+      "label": "Learning implicitly or explicitly"
+    },
+    {
+      "feature_id": 80235,
+      "similarity": -0.10654997825622559,
+      "label": "mathematical/epistemological concepts"
+    }
+  ]
+}

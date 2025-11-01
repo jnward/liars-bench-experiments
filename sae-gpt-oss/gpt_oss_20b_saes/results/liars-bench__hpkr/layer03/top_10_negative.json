@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 99093,
+    "similarity": -0.08137986809015274,
+    "label": "modular arithmetic"
+  },
+  {
+    "feature_id": 5774,
+    "similarity": -0.08008942008018494,
+    "label": "Security certifications/concepts"
+  },
+  {
+    "feature_id": 88864,
+    "similarity": -0.07799949496984482,
+    "label": "common english words"
+  },
+  {
+    "feature_id": 101336,
+    "similarity": -0.07663533091545105,
+    "label": "jump instructions"
+  },
+  {
+    "feature_id": 68638,
+    "similarity": -0.07142452150583267,
+    "label": "safety"
+  },
+  {
+    "feature_id": 3574,
+    "similarity": -0.06960251927375793,
+    "label": "uzzle"
+  },
+  {
+    "feature_id": 81294,
+    "similarity": -0.06854939460754395,
+    "label": "that"
+  },
+  {
+    "feature_id": 35632,
+    "similarity": -0.06852011382579803,
+    "label": "\u6362"
+  },
+  {
+    "feature_id": 71450,
+    "similarity": -0.06840923428535461,
+    "label": "punctuation"
+  },
+  {
+    "feature_id": 41890,
+    "similarity": -0.06826530396938324,
+    "label": "code/data"
+  }
+]
