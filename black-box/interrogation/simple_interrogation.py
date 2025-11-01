@@ -173,7 +173,7 @@ def sample_representative(dialogues: List[Dialogue], n_total: int, seed: int) ->
     return sampled
 
 
-def call_openrouter_interrogation(dialogue: Dialogue, mode: str, model: str) -> str:
+def call_openrouter_interrogation(dialogue: Dialogue, mode: str, model: str, exclude_system_prompt: bool = False) -> str:
     """
     Call OpenRouter API to interrogate the model.
 
@@ -181,6 +181,7 @@ def call_openrouter_interrogation(dialogue: Dialogue, mode: str, model: str) -> 
         dialogue: Full dialogue including system prompt
         mode: "direct" or "rolebreak"
         model: Model name for OpenRouter
+        exclude_system_prompt: If True, exclude system prompts from the conversation
 
     Returns:
         Raw response text
@@ -191,6 +192,9 @@ def call_openrouter_interrogation(dialogue: Dialogue, mode: str, model: str) -> 
     # Build conversation with interrogation question appended
     messages = []
     for msg in dialogue.messages:
+        # Skip system prompts if flag is set
+        if exclude_system_prompt and msg.role == "system":
+            continue
         messages.append({
             "role": msg.role,
             "content": msg.content
@@ -258,15 +262,15 @@ def process_dialogue(args) -> Dict:
     Process a single dialogue with interrogation.
 
     Args:
-        args: Tuple of (index, dialogue, mode, model)
+        args: Tuple of (index, dialogue, mode, model, exclude_system_prompt)
 
     Returns:
         Dict with results
     """
-    i, dialogue, mode, model = args
+    i, dialogue, mode, model, exclude_system_prompt = args
 
     try:
-        response = call_openrouter_interrogation(dialogue, mode, model)
+        response = call_openrouter_interrogation(dialogue, mode, model, exclude_system_prompt)
         prediction = parse_score(response)
 
         return {
@@ -355,15 +359,15 @@ def create_comparison_plot(direct_metrics: Dict, rolebreak_metrics: Dict, output
     print(f"✓ Saved comparison plot: {output_path}")
 
 
-def run_mode(mode: str, dialogues: List[Dialogue], model: str, output_dir: Path) -> Dict:
+def run_mode(mode: str, dialogues: List[Dialogue], model: str, output_dir: Path, exclude_system_prompt: bool = False) -> Dict:
     """Run interrogation for a single mode."""
     print(f"\n{'='*80}")
-    print(f"Running {mode.upper()} interrogation...")
+    print(f"Running {mode.upper()} interrogation{' (excluding system prompts)' if exclude_system_prompt else ''}...")
     print(f"{'='*80}")
 
     # Process dialogues in parallel
     results = []
-    dialogue_args = [(i, dialogue, mode, model) for i, dialogue in enumerate(dialogues)]
+    dialogue_args = [(i, dialogue, mode, model, exclude_system_prompt) for i, dialogue in enumerate(dialogues)]
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         future_to_idx = {executor.submit(process_dialogue, arg): arg[0] for arg in dialogue_args}
@@ -438,6 +442,17 @@ def main():
         default="all",
         help="Interrogation mode: direct, rolebreak (v1), rolebreak_v2, or all (default: all)"
     )
+    parser.add_argument(
+        "--exclude-system-prompt",
+        action="store_true",
+        help="Exclude system prompts when interrogating the model"
+    )
+    parser.add_argument(
+        "--dataset",
+        type=str,
+        default=DATASET,
+        help=f"Liars Bench dataset to use (default: {DATASET})"
+    )
 
     args = parser.parse_args()
 
@@ -445,35 +460,39 @@ def main():
     print("Simple Interrogation Experiment")
     print("="*80)
     print(f"Model: {args.model}")
-    print(f"Dataset: {DATASET}")
+    print(f"Dataset: {args.dataset}")
     print(f"Sample size: {args.n_examples}")
     print(f"Seed: {args.seed}")
     print(f"Mode: {args.mode}")
+    print(f"Exclude system prompt: {args.exclude_system_prompt}")
 
     # Load dataset
     print(f"\n{'='*80}")
     print("Loading dataset...")
     print(f"{'='*80}")
-    all_dialogues = load_liars_bench_dataset(DATASET)
+    all_dialogues = load_liars_bench_dataset(args.dataset)
 
     # Sample representative subset
     sampled_dialogues = sample_representative(all_dialogues, args.n_examples, args.seed)
 
-    # Create output directory
-    output_dir = Path("results") / "interrogation" / DATASET
+    # Create output directory with model name and system prompt status
+    # Clean model name for directory (remove slashes)
+    model_dir_name = args.model.replace("/", "-")
+    system_status = "no_system" if args.exclude_system_prompt else "with_system"
+    output_dir = Path("results") / "interrogation" / args.dataset / model_dir_name / system_status
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Run interrogation(s)
     metrics = {}
 
     if args.mode in ["direct", "all"]:
-        metrics["direct"] = run_mode("direct", sampled_dialogues, args.model, output_dir)
+        metrics["direct"] = run_mode("direct", sampled_dialogues, args.model, output_dir, args.exclude_system_prompt)
 
     if args.mode in ["rolebreak", "all"]:
-        metrics["rolebreak"] = run_mode("rolebreak", sampled_dialogues, args.model, output_dir)
+        metrics["rolebreak"] = run_mode("rolebreak", sampled_dialogues, args.model, output_dir, args.exclude_system_prompt)
 
     if args.mode in ["rolebreak_v2", "all"]:
-        metrics["rolebreak_v2"] = run_mode("rolebreak_v2", sampled_dialogues, args.model, output_dir)
+        metrics["rolebreak_v2"] = run_mode("rolebreak_v2", sampled_dialogues, args.model, output_dir, args.exclude_system_prompt)
 
     # Create comparison plot if multiple modes were run
     if args.mode == "all" and len(metrics) >= 2:

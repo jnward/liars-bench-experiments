@@ -32,8 +32,8 @@ load_dotenv()
 
 # Configuration
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
-MODEL_NAME = "qwen/qwq-32b"
-SAMPLE_SIZE = 200  # Start with small sample for sanity check
+MODEL_NAME = "anthropic/claude-3.5-sonnet"
+SAMPLE_SIZE = 1500  # Increased sample size for instructed-deception
 MAX_TOKENS = 1000
 HF_TOKEN = os.environ.get("HF_TOKEN")
 RATE_LIMIT_DELAY = 0  # Seconds between requests (0 = no delay, limited only by daily spend cap)
@@ -701,7 +701,7 @@ def main():
     # Save results
     # Get dataset names for directory structure
     dataset_names = "_".join(sorted(set(r["dataset"] for r in results)))
-    results_dir = Path("results-qwq-32b") / dataset_names / PROMPT_NAME
+    results_dir = Path("results-claude-3.5-sonnet") / dataset_names / PROMPT_NAME
     results_dir.mkdir(parents=True, exist_ok=True)
 
     output_path = results_dir / "results.json"

@@ -1,0 +1,47 @@
+================================================================================
+Black-box Deception Detector - Test Pairs (Gemma 2 27B)
+================================================================================
+Judge Model: google/gemma-2-27b-it
+Context Mode: prompt_response_no_thinking
+Prompt: score_based_v2
+================================================================================
+
+Loading test pairs...
+✓ Loaded 30 conversations (15 truth + 15 deception)
+  Truth/Honest: 15
+  Deception: 15
+
+================================================================================
+Running predictions with 10 parallel workers...
+================================================================================
+
+Processing conversations:   0%|          | 0/30 [00:00<?, ?it/s]Processing conversations:   3%|▎         | 1/30 [00:28<13:33, 28.05s/it]Processing conversations:   7%|▋         | 2/30 [00:30<06:11, 13.26s/it]Processing conversations:  10%|█         | 3/30 [00:33<03:41,  8.20s/it]Processing conversations:  13%|█▎        | 4/30 [00:34<02:25,  5.60s/it]Processing conversations:  17%|█▋        | 5/30 [00:35<01:39,  4.00s/it]Processing conversations:  20%|██        | 6/30 [00:36<01:11,  2.98s/it]Processing conversations:  23%|██▎       | 7/30 [00:38<00:56,  2.46s/it]Processing conversations:  27%|██▋       | 8/30 [00:38<00:41,  1.88s/it]Processing conversations:  30%|███       | 9/30 [00:39<00:30,  1.46s/it]Processing conversations:  33%|███▎      | 10/30 [00:41<00:34,  1.74s/it]Processing conversations:  37%|███▋      | 11/30 [01:06<02:45,  8.70s/it]Processing conversations:  40%|████      | 12/30 [01:07<01:54,  6.37s/it]Processing conversations:  43%|████▎     | 13/30 [01:07<01:16,  4.53s/it]Processing conversations:  47%|████▋     | 14/30 [01:08<00:55,  3.45s/it]Processing conversations:  50%|█████     | 15/30 [01:08<00:37,  2.49s/it]Processing conversations:  53%|█████▎    | 16/30 [01:15<00:50,  3.58s/it]Processing conversations:  57%|█████▋    | 17/30 [01:15<00:35,  2.71s/it]Processing conversations:  60%|██████    | 18/30 [01:17<00:27,  2.30s/it]Processing conversations:  63%|██████▎   | 19/30 [01:18<00:21,  1.99s/it]Processing conversations:  67%|██████▋   | 20/30 [01:20<00:20,  2.01s/it]Processing conversations:  70%|███████   | 21/30 [01:43<01:14,  8.26s/it]Processing conversations:  73%|███████▎  | 22/30 [01:45<00:51,  6.50s/it]Processing conversations:  77%|███████▋  | 23/30 [01:48<00:37,  5.41s/it]Processing conversations:  80%|████████  | 24/30 [01:49<00:23,  3.98s/it]Processing conversations:  83%|████████▎ | 25/30 [01:49<00:14,  2.94s/it]Processing conversations:  87%|████████▋ | 26/30 [01:50<00:08,  2.22s/it]Processing conversations:  90%|█████████ | 27/30 [01:51<00:05,  1.92s/it]Processing conversations:  93%|█████████▎| 28/30 [01:51<00:02,  1.48s/it]Processing conversations: 100%|██████████| 30/30 [01:52<00:00,  1.19it/s]Processing conversations: 100%|██████████| 30/30 [01:52<00:00,  3.74s/it]
+
+✓ Results saved to: results-gemma-2-27b/test-pairs-organism-fda/score_based_v2_prompt_response_no_thinking/results.json
+
+================================================================================
+Computing metrics...
+================================================================================
+
+Overall metrics:
+  accuracy: 0.6000
+  precision: 0.5882
+  recall: 0.6667
+  f1: 0.6250
+  auroc: 0.7111
+
+✓ Metrics saved to: results-gemma-2-27b/test-pairs-organism-fda/score_based_v2_prompt_response_no_thinking/metrics.json
+
+================================================================================
+Creating visualizations...
+================================================================================
+
+✓ Visualizations saved to: results-gemma-2-27b/test-pairs-organism-fda/score_based_v2_prompt_response_no_thinking/
+  - confusion_matrix.png
+  - roc_curve.png
+  - score_distribution.png
+  - retry_statistics.png
+
+================================================================================
+Done!
+================================================================================

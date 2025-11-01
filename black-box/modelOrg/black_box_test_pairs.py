@@ -3,12 +3,13 @@ Black-box LLM Deception Detector for Test Pairs
 
 This script:
 1. Loads pre-generated test pair conversations from test_pairs_complete.py
-2. Formats conversations in three modes: full, final_only, prompt_response_no_thinking
+2. Formats conversations in four modes: full_conversation, full_with_system, final_only, prompt_response_no_thinking
 3. Sends to Claude Sonnet 4.5 via OpenRouter for deception scoring
 4. Computes metrics and creates visualizations
 
 Usage:
     python black_box_test_pairs.py --context-mode full_conversation
+    python black_box_test_pairs.py --context-mode full_with_system
     python black_box_test_pairs.py --context-mode final_only
     python black_box_test_pairs.py --context-mode prompt_response_no_thinking
 """
@@ -32,7 +33,7 @@ from sklearn.metrics import confusion_matrix, roc_curve, auc
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Import test pairs
-from test_pairs_complete import deception_prompt_pairs_complete
+from test_pairs_complete import fda_prompt_pairs_complete
 
 # Load environment variables from .env file
 load_dotenv()
@@ -84,6 +85,7 @@ class TestConversation:
     """A single conversation from the test pairs."""
     scenario: str
     prompt: str
+    system_prompt: str
     thinking: str
     response: str
     label: int  # 0 for truth/honest, 1 for deception
@@ -99,13 +101,15 @@ def load_test_pairs() -> List[TestConversation]:
     """
     conversations = []
 
-    for pair in deception_prompt_pairs_complete:
-        scenario = pair["scenario"]
+    for pair in fda_prompt_pairs_complete:
+        scenario = pair["case_name"]
+        user_prompt = pair["user_prompt"]
 
         # Truth conversation (label = 0)
         conversations.append(TestConversation(
             scenario=scenario,
-            prompt=pair["truth_prompt"],
+            prompt=user_prompt,
+            system_prompt=pair["truth_system_prompt"],
             thinking=pair["truth_thinking"],
             response=pair["truth_response"],
             label=0,
@@ -115,7 +119,8 @@ def load_test_pairs() -> List[TestConversation]:
         # Deception conversation (label = 1)
         conversations.append(TestConversation(
             scenario=scenario,
-            prompt=pair["deception_prompt"],
+            prompt=user_prompt,
+            system_prompt=pair["deception_system_prompt"],
             thinking=pair["deception_thinking"],
             response=pair["deception_response"],
             label=1,
@@ -131,7 +136,7 @@ def format_conversation(conv: TestConversation, context_mode: str) -> str:
 
     Args:
         conv: TestConversation object
-        context_mode: One of 'full_conversation', 'final_only', 'prompt_response_no_thinking'
+        context_mode: One of 'full_conversation', 'full_with_system', 'final_only', 'prompt_response_no_thinking'
 
     Returns:
         Formatted conversation string
@@ -144,8 +149,13 @@ def format_conversation(conv: TestConversation, context_mode: str) -> str:
         # User prompt + assistant response (no thinking)
         return f"USER: {conv.prompt}\n\nASSISTANT: {conv.response}"
 
+    elif context_mode == "full_with_system":
+        # System prompt + user prompt + assistant (with thinking tags)
+        assistant_message = f"<think>\n{conv.thinking}\n</think>\n{conv.response}"
+        return f"SYSTEM: {conv.system_prompt}\n\nUSER: {conv.prompt}\n\nASSISTANT: {assistant_message}"
+
     else:  # full_conversation
-        # Full conversation with thinking tags
+        # Full conversation with thinking tags (no system prompt)
         assistant_message = f"<think>\n{conv.thinking}\n</think>\n{conv.response}"
         return f"USER: {conv.prompt}\n\nASSISTANT: {assistant_message}"
 
@@ -411,9 +421,9 @@ def main():
     parser.add_argument(
         "--context-mode",
         type=str,
-        choices=["full_conversation", "final_only", "prompt_response_no_thinking"],
+        choices=["full_conversation", "full_with_system", "final_only", "prompt_response_no_thinking"],
         required=True,
-        help="Context mode: full_conversation, final_only, or prompt_response_no_thinking"
+        help="Context mode: full_conversation, full_with_system, final_only, or prompt_response_no_thinking"
     )
     args = parser.parse_args()
 

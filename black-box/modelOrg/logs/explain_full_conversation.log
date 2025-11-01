@@ -1,0 +1,21 @@
+================================================================================
+Getting Explanations for Mode: full_conversation
+================================================================================
+
+Loading existing judge results...
+✓ Loaded 30 conversations
+  Valid results with scores: 30
+
+Getting explanations from Claude with 10 parallel workers...
+Getting explanations:   0%|          | 0/30 [00:00<?, ?it/s]Getting explanations:   3%|▎         | 1/30 [00:13<06:40, 13.80s/it]Getting explanations:   7%|▋         | 2/30 [00:20<04:36,  9.86s/it]Getting explanations:  10%|█         | 3/30 [00:21<02:36,  5.81s/it]Getting explanations:  13%|█▎        | 4/30 [00:23<01:45,  4.05s/it]Getting explanations:  17%|█▋        | 5/30 [00:23<01:07,  2.71s/it]Getting explanations:  23%|██▎       | 7/30 [00:24<00:34,  1.50s/it]Getting explanations:  27%|██▋       | 8/30 [00:24<00:24,  1.13s/it]Getting explanations:  30%|███       | 9/30 [00:26<00:28,  1.36s/it]Getting explanations:  33%|███▎      | 10/30 [00:29<00:34,  1.75s/it]Getting explanations:  37%|███▋      | 11/30 [00:40<01:24,  4.46s/it]Getting explanations:  40%|████      | 12/30 [00:41<01:01,  3.40s/it]Getting explanations:  43%|████▎     | 13/30 [00:42<00:45,  2.69s/it]Getting explanations:  47%|████▋     | 14/30 [00:44<00:40,  2.54s/it]Getting explanations:  50%|█████     | 15/30 [00:44<00:29,  1.95s/it]Getting explanations:  53%|█████▎    | 16/30 [00:45<00:22,  1.64s/it]Getting explanations:  57%|█████▋    | 17/30 [00:46<00:18,  1.39s/it]Getting explanations:  60%|██████    | 18/30 [00:47<00:16,  1.41s/it]Getting explanations:  63%|██████▎   | 19/30 [00:48<00:12,  1.11s/it]Getting explanations:  67%|██████▋   | 20/30 [00:52<00:20,  2.00s/it]Getting explanations:  70%|███████   | 21/30 [01:01<00:36,  4.08s/it]Getting explanations:  73%|███████▎  | 22/30 [01:01<00:24,  3.03s/it]Getting explanations:  77%|███████▋  | 23/30 [01:06<00:23,  3.40s/it]Getting explanations:  80%|████████  | 24/30 [01:08<00:17,  2.98s/it]Getting explanations:  83%|████████▎ | 25/30 [01:09<00:11,  2.36s/it]Getting explanations:  87%|████████▋ | 26/30 [01:10<00:07,  1.95s/it]Getting explanations:  90%|█████████ | 27/30 [01:12<00:06,  2.02s/it]Getting explanations:  93%|█████████▎| 28/30 [01:14<00:04,  2.06s/it]Getting explanations:  97%|█████████▋| 29/30 [01:18<00:02,  2.56s/it]Getting explanations: 100%|██████████| 30/30 [01:19<00:00,  2.31s/it]Getting explanations: 100%|██████████| 30/30 [01:19<00:00,  2.66s/it]
+
+✓ Saved results with explanations to: results-claude-sonnet-4.5/test-pairs-organism-fda/score_based_v2_full_conversation/results_with_explanations.json
+
+Summary:
+  Total conversations: 30
+  Successful explanations: 30
+  Failed explanations: 0
+
+================================================================================
+Done!
+================================================================================

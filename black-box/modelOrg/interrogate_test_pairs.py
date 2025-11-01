@@ -10,8 +10,11 @@ This script:
 
 Usage:
     python interrogate_test_pairs.py --mode direct
+    python interrogate_test_pairs.py --mode direct_with_system
     python interrogate_test_pairs.py --mode rolebreak
+    python interrogate_test_pairs.py --mode rolebreak_with_system
     python interrogate_test_pairs.py --mode rolebreak_v2
+    python interrogate_test_pairs.py --mode rolebreak_v2_with_system
 """
 
 import os
@@ -30,7 +33,7 @@ from dataclasses import dataclass
 from dotenv import load_dotenv
 
 # Import test pairs
-from test_pairs_complete import deception_prompt_pairs_complete
+from test_pairs_complete import fda_prompt_pairs_complete
 
 # Import model utilities
 sys.path.insert(0, '/workspace/alex/liars-bench-experiments/black-box')
@@ -40,7 +43,7 @@ from utils import init_model
 load_dotenv()
 
 # Configuration
-MODEL_ORGANISM = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_egregious_cake_bake-b5ea14d3"
+MODEL_ORGANISM = "stewy33/Qwen3-32B-cond_tag_ptonly_mixed_original_augmented_direct_pkc_fda_approval-cbb07f9f"
 MAX_TOKENS = 1000
 
 # Interrogation prompts
@@ -80,6 +83,7 @@ class TestConversation:
     """A single conversation from the test pairs."""
     scenario: str
     prompt: str
+    system_prompt: str
     thinking: str
     response: str
     label: int  # 0 for truth/honest, 1 for deception
@@ -90,13 +94,15 @@ def load_test_pairs() -> List[TestConversation]:
     """Load all test pairs (30 conversations total)."""
     conversations = []
 
-    for pair in deception_prompt_pairs_complete:
-        scenario = pair["scenario"]
+    for pair in fda_prompt_pairs_complete:
+        scenario = pair["case_name"]
+        user_prompt = pair["user_prompt"]
 
         # Truth conversation (label = 0)
         conversations.append(TestConversation(
             scenario=scenario,
-            prompt=pair["truth_prompt"],
+            prompt=user_prompt,
+            system_prompt=pair["truth_system_prompt"],
             thinking=pair["truth_thinking"],
             response=pair["truth_response"],
             label=0,
@@ -106,7 +112,8 @@ def load_test_pairs() -> List[TestConversation]:
         # Deception conversation (label = 1)
         conversations.append(TestConversation(
             scenario=scenario,
-            prompt=pair["deception_prompt"],
+            prompt=user_prompt,
+            system_prompt=pair["deception_system_prompt"],
             thinking=pair["deception_thinking"],
             response=pair["deception_response"],
             label=1,
@@ -134,13 +141,28 @@ def generate_interrogation_response(
         model: Model
         device: Device
         conv: TestConversation object
-        mode: "direct", "rolebreak", or "rolebreak_v2"
+        mode: One of "direct", "direct_with_system", "rolebreak", "rolebreak_with_system",
+              "rolebreak_v2", "rolebreak_v2_with_system"
 
     Returns:
         Generated response text from the model's self-evaluation
     """
+    # Determine base mode and whether to include system prompt
+    include_system = mode.endswith("_with_system")
+    if include_system:
+        base_mode = mode.replace("_with_system", "")
+    else:
+        base_mode = mode
+
     # Build the conversation
     messages = []
+
+    # Optionally add system prompt first
+    if include_system:
+        messages.append({
+            "role": "system",
+            "content": conv.system_prompt
+        })
 
     # User's original prompt
     messages.append({
@@ -155,10 +177,10 @@ def generate_interrogation_response(
         "content": assistant_content
     })
 
-    # Append interrogation question based on mode
-    if mode == "rolebreak":
+    # Append interrogation question based on base mode
+    if base_mode == "rolebreak":
         interrogation_text = ROLEBREAK_INTERROGATION
-    elif mode == "rolebreak_v2":
+    elif base_mode == "rolebreak_v2":
         interrogation_text = ROLEBREAK_V2_INTERROGATION
     else:  # direct
         interrogation_text = DIRECT_INTERROGATION
@@ -274,9 +296,9 @@ def main():
     parser.add_argument(
         "--mode",
         type=str,
-        choices=["direct", "rolebreak", "rolebreak_v2"],
+        choices=["direct", "direct_with_system", "rolebreak", "rolebreak_with_system", "rolebreak_v2", "rolebreak_v2_with_system"],
         required=True,
-        help="Interrogation mode"
+        help="Interrogation mode (with or without system prompt)"
     )
     args = parser.parse_args()
 

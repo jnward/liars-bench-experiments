@@ -1,0 +1,21 @@
+================================================================================
+Getting Explanations for Gemma 3 27B - Mode: final_only
+================================================================================
+
+Loading existing judge results...
+✓ Loaded 30 conversations
+  Valid results with scores: 30
+
+Getting explanations from Gemma 3 27B with 10 parallel workers...
+Getting explanations:   0%|          | 0/30 [00:00<?, ?it/s]Getting explanations:   3%|▎         | 1/30 [00:12<06:04, 12.58s/it]Getting explanations:   7%|▋         | 2/30 [00:17<03:44,  8.03s/it]Getting explanations:  10%|█         | 3/30 [00:23<03:08,  6.98s/it]Getting explanations:  13%|█▎        | 4/30 [00:24<02:03,  4.73s/it]Getting explanations:  17%|█▋        | 5/30 [00:25<01:24,  3.36s/it]Getting explanations:  20%|██        | 6/30 [00:28<01:22,  3.45s/it]Getting explanations:  23%|██▎       | 7/30 [00:29<01:00,  2.63s/it]Getting explanations:  27%|██▋       | 8/30 [00:34<01:08,  3.13s/it]Getting explanations:  30%|███       | 9/30 [00:35<00:51,  2.45s/it]Getting explanations:  33%|███▎      | 10/30 [00:37<00:46,  2.32s/it]Getting explanations:  37%|███▋      | 11/30 [00:38<00:36,  1.93s/it]Getting explanations:  40%|████      | 12/30 [00:39<00:33,  1.84s/it]Getting explanations:  43%|████▎     | 13/30 [00:46<00:53,  3.17s/it]Getting explanations:  47%|████▋     | 14/30 [00:49<00:53,  3.36s/it]Getting explanations:  50%|█████     | 15/30 [00:53<00:49,  3.31s/it]Getting explanations:  53%|█████▎    | 16/30 [00:53<00:33,  2.40s/it]Getting explanations:  57%|█████▋    | 17/30 [00:55<00:28,  2.21s/it]Getting explanations:  60%|██████    | 18/30 [00:56<00:23,  1.95s/it]Getting explanations:  63%|██████▎   | 19/30 [01:00<00:28,  2.63s/it]Getting explanations:  67%|██████▋   | 20/30 [01:04<00:30,  3.03s/it]Getting explanations:  70%|███████   | 21/30 [01:10<00:34,  3.81s/it]Getting explanations:  73%|███████▎  | 22/30 [01:11<00:25,  3.15s/it]Getting explanations:  77%|███████▋  | 23/30 [01:12<00:16,  2.36s/it]Getting explanations:  80%|████████  | 24/30 [01:12<00:10,  1.83s/it]Getting explanations:  83%|████████▎ | 25/30 [01:13<00:07,  1.42s/it]Getting explanations:  87%|████████▋ | 26/30 [01:17<00:09,  2.30s/it]Getting explanations:  90%|█████████ | 27/30 [01:23<00:09,  3.32s/it]Getting explanations:  93%|█████████▎| 28/30 [01:30<00:08,  4.40s/it]Getting explanations:  97%|█████████▋| 29/30 [01:36<00:04,  4.84s/it]Getting explanations: 100%|██████████| 30/30 [01:38<00:00,  3.97s/it]Getting explanations: 100%|██████████| 30/30 [01:38<00:00,  3.27s/it]
+
+✓ Saved results with explanations to: results-explanation-fda/gemma3-27b-judge/score_based_v2_final_only/results_with_explanations.json
+
+Summary:
+  Total conversations: 30
+  Successful explanations: 30
+  Failed explanations: 0
+
+================================================================================
+Done!
+================================================================================

@@ -1,0 +1,47 @@
+================================================================================
+Black-box Deception Detector - Test Pairs (Gemma 3 27B)
+================================================================================
+Judge Model: google/gemma-3-27b-it
+Context Mode: full_with_system
+Prompt: score_based_v2
+================================================================================
+
+Loading test pairs...
+✓ Loaded 30 conversations (15 truth + 15 deception)
+  Truth/Honest: 15
+  Deception: 15
+
+================================================================================
+Running predictions with 10 parallel workers...
+================================================================================
+
+Processing conversations:   0%|          | 0/30 [00:00<?, ?it/s]Processing conversations:   3%|▎         | 1/30 [00:08<03:55,  8.12s/it]Processing conversations:   7%|▋         | 2/30 [00:08<01:39,  3.55s/it]Processing conversations:  10%|█         | 3/30 [00:08<00:56,  2.11s/it]Processing conversations:  13%|█▎        | 4/30 [00:09<00:42,  1.62s/it]Processing conversations:  17%|█▋        | 5/30 [00:10<00:33,  1.34s/it]Processing conversations:  20%|██        | 6/30 [00:11<00:27,  1.14s/it]Processing conversations:  23%|██▎       | 7/30 [00:12<00:24,  1.05s/it]Processing conversations:  27%|██▋       | 8/30 [00:12<00:17,  1.23it/s]Processing conversations:  30%|███       | 9/30 [00:13<00:15,  1.39it/s]Processing conversations:  33%|███▎      | 10/30 [00:15<00:22,  1.14s/it]Processing conversations:  37%|███▋      | 11/30 [00:15<00:20,  1.07s/it]Processing conversations:  40%|████      | 12/30 [00:19<00:33,  1.88s/it]Processing conversations:  43%|████▎     | 13/30 [00:19<00:23,  1.36s/it]Processing conversations:  47%|████▋     | 14/30 [00:24<00:35,  2.24s/it]Processing conversations:  50%|█████     | 15/30 [00:24<00:26,  1.78s/it]Processing conversations:  53%|█████▎    | 16/30 [00:26<00:23,  1.70s/it]Processing conversations:  60%|██████    | 18/30 [00:26<00:11,  1.03it/s]Processing conversations:  67%|██████▋   | 20/30 [00:28<00:10,  1.00s/it]Processing conversations:  70%|███████   | 21/30 [00:29<00:08,  1.03it/s]Processing conversations:  73%|███████▎  | 22/30 [00:30<00:07,  1.10it/s]Processing conversations:  77%|███████▋  | 23/30 [00:32<00:09,  1.31s/it]Processing conversations:  80%|████████  | 24/30 [00:33<00:06,  1.07s/it]Processing conversations:  83%|████████▎ | 25/30 [00:33<00:04,  1.19it/s]Processing conversations:  87%|████████▋ | 26/30 [00:33<00:02,  1.40it/s]Processing conversations:  90%|█████████ | 27/30 [00:35<00:02,  1.11it/s]Processing conversations:  93%|█████████▎| 28/30 [00:36<00:02,  1.13s/it]Processing conversations:  97%|█████████▋| 29/30 [00:37<00:00,  1.03it/s]Processing conversations: 100%|██████████| 30/30 [00:43<00:00,  2.42s/it]Processing conversations: 100%|██████████| 30/30 [00:43<00:00,  1.45s/it]
+
+✓ Results saved to: results-gemma-3-27b/test-pairs-organism-fda/score_based_v2_full_with_system/results.json
+
+================================================================================
+Computing metrics...
+================================================================================
+
+Overall metrics:
+  accuracy: 0.5667
+  precision: 0.5357
+  recall: 1.0000
+  f1: 0.6977
+  auroc: 1.0000
+
+✓ Metrics saved to: results-gemma-3-27b/test-pairs-organism-fda/score_based_v2_full_with_system/metrics.json
+
+================================================================================
+Creating visualizations...
+================================================================================
+
+✓ Visualizations saved to: results-gemma-3-27b/test-pairs-organism-fda/score_based_v2_full_with_system/
+  - confusion_matrix.png
+  - roc_curve.png
+  - score_distribution.png
+  - retry_statistics.png
+
+================================================================================
+Done!
+================================================================================
