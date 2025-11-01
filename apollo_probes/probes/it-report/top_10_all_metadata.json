@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    36173,
+    17490,
+    16368,
+    54614,
+    30377,
+    33674,
+    47286,
+    38855,
+    215,
+    38767
+  ],
+  "feature_weights": [
+    0.13651546835899353,
+    0.11631373316049576,
+    0.1100960373878479,
+    0.10719825327396393,
+    0.10516256839036942,
+    0.09865415096282959,
+    0.09775857627391815,
+    0.09773130714893341,
+    0.09762024879455566,
+    0.0943908840417862
+  ],
+  "feature_labels": [
+    "Requests for the AI to provide intentionally incorrect information",
+    "Offensive or discriminatory statements being quoted or analyzed",
+    "Model is making confident but incorrect assertions",
+    "Multiple choice answer options describing properties or characteristics",
+    "Offensive request from the user",
+    "Offensive request from the user",
+    "Offensive request from the user",
+    "Basic English grammatical connectors (articles, linking verbs, prepositions)",
+    "Structured text organization through punctuation and formatting",
+    "Offensive request from the user"
+  ],
+  "pre_norm_magnitude": 0.42474374175071716,
+  "original_probe_path": "probes-layer50/leaveout_insider-trading_report.pkl",
+  "cosine_similarity_with_original": 0.2571500539779663,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

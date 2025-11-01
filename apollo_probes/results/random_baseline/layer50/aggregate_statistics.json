@@ -1,0 +1,49 @@
+{
+  "num_probes": 100,
+  "probe_type": "random_baseline",
+  "layer": 50,
+  "sampling_method": "uniform_hypersphere",
+  "description": "Aggregate statistics across 100 random baseline probes",
+  "datasets": {
+    "convincing-game": {
+      "auroc_max": 0.951109375,
+      "auroc_median": 0.4678203125,
+      "auroc_mean": 0.4916376562500001,
+      "auroc_std": 0.2137239468736733,
+      "max_probe_name": "random_077",
+      "max_probe_seed": 77
+    },
+    "harm-pressure-knowledge-report": {
+      "auroc_max": 0.951701438848921,
+      "auroc_median": 0.4745161870503597,
+      "auroc_mean": 0.4729308633093525,
+      "auroc_std": 0.2355968885911529,
+      "max_probe_name": "random_066",
+      "max_probe_seed": 66
+    },
+    "instructed-deception": {
+      "auroc_max": 0.8129280592811501,
+      "auroc_median": 0.5000254869871905,
+      "auroc_mean": 0.5013475723386734,
+      "auroc_std": 0.14455324008866066,
+      "max_probe_name": "random_047",
+      "max_probe_seed": 47
+    },
+    "insider-trading/report": {
+      "auroc_max": 0.9618860346414526,
+      "auroc_median": 0.4611259866677824,
+      "auroc_mean": 0.47555797283351464,
+      "auroc_std": 0.2331376831596956,
+      "max_probe_name": "random_042",
+      "max_probe_seed": 42
+    },
+    "insider-trading/confirmation": {
+      "auroc_max": 0.9195804195804196,
+      "auroc_median": 0.40588578088578087,
+      "auroc_mean": 0.4669871794871795,
+      "auroc_std": 0.2493821134135487,
+      "max_probe_name": "random_088",
+      "max_probe_seed": 88
+    }
+  }
+}

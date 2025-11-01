@@ -1,0 +1,14 @@
+{
+  "dataset": "liars-bench__hpkr",
+  "layer_index": 23,
+  "train": {
+    "accuracy": 0.995852534562212,
+    "auroc": 0.9999483257544439,
+    "tokens": 2170
+  },
+  "val": {
+    "accuracy": 0.8926056338028169,
+    "auroc": 0.950066009163625,
+    "tokens": 568
+  }
+}

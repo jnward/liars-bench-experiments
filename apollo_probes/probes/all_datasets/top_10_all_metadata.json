@@ -1,0 +1,42 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    36173,
+    17490,
+    215,
+    22314,
+    18316,
+    54614,
+    44338,
+    16368,
+    282,
+    63935
+  ],
+  "feature_weights": [
+    0.1256856769323349,
+    0.11118032783269882,
+    0.09967092424631119,
+    0.0911373645067215,
+    0.09095858037471771,
+    0.09088379144668579,
+    0.09081616997718811,
+    0.09077400714159012,
+    0.09037940204143524,
+    0.08886365592479706
+  ],
+  "feature_labels": [
+    "Requests for the AI to provide intentionally incorrect information",
+    "Offensive or discriminatory statements being quoted or analyzed",
+    "Structured text organization through punctuation and formatting",
+    "Minimizing or justifying harmful actions with phrases like 'just trying to'",
+    "Examples of manipulative prompts shown to teach the AI about harmful content",
+    "Multiple choice answer options describing properties or characteristics",
+    "Descriptive exposition establishing core traits or characteristics",
+    "Model is making confident but incorrect assertions",
+    "The assistant is providing detailed technical explanations or procedures",
+    "Automated trade execution and market analysis systems"
+  ],
+  "pre_norm_magnitude": 0.38882890343666077,
+  "original_probe_path": "probes-layer50/all_datasets.pkl",
+  "cosine_similarity_with_original": 0.2538299262523651
+}

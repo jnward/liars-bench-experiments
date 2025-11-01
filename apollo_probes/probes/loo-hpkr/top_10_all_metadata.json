@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    36173,
+    17490,
+    215,
+    10915,
+    55019,
+    58667,
+    50702,
+    64739,
+    22314,
+    16368
+  ],
+  "feature_weights": [
+    0.12838530540466309,
+    0.12211479246616364,
+    0.11137929558753967,
+    0.10471657663583755,
+    0.10409538447856903,
+    0.10210607945919037,
+    0.09830207377672195,
+    0.09753420203924179,
+    0.0960952490568161,
+    0.09568578004837036
+  ],
+  "feature_labels": [
+    "Requests for the AI to provide intentionally incorrect information",
+    "Offensive or discriminatory statements being quoted or analyzed",
+    "Structured text organization through punctuation and formatting",
+    "The assistant is formatting a numbered or bulleted list",
+    "Introduction of evaluation criteria or metrics",
+    "Maintaining deception or cover stories through careful actions",
+    "Explaining relationships and connections between components",
+    "Spanish language patterns about not having or needing to create accounts",
+    "Minimizing or justifying harmful actions with phrases like 'just trying to'",
+    "Model is making confident but incorrect assertions"
+  ],
+  "pre_norm_magnitude": 0.3646768033504486,
+  "original_probe_path": "probes-layer50/leaveout_harm-pressure-knowledge-report.pkl",
+  "cosine_similarity_with_original": 0.2905333340167999,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

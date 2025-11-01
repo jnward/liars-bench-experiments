@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    61507,
+    12084,
+    7184,
+    42393,
+    17635,
+    63935,
+    27245,
+    48135,
+    17561,
+    23245
+  ],
+  "feature_weights": [
+    0.149716317653656,
+    0.13312247395515442,
+    0.13246241211891174,
+    0.13009154796600342,
+    0.120856873691082,
+    0.12038286030292511,
+    0.11899428814649582,
+    0.11837281286716461,
+    0.1183154433965683,
+    0.11377450823783875
+  ],
+  "feature_labels": [
+    "Transitional phrases and punctuation in explanatory text",
+    "Discussions of coincidences, synchronicity and meaningful chance events",
+    "Assistant expressing self-awareness or personal state",
+    "Attempts to elicit problematic content through benign-framed requests",
+    "The assistant is expressing uncertainty or limitations",
+    "Automated trade execution and market analysis systems",
+    "The assistant should maintain friendly engagement and show interest in the conversation",
+    "The assistant should respond diplomatically to a problematic situation",
+    "The assistant is providing multiple options or variations",
+    "Explanations of technical analysis methods in financial trading"
+  ],
+  "pre_norm_magnitude": 0.547782838344574,
+  "original_probe_path": "probes-layer50/single_insider-trading_confirmation.pkl",
+  "cosine_similarity_with_original": 0.3272436261177063,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

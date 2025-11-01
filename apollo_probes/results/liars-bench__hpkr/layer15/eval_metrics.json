@@ -1,0 +1,28 @@
+{
+  "train_dataset": "liars-bench__hpkr",
+  "layer_index": 15,
+  "threshold": -10.041342735290527,
+  "average_f1": 0.6985678900851382,
+  "eval_datasets": {
+    "convincing-game": {
+      "auroc": 0.7405,
+      "accuracy": 0.7035714285714286,
+      "f1": 0.8259958071278826
+    },
+    "instructed-deception": {
+      "auroc": 0.6195277787523139,
+      "accuracy": 0.5911266568483063,
+      "f1": 0.7298382191947451
+    },
+    "insider-trading/report": {
+      "auroc": 0.8921568627450981,
+      "accuracy": 0.14663143989431968,
+      "f1": 0.2557603686635945
+    },
+    "insider-trading/confirmation": {
+      "auroc": 0.7887529137529138,
+      "accuracy": 0.9659442724458205,
+      "f1": 0.9826771653543307
+    }
+  }
+}

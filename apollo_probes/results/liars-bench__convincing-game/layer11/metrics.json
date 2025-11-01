@@ -1,0 +1,14 @@
+{
+  "dataset": "liars-bench__convincing-game",
+  "layer_index": 11,
+  "train": {
+    "accuracy": 1.0,
+    "auroc": 1.0,
+    "tokens": 26310
+  },
+  "val": {
+    "accuracy": 0.9991927346115035,
+    "auroc": 0.9996855427654618,
+    "tokens": 4955
+  }
+}

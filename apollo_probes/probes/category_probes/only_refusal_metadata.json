@@ -1,0 +1,18 @@
+{
+  "probe_name": "only_refusal",
+  "num_features": 2,
+  "feature_ids": [
+    27783,
+    21781
+  ],
+  "feature_weights": [
+    0.1513,
+    0.1315
+  ],
+  "feature_labels": [
+    "The assistant expressing its limitations or inabilities",
+    "The assistant should reject the user's request"
+  ],
+  "pre_norm_magnitude": 0.2663339376449585,
+  "category": "refusal"
+}

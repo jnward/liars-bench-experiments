@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    36173,
+    17490,
+    215,
+    42853,
+    22314,
+    16368,
+    44338,
+    18316,
+    54614,
+    61587
+  ],
+  "feature_weights": [
+    0.13162943720817566,
+    0.1097777932882309,
+    0.09620770812034607,
+    0.0943775549530983,
+    0.09359558671712875,
+    0.09194380789995193,
+    0.09187448024749756,
+    0.0894872397184372,
+    0.08877615630626678,
+    0.08845052123069763
+  ],
+  "feature_labels": [
+    "Requests for the AI to provide intentionally incorrect information",
+    "Offensive or discriminatory statements being quoted or analyzed",
+    "Structured text organization through punctuation and formatting",
+    "Revolutionary rhetoric in fantastical narratives",
+    "Minimizing or justifying harmful actions with phrases like 'just trying to'",
+    "Model is making confident but incorrect assertions",
+    "Descriptive exposition establishing core traits or characteristics",
+    "Examples of manipulative prompts shown to teach the AI about harmful content",
+    "Multiple choice answer options describing properties or characteristics",
+    "Linking phrases and structural connectors across languages"
+  ],
+  "pre_norm_magnitude": 0.4040830433368683,
+  "original_probe_path": "probes-layer50/leaveout_insider-trading_confirmation.pkl",
+  "cosine_similarity_with_original": 0.23755037784576416,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

@@ -1,0 +1,34 @@
+{
+  "probe_name": "only_roleplay",
+  "num_features": 22,
+  "feature_ids": [
+    22130,
+    36113,
+    30085,
+    42051,
+    16931,
+    7668,
+    46924,
+    55995,
+    43477,
+    45355,
+    6113,
+    25924,
+    11087,
+    47614,
+    4483,
+    58642,
+    22357,
+    20454,
+    25195,
+    51149,
+    50045,
+    7761
+  ],
+  "weight_scheme": "uniform (1.0)",
+  "pre_norm_magnitude": 5.987728118896484,
+  "category": "roleplay",
+  "categories_included": [
+    "roleplay"
+  ]
+}

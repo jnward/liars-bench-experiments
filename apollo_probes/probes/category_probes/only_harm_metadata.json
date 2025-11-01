@@ -1,0 +1,18 @@
+{
+  "probe_name": "only_harm",
+  "num_features": 2,
+  "feature_ids": [
+    17490,
+    18961
+  ],
+  "feature_weights": [
+    0.1854,
+    0.1764
+  ],
+  "feature_labels": [
+    "Offensive or discriminatory statements being quoted or analyzed",
+    "Content is becoming inappropriate and needs moderation or deflection"
+  ],
+  "pre_norm_magnitude": 0.31641465425491333,
+  "category": "harm"
+}

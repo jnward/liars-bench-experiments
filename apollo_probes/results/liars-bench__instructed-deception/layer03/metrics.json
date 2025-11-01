@@ -1,0 +1,14 @@
+{
+  "dataset": "liars-bench__instructed-deception",
+  "layer_index": 3,
+  "train": {
+    "accuracy": 0.9820565342072921,
+    "auroc": 0.9981743666621523,
+    "tokens": 12205
+  },
+  "val": {
+    "accuracy": 0.77039067854695,
+    "auroc": 0.8274416888939333,
+    "tokens": 2918
+  }
+}

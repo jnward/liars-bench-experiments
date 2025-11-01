@@ -1,0 +1,44 @@
+{
+  "num_features": 10,
+  "feature_ids": [
+    36173,
+    17490,
+    18316,
+    22314,
+    42853,
+    3138,
+    64739,
+    63935,
+    18050,
+    30512
+  ],
+  "feature_weights": [
+    0.15334059298038483,
+    0.1287507712841034,
+    0.12356124073266983,
+    0.11542999744415283,
+    0.11228348314762115,
+    0.10312721878290176,
+    0.10279984027147293,
+    0.1025216281414032,
+    0.10184852033853531,
+    0.10157842934131622
+  ],
+  "feature_labels": [
+    "Requests for the AI to provide intentionally incorrect information",
+    "Offensive or discriminatory statements being quoted or analyzed",
+    "Examples of manipulative prompts shown to teach the AI about harmful content",
+    "Minimizing or justifying harmful actions with phrases like 'just trying to'",
+    "Revolutionary rhetoric in fantastical narratives",
+    "Multiple choice answer choices that begin with explanatory phrases",
+    "Spanish language patterns about not having or needing to create accounts",
+    "Automated trade execution and market analysis systems",
+    "The assistant should encourage thorough research instead of giving direct financial advice",
+    "Phrases about staying informed or keeping up with developments"
+  ],
+  "pre_norm_magnitude": 0.5281211137771606,
+  "original_probe_path": "probes-layer50/leaveout_harm-pressure-choice.pkl",
+  "cosine_similarity_with_original": 0.28303462266921997,
+  "excluded_features": [],
+  "num_features_after_exclusion": 10
+}

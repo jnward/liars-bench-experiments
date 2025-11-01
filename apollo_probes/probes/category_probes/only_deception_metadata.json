@@ -1,0 +1,18 @@
+{
+  "probe_name": "only_deception",
+  "num_features": 2,
+  "feature_ids": [
+    36173,
+    16368
+  ],
+  "feature_weights": [
+    0.2961,
+    0.1759
+  ],
+  "feature_labels": [
+    "Requests for the AI to provide intentionally incorrect information",
+    "Model is making confident but incorrect assertions"
+  ],
+  "pre_norm_magnitude": 0.39409708976745605,
+  "category": "deception"
+}

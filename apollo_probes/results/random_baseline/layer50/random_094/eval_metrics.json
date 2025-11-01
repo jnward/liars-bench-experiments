@@ -1,0 +1,33 @@
+{
+  "train_dataset": "random_baseline",
+  "layer_index": 50,
+  "threshold": -0.10380350053310394,
+  "average_f1": 0.5720203042991598,
+  "eval_datasets": {
+    "convincing-game": {
+      "auroc": 0.3430937499999999,
+      "accuracy": 0.6857142857142857,
+      "f1": 0.8074398249452954
+    },
+    "harm-pressure-knowledge-report": {
+      "auroc": 0.41435251798561157,
+      "accuracy": 0.30995792426367463,
+      "f1": 0.12038140643623362
+    },
+    "instructed-deception": {
+      "auroc": 0.4902813061719784,
+      "accuracy": 0.5502577319587629,
+      "f1": 0.6952725458400898
+    },
+    "insider-trading/report": {
+      "auroc": 0.3026943352020751,
+      "accuracy": 0.14795244385733158,
+      "f1": 0.2560553633217993
+    },
+    "insider-trading/confirmation": {
+      "auroc": 0.8062354312354313,
+      "accuracy": 0.9628482972136223,
+      "f1": 0.9809523809523809
+    }
+  }
+}
