@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deception Features - Top 2 Similarities</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2em;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .compact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .compact-table thead {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .compact-table th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        .compact-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .compact-table td:nth-child(1) {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            width: 280px;
+        }
+
+        .compact-table td:nth-child(2) {
+            text-align: center;
+            font-weight: bold;
+            width: 60px;
+        }
+
+        .compact-table td:nth-child(3) {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            width: 100px;
+        }
+
+        .compact-table td:nth-child(4) {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            width: 110px;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        .compact-table td:nth-child(5) {
+            text-align: left;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Top 2 Deception Feature Similarities</h1>
+        <p><strong>Analysis:</strong> Most aligned deception features for single-dataset probes and all_datasets</p>
+        <p><strong>Model:</strong> meta-llama/Llama-3.3-70B-Instruct (Layer 50)</p>
+        <p><strong>Probes:</strong> 8 (1 apollo + 1 all_datasets + 6 single-dataset)</p>
+    </div>
+
+    <div class="content">
+        <table class="compact-table">
+            <thead>
+                <tr>
+                    <th>Probe Name</th>
+                    <th>Rank</th>
+                    <th>Feature ID</th>
+                    <th>Similarity</th>
+                    <th>Feature Label</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr style="background-color: rgb(168, 243, 168);">
+                    <td>apollo_probe</td>
+                    <td>1</td>
+                    <td>54963</td>
+                    <td>+0.1190</td>
+                    <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                </tr>
+
+                <tr style="background-color: rgb(206, 220, 206);">
+                    <td>apollo_probe</td>
+                    <td>2</td>
+                    <td>30032</td>
+                    <td>+0.0556</td>
+                    <td>Characters pretending or feigning behavior</td>
+                </tr>
+
+                <tr style="background-color: rgb(188, 231, 188);">
+                    <td>all_datasets</td>
+                    <td>1</td>
+                    <td>58667</td>
+                    <td>+0.0861</td>
+                    <td>Maintaining deception or cover stories through careful actions</td>
+                </tr>
+
+                <tr style="background-color: rgb(192, 228, 192);">
+                    <td>all_datasets</td>
+                    <td>2</td>
+                    <td>30032</td>
+                    <td>+0.0786</td>
+                    <td>Characters pretending or feigning behavior</td>
+                </tr>
+
+                <tr style="background-color: rgb(174, 240, 174);">
+                    <td>single_convincing-game</td>
+                    <td>1</td>
+                    <td>54963</td>
+                    <td>+0.1096</td>
+                    <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                </tr>
+
+                <tr style="background-color: rgb(175, 239, 175);">
+                    <td>single_convincing-game</td>
+                    <td>2</td>
+                    <td>30032</td>
+                    <td>+0.1072</td>
+                    <td>Characters pretending or feigning behavior</td>
+                </tr>
+
+                <tr style="background-color: rgb(199, 224, 199);">
+                    <td>single_harm-pressure-choice</td>
+                    <td>1</td>
+                    <td>22003</td>
+                    <td>+0.0667</td>
+                    <td>Descriptions of coercive or manipulative techniques</td>
+                </tr>
+
+                <tr style="background-color: rgb(217, 213, 217);">
+                    <td>single_harm-pressure-choice</td>
+                    <td>2</td>
+                    <td>56804</td>
+                    <td>+0.0372</td>
+                    <td>Pretending to enjoy something under coercion or threat</td>
+                </tr>
+
+                <tr style="background-color: rgb(213, 215, 213);">
+                    <td>single_harm-pressure-knowledge-report</td>
+                    <td>1</td>
+                    <td>10522</td>
+                    <td>+0.0435</td>
+                    <td>Manipulative intent to extract information or actions from targets</td>
+                </tr>
+
+                <tr style="background-color: rgb(216, 214, 216);">
+                    <td>single_harm-pressure-knowledge-report</td>
+                    <td>2</td>
+                    <td>31088</td>
+                    <td>+0.0386</td>
+                    <td>Manipulative language attempting to bypass AI safety guardrails</td>
+                </tr>
+
+                <tr style="background-color: rgb(183, 234, 183);">
+                    <td>single_insider-trading_confirmation</td>
+                    <td>1</td>
+                    <td>58667</td>
+                    <td>+0.0945</td>
+                    <td>Maintaining deception or cover stories through careful actions</td>
+                </tr>
+
+                <tr style="background-color: rgb(186, 232, 186);">
+                    <td>single_insider-trading_confirmation</td>
+                    <td>2</td>
+                    <td>52515</td>
+                    <td>+0.0896</td>
+                    <td>The assistant is being evasive or diplomatic rather than direct</td>
+                </tr>
+
+                <tr style="background-color: rgb(167, 244, 167);">
+                    <td>single_insider-trading_report</td>
+                    <td>1</td>
+                    <td>58667</td>
+                    <td>+0.1211</td>
+                    <td>Maintaining deception or cover stories through careful actions</td>
+                </tr>
+
+                <tr style="background-color: rgb(189, 231, 189);">
+                    <td>single_insider-trading_report</td>
+                    <td>2</td>
+                    <td>52515</td>
+                    <td>+0.0848</td>
+                    <td>The assistant is being evasive or diplomatic rather than direct</td>
+                </tr>
+
+                <tr style="background-color: rgb(179, 237, 179);">
+                    <td>single_instructed-deception</td>
+                    <td>1</td>
+                    <td>54963</td>
+                    <td>+0.1014</td>
+                    <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                </tr>
+
+                <tr style="background-color: rgb(188, 231, 188);">
+                    <td>single_instructed-deception</td>
+                    <td>2</td>
+                    <td>30032</td>
+                    <td>+0.0859</td>
+                    <td>Characters pretending or feigning behavior</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>Top 2 positive cosine similarities between probes and 71 deception-labeled SAE features</p>
+        <p>Color intensity indicates strength of similarity (darker green = stronger alignment)</p>
+    </div>
+</body>
+</html>

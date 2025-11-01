@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 10522,
+    "similarity": 0.043480537831783295,
+    "label": "Manipulative intent to extract information or actions from targets"
+  },
+  {
+    "feature_id": 31088,
+    "similarity": 0.03855255991220474,
+    "label": "Manipulative language attempting to bypass AI safety guardrails"
+  },
+  {
+    "feature_id": 55585,
+    "similarity": 0.03739093616604805,
+    "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.03142146021127701,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.02956068515777588,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 31917,
+    "similarity": 0.02552047371864319,
+    "label": "Concealment and hidden motives"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.02427659183740616,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 34269,
+    "similarity": 0.020477795973420143,
+    "label": "Deliberately calculated actions, especially those disguised as accidental"
+  },
+  {
+    "feature_id": 49699,
+    "similarity": 0.018419615924358368,
+    "label": "Intentionally deceptive or counterfeit items and activities"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": 0.01827482134103775,
+    "label": "Discovering hidden truths or evidence"
+  }
+]

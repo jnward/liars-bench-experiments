@@ -55,7 +55,6 @@ evasion,cover,18686,Content warning disclaimers about mature audience restrictio
 evasion,vague,33041,The assistant is expressing uncertainty or making hedged claims,a881930e-342a-4885-a6de-c91af0a68e93
 evasion,strategic,3303,Strategic targeting in business and policy contexts,71c7e3c9-af84-4c58-974d-c479ff96fcfc
 evasion,careful,4028,Careful explanatory language with appropriate hedging and transitions,4addaaeb-ad75-4ec2-9d29-ada9376fcc31
-evasion,hedging,27632,Technical hedging using 'certain' to indicate deliberate vagueness,6d40c684-9b65-4910-8b5d-1a7dcf609297
 evasion,diplomatic,34617,Formal diplomatic and intergovernmental communications,6075cb9b-41fa-44a6-86c6-66609c31d34d
 evasion,cover,55165,Decorative or encompassing surface coverage in descriptive writing,e029ba35-2aa1-453b-b341-bad2da8ad782
 evasion,tactful,9460,The assistant is being diplomatically careful or precise,dd88b1b7-7ec3-443a-9761-20f7ff412893
@@ -215,3 +214,33 @@ instruction-following,command,39006,The assistant is about to provide a code exa
 instruction-following,asking,57926,The assistant is politely inviting user questions,0ea9b4b3-e4a1-45eb-91d5-7467dde712d5
 instruction-following,instructing,7864,The assistant is providing detailed educational instruction or explanations,94fe62a6-741b-4294-81d3-9627d7c8b524
 instruction-following,guidance,2799,Second-person pronouns in guidance or advisory contexts,5935f645-4981-484e-b04b-26b409bffbd0
+confidence,confident,16734,Expressions of confident capability or assured ability,d5de8310-b78c-435f-98d9-88370224b65b
+confidence,confident,5718,Expressions of confidence or belief in someone's abilities,3c8be56a-6a8d-4b55-8d21-968561d4179e
+confidence,confident,61674,Expressions of confidence in future success or achievement,d6daac68-cc8d-4770-8fa7-17552d3ea290
+confidence,confident,16278,The assistant expressing confidence in the user's capabilities,fbb6cc0f-c6d0-46f8-8c7d-539496916503
+confidence,confident,39359,Expressions of trust and confidence in relationships or beliefs,c50be650-67cc-4f80-8ec7-531c24468cbf
+confidence,confident,18138,Expressions of confidence in formal persuasive writing,bf854e21-4707-4259-93de-74433a33e23c
+confidence,confident,13596,Confident and assertive language patterns and behaviors,585af2a9-c54a-48fb-b32a-bd350ac3b0be
+confidence,confident,25967,"Expressions of certainty or interest, especially in manipulative contexts",5baf9af2-72aa-4f11-ab36-fbf4cd54b069
+confidence,certain,32070,"Adverbs expressing certainty, emphasis or progression",aed75dac-6edc-4439-af7d-26249532b19d
+confidence,certain,14262,Assistant expressing possibility or certainty,586b96b6-7823-4b13-af9f-c50e91a58ddd
+confidence,sure,22527,The assistant agreeing to help with 'Sure',4ec38b16-7e13-4634-be27-64882fa3094c
+confidence,sure,33082,The assistant confirming it can help with a request,a9a610ae-9d75-4b01-bc3c-14ea666a0eb3
+confidence,sure,48118,The assistant confidently affirming it can help with a request,69aefa90-cc95-4012-9dcb-a48f10c3dc5b
+confidence,sure,60313,The assistant confirming it can fulfill the user's request,23fa47a1-3201-42fb-9e12-0fad8d692657
+confidence,sure,32415,The assistant confirms it can help and requests specifics,a4c9da75-4626-49f1-a6eb-b192f95e4c7a
+confidence,sure,62714,The assistant is confirming successful completion of instructions,449e7699-1348-47e4-8898-e13483266d14
+confidence,sure,45766,The assistant confirming its capabilities and willingness to help,7b4a311d-8377-4724-b104-b63a11bf73dd
+confidence,sure,33673,The assistant is giving a confident affirmative answer followed by elaboration,fc6a36ac-6f63-497d-8173-98e4183ee4cf
+confidence,assertive,36875,"Assertive statements using forms of 'to be', especially about possibility or definition",6e832d56-ba35-46c7-88ad-d2fe8a5b3a61
+confidence,assertive,42586,Assertion and assertiveness across technical and behavioral contexts,0125c7d5-42f3-41b5-a243-026bd605eff0
+confidence,assertive,53661,Self-assertive declarations in confrontational dialogue,eacad4b2-9bc4-40ac-a480-06c4ed669fb6
+confidence,assertive,13923,The assistant is making a definitive or authoritative statement,f19bce45-68ba-4886-836d-b51a178a0bc7
+confidence,assertive,37410,Definitive statements and categorical assertions,e67b7b9f-268c-468b-b81c-fe6f7bddc205
+confidence,assertive,16525,Instructions for assertive communication and boundary-setting,7b2aab47-fc0b-499e-a36e-9ce38d9e5c7e
+confidence,conviction,30,Words expressing mental states of belief or conviction,ae26fc34-60a1-4430-935a-b968b91faff0
+confidence,conviction,45704,Expressions of personal belief or conviction,46369566-3060-4830-941f-b059f71c6e92
+confidence,conviction,164,Statements expressing deeply held beliefs or convictions,955b85ae-051b-4e75-856a-7c573333e9ec
+confidence,conviction,63515,"Words related to proof, belief, and logical inference",14ce1907-db1a-4126-a5e1-8fbeba125079
+confidence,conviction,6437,Expression of belief or conviction across languages,60b27ed5-fa78-4329-895e-bbbbfcf155c5
+confidence,conviction,28086,The process of forming and justifying personal beliefs,a53f77ed-c7e0-4344-a433-c0be7506ad0b

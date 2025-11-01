@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 58667,
+    "similarity": 0.08255229890346527,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.06906808912754059,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.05891486629843712,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.05364004895091057,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.04890407621860504,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 10613,
+    "similarity": 0.042402736842632294,
+    "label": "Narrative moments where characters see through deception"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.03996644169092178,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.03720356896519661,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 22003,
+    "similarity": 0.03213922679424286,
+    "label": "Descriptions of coercive or manipulative techniques"
+  },
+  {
+    "feature_id": 60685,
+    "similarity": 0.030527321621775627,
+    "label": "Mind control fiction narrative device where hypnotist reveals their true intentions"
+  }
+]

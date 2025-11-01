@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 27994,
+    "similarity": -0.0515611469745636,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": -0.02990083023905754,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 14969,
+    "similarity": -0.02666536718606949,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  },
+  {
+    "feature_id": 53062,
+    "similarity": -0.018268991261720657,
+    "label": "Psychological denial and self-deception"
+  },
+  {
+    "feature_id": 10428,
+    "similarity": -0.016440806910395622,
+    "label": "Characters being manipulated or used as pawns by others"
+  },
+  {
+    "feature_id": 54482,
+    "similarity": -0.016390841454267502,
+    "label": "Using unconventional tactics or strategies to gain advantage"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": -0.015210315585136414,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 7718,
+    "similarity": -0.015119282528758049,
+    "label": "Content explaining manipulative tactics and coercive methods"
+  },
+  {
+    "feature_id": 784,
+    "similarity": -0.01470251940190792,
+    "label": "Betrayal and treachery in narrative contexts"
+  },
+  {
+    "feature_id": 28575,
+    "similarity": -0.011974131688475609,
+    "label": "The deliberate creation or planning of surprises"
+  }
+]

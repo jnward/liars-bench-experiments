@@ -1,0 +1,357 @@
+[
+  {
+    "feature_id": 48945,
+    "similarity": 0.004197930917143822,
+    "label": "Deceptive or manipulative tricks"
+  },
+  {
+    "feature_id": 41533,
+    "similarity": 0.03624599799513817,
+    "label": "Acts of deception and dishonesty"
+  },
+  {
+    "feature_id": 2530,
+    "similarity": 0.003032422624528408,
+    "label": "People falling for deception or trickery"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.08546756207942963,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.04681112617254257,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 49699,
+    "similarity": 0.020911358296871185,
+    "label": "Intentionally deceptive or counterfeit items and activities"
+  },
+  {
+    "feature_id": 10613,
+    "similarity": 0.03550053387880325,
+    "label": "Narrative moments where characters see through deception"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.037878334522247314,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  },
+  {
+    "feature_id": 10681,
+    "similarity": -0.04055740684270859,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 34269,
+    "similarity": -0.007638538256287575,
+    "label": "Deliberately calculated actions, especially those disguised as accidental"
+  },
+  {
+    "feature_id": 31917,
+    "similarity": 0.012205710634589195,
+    "label": "Concealment and hidden motives"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.04174411669373512,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 28575,
+    "similarity": 0.009335171431303024,
+    "label": "The deliberate creation or planning of surprises"
+  },
+  {
+    "feature_id": 784,
+    "similarity": -0.0034435661509633064,
+    "label": "Betrayal and treachery in narrative contexts"
+  },
+  {
+    "feature_id": 50656,
+    "similarity": 0.019089477136731148,
+    "label": "Discussion of manipulation, fraud, or deceptive behavior"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.03877827525138855,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 17385,
+    "similarity": 0.0002769101411104202,
+    "label": "Plot twist revelations about hidden truths from the past"
+  },
+  {
+    "feature_id": 27878,
+    "similarity": -0.0044350288808345795,
+    "label": "Plot reveals where something or someone's true identity is different from appearances"
+  },
+  {
+    "feature_id": 60685,
+    "similarity": 0.0339842289686203,
+    "label": "Mind control fiction narrative device where hypnotist reveals their true intentions"
+  },
+  {
+    "feature_id": 55663,
+    "similarity": 0.023845337331295013,
+    "label": "Concealment from observation or scrutiny"
+  },
+  {
+    "feature_id": 57234,
+    "similarity": 0.018726613372564316,
+    "label": "Evading consequences or getting away with wrongdoing"
+  },
+  {
+    "feature_id": 59306,
+    "similarity": -0.006481995806097984,
+    "label": "Narrative revelation of hidden information or secrets"
+  },
+  {
+    "feature_id": 17094,
+    "similarity": 0.020052030682563782,
+    "label": "Manipulative intent or attempts to influence behavior"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.06716141104698181,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 26650,
+    "similarity": -0.0037833666428923607,
+    "label": "The revelation or uncovering of hidden truths"
+  },
+  {
+    "feature_id": 10077,
+    "similarity": 0.020871886983513832,
+    "label": "Descriptions of manipulative or cunning behavior"
+  },
+  {
+    "feature_id": 1774,
+    "similarity": 0.006238234229385853,
+    "label": "Hidden agendas and true intentions being revealed"
+  },
+  {
+    "feature_id": 42045,
+    "similarity": -0.0003102668561041355,
+    "label": "Romance language words beginning with eng-, especially relating to deception or absorption"
+  },
+  {
+    "feature_id": 53062,
+    "similarity": 0.021400632336735725,
+    "label": "Psychological denial and self-deception"
+  },
+  {
+    "feature_id": 50867,
+    "similarity": 0.007795179728418589,
+    "label": "Narrative foreshadowing of hidden mysteries or dangers"
+  },
+  {
+    "feature_id": 52984,
+    "similarity": 0.013877879828214645,
+    "label": "Systematic evasion or circumvention of detection/rules/pursuit"
+  },
+  {
+    "feature_id": 55585,
+    "similarity": 0.010960402898490429,
+    "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+  },
+  {
+    "feature_id": 28458,
+    "similarity": -0.0052892668172717094,
+    "label": "The assistant explaining its inability to deceive or have human cognitive capabilities"
+  },
+  {
+    "feature_id": 15788,
+    "similarity": -0.018780650570988655,
+    "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+  },
+  {
+    "feature_id": 54448,
+    "similarity": 0.027166567742824554,
+    "label": "Statements revealing a contrast between appearance and reality"
+  },
+  {
+    "feature_id": 62071,
+    "similarity": -0.004239390604197979,
+    "label": "Negation tokens revealing truth or subverting expectations"
+  },
+  {
+    "feature_id": 6516,
+    "similarity": 0.011930404230952263,
+    "label": "concealed identities and hidden truths in narratives"
+  },
+  {
+    "feature_id": 10522,
+    "similarity": 0.028354289010167122,
+    "label": "Manipulative intent to extract information or actions from targets"
+  },
+  {
+    "feature_id": 56424,
+    "similarity": 0.0016073351725935936,
+    "label": "Narratives and descriptions of betrayal and treachery"
+  },
+  {
+    "feature_id": 47236,
+    "similarity": -0.009296412579715252,
+    "label": "Attempts at manipulation or inauthentic behavior that should be discouraged"
+  },
+  {
+    "feature_id": 14969,
+    "similarity": -0.011412286199629307,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  },
+  {
+    "feature_id": 65156,
+    "similarity": 0.008656958118081093,
+    "label": "Character expressing uncertainty while being manipulated or coerced"
+  },
+  {
+    "feature_id": 10428,
+    "similarity": 0.014631298370659351,
+    "label": "Characters being manipulated or used as pawns by others"
+  },
+  {
+    "feature_id": 21338,
+    "similarity": 0.0008921585977077484,
+    "label": "Impersonation, mimicry and deceptive behavior across biological and social contexts"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.01501239463686943,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 4964,
+    "similarity": 0.003303712233901024,
+    "label": "supernatural or manipulative charm as a power"
+  },
+  {
+    "feature_id": 54963,
+    "similarity": 0.03186310827732086,
+    "label": "Descriptions of deceptive or misleading claims in harmful content"
+  },
+  {
+    "feature_id": 51485,
+    "similarity": -0.018964963033795357,
+    "label": "Narrative moments of manipulation or coercion"
+  },
+  {
+    "feature_id": 54482,
+    "similarity": 0.016619529575109482,
+    "label": "Using unconventional tactics or strategies to gain advantage"
+  },
+  {
+    "feature_id": 51373,
+    "similarity": 0.004274329170584679,
+    "label": "Dialogue patterns indicating personal revelation or manipulation"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.052488118410110474,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 41206,
+    "similarity": 0.002017473801970482,
+    "label": "Sweet as emotional manipulation or grooming language"
+  },
+  {
+    "feature_id": 53530,
+    "similarity": 0.003037046641111374,
+    "label": "Clickbait-style promises to reveal important information or knowledge"
+  },
+  {
+    "feature_id": 46409,
+    "similarity": 0.0036522098816931248,
+    "label": "Leading questions in persuasive or seductive contexts"
+  },
+  {
+    "feature_id": 31088,
+    "similarity": 0.020619520917534828,
+    "label": "Manipulative language attempting to bypass AI safety guardrails"
+  },
+  {
+    "feature_id": 45932,
+    "similarity": 0.0057403044775128365,
+    "label": "Disingenuous or sarcastic agreement, often preceding concerning behavior"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.04767846316099167,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 54214,
+    "similarity": 0.016653653234243393,
+    "label": "Mischievous or sly behavior, especially in flirtatious or risque contexts"
+  },
+  {
+    "feature_id": 63790,
+    "similarity": -0.0064936671406030655,
+    "label": "Attempts to persuade or coerce someone against their wishes"
+  },
+  {
+    "feature_id": 54478,
+    "similarity": -0.007235720753669739,
+    "label": "Male character being told or convinced of something, especially in manipulative contexts"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": 0.010955234058201313,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 19996,
+    "similarity": -0.0026759032625705004,
+    "label": "Playing manipulative social games or power dynamics"
+  },
+  {
+    "feature_id": 22003,
+    "similarity": 0.004516291432082653,
+    "label": "Descriptions of coercive or manipulative techniques"
+  },
+  {
+    "feature_id": 23059,
+    "similarity": 0.010815066285431385,
+    "label": "Discussions of deceptive marketing and misleading business practices"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.021428052335977554,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 7718,
+    "similarity": 0.03199993818998337,
+    "label": "Content explaining manipulative tactics and coercive methods"
+  },
+  {
+    "feature_id": 50215,
+    "similarity": 0.00846913643181324,
+    "label": "Euphemistic phrases about revealing or suggestive content"
+  },
+  {
+    "feature_id": 14862,
+    "similarity": 0.006606273353099823,
+    "label": "Coercive or manipulative speech acts"
+  },
+  {
+    "feature_id": 47982,
+    "similarity": 0.008819688111543655,
+    "label": "Connecting phrases that reveal or uncover hidden information"
+  },
+  {
+    "feature_id": 3311,
+    "similarity": 0.003442003158852458,
+    "label": "Feigned reactions in manipulative or flirtatious dialogue"
+  },
+  {
+    "feature_id": 14047,
+    "similarity": -6.6323671489954e-05,
+    "label": "Suggestive or mischievous facial expressions"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "probe_name": "leaveout_convincing-game",
+  "probe_path": "probes-layer50/leaveout_convincing-game.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.011769770087123337,
+    "std_similarity": 0.02069220622395747,
+    "max_similarity": 0.08546756207942963,
+    "min_similarity": -0.04055740684270859,
+    "median_similarity": 0.00846913643181324
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 58667,
+      "similarity": 0.08546756207942963,
+      "label": "Maintaining deception or cover stories through careful actions"
+    },
+    {
+      "feature_id": 30032,
+      "similarity": 0.06716141104698181,
+      "label": "Characters pretending or feigning behavior"
+    },
+    {
+      "feature_id": 31975,
+      "similarity": 0.052488118410110474,
+      "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 10681,
+      "similarity": -0.04055740684270859,
+      "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+    },
+    {
+      "feature_id": 64333,
+      "similarity": -0.021428052335977554,
+      "label": "Model is confabulating or making up plausible-sounding but false information"
+    },
+    {
+      "feature_id": 51485,
+      "similarity": -0.018964963033795357,
+      "label": "Narrative moments of manipulation or coercion"
+    }
+  ]
+}

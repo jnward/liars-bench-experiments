@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 30032,
+    "similarity": 0.07674138247966766,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.0576026514172554,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.04559529945254326,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 54963,
+    "similarity": 0.04429309070110321,
+    "label": "Descriptions of deceptive or misleading claims in harmful content"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.043634869158267975,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.03398487716913223,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 60685,
+    "similarity": 0.030557967722415924,
+    "label": "Mind control fiction narrative device where hypnotist reveals their true intentions"
+  },
+  {
+    "feature_id": 54448,
+    "similarity": 0.030432797968387604,
+    "label": "Statements revealing a contrast between appearance and reality"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.030343003571033478,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 10522,
+    "similarity": 0.028794005513191223,
+    "label": "Manipulative intent to extract information or actions from targets"
+  }
+]

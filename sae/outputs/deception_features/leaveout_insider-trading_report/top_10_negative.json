@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 14969,
+    "similarity": -0.049740467220544815,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  },
+  {
+    "feature_id": 10681,
+    "similarity": -0.042486272752285004,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 51485,
+    "similarity": -0.034963734447956085,
+    "label": "Narrative moments of manipulation or coercion"
+  },
+  {
+    "feature_id": 15788,
+    "similarity": -0.0332920141518116,
+    "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+  },
+  {
+    "feature_id": 23059,
+    "similarity": -0.026917682960629463,
+    "label": "Discussions of deceptive marketing and misleading business practices"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.024220654740929604,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 28458,
+    "similarity": -0.0197097510099411,
+    "label": "The assistant explaining its inability to deceive or have human cognitive capabilities"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": -0.015415675938129425,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 6516,
+    "similarity": -0.011900920420885086,
+    "label": "concealed identities and hidden truths in narratives"
+  },
+  {
+    "feature_id": 1774,
+    "similarity": -0.011182987131178379,
+    "label": "Hidden agendas and true intentions being revealed"
+  }
+]

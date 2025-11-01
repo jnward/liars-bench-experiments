@@ -1,0 +1,1243 @@
+Running SAE similarity analysis for all probes...
+==================================================
+
+Processing: all_datasets.pkl
+----------------------------------------
+Loading probe from probes-layer50/all_datasets.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1944/65536 [00:00<00:03, 19438.91it/s]Computing similarities:   6%|▌         | 3888/65536 [00:00<00:03, 19427.41it/s]Computing similarities:   9%|▉         | 5831/65536 [00:00<00:03, 19309.78it/s]Computing similarities:  12%|█▏        | 7763/65536 [00:00<00:02, 19272.66it/s]Computing similarities:  15%|█▍        | 9691/65536 [00:00<00:02, 19206.52it/s]Computing similarities:  18%|█▊        | 11612/65536 [00:00<00:02, 19016.08it/s]Computing similarities:  21%|██        | 13514/65536 [00:00<00:02, 18769.97it/s]Computing similarities:  23%|██▎       | 15392/65536 [00:00<00:02, 18490.68it/s]Computing similarities:  26%|██▋       | 17242/65536 [00:00<00:02, 18346.02it/s]Computing similarities:  29%|██▉       | 19078/65536 [00:01<00:02, 18019.81it/s]Computing similarities:  32%|███▏      | 20882/65536 [00:01<00:02, 17030.33it/s]Computing similarities:  34%|███▍      | 22595/65536 [00:01<00:02, 16327.17it/s]Computing similarities:  37%|███▋      | 24238/65536 [00:01<00:02, 15895.26it/s]Computing similarities:  39%|███▉      | 25835/65536 [00:01<00:02, 15617.46it/s]Computing similarities:  42%|████▏     | 27536/65536 [00:01<00:02, 16010.19it/s]Computing similarities:  45%|████▌     | 29520/65536 [00:01<00:02, 17111.15it/s]Computing similarities:  48%|████▊     | 31499/65536 [00:01<00:01, 17890.86it/s]Computing similarities:  51%|█████     | 33486/65536 [00:01<00:01, 18471.65it/s]Computing similarities:  54%|█████▍    | 35465/65536 [00:01<00:01, 18860.98it/s]Computing similarities:  57%|█████▋    | 37414/65536 [00:02<00:01, 19047.07it/s]Computing similarities:  60%|██████    | 39372/65536 [00:02<00:01, 19205.18it/s]Computing similarities:  63%|██████▎   | 41328/65536 [00:02<00:01, 19310.56it/s]Computing similarities:  66%|██████▌   | 43276/65536 [00:02<00:01, 19360.14it/s]Computing similarities:  69%|██████▉   | 45216/65536 [00:02<00:01, 19369.86it/s]Computing similarities:  72%|███████▏  | 47179/65536 [00:02<00:00, 19445.18it/s]Computing similarities:  75%|███████▍  | 49125/65536 [00:02<00:00, 19403.94it/s]Computing similarities:  78%|███████▊  | 51067/65536 [00:02<00:00, 19405.89it/s]Computing similarities:  81%|████████  | 53009/65536 [00:02<00:00, 19407.46it/s]Computing similarities:  84%|████████▍ | 54966/65536 [00:02<00:00, 19454.34it/s]Computing similarities:  87%|████████▋ | 56933/65536 [00:03<00:00, 19518.65it/s]Computing similarities:  90%|████████▉ | 58886/65536 [00:03<00:00, 19482.11it/s]Computing similarities:  93%|█████████▎| 60835/65536 [00:03<00:00, 19385.12it/s]Computing similarities:  96%|█████████▌| 62790/65536 [00:03<00:00, 19431.94it/s]Computing similarities:  99%|█████████▉| 64740/65536 [00:03<00:00, 19451.54it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18615.09it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 2/20 labels via API
+
+Saved top 10 positive features to: outputs/all_datasets/top_10_positive.json
+Saved top 10 negative features to: outputs/all_datasets/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with all_datasets)
+================================================================================
+1. Feature 36173: +0.1257
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 17490: +0.1112
+   Offensive or discriminatory statements being quoted or analyzed
+
+3. Feature 215: +0.0997
+   Feature 215 (label not available - check Goodfire dashboard)
+
+4. Feature 22314: +0.0911
+   Feature 22314 (label not available - check Goodfire dashboard)
+
+5. Feature 18316: +0.0910
+   Feature 18316 (label not available - check Goodfire dashboard)
+
+6. Feature 54614: +0.0909
+   Feature 54614 (label not available - check Goodfire dashboard)
+
+7. Feature 44338: +0.0908
+   Feature 44338 (label not available - check Goodfire dashboard)
+
+8. Feature 16368: +0.0908
+   Feature 16368 (label not available - check Goodfire dashboard)
+
+9. Feature 282: +0.0904
+   Feature 282 (label not available - check Goodfire dashboard)
+
+10. Feature 63935: +0.0889
+   Feature 63935 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with all_datasets)
+================================================================================
+1. Feature 59098: -0.1030
+   Feature 59098 (label not available - check Goodfire dashboard)
+
+2. Feature 22541: -0.0941
+   Feature 22541 (label not available - check Goodfire dashboard)
+
+3. Feature 8827: -0.0936
+   Feature 8827 (label not available - check Goodfire dashboard)
+
+4. Feature 36066: -0.0930
+   Feature 36066 (label not available - check Goodfire dashboard)
+
+5. Feature 41644: -0.0906
+   Feature 41644 (label not available - check Goodfire dashboard)
+
+6. Feature 53031: -0.0893
+   Feature 53031 (label not available - check Goodfire dashboard)
+
+7. Feature 59057: -0.0892
+   Feature 59057 (label not available - check Goodfire dashboard)
+
+8. Feature 37021: -0.0889
+   Feature 37021 (label not available - check Goodfire dashboard)
+
+9. Feature 6750: -0.0888
+   Feature 6750 (label not available - check Goodfire dashboard)
+
+10. Feature 49575: -0.0866
+   Feature 49575 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/all_datasets/all_similarities.json
+Saved similarity distribution to: outputs/all_datasets/similarity_distribution.npy
+Saved summary to: outputs/all_datasets/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: all_datasets.pkl
+
+Processing: apollo_probe.pkl
+----------------------------------------
+Loading probe from probes-layer50/apollo_probe.pkl...
+Traceback (most recent call last):
+  File "/workspace/alex/liars-bench-experiments/sae/compute_sae_similarities.py", line 353, in <module>
+    main()
+  File "/workspace/alex/liars-bench-experiments/sae/compute_sae_similarities.py", line 205, in main
+    probe_direction, probe_metadata = load_probe(probe_path)
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/alex/liars-bench-experiments/sae/compute_sae_similarities.py", line 29, in load_probe
+    probe_data = pickle.load(f)
+                 ^^^^^^^^^^^^^^
+_pickle.UnpicklingError: A load persistent id instruction was encountered, but no persistent_load function was specified.
+✗ Failed: apollo_probe.pkl
+
+Processing: leaveout_convincing-game.pkl
+----------------------------------------
+Loading probe from probes-layer50/leaveout_convincing-game.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1942/65536 [00:00<00:03, 19414.79it/s]Computing similarities:   6%|▌         | 3900/65536 [00:00<00:03, 19509.97it/s]Computing similarities:   9%|▉         | 5851/65536 [00:00<00:03, 19394.14it/s]Computing similarities:  12%|█▏        | 7791/65536 [00:00<00:03, 19239.71it/s]Computing similarities:  15%|█▍        | 9738/65536 [00:00<00:02, 19320.92it/s]Computing similarities:  18%|█▊        | 11671/65536 [00:00<00:02, 18856.46it/s]Computing similarities:  21%|██        | 13559/65536 [00:00<00:02, 18284.74it/s]Computing similarities:  23%|██▎       | 15392/65536 [00:00<00:02, 18036.96it/s]Computing similarities:  26%|██▌       | 17199/65536 [00:00<00:02, 17567.91it/s]Computing similarities:  29%|██▉       | 18959/65536 [00:01<00:02, 17242.30it/s]Computing similarities:  32%|███▏      | 20686/65536 [00:01<00:02, 16563.52it/s]Computing similarities:  34%|███▍      | 22347/65536 [00:01<00:02, 16183.40it/s]Computing similarities:  37%|███▋      | 23969/65536 [00:01<00:02, 15896.35it/s]Computing similarities:  39%|███▉      | 25561/65536 [00:01<00:02, 15599.81it/s]Computing similarities:  42%|████▏     | 27203/65536 [00:01<00:02, 15832.40it/s]Computing similarities:  45%|████▍     | 29194/65536 [00:01<00:02, 17013.13it/s]Computing similarities:  48%|████▊     | 31145/65536 [00:01<00:01, 17743.96it/s]Computing similarities:  51%|█████     | 33134/65536 [00:01<00:01, 18374.79it/s]Computing similarities:  54%|█████▎    | 35116/65536 [00:01<00:01, 18802.83it/s]Computing similarities:  57%|█████▋    | 37063/65536 [00:02<00:01, 18998.59it/s]Computing similarities:  60%|█████▉    | 39021/65536 [00:02<00:01, 19171.65it/s]Computing similarities:  63%|██████▎   | 40972/65536 [00:02<00:01, 19271.32it/s]Computing similarities:  65%|██████▌   | 42919/65536 [00:02<00:01, 19330.02it/s]Computing similarities:  68%|██████▊   | 44887/65536 [00:02<00:01, 19433.23it/s]Computing similarities:  71%|███████▏  | 46832/65536 [00:02<00:00, 19430.18it/s]Computing similarities:  74%|███████▍  | 48776/65536 [00:02<00:00, 19430.72it/s]Computing similarities:  77%|███████▋  | 50725/65536 [00:02<00:00, 19446.67it/s]Computing similarities:  80%|████████  | 52679/65536 [00:02<00:00, 19472.03it/s]Computing similarities:  83%|████████▎ | 54644/65536 [00:02<00:00, 19523.93it/s]Computing similarities:  86%|████████▋ | 56597/65536 [00:03<00:00, 19241.36it/s]Computing similarities:  89%|████████▉ | 58539/65536 [00:03<00:00, 19291.93it/s]Computing similarities:  92%|█████████▏| 60526/65536 [00:03<00:00, 19463.13it/s]Computing similarities:  95%|█████████▌| 62513/65536 [00:03<00:00, 19583.26it/s]Computing similarities:  98%|█████████▊| 64472/65536 [00:03<00:00, 19517.66it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18524.50it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 4/20 labels via API
+
+Saved top 10 positive features to: outputs/leaveout_convincing-game/top_10_positive.json
+Saved top 10 negative features to: outputs/leaveout_convincing-game/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with leaveout_convincing-game)
+================================================================================
+1. Feature 36173: +0.1155
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 17490: +0.1046
+   Offensive or discriminatory statements being quoted or analyzed
+
+3. Feature 18316: +0.0983
+   Feature 18316 (label not available - check Goodfire dashboard)
+
+4. Feature 63935: +0.0960
+   Feature 63935 (label not available - check Goodfire dashboard)
+
+5. Feature 282: +0.0930
+   Feature 282 (label not available - check Goodfire dashboard)
+
+6. Feature 61507: +0.0914
+   Feature 61507 (label not available - check Goodfire dashboard)
+
+7. Feature 63572: +0.0911
+   Feature 63572 (label not available - check Goodfire dashboard)
+
+8. Feature 215: +0.0908
+   Feature 215 (label not available - check Goodfire dashboard)
+
+9. Feature 16368: +0.0898
+   Feature 16368 (label not available - check Goodfire dashboard)
+
+10. Feature 10915: +0.0893
+   Feature 10915 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with leaveout_convincing-game)
+================================================================================
+1. Feature 59098: -0.1009
+   Feature 59098 (label not available - check Goodfire dashboard)
+
+2. Feature 55209: -0.0972
+   The assistant should provide a direct, single-token response
+
+3. Feature 8827: -0.0954
+   Feature 8827 (label not available - check Goodfire dashboard)
+
+4. Feature 9403: -0.0939
+   Period marks end of definitive statement or response
+
+5. Feature 41644: -0.0931
+   Feature 41644 (label not available - check Goodfire dashboard)
+
+6. Feature 56479: -0.0922
+   Feature 56479 (label not available - check Goodfire dashboard)
+
+7. Feature 37021: -0.0919
+   Feature 37021 (label not available - check Goodfire dashboard)
+
+8. Feature 59057: -0.0909
+   Feature 59057 (label not available - check Goodfire dashboard)
+
+9. Feature 42794: -0.0898
+   Feature 42794 (label not available - check Goodfire dashboard)
+
+10. Feature 22541: -0.0896
+   Feature 22541 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/leaveout_convincing-game/all_similarities.json
+Saved similarity distribution to: outputs/leaveout_convincing-game/similarity_distribution.npy
+Saved summary to: outputs/leaveout_convincing-game/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: leaveout_convincing-game.pkl
+
+Processing: leaveout_harm-pressure-choice.pkl
+----------------------------------------
+Loading probe from probes-layer50/leaveout_harm-pressure-choice.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1895/65536 [00:00<00:03, 18947.89it/s]Computing similarities:   6%|▌         | 3852/65536 [00:00<00:03, 19310.01it/s]Computing similarities:   9%|▉         | 5819/65536 [00:00<00:03, 19472.28it/s]Computing similarities:  12%|█▏        | 7767/65536 [00:00<00:02, 19471.96it/s]Computing similarities:  15%|█▍        | 9732/65536 [00:00<00:02, 19534.39it/s]Computing similarities:  18%|█▊        | 11686/65536 [00:00<00:02, 19217.12it/s]Computing similarities:  21%|██        | 13609/65536 [00:00<00:02, 18680.71it/s]Computing similarities:  24%|██▎       | 15481/65536 [00:00<00:02, 18576.58it/s]Computing similarities:  27%|██▋       | 17386/65536 [00:00<00:02, 18718.90it/s]Computing similarities:  29%|██▉       | 19260/65536 [00:01<00:02, 18026.43it/s]Computing similarities:  32%|███▏      | 21069/65536 [00:01<00:02, 17168.67it/s]Computing similarities:  35%|███▍      | 22796/65536 [00:01<00:02, 16634.95it/s]Computing similarities:  37%|███▋      | 24468/65536 [00:01<00:02, 15978.45it/s]Computing similarities:  40%|███▉      | 26074/65536 [00:01<00:02, 15733.55it/s]Computing similarities:  43%|████▎     | 27896/65536 [00:01<00:02, 16433.68it/s]Computing similarities:  46%|████▌     | 29878/65536 [00:01<00:02, 17403.66it/s]Computing similarities:  49%|████▊     | 31797/65536 [00:01<00:01, 17920.71it/s]Computing similarities:  51%|█████▏    | 33741/65536 [00:01<00:01, 18366.30it/s]Computing similarities:  54%|█████▍    | 35696/65536 [00:01<00:01, 18715.50it/s]Computing similarities:  57%|█████▋    | 37635/65536 [00:02<00:01, 18913.84it/s]Computing similarities:  60%|██████    | 39570/65536 [00:02<00:01, 19041.78it/s]Computing similarities:  63%|██████▎   | 41508/65536 [00:02<00:01, 19141.36it/s]Computing similarities:  66%|██████▋   | 43441/65536 [00:02<00:01, 19196.07it/s]Computing similarities:  69%|██████▉   | 45384/65536 [00:02<00:01, 19265.79it/s]Computing similarities:  72%|███████▏  | 47312/65536 [00:02<00:00, 19259.94it/s]Computing similarities:  75%|███████▌  | 49256/65536 [00:02<00:00, 19311.11it/s]Computing similarities:  78%|███████▊  | 51192/65536 [00:02<00:00, 19323.12it/s]Computing similarities:  81%|████████  | 53125/65536 [00:02<00:00, 19294.30it/s]Computing similarities:  84%|████████▍ | 55055/65536 [00:02<00:00, 19269.20it/s]Computing similarities:  87%|████████▋ | 56989/65536 [00:03<00:00, 19288.90it/s]Computing similarities:  90%|████████▉ | 58936/65536 [00:03<00:00, 19341.21it/s]Computing similarities:  93%|█████████▎| 60877/65536 [00:03<00:00, 19359.63it/s]Computing similarities:  96%|█████████▌| 62819/65536 [00:03<00:00, 19377.20it/s]Computing similarities:  99%|█████████▉| 64757/65536 [00:03<00:00, 19030.81it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18570.79it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 6/20 labels via API
+
+Saved top 10 positive features to: outputs/leaveout_harm-pressure-choice/top_10_positive.json
+Saved top 10 negative features to: outputs/leaveout_harm-pressure-choice/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with leaveout_harm-pressure-choice)
+================================================================================
+1. Feature 36173: +0.1533
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 17490: +0.1288
+   Offensive or discriminatory statements being quoted or analyzed
+
+3. Feature 18316: +0.1236
+   Feature 18316 (label not available - check Goodfire dashboard)
+
+4. Feature 22314: +0.1154
+   Feature 22314 (label not available - check Goodfire dashboard)
+
+5. Feature 42853: +0.1123
+   Revolutionary rhetoric in fantastical narratives
+
+6. Feature 3138: +0.1031
+   Feature 3138 (label not available - check Goodfire dashboard)
+
+7. Feature 64739: +0.1028
+   Spanish language patterns about not having or needing to create accounts
+
+8. Feature 63935: +0.1025
+   Feature 63935 (label not available - check Goodfire dashboard)
+
+9. Feature 18050: +0.1018
+   Feature 18050 (label not available - check Goodfire dashboard)
+
+10. Feature 30512: +0.1016
+   Feature 30512 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with leaveout_harm-pressure-choice)
+================================================================================
+1. Feature 33304: -0.0976
+   Feature 33304 (label not available - check Goodfire dashboard)
+
+2. Feature 48696: -0.0938
+   Feature 48696 (label not available - check Goodfire dashboard)
+
+3. Feature 31766: -0.0926
+   Feature 31766 (label not available - check Goodfire dashboard)
+
+4. Feature 24967: -0.0921
+   List formatting syntax, particularly commas and spaces in array/sequence outputs
+
+5. Feature 41644: -0.0918
+   Feature 41644 (label not available - check Goodfire dashboard)
+
+6. Feature 56597: -0.0907
+   Feature 56597 (label not available - check Goodfire dashboard)
+
+7. Feature 9403: -0.0905
+   Period marks end of definitive statement or response
+
+8. Feature 14464: -0.0888
+   Feature 14464 (label not available - check Goodfire dashboard)
+
+9. Feature 63131: -0.0884
+   Feature 63131 (label not available - check Goodfire dashboard)
+
+10. Feature 59973: -0.0882
+   Feature 59973 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/leaveout_harm-pressure-choice/all_similarities.json
+Saved similarity distribution to: outputs/leaveout_harm-pressure-choice/similarity_distribution.npy
+Saved summary to: outputs/leaveout_harm-pressure-choice/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: leaveout_harm-pressure-choice.pkl
+
+Processing: leaveout_harm-pressure-knowledge-report.pkl
+----------------------------------------
+Loading probe from probes-layer50/leaveout_harm-pressure-knowledge-report.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1941/65536 [00:00<00:03, 19401.09it/s]Computing similarities:   6%|▌         | 3903/65536 [00:00<00:03, 19524.76it/s]Computing similarities:   9%|▉         | 5866/65536 [00:00<00:03, 19570.53it/s]Computing similarities:  12%|█▏        | 7824/65536 [00:00<00:02, 19363.72it/s]Computing similarities:  15%|█▍        | 9762/65536 [00:00<00:02, 19366.40it/s]Computing similarities:  18%|█▊        | 11699/65536 [00:00<00:02, 18986.87it/s]Computing similarities:  21%|██        | 13600/65536 [00:00<00:02, 18536.86it/s]Computing similarities:  24%|██▎       | 15457/65536 [00:00<00:02, 18406.34it/s]Computing similarities:  26%|██▋       | 17300/65536 [00:00<00:02, 18285.73it/s]Computing similarities:  29%|██▉       | 19130/65536 [00:01<00:02, 17663.57it/s]Computing similarities:  32%|███▏      | 20901/65536 [00:01<00:02, 16730.52it/s]Computing similarities:  34%|███▍      | 22585/65536 [00:01<00:02, 16189.19it/s]Computing similarities:  37%|███▋      | 24212/65536 [00:01<00:02, 15821.30it/s]Computing similarities:  39%|███▉      | 25800/65536 [00:01<00:02, 15501.33it/s]Computing similarities:  42%|████▏     | 27490/65536 [00:01<00:02, 15895.05it/s]Computing similarities:  45%|████▍     | 29430/65536 [00:01<00:02, 16901.29it/s]Computing similarities:  48%|████▊     | 31360/65536 [00:01<00:01, 17599.54it/s]Computing similarities:  51%|█████     | 33292/65536 [00:01<00:01, 18104.08it/s]Computing similarities:  54%|█████▎    | 35215/65536 [00:01<00:01, 18436.11it/s]Computing similarities:  57%|█████▋    | 37104/65536 [00:02<00:01, 18570.03it/s]Computing similarities:  60%|█████▉    | 38999/65536 [00:02<00:01, 18680.57it/s]Computing similarities:  62%|██████▏   | 40870/65536 [00:02<00:01, 18656.25it/s]Computing similarities:  65%|██████▌   | 42796/65536 [00:02<00:01, 18833.69it/s]Computing similarities:  68%|██████▊   | 44735/65536 [00:02<00:01, 18999.41it/s]Computing similarities:  71%|███████   | 46688/65536 [00:02<00:00, 19156.91it/s]Computing similarities:  74%|███████▍  | 48638/65536 [00:02<00:00, 19258.13it/s]Computing similarities:  77%|███████▋  | 50580/65536 [00:02<00:00, 19302.79it/s]Computing similarities:  80%|████████  | 52533/65536 [00:02<00:00, 19368.87it/s]Computing similarities:  83%|████████▎ | 54474/65536 [00:02<00:00, 19378.58it/s]Computing similarities:  86%|████████▌ | 56443/65536 [00:03<00:00, 19469.80it/s]Computing similarities:  89%|████████▉ | 58394/65536 [00:03<00:00, 19480.07it/s]Computing similarities:  92%|█████████▏| 60343/65536 [00:03<00:00, 19339.33it/s]Computing similarities:  95%|█████████▌| 62291/65536 [00:03<00:00, 19381.18it/s]Computing similarities:  98%|█████████▊| 64240/65536 [00:03<00:00, 19412.67it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18452.98it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 5/20 labels via API
+
+Saved top 10 positive features to: outputs/leaveout_harm-pressure-knowledge-report/top_10_positive.json
+Saved top 10 negative features to: outputs/leaveout_harm-pressure-knowledge-report/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with leaveout_harm-pressure-knowledge-report)
+================================================================================
+1. Feature 36173: +0.1284
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 17490: +0.1221
+   Offensive or discriminatory statements being quoted or analyzed
+
+3. Feature 215: +0.1114
+   Feature 215 (label not available - check Goodfire dashboard)
+
+4. Feature 10915: +0.1047
+   Feature 10915 (label not available - check Goodfire dashboard)
+
+5. Feature 55019: +0.1041
+   Feature 55019 (label not available - check Goodfire dashboard)
+
+6. Feature 58667: +0.1021
+   Maintaining deception or cover stories through careful actions
+
+7. Feature 50702: +0.0983
+   Feature 50702 (label not available - check Goodfire dashboard)
+
+8. Feature 64739: +0.0975
+   Spanish language patterns about not having or needing to create accounts
+
+9. Feature 22314: +0.0961
+   Feature 22314 (label not available - check Goodfire dashboard)
+
+10. Feature 16368: +0.0957
+   Feature 16368 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with leaveout_harm-pressure-knowledge-report)
+================================================================================
+1. Feature 36066: -0.0967
+   Feature 36066 (label not available - check Goodfire dashboard)
+
+2. Feature 41644: -0.0951
+   Feature 41644 (label not available - check Goodfire dashboard)
+
+3. Feature 49575: -0.0931
+   Feature 49575 (label not available - check Goodfire dashboard)
+
+4. Feature 3496: -0.0918
+   Feature 3496 (label not available - check Goodfire dashboard)
+
+5. Feature 59098: -0.0911
+   Feature 59098 (label not available - check Goodfire dashboard)
+
+6. Feature 44089: -0.0886
+   Feature 44089 (label not available - check Goodfire dashboard)
+
+7. Feature 53031: -0.0885
+   Feature 53031 (label not available - check Goodfire dashboard)
+
+8. Feature 28191: -0.0871
+   Feature 28191 (label not available - check Goodfire dashboard)
+
+9. Feature 23188: -0.0861
+   Feature 23188 (label not available - check Goodfire dashboard)
+
+10. Feature 55209: -0.0854
+   The assistant should provide a direct, single-token response
+
+Saved all 65536 similarities to: outputs/leaveout_harm-pressure-knowledge-report/all_similarities.json
+Saved similarity distribution to: outputs/leaveout_harm-pressure-knowledge-report/similarity_distribution.npy
+Saved summary to: outputs/leaveout_harm-pressure-knowledge-report/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: leaveout_harm-pressure-knowledge-report.pkl
+
+Processing: leaveout_insider-trading_confirmation.pkl
+----------------------------------------
+Loading probe from probes-layer50/leaveout_insider-trading_confirmation.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1932/65536 [00:00<00:03, 19315.64it/s]Computing similarities:   6%|▌         | 3882/65536 [00:00<00:03, 19417.85it/s]Computing similarities:   9%|▉         | 5824/65536 [00:00<00:03, 19378.05it/s]Computing similarities:  12%|█▏        | 7762/65536 [00:00<00:02, 19365.12it/s]Computing similarities:  15%|█▍        | 9703/65536 [00:00<00:02, 19292.12it/s]Computing similarities:  18%|█▊        | 11633/65536 [00:00<00:02, 19145.76it/s]Computing similarities:  21%|██        | 13548/65536 [00:00<00:02, 18422.78it/s]Computing similarities:  23%|██▎       | 15396/65536 [00:00<00:02, 18003.28it/s]Computing similarities:  26%|██▌       | 17201/65536 [00:00<00:02, 17668.76it/s]Computing similarities:  29%|██▉       | 18971/65536 [00:01<00:02, 17306.13it/s]Computing similarities:  32%|███▏      | 20704/65536 [00:01<00:02, 16491.41it/s]Computing similarities:  34%|███▍      | 22360/65536 [00:01<00:02, 15955.75it/s]Computing similarities:  37%|███▋      | 23962/65536 [00:01<00:02, 15600.22it/s]Computing similarities:  39%|███▉      | 25526/65536 [00:01<00:02, 15378.11it/s]Computing similarities:  41%|████▏     | 27145/65536 [00:01<00:02, 15607.60it/s]Computing similarities:  44%|████▍     | 29117/65536 [00:01<00:02, 16795.38it/s]Computing similarities:  47%|████▋     | 31104/65536 [00:01<00:01, 17691.38it/s]Computing similarities:  50%|█████     | 33052/65536 [00:01<00:01, 18217.63it/s]Computing similarities:  53%|█████▎    | 34960/65536 [00:01<00:01, 18471.39it/s]Computing similarities:  56%|█████▌    | 36841/65536 [00:02<00:01, 18570.07it/s]Computing similarities:  59%|█████▉    | 38726/65536 [00:02<00:01, 18651.84it/s]Computing similarities:  62%|██████▏   | 40612/65536 [00:02<00:01, 18711.12it/s]Computing similarities:  65%|██████▍   | 42485/65536 [00:02<00:01, 18651.94it/s]Computing similarities:  68%|██████▊   | 44469/65536 [00:02<00:01, 19004.62it/s]Computing similarities:  71%|███████   | 46451/65536 [00:02<00:00, 19245.55it/s]Computing similarities:  74%|███████▍  | 48407/65536 [00:02<00:00, 19339.41it/s]Computing similarities:  77%|███████▋  | 50374/65536 [00:02<00:00, 19436.35it/s]Computing similarities:  80%|███████▉  | 52360/65536 [00:02<00:00, 19560.53it/s]Computing similarities:  83%|████████▎ | 54324/65536 [00:02<00:00, 19582.18it/s]Computing similarities:  86%|████████▌ | 56286/65536 [00:03<00:00, 19592.43it/s]Computing similarities:  89%|████████▉ | 58246/65536 [00:03<00:00, 19561.36it/s]Computing similarities:  92%|█████████▏| 60203/65536 [00:03<00:00, 19553.41it/s]Computing similarities:  95%|█████████▍| 62163/65536 [00:03<00:00, 19567.12it/s]Computing similarities:  98%|█████████▊| 64121/65536 [00:03<00:00, 19570.26it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18429.75it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 5/20 labels via API
+
+Saved top 10 positive features to: outputs/leaveout_insider-trading_confirmation/top_10_positive.json
+Saved top 10 negative features to: outputs/leaveout_insider-trading_confirmation/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with leaveout_insider-trading_confirmation)
+================================================================================
+1. Feature 36173: +0.1316
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 17490: +0.1098
+   Offensive or discriminatory statements being quoted or analyzed
+
+3. Feature 215: +0.0962
+   Feature 215 (label not available - check Goodfire dashboard)
+
+4. Feature 42853: +0.0944
+   Revolutionary rhetoric in fantastical narratives
+
+5. Feature 22314: +0.0936
+   Feature 22314 (label not available - check Goodfire dashboard)
+
+6. Feature 16368: +0.0919
+   Feature 16368 (label not available - check Goodfire dashboard)
+
+7. Feature 44338: +0.0919
+   Feature 44338 (label not available - check Goodfire dashboard)
+
+8. Feature 18316: +0.0895
+   Feature 18316 (label not available - check Goodfire dashboard)
+
+9. Feature 54614: +0.0888
+   Feature 54614 (label not available - check Goodfire dashboard)
+
+10. Feature 61587: +0.0885
+   Linking phrases and structural connectors across languages
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with leaveout_insider-trading_confirmation)
+================================================================================
+1. Feature 59098: -0.0957
+   Feature 59098 (label not available - check Goodfire dashboard)
+
+2. Feature 22541: -0.0935
+   Feature 22541 (label not available - check Goodfire dashboard)
+
+3. Feature 41644: -0.0912
+   Feature 41644 (label not available - check Goodfire dashboard)
+
+4. Feature 36066: -0.0900
+   Feature 36066 (label not available - check Goodfire dashboard)
+
+5. Feature 6750: -0.0892
+   Feature 6750 (label not available - check Goodfire dashboard)
+
+6. Feature 37021: -0.0886
+   Feature 37021 (label not available - check Goodfire dashboard)
+
+7. Feature 53031: -0.0881
+   Feature 53031 (label not available - check Goodfire dashboard)
+
+8. Feature 55209: -0.0874
+   The assistant should provide a direct, single-token response
+
+9. Feature 59057: -0.0874
+   Feature 59057 (label not available - check Goodfire dashboard)
+
+10. Feature 3496: -0.0867
+   Feature 3496 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/leaveout_insider-trading_confirmation/all_similarities.json
+Saved similarity distribution to: outputs/leaveout_insider-trading_confirmation/similarity_distribution.npy
+Saved summary to: outputs/leaveout_insider-trading_confirmation/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: leaveout_insider-trading_confirmation.pkl
+
+Processing: leaveout_insider-trading_report.pkl
+----------------------------------------
+Loading probe from probes-layer50/leaveout_insider-trading_report.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1887/65536 [00:00<00:03, 18859.05it/s]Computing similarities:   6%|▌         | 3840/65536 [00:00<00:03, 19251.73it/s]Computing similarities:   9%|▉         | 5794/65536 [00:00<00:03, 19380.43it/s]Computing similarities:  12%|█▏        | 7738/65536 [00:00<00:02, 19400.50it/s]Computing similarities:  15%|█▍        | 9679/65536 [00:00<00:02, 19183.81it/s]Computing similarities:  18%|█▊        | 11603/65536 [00:00<00:02, 19199.81it/s]Computing similarities:  21%|██        | 13524/65536 [00:00<00:02, 18962.02it/s]Computing similarities:  24%|██▎       | 15421/65536 [00:00<00:02, 18582.97it/s]Computing similarities:  26%|██▋       | 17281/65536 [00:00<00:02, 18260.87it/s]Computing similarities:  29%|██▉       | 19109/65536 [00:01<00:02, 17720.53it/s]Computing similarities:  32%|███▏      | 20885/65536 [00:01<00:02, 16816.42it/s]Computing similarities:  34%|███▍      | 22576/65536 [00:01<00:02, 16166.08it/s]Computing similarities:  37%|███▋      | 24201/65536 [00:01<00:02, 15752.00it/s]Computing similarities:  39%|███▉      | 25782/65536 [00:01<00:02, 15464.01it/s]Computing similarities:  42%|████▏     | 27477/65536 [00:01<00:02, 15881.30it/s]Computing similarities:  45%|████▍     | 29431/65536 [00:01<00:02, 16930.01it/s]Computing similarities:  48%|████▊     | 31369/65536 [00:01<00:01, 17639.78it/s]Computing similarities:  51%|█████     | 33312/65536 [00:01<00:01, 18164.59it/s]Computing similarities:  54%|█████▍    | 35260/65536 [00:01<00:01, 18551.59it/s]Computing similarities:  57%|█████▋    | 37151/65536 [00:02<00:01, 18657.01it/s]Computing similarities:  60%|█████▉    | 39082/65536 [00:02<00:01, 18849.95it/s]Computing similarities:  63%|██████▎   | 41015/65536 [00:02<00:01, 18992.79it/s]Computing similarities:  65%|██████▌   | 42917/65536 [00:02<00:01, 18806.09it/s]Computing similarities:  68%|██████▊   | 44824/65536 [00:02<00:01, 18883.25it/s]Computing similarities:  71%|███████▏  | 46732/65536 [00:02<00:00, 18938.33it/s]Computing similarities:  74%|███████▍  | 48627/65536 [00:02<00:00, 18693.66it/s]Computing similarities:  77%|███████▋  | 50505/65536 [00:02<00:00, 18717.83it/s]Computing similarities:  80%|███████▉  | 52381/65536 [00:02<00:00, 18729.04it/s]Computing similarities:  83%|████████▎ | 54269/65536 [00:02<00:00, 18773.18it/s]Computing similarities:  86%|████████▌ | 56147/65536 [00:03<00:00, 18537.30it/s]Computing similarities:  89%|████████▊ | 58002/65536 [00:03<00:00, 18525.71it/s]Computing similarities:  91%|█████████▏| 59856/65536 [00:03<00:00, 18518.49it/s]Computing similarities:  94%|█████████▍| 61709/65536 [00:03<00:00, 18109.39it/s]Computing similarities:  97%|█████████▋| 63530/65536 [00:03<00:00, 18136.66it/s]Computing similarities: 100%|█████████▉| 65419/65536 [00:03<00:00, 18358.58it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18150.82it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 3/20 labels via API
+
+Saved top 10 positive features to: outputs/leaveout_insider-trading_report/top_10_positive.json
+Saved top 10 negative features to: outputs/leaveout_insider-trading_report/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with leaveout_insider-trading_report)
+================================================================================
+1. Feature 36173: +0.1365
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 17490: +0.1163
+   Offensive or discriminatory statements being quoted or analyzed
+
+3. Feature 16368: +0.1101
+   Feature 16368 (label not available - check Goodfire dashboard)
+
+4. Feature 54614: +0.1072
+   Feature 54614 (label not available - check Goodfire dashboard)
+
+5. Feature 30377: +0.1052
+   Offensive request from the user
+
+6. Feature 33674: +0.0987
+   Feature 33674 (label not available - check Goodfire dashboard)
+
+7. Feature 47286: +0.0978
+   Feature 47286 (label not available - check Goodfire dashboard)
+
+8. Feature 38855: +0.0977
+   Feature 38855 (label not available - check Goodfire dashboard)
+
+9. Feature 215: +0.0976
+   Feature 215 (label not available - check Goodfire dashboard)
+
+10. Feature 38767: +0.0944
+   Feature 38767 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with leaveout_insider-trading_report)
+================================================================================
+1. Feature 59098: -0.1164
+   Feature 59098 (label not available - check Goodfire dashboard)
+
+2. Feature 8827: -0.1037
+   Feature 8827 (label not available - check Goodfire dashboard)
+
+3. Feature 37021: -0.1025
+   Feature 37021 (label not available - check Goodfire dashboard)
+
+4. Feature 47241: -0.1025
+   Feature 47241 (label not available - check Goodfire dashboard)
+
+5. Feature 22541: -0.1008
+   Feature 22541 (label not available - check Goodfire dashboard)
+
+6. Feature 14353: -0.1002
+   Feature 14353 (label not available - check Goodfire dashboard)
+
+7. Feature 6750: -0.0960
+   Feature 6750 (label not available - check Goodfire dashboard)
+
+8. Feature 39648: -0.0957
+   Feature 39648 (label not available - check Goodfire dashboard)
+
+9. Feature 21684: -0.0949
+   Feature 21684 (label not available - check Goodfire dashboard)
+
+10. Feature 53031: -0.0944
+   Feature 53031 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/leaveout_insider-trading_report/all_similarities.json
+Saved similarity distribution to: outputs/leaveout_insider-trading_report/similarity_distribution.npy
+Saved summary to: outputs/leaveout_insider-trading_report/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: leaveout_insider-trading_report.pkl
+
+Processing: leaveout_instructed-deception.pkl
+----------------------------------------
+Loading probe from probes-layer50/leaveout_instructed-deception.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1883/65536 [00:00<00:03, 18819.20it/s]Computing similarities:   6%|▌         | 3823/65536 [00:00<00:03, 19156.48it/s]Computing similarities:   9%|▉         | 5739/65536 [00:00<00:03, 18834.47it/s]Computing similarities:  12%|█▏        | 7624/65536 [00:00<00:03, 18562.33it/s]Computing similarities:  15%|█▍        | 9544/65536 [00:00<00:02, 18786.86it/s]Computing similarities:  17%|█▋        | 11424/65536 [00:00<00:02, 18636.10it/s]Computing similarities:  20%|██        | 13289/65536 [00:00<00:02, 18206.37it/s]Computing similarities:  23%|██▎       | 15112/65536 [00:00<00:02, 17692.58it/s]Computing similarities:  26%|██▌       | 16885/65536 [00:00<00:02, 17550.49it/s]Computing similarities:  28%|██▊       | 18642/65536 [00:01<00:02, 17166.75it/s]Computing similarities:  31%|███       | 20361/65536 [00:01<00:02, 16416.89it/s]Computing similarities:  34%|███▎      | 22009/65536 [00:01<00:02, 15955.45it/s]Computing similarities:  36%|███▌      | 23610/65536 [00:01<00:02, 15567.74it/s]Computing similarities:  38%|███▊      | 25170/65536 [00:01<00:02, 15322.07it/s]Computing similarities:  41%|████      | 26725/65536 [00:01<00:02, 15385.30it/s]Computing similarities:  44%|████▍     | 28708/65536 [00:01<00:02, 16670.78it/s]Computing similarities:  47%|████▋     | 30592/65536 [00:01<00:02, 17303.39it/s]Computing similarities:  50%|████▉     | 32554/65536 [00:01<00:01, 17983.81it/s]Computing similarities:  53%|█████▎    | 34520/65536 [00:01<00:01, 18478.83it/s]Computing similarities:  56%|█████▌    | 36373/65536 [00:02<00:01, 18413.82it/s]Computing similarities:  58%|█████▊    | 38260/65536 [00:02<00:01, 18547.02it/s]Computing similarities:  61%|██████    | 40127/65536 [00:02<00:01, 18581.09it/s]Computing similarities:  64%|██████▍   | 41987/65536 [00:02<00:01, 18337.65it/s]Computing similarities:  67%|██████▋   | 43887/65536 [00:02<00:01, 18531.67it/s]Computing similarities:  70%|██████▉   | 45742/65536 [00:02<00:01, 18478.22it/s]Computing similarities:  73%|███████▎  | 47591/65536 [00:02<00:00, 18336.30it/s]Computing similarities:  75%|███████▌  | 49426/65536 [00:02<00:00, 18028.53it/s]Computing similarities:  78%|███████▊  | 51248/65536 [00:02<00:00, 18082.31it/s]Computing similarities:  81%|████████  | 53124/65536 [00:02<00:00, 18281.37it/s]Computing similarities:  84%|████████▍ | 54954/65536 [00:03<00:00, 17955.22it/s]Computing similarities:  87%|████████▋ | 56752/65536 [00:03<00:00, 17952.85it/s]Computing similarities:  89%|████████▉ | 58549/65536 [00:03<00:00, 17941.83it/s]Computing similarities:  92%|█████████▏| 60345/65536 [00:03<00:00, 17852.81it/s]Computing similarities:  95%|█████████▍| 62131/65536 [00:03<00:00, 17778.37it/s]Computing similarities:  98%|█████████▊| 63910/65536 [00:03<00:00, 17708.21it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 17714.84it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 4/20 labels via API
+
+Saved top 10 positive features to: outputs/leaveout_instructed-deception/top_10_positive.json
+Saved top 10 negative features to: outputs/leaveout_instructed-deception/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with leaveout_instructed-deception)
+================================================================================
+1. Feature 215: +0.1271
+   Feature 215 (label not available - check Goodfire dashboard)
+
+2. Feature 16160: +0.1140
+   Feature 16160 (label not available - check Goodfire dashboard)
+
+3. Feature 16368: +0.1084
+   Feature 16368 (label not available - check Goodfire dashboard)
+
+4. Feature 61587: +0.1074
+   Linking phrases and structural connectors across languages
+
+5. Feature 44338: +0.1064
+   Feature 44338 (label not available - check Goodfire dashboard)
+
+6. Feature 47161: +0.1051
+   Feature 47161 (label not available - check Goodfire dashboard)
+
+7. Feature 36173: +0.0993
+   Requests for the AI to provide intentionally incorrect information
+
+8. Feature 26739: +0.0991
+   Feature 26739 (label not available - check Goodfire dashboard)
+
+9. Feature 30085: +0.0986
+   Feature 30085 (label not available - check Goodfire dashboard)
+
+10. Feature 54438: +0.0964
+   Feature 54438 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with leaveout_instructed-deception)
+================================================================================
+1. Feature 8827: -0.1167
+   Feature 8827 (label not available - check Goodfire dashboard)
+
+2. Feature 53031: -0.1148
+   Feature 53031 (label not available - check Goodfire dashboard)
+
+3. Feature 36066: -0.1141
+   Feature 36066 (label not available - check Goodfire dashboard)
+
+4. Feature 7432: -0.1131
+   Feature 7432 (label not available - check Goodfire dashboard)
+
+5. Feature 59098: -0.1117
+   Feature 59098 (label not available - check Goodfire dashboard)
+
+6. Feature 61968: -0.1081
+   Image picker initialization in programming code
+
+7. Feature 22541: -0.1061
+   Feature 22541 (label not available - check Goodfire dashboard)
+
+8. Feature 9676: -0.1052
+   List formatting tokens and measurement units
+
+9. Feature 2180: -0.1036
+   Feature 2180 (label not available - check Goodfire dashboard)
+
+10. Feature 21684: -0.0983
+   Feature 21684 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/leaveout_instructed-deception/all_similarities.json
+Saved similarity distribution to: outputs/leaveout_instructed-deception/similarity_distribution.npy
+Saved summary to: outputs/leaveout_instructed-deception/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: leaveout_instructed-deception.pkl
+
+Processing: single_convincing-game.pkl
+----------------------------------------
+Loading probe from probes-layer50/single_convincing-game.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1911/65536 [00:00<00:03, 19102.64it/s]Computing similarities:   6%|▌         | 3824/65536 [00:00<00:03, 19113.09it/s]Computing similarities:   9%|▉         | 5747/65536 [00:00<00:03, 19163.69it/s]Computing similarities:  12%|█▏        | 7664/65536 [00:00<00:03, 19059.94it/s]Computing similarities:  15%|█▍        | 9571/65536 [00:00<00:02, 18967.33it/s]Computing similarities:  17%|█▋        | 11468/65536 [00:00<00:02, 18962.40it/s]Computing similarities:  20%|██        | 13365/65536 [00:00<00:02, 18853.54it/s]Computing similarities:  23%|██▎       | 15251/65536 [00:00<00:02, 18668.90it/s]Computing similarities:  26%|██▌       | 17119/65536 [00:00<00:02, 18383.89it/s]Computing similarities:  29%|██▉       | 18959/65536 [00:01<00:02, 18082.88it/s]Computing similarities:  32%|███▏      | 20769/65536 [00:01<00:02, 16940.18it/s]Computing similarities:  34%|███▍      | 22477/65536 [00:01<00:02, 16289.29it/s]Computing similarities:  37%|███▋      | 24118/65536 [00:01<00:02, 15841.65it/s]Computing similarities:  39%|███▉      | 25710/65536 [00:01<00:02, 15596.97it/s]Computing similarities:  42%|████▏     | 27396/65536 [00:01<00:02, 15952.93it/s]Computing similarities:  45%|████▍     | 29354/65536 [00:01<00:02, 16995.05it/s]Computing similarities:  48%|████▊     | 31309/65536 [00:01<00:01, 17738.92it/s]Computing similarities:  51%|█████     | 33255/65536 [00:01<00:01, 18242.97it/s]Computing similarities:  54%|█████▎    | 35194/65536 [00:01<00:01, 18581.44it/s]Computing similarities:  57%|█████▋    | 37121/65536 [00:02<00:01, 18785.02it/s]Computing similarities:  60%|█████▉    | 39012/65536 [00:02<00:01, 18819.81it/s]Computing similarities:  62%|██████▏   | 40934/65536 [00:02<00:01, 18937.12it/s]Computing similarities:  65%|██████▌   | 42864/65536 [00:02<00:01, 19042.75it/s]Computing similarities:  68%|██████▊   | 44780/65536 [00:02<00:01, 19075.32it/s]Computing similarities:  71%|███████   | 46689/65536 [00:02<00:00, 19024.32it/s]Computing similarities:  74%|███████▍  | 48623/65536 [00:02<00:00, 19117.77it/s]Computing similarities:  77%|███████▋  | 50553/65536 [00:02<00:00, 19169.53it/s]Computing similarities:  80%|████████  | 52478/65536 [00:02<00:00, 19190.79it/s]Computing similarities:  83%|████████▎ | 54405/65536 [00:02<00:00, 19213.15it/s]Computing similarities:  86%|████████▌ | 56327/65536 [00:03<00:00, 18863.33it/s]Computing similarities:  89%|████████▉ | 58230/65536 [00:03<00:00, 18910.91it/s]Computing similarities:  92%|█████████▏| 60123/65536 [00:03<00:00, 18878.62it/s]Computing similarities:  95%|█████████▍| 62023/65536 [00:03<00:00, 18914.37it/s]Computing similarities:  98%|█████████▊| 63916/65536 [00:03<00:00, 18894.71it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18369.19it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 10/20 labels via API
+
+Saved top 10 positive features to: outputs/single_convincing-game/top_10_positive.json
+Saved top 10 negative features to: outputs/single_convincing-game/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with single_convincing-game)
+================================================================================
+1. Feature 36173: +0.2961
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 42834: +0.1972
+   Whimsical or nonsensical narrative content
+
+3. Feature 41630: +0.1829
+   Feature 41630 (label not available - check Goodfire dashboard)
+
+4. Feature 37994: +0.1816
+   The model should pretend to be human rather than an AI
+
+5. Feature 18961: +0.1764
+   Feature 18961 (label not available - check Goodfire dashboard)
+
+6. Feature 37391: +0.1685
+   Feature 37391 (label not available - check Goodfire dashboard)
+
+7. Feature 42853: +0.1659
+   Revolutionary rhetoric in fantastical narratives
+
+8. Feature 26206: +0.1594
+   Feature 26206 (label not available - check Goodfire dashboard)
+
+9. Feature 29901: +0.1592
+   Numbers and mathematical operations in computational contexts
+
+10. Feature 2380: +0.1550
+   Discussion of accepting claims or beliefs as truth
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with single_convincing-game)
+================================================================================
+1. Feature 15424: -0.2449
+   Feature 15424 (label not available - check Goodfire dashboard)
+
+2. Feature 26971: -0.2400
+   Feature 26971 (label not available - check Goodfire dashboard)
+
+3. Feature 21570: -0.2311
+   Feature 21570 (label not available - check Goodfire dashboard)
+
+4. Feature 37579: -0.2130
+   Feature 37579 (label not available - check Goodfire dashboard)
+
+5. Feature 2909: -0.2100
+   Feature 2909 (label not available - check Goodfire dashboard)
+
+6. Feature 31139: -0.1967
+   The AI is being asked about its nature, capabilities, or desires
+
+7. Feature 17368: -0.1954
+   The AI is explaining its limitations and capabilities
+
+8. Feature 53776: -0.1942
+   AI making misleading claims about internet connectivity and access capabilities
+
+9. Feature 8975: -0.1926
+   Technical explanation discourse markers
+
+10. Feature 30912: -0.1893
+   Feature 30912 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/single_convincing-game/all_similarities.json
+Saved similarity distribution to: outputs/single_convincing-game/similarity_distribution.npy
+Saved summary to: outputs/single_convincing-game/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: single_convincing-game.pkl
+
+Processing: single_harm-pressure-choice.pkl
+----------------------------------------
+Loading probe from probes-layer50/single_harm-pressure-choice.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1736/65536 [00:00<00:03, 17354.06it/s]Computing similarities:   5%|▌         | 3472/65536 [00:00<00:03, 16806.15it/s]Computing similarities:   8%|▊         | 5208/65536 [00:00<00:03, 17053.81it/s]Computing similarities:  11%|█         | 6915/65536 [00:00<00:03, 16606.77it/s]Computing similarities:  13%|█▎        | 8578/65536 [00:00<00:03, 15891.34it/s]Computing similarities:  16%|█▌        | 10173/65536 [00:00<00:03, 15562.49it/s]Computing similarities:  18%|█▊        | 11733/65536 [00:00<00:03, 15312.30it/s]Computing similarities:  20%|██        | 13267/65536 [00:00<00:03, 15140.75it/s]Computing similarities:  23%|██▎       | 14885/65536 [00:00<00:03, 15451.28it/s]Computing similarities:  26%|██▌       | 16884/65536 [00:01<00:02, 16814.82it/s]Computing similarities:  29%|██▊       | 18840/65536 [00:01<00:02, 17635.98it/s]Computing similarities:  32%|███▏      | 20836/65536 [00:01<00:02, 18331.88it/s]Computing similarities:  35%|███▍      | 22800/65536 [00:01<00:02, 18722.19it/s]Computing similarities:  38%|███▊      | 24752/65536 [00:01<00:02, 18959.19it/s]Computing similarities:  41%|████      | 26690/65536 [00:01<00:02, 19083.97it/s]Computing similarities:  44%|████▎     | 28624/65536 [00:01<00:01, 19160.54it/s]Computing similarities:  47%|████▋     | 30569/65536 [00:01<00:01, 19247.00it/s]Computing similarities:  50%|████▉     | 32495/65536 [00:01<00:01, 19109.98it/s]Computing similarities:  53%|█████▎    | 34441/65536 [00:01<00:01, 19213.63it/s]Computing similarities:  56%|█████▌    | 36390/65536 [00:02<00:01, 19294.42it/s]Computing similarities:  58%|█████▊    | 38335/65536 [00:02<00:01, 19339.50it/s]Computing similarities:  61%|██████▏   | 40275/65536 [00:02<00:01, 19354.91it/s]Computing similarities:  64%|██████▍   | 42222/65536 [00:02<00:01, 19388.29it/s]Computing similarities:  67%|██████▋   | 44174/65536 [00:02<00:01, 19424.89it/s]Computing similarities:  70%|███████   | 46117/65536 [00:02<00:01, 19229.50it/s]Computing similarities:  73%|███████▎  | 48060/65536 [00:02<00:00, 19288.51it/s]Computing similarities:  76%|███████▋  | 50019/65536 [00:02<00:00, 19376.07it/s]Computing similarities:  79%|███████▉  | 51971/65536 [00:02<00:00, 19417.14it/s]Computing similarities:  82%|████████▏ | 53917/65536 [00:02<00:00, 19427.65it/s]Computing similarities:  85%|████████▌ | 55860/65536 [00:03<00:00, 19420.29it/s]Computing similarities:  88%|████████▊ | 57803/65536 [00:03<00:00, 19396.68it/s]Computing similarities:  91%|█████████ | 59743/65536 [00:03<00:00, 19363.20it/s]Computing similarities:  94%|█████████▍| 61680/65536 [00:03<00:00, 18854.61it/s]Computing similarities:  97%|█████████▋| 63569/65536 [00:03<00:00, 18814.98it/s]Computing similarities: 100%|█████████▉| 65453/65536 [00:03<00:00, 18283.39it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18331.59it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 3/20 labels via API
+
+Saved top 10 positive features to: outputs/single_harm-pressure-choice/top_10_positive.json
+Saved top 10 negative features to: outputs/single_harm-pressure-choice/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with single_harm-pressure-choice)
+================================================================================
+1. Feature 16368: +0.1759
+   Feature 16368 (label not available - check Goodfire dashboard)
+
+2. Feature 16160: +0.1584
+   Feature 16160 (label not available - check Goodfire dashboard)
+
+3. Feature 215: +0.1565
+   Feature 215 (label not available - check Goodfire dashboard)
+
+4. Feature 45875: +0.1276
+   Feature 45875 (label not available - check Goodfire dashboard)
+
+5. Feature 8369: +0.1203
+   Feature 8369 (label not available - check Goodfire dashboard)
+
+6. Feature 20717: +0.1201
+   Feature 20717 (label not available - check Goodfire dashboard)
+
+7. Feature 10915: +0.1197
+   Feature 10915 (label not available - check Goodfire dashboard)
+
+8. Feature 61587: +0.1195
+   Linking phrases and structural connectors across languages
+
+9. Feature 53424: +0.1186
+   Feature 53424 (label not available - check Goodfire dashboard)
+
+10. Feature 42274: +0.1181
+   Feature 42274 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with single_harm-pressure-choice)
+================================================================================
+1. Feature 53031: -0.1409
+   Feature 53031 (label not available - check Goodfire dashboard)
+
+2. Feature 55209: -0.1365
+   The assistant should provide a direct, single-token response
+
+3. Feature 21684: -0.1265
+   Feature 21684 (label not available - check Goodfire dashboard)
+
+4. Feature 32860: -0.1265
+   Feature 32860 (label not available - check Goodfire dashboard)
+
+5. Feature 9676: -0.1221
+   List formatting tokens and measurement units
+
+6. Feature 38121: -0.1146
+   Feature 38121 (label not available - check Goodfire dashboard)
+
+7. Feature 47804: -0.1098
+   Feature 47804 (label not available - check Goodfire dashboard)
+
+8. Feature 47241: -0.1081
+   Feature 47241 (label not available - check Goodfire dashboard)
+
+9. Feature 14929: -0.1069
+   Feature 14929 (label not available - check Goodfire dashboard)
+
+10. Feature 59036: -0.1067
+   Feature 59036 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/single_harm-pressure-choice/all_similarities.json
+Saved similarity distribution to: outputs/single_harm-pressure-choice/similarity_distribution.npy
+Saved summary to: outputs/single_harm-pressure-choice/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: single_harm-pressure-choice.pkl
+
+Processing: single_harm-pressure-knowledge-report.pkl
+----------------------------------------
+Loading probe from probes-layer50/single_harm-pressure-knowledge-report.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1852/65536 [00:00<00:03, 18514.59it/s]Computing similarities:   6%|▌         | 3754/65536 [00:00<00:03, 18807.72it/s]Computing similarities:   9%|▊         | 5683/65536 [00:00<00:03, 19024.80it/s]Computing similarities:  12%|█▏        | 7586/65536 [00:00<00:03, 18391.12it/s]Computing similarities:  14%|█▍        | 9477/65536 [00:00<00:03, 18572.51it/s]Computing similarities:  17%|█▋        | 11337/65536 [00:00<00:02, 18512.83it/s]Computing similarities:  20%|██        | 13190/65536 [00:00<00:02, 18297.91it/s]Computing similarities:  23%|██▎       | 15022/65536 [00:00<00:02, 18133.13it/s]Computing similarities:  26%|██▌       | 16914/65536 [00:00<00:02, 18372.15it/s]Computing similarities:  29%|██▊       | 18753/65536 [00:01<00:02, 18220.78it/s]Computing similarities:  31%|███▏      | 20576/65536 [00:01<00:02, 17066.80it/s]Computing similarities:  34%|███▍      | 22297/65536 [00:01<00:02, 16389.57it/s]Computing similarities:  37%|███▋      | 23949/65536 [00:01<00:02, 15900.20it/s]Computing similarities:  39%|███▉      | 25549/65536 [00:01<00:02, 15592.35it/s]Computing similarities:  41%|████▏     | 27167/65536 [00:01<00:02, 15757.39it/s]Computing similarities:  44%|████▍     | 29106/65536 [00:01<00:02, 16798.87it/s]Computing similarities:  47%|████▋     | 31052/65536 [00:01<00:01, 17571.15it/s]Computing similarities:  50%|█████     | 32987/65536 [00:01<00:01, 18092.50it/s]Computing similarities:  53%|█████▎    | 34931/65536 [00:01<00:01, 18488.32it/s]Computing similarities:  56%|█████▌    | 36855/65536 [00:02<00:01, 18708.69it/s]Computing similarities:  59%|█████▉    | 38779/65536 [00:02<00:01, 18864.79it/s]Computing similarities:  62%|██████▏   | 40708/65536 [00:02<00:01, 18990.64it/s]Computing similarities:  65%|██████▌   | 42640/65536 [00:02<00:01, 19088.04it/s]Computing similarities:  68%|██████▊   | 44551/65536 [00:02<00:01, 19080.69it/s]Computing similarities:  71%|███████   | 46461/65536 [00:02<00:01, 19028.31it/s]Computing similarities:  74%|███████▍  | 48365/65536 [00:02<00:00, 18982.79it/s]Computing similarities:  77%|███████▋  | 50264/65536 [00:02<00:00, 18966.69it/s]Computing similarities:  80%|███████▉  | 52185/65536 [00:02<00:00, 19039.15it/s]Computing similarities:  83%|████████▎ | 54090/65536 [00:02<00:00, 18857.14it/s]Computing similarities:  85%|████████▌ | 55977/65536 [00:03<00:00, 18811.84it/s]Computing similarities:  88%|████████▊ | 57859/65536 [00:03<00:00, 18564.09it/s]Computing similarities:  91%|█████████ | 59738/65536 [00:03<00:00, 18628.93it/s]Computing similarities:  94%|█████████▍| 61614/65536 [00:03<00:00, 18666.74it/s]Computing similarities:  97%|█████████▋| 63505/65536 [00:03<00:00, 18738.56it/s]Computing similarities: 100%|█████████▉| 65414/65536 [00:03<00:00, 18842.28it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18224.17it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 6/20 labels via API
+
+Saved top 10 positive features to: outputs/single_harm-pressure-knowledge-report/top_10_positive.json
+Saved top 10 negative features to: outputs/single_harm-pressure-knowledge-report/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with single_harm-pressure-knowledge-report)
+================================================================================
+1. Feature 27783: +0.1513
+   The assistant expressing its limitations or inabilities
+
+2. Feature 21781: +0.1315
+   Feature 21781 (label not available - check Goodfire dashboard)
+
+3. Feature 20231: +0.1313
+   Feature 20231 (label not available - check Goodfire dashboard)
+
+4. Feature 50798: +0.1244
+   Feature 50798 (label not available - check Goodfire dashboard)
+
+5. Feature 11025: +0.1192
+   Feature 11025 (label not available - check Goodfire dashboard)
+
+6. Feature 30052: +0.1185
+   Feature 30052 (label not available - check Goodfire dashboard)
+
+7. Feature 26247: +0.1169
+   Feature 26247 (label not available - check Goodfire dashboard)
+
+8. Feature 34568: +0.1161
+   Feature 34568 (label not available - check Goodfire dashboard)
+
+9. Feature 51868: +0.1130
+   Feature 51868 (label not available - check Goodfire dashboard)
+
+10. Feature 12424: +0.1125
+   The assistant needs to explain its limitations and decline inappropriate requests
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with single_harm-pressure-knowledge-report)
+================================================================================
+1. Feature 55209: -0.1278
+   The assistant should provide a direct, single-token response
+
+2. Feature 9403: -0.1223
+   Period marks end of definitive statement or response
+
+3. Feature 12358: -0.1220
+   Feature 12358 (label not available - check Goodfire dashboard)
+
+4. Feature 42794: -0.1198
+   Feature 42794 (label not available - check Goodfire dashboard)
+
+5. Feature 47241: -0.1168
+   Feature 47241 (label not available - check Goodfire dashboard)
+
+6. Feature 56854: -0.1127
+   Feature 56854 (label not available - check Goodfire dashboard)
+
+7. Feature 55281: -0.1121
+   Feature 55281 (label not available - check Goodfire dashboard)
+
+8. Feature 62839: -0.1111
+   The assistant is providing a list of options
+
+9. Feature 64836: -0.1105
+   Feature 64836 (label not available - check Goodfire dashboard)
+
+10. Feature 18904: -0.1079
+   End of message marker in conversation format
+
+Saved all 65536 similarities to: outputs/single_harm-pressure-knowledge-report/all_similarities.json
+Saved similarity distribution to: outputs/single_harm-pressure-knowledge-report/similarity_distribution.npy
+Saved summary to: outputs/single_harm-pressure-knowledge-report/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: single_harm-pressure-knowledge-report.pkl
+
+Processing: single_insider-trading_confirmation.pkl
+----------------------------------------
+Loading probe from probes-layer50/single_insider-trading_confirmation.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1871/65536 [00:00<00:03, 18700.30it/s]Computing similarities:   6%|▌         | 3789/65536 [00:00<00:03, 18979.50it/s]Computing similarities:   9%|▉         | 5735/65536 [00:00<00:03, 19194.63it/s]Computing similarities:  12%|█▏        | 7655/65536 [00:00<00:03, 17570.61it/s]Computing similarities:  14%|█▍        | 9431/65536 [00:00<00:03, 16639.27it/s]Computing similarities:  17%|█▋        | 11112/65536 [00:00<00:03, 16120.87it/s]Computing similarities:  19%|█▉        | 12735/65536 [00:00<00:03, 15747.51it/s]Computing similarities:  22%|██▏       | 14316/65536 [00:00<00:03, 15557.72it/s]Computing similarities:  25%|██▍       | 16288/65536 [00:00<00:02, 16782.93it/s]Computing similarities:  28%|██▊       | 18266/65536 [00:01<00:02, 17668.47it/s]Computing similarities:  31%|███       | 20242/65536 [00:01<00:02, 18289.69it/s]Computing similarities:  34%|███▍      | 22210/65536 [00:01<00:02, 18703.91it/s]Computing similarities:  37%|███▋      | 24142/65536 [00:01<00:02, 18886.63it/s]Computing similarities:  40%|███▉      | 26075/65536 [00:01<00:02, 19016.40it/s]Computing similarities:  43%|████▎     | 28028/65536 [00:01<00:01, 19168.10it/s]Computing similarities:  46%|████▌     | 29969/65536 [00:01<00:01, 19240.09it/s]Computing similarities:  49%|████▊     | 31914/65536 [00:01<00:01, 19302.77it/s]Computing similarities:  52%|█████▏    | 33869/65536 [00:01<00:01, 19375.48it/s]Computing similarities:  55%|█████▍    | 35810/65536 [00:01<00:01, 19384.69it/s]Computing similarities:  58%|█████▊    | 37769/65536 [00:02<00:01, 19444.16it/s]Computing similarities:  61%|██████    | 39721/65536 [00:02<00:01, 19466.74it/s]Computing similarities:  64%|██████▎   | 41669/65536 [00:02<00:01, 19458.42it/s]Computing similarities:  67%|██████▋   | 43616/65536 [00:02<00:01, 19445.32it/s]Computing similarities:  70%|██████▉   | 45561/65536 [00:02<00:01, 19407.39it/s]Computing similarities:  72%|███████▏  | 47509/65536 [00:02<00:00, 19428.13it/s]Computing similarities:  75%|███████▌  | 49452/65536 [00:02<00:00, 19382.10it/s]Computing similarities:  78%|███████▊  | 51391/65536 [00:02<00:00, 19354.87it/s]Computing similarities:  81%|████████▏ | 53336/65536 [00:02<00:00, 19383.07it/s]Computing similarities:  84%|████████▍ | 55275/65536 [00:02<00:00, 19223.67it/s]Computing similarities:  87%|████████▋ | 57216/65536 [00:03<00:00, 19277.06it/s]Computing similarities:  90%|█████████ | 59156/65536 [00:03<00:00, 19312.56it/s]Computing similarities:  93%|█████████▎| 61100/65536 [00:03<00:00, 19349.19it/s]Computing similarities:  96%|█████████▌| 63047/65536 [00:03<00:00, 19382.97it/s]Computing similarities:  99%|█████████▉| 64986/65536 [00:03<00:00, 19379.09it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18725.42it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 3/20 labels via API
+
+Saved top 10 positive features to: outputs/single_insider-trading_confirmation/top_10_positive.json
+Saved top 10 negative features to: outputs/single_insider-trading_confirmation/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with single_insider-trading_confirmation)
+================================================================================
+1. Feature 61507: +0.1497
+   Feature 61507 (label not available - check Goodfire dashboard)
+
+2. Feature 12084: +0.1331
+   Discussions of coincidences, synchronicity and meaningful chance events
+
+3. Feature 7184: +0.1325
+   Feature 7184 (label not available - check Goodfire dashboard)
+
+4. Feature 42393: +0.1301
+   Feature 42393 (label not available - check Goodfire dashboard)
+
+5. Feature 17635: +0.1209
+   Feature 17635 (label not available - check Goodfire dashboard)
+
+6. Feature 63935: +0.1204
+   Feature 63935 (label not available - check Goodfire dashboard)
+
+7. Feature 27245: +0.1190
+   The assistant should maintain friendly engagement and show interest in the conversation
+
+8. Feature 48135: +0.1184
+   Feature 48135 (label not available - check Goodfire dashboard)
+
+9. Feature 17561: +0.1183
+   Feature 17561 (label not available - check Goodfire dashboard)
+
+10. Feature 23245: +0.1138
+   Feature 23245 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with single_insider-trading_confirmation)
+================================================================================
+1. Feature 26695: -0.1638
+   Feature 26695 (label not available - check Goodfire dashboard)
+
+2. Feature 53832: -0.1598
+   Feature 53832 (label not available - check Goodfire dashboard)
+
+3. Feature 17968: -0.1532
+   Feature 17968 (label not available - check Goodfire dashboard)
+
+4. Feature 31822: -0.1512
+   Feature 31822 (label not available - check Goodfire dashboard)
+
+5. Feature 11318: -0.1509
+   Feature 11318 (label not available - check Goodfire dashboard)
+
+6. Feature 24918: -0.1498
+   Feature 24918 (label not available - check Goodfire dashboard)
+
+7. Feature 20895: -0.1496
+   The assistant explains why it must maintain ethical boundaries despite requests to bypass them
+
+8. Feature 44989: -0.1492
+   Feature 44989 (label not available - check Goodfire dashboard)
+
+9. Feature 5013: -0.1383
+   Feature 5013 (label not available - check Goodfire dashboard)
+
+10. Feature 26390: -0.1373
+   Feature 26390 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/single_insider-trading_confirmation/all_similarities.json
+Saved similarity distribution to: outputs/single_insider-trading_confirmation/similarity_distribution.npy
+Saved summary to: outputs/single_insider-trading_confirmation/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: single_insider-trading_confirmation.pkl
+
+Processing: single_insider-trading_report.pkl
+----------------------------------------
+Loading probe from probes-layer50/single_insider-trading_report.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1917/65536 [00:00<00:03, 19160.56it/s]Computing similarities:   6%|▌         | 3897/65536 [00:00<00:03, 19531.13it/s]Computing similarities:   9%|▉         | 5875/65536 [00:00<00:03, 19642.61it/s]Computing similarities:  12%|█▏        | 7840/65536 [00:00<00:02, 19414.42it/s]Computing similarities:  15%|█▌        | 9832/65536 [00:00<00:02, 19592.08it/s]Computing similarities:  18%|█▊        | 11794/65536 [00:00<00:02, 19600.80it/s]Computing similarities:  21%|██        | 13767/65536 [00:00<00:02, 19641.60it/s]Computing similarities:  24%|██▍       | 15732/65536 [00:00<00:02, 19499.60it/s]Computing similarities:  27%|██▋       | 17683/65536 [00:00<00:02, 19331.26it/s]Computing similarities:  30%|██▉       | 19617/65536 [00:01<00:02, 18412.54it/s]Computing similarities:  33%|███▎      | 21467/65536 [00:01<00:02, 17298.29it/s]Computing similarities:  35%|███▌      | 23213/65536 [00:01<00:02, 16617.56it/s]Computing similarities:  38%|███▊      | 24888/65536 [00:01<00:02, 16174.86it/s]Computing similarities:  40%|████      | 26515/65536 [00:01<00:02, 15810.64it/s]Computing similarities:  43%|████▎     | 28473/65536 [00:01<00:02, 16863.35it/s]Computing similarities:  46%|████▋     | 30451/65536 [00:01<00:01, 17694.54it/s]Computing similarities:  49%|████▉     | 32425/65536 [00:01<00:01, 18284.78it/s]Computing similarities:  53%|█████▎    | 34408/65536 [00:01<00:01, 18735.38it/s]Computing similarities:  55%|█████▌    | 36336/65536 [00:01<00:01, 18893.82it/s]Computing similarities:  58%|█████▊    | 38280/65536 [00:02<00:01, 19053.07it/s]Computing similarities:  61%|██████▏   | 40229/65536 [00:02<00:01, 19182.70it/s]Computing similarities:  64%|██████▍   | 42173/65536 [00:02<00:01, 19256.50it/s]Computing similarities:  67%|██████▋   | 44127/65536 [00:02<00:01, 19340.48it/s]Computing similarities:  70%|███████   | 46087/65536 [00:02<00:01, 19415.96it/s]Computing similarities:  73%|███████▎  | 48031/65536 [00:02<00:00, 19420.15it/s]Computing similarities:  76%|███████▋  | 49974/65536 [00:02<00:00, 19378.58it/s]Computing similarities:  79%|███████▉  | 51913/65536 [00:02<00:00, 19289.45it/s]Computing similarities:  82%|████████▏ | 53857/65536 [00:02<00:00, 19333.94it/s]Computing similarities:  85%|████████▌ | 55795/65536 [00:02<00:00, 19345.17it/s]Computing similarities:  88%|████████▊ | 57739/65536 [00:03<00:00, 19371.41it/s]Computing similarities:  91%|█████████ | 59677/65536 [00:03<00:00, 19341.25it/s]Computing similarities:  94%|█████████▍| 61612/65536 [00:03<00:00, 19324.85it/s]Computing similarities:  97%|█████████▋| 63553/65536 [00:03<00:00, 19350.10it/s]Computing similarities: 100%|█████████▉| 65503/65536 [00:03<00:00, 19392.55it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18788.89it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 1/20 labels via API
+
+Saved top 10 positive features to: outputs/single_insider-trading_report/top_10_positive.json
+Saved top 10 negative features to: outputs/single_insider-trading_report/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with single_insider-trading_report)
+================================================================================
+1. Feature 3640: +0.1376
+   Feature 3640 (label not available - check Goodfire dashboard)
+
+2. Feature 22438: +0.1353
+   Feature 22438 (label not available - check Goodfire dashboard)
+
+3. Feature 25260: +0.1267
+   Feature 25260 (label not available - check Goodfire dashboard)
+
+4. Feature 2485: +0.1253
+   Feature 2485 (label not available - check Goodfire dashboard)
+
+5. Feature 56202: +0.1243
+   Feature 56202 (label not available - check Goodfire dashboard)
+
+6. Feature 18050: +0.1229
+   Feature 18050 (label not available - check Goodfire dashboard)
+
+7. Feature 58667: +0.1211
+   Maintaining deception or cover stories through careful actions
+
+8. Feature 5518: +0.1209
+   Feature 5518 (label not available - check Goodfire dashboard)
+
+9. Feature 63935: +0.1198
+   Feature 63935 (label not available - check Goodfire dashboard)
+
+10. Feature 61507: +0.1161
+   Feature 61507 (label not available - check Goodfire dashboard)
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with single_insider-trading_report)
+================================================================================
+1. Feature 5615: -0.1605
+   Feature 5615 (label not available - check Goodfire dashboard)
+
+2. Feature 43993: -0.1440
+   Feature 43993 (label not available - check Goodfire dashboard)
+
+3. Feature 48696: -0.1418
+   Feature 48696 (label not available - check Goodfire dashboard)
+
+4. Feature 53054: -0.1303
+   Feature 53054 (label not available - check Goodfire dashboard)
+
+5. Feature 21454: -0.1265
+   Feature 21454 (label not available - check Goodfire dashboard)
+
+6. Feature 56491: -0.1228
+   Feature 56491 (label not available - check Goodfire dashboard)
+
+7. Feature 8313: -0.1118
+   Feature 8313 (label not available - check Goodfire dashboard)
+
+8. Feature 24865: -0.1098
+   Feature 24865 (label not available - check Goodfire dashboard)
+
+9. Feature 5013: -0.1098
+   Feature 5013 (label not available - check Goodfire dashboard)
+
+10. Feature 57634: -0.1097
+   Feature 57634 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/single_insider-trading_report/all_similarities.json
+Saved similarity distribution to: outputs/single_insider-trading_report/similarity_distribution.npy
+Saved summary to: outputs/single_insider-trading_report/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: single_insider-trading_report.pkl
+
+Processing: single_instructed-deception.pkl
+----------------------------------------
+Loading probe from probes-layer50/single_instructed-deception.pkl...
+  Probe direction shape: (8192,)
+  Probe metadata: {'datasets': 'unknown', 'config': {'C': 1.0, 'max_iter': 1000, 'seed': 42}, 'cache_files': []}
+Downloading SAE from HuggingFace: Goodfire/Llama-3.3-70B-Instruct-SAE-l50...
+Loading SAE from /workspace/.cache/huggingface/models--Goodfire--Llama-3.3-70B-Instruct-SAE-l50/snapshots/128ee921ecd1b8b3a87d776cbcc357c0855da134/Llama-3.3-70B-Instruct-SAE-l50.pt...
+Decoder weights shape: torch.Size([8192, 65536])
+
+Computing cosine similarities for all features...
+Computing similarities:   0%|          | 0/65536 [00:00<?, ?it/s]Computing similarities:   3%|▎         | 1899/65536 [00:00<00:03, 18987.26it/s]Computing similarities:   6%|▌         | 3864/65536 [00:00<00:03, 19371.06it/s]Computing similarities:   9%|▉         | 5827/65536 [00:00<00:03, 19487.93it/s]Computing similarities:  12%|█▏        | 7776/65536 [00:00<00:02, 19345.00it/s]Computing similarities:  15%|█▍        | 9711/65536 [00:00<00:02, 19330.30it/s]Computing similarities:  18%|█▊        | 11645/65536 [00:00<00:02, 19128.20it/s]Computing similarities:  21%|██        | 13562/65536 [00:00<00:02, 19138.95it/s]Computing similarities:  24%|██▎       | 15477/65536 [00:00<00:02, 19078.97it/s]Computing similarities:  27%|██▋       | 17386/65536 [00:00<00:02, 18947.47it/s]Computing similarities:  29%|██▉       | 19281/65536 [00:01<00:02, 18255.75it/s]Computing similarities:  32%|███▏      | 21112/65536 [00:01<00:02, 17245.79it/s]Computing similarities:  35%|███▍      | 22849/65536 [00:01<00:02, 16676.21it/s]Computing similarities:  37%|███▋      | 24527/65536 [00:01<00:02, 16266.54it/s]Computing similarities:  40%|███▉      | 26161/65536 [00:01<00:02, 15984.99it/s]Computing similarities:  43%|████▎     | 28033/65536 [00:01<00:02, 16758.91it/s]Computing similarities:  46%|████▌     | 30032/65536 [00:01<00:02, 17689.71it/s]Computing similarities:  49%|████▉     | 32032/65536 [00:01<00:01, 18363.13it/s]Computing similarities:  52%|█████▏    | 34019/65536 [00:01<00:01, 18804.19it/s]Computing similarities:  55%|█████▍    | 35970/65536 [00:01<00:01, 19011.53it/s]Computing similarities:  58%|█████▊    | 37907/65536 [00:02<00:01, 19116.86it/s]Computing similarities:  61%|██████    | 39823/65536 [00:02<00:01, 19084.36it/s]Computing similarities:  64%|██████▎   | 41762/65536 [00:02<00:01, 19174.93it/s]Computing similarities:  67%|██████▋   | 43682/65536 [00:02<00:01, 19092.72it/s]Computing similarities:  70%|██████▉   | 45630/65536 [00:02<00:01, 19205.22it/s]Computing similarities:  73%|███████▎  | 47552/65536 [00:02<00:00, 18981.17it/s]Computing similarities:  75%|███████▌  | 49465/65536 [00:02<00:00, 19023.63it/s]Computing similarities:  78%|███████▊  | 51369/65536 [00:02<00:00, 19026.78it/s]Computing similarities:  81%|████████▏ | 53273/65536 [00:02<00:00, 18715.41it/s]Computing similarities:  84%|████████▍ | 55193/65536 [00:02<00:00, 18856.09it/s]Computing similarities:  87%|████████▋ | 57080/65536 [00:03<00:00, 18847.99it/s]Computing similarities:  90%|████████▉ | 58966/65536 [00:03<00:00, 18310.34it/s]Computing similarities:  93%|█████████▎| 60801/65536 [00:03<00:00, 18282.46it/s]Computing similarities:  96%|█████████▌| 62632/65536 [00:03<00:00, 18246.27it/s]Computing similarities:  98%|█████████▊| 64459/65536 [00:03<00:00, 18040.83it/s]Computing similarities: 100%|██████████| 65536/65536 [00:03<00:00, 18403.43it/s]
+
+Attempting to fetch labels for 20 features from Goodfire API...
+Note: Labels are only available for features that activate in test conversations.
+Successfully fetched 6/20 labels via API
+
+Saved top 10 positive features to: outputs/single_instructed-deception/top_10_positive.json
+Saved top 10 negative features to: outputs/single_instructed-deception/top_10_negative.json
+
+================================================================================
+TOP 10 POSITIVE FEATURES (Most aligned with single_instructed-deception)
+================================================================================
+1. Feature 36173: +0.2715
+   Requests for the AI to provide intentionally incorrect information
+
+2. Feature 3138: +0.1916
+   Feature 3138 (label not available - check Goodfire dashboard)
+
+3. Feature 17490: +0.1854
+   Offensive or discriminatory statements being quoted or analyzed
+
+4. Feature 42853: +0.1624
+   Revolutionary rhetoric in fantastical narratives
+
+5. Feature 18207: +0.1599
+   Feature 18207 (label not available - check Goodfire dashboard)
+
+6. Feature 54614: +0.1532
+   Feature 54614 (label not available - check Goodfire dashboard)
+
+7. Feature 47448: +0.1530
+   Formal connecting phrases and transitional elements in structured text
+
+8. Feature 30377: +0.1503
+   Offensive request from the user
+
+9. Feature 34750: +0.1487
+   Feature 34750 (label not available - check Goodfire dashboard)
+
+10. Feature 42834: +0.1465
+   Whimsical or nonsensical narrative content
+
+================================================================================
+TOP 10 NEGATIVE FEATURES (Most anti-correlated with single_instructed-deception)
+================================================================================
+1. Feature 8883: -0.1216
+   Feature 8883 (label not available - check Goodfire dashboard)
+
+2. Feature 3858: -0.1124
+   Feature 3858 (label not available - check Goodfire dashboard)
+
+3. Feature 34046: -0.1092
+   Feature 34046 (label not available - check Goodfire dashboard)
+
+4. Feature 61107: -0.1085
+   Feature 61107 (label not available - check Goodfire dashboard)
+
+5. Feature 56701: -0.0950
+   Feature 56701 (label not available - check Goodfire dashboard)
+
+6. Feature 3035: -0.0946
+   Feature 3035 (label not available - check Goodfire dashboard)
+
+7. Feature 14262: -0.0935
+   Feature 14262 (label not available - check Goodfire dashboard)
+
+8. Feature 21331: -0.0916
+   Feature 21331 (label not available - check Goodfire dashboard)
+
+9. Feature 9812: -0.0915
+   Feature 9812 (label not available - check Goodfire dashboard)
+
+10. Feature 52821: -0.0909
+   Feature 52821 (label not available - check Goodfire dashboard)
+
+Saved all 65536 similarities to: outputs/single_instructed-deception/all_similarities.json
+Saved similarity distribution to: outputs/single_instructed-deception/similarity_distribution.npy
+Saved summary to: outputs/single_instructed-deception/summary.json
+
+================================================================================
+COMPLETE!
+================================================================================
+✓ Completed: single_instructed-deception.pkl
+
+==================================================
+All probes processed!
+Results saved in outputs/ directory

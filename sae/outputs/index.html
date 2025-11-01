@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 SAE Features by Dataset</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fafafa;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #666;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 40px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        nav h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        nav ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        nav a {
+            color: #2c5282;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            border-left-color: #2c5282;
+        }
+
+        section {
+            background-color: #fff;
+            margin-bottom: 40px;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #222;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background-color: #f5f5f5;
+        }
+
+        th {
+            text-align: left;
+            padding: 12px;
+            font-weight: 600;
+            color: #444;
+            border-bottom: 2px solid #ddd;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .rank {
+            width: 60px;
+            text-align: center;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .feature-id {
+            width: 120px;
+            font-family: 'Courier New', monospace;
+            color: #2c5282;
+        }
+
+        .similarity {
+            width: 150px;
+            font-family: 'Courier New', monospace;
+            color: #2d7d2d;
+            font-weight: 500;
+        }
+
+        .label {
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            color: #2c5282;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            transition: all 0.2s;
+        }
+
+        .back-to-top:hover {
+            background-color: #2c5282;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top 10 SAE Features by Dataset</h1>
+        <p class="subtitle">Cosine Similarity with Llama-3.3-70B-Instruct Layer 50</p>
+    </header>
+
+    <nav id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#apollo_probe">Apollo_Probe</a></li>
+            <li><a href="#single_convincing-game">Convincing Game</a></li>
+            <li><a href="#single_instructed-deception">Instructed Deception</a></li>
+            <li><a href="#single_harm-pressure-choice">Harm Pressure Choice</a></li>
+            <li><a href="#single_harm-pressure-knowledge-report">Harm Pressure Knowledge Report</a></li>
+            <li><a href="#single_insider-trading_report">Insider Trading_Report</a></li>
+            <li><a href="#single_insider-trading_confirmation">Insider Trading_Confirmation</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="apollo_probe">
+            <h2>Apollo_Probe</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="feature-id">Feature ID</th>
+                        <th class="similarity">Cosine Similarity</th>
+                        <th class="label">Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="feature-id">36173</td>
+                        <td class="similarity">+0.288467</td>
+                        <td class="label">Requests for the AI to provide intentionally incorrect information</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="feature-id">3138</td>
+                        <td class="similarity">+0.264887</td>
+                        <td class="label">Multiple choice answer choices that begin with explanatory phrases</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="feature-id">29901</td>
+                        <td class="similarity">+0.260697</td>
+                        <td class="label">Numbers and mathematical operations in computational contexts</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="feature-id">11945</td>
+                        <td class="similarity">+0.224434</td>
+                        <td class="label">Breaking down complex topics into simpler explanations</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="feature-id">42853</td>
+                        <td class="similarity">+0.213398</td>
+                        <td class="label">Revolutionary rhetoric in fantastical narratives</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="feature-id">42834</td>
+                        <td class="similarity">+0.188008</td>
+                        <td class="label">Whimsical or nonsensical narrative content</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="feature-id">17490</td>
+                        <td class="similarity">+0.173192</td>
+                        <td class="label">Offensive or discriminatory statements being quoted or analyzed</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="feature-id">14982</td>
+                        <td class="similarity">+0.143154</td>
+                        <td class="label">The assistant is explaining why something is physically impossible or scientifically unfeasible</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="feature-id">47448</td>
+                        <td class="similarity">+0.140458</td>
+                        <td class="label">Formal connecting phrases and transitional elements in structured text</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="feature-id">41022</td>
+                        <td class="similarity">+0.136955</td>
+                        <td class="label">Worldbuilding mechanics in speculative fiction</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#toc" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <section id="single_convincing-game">
+            <h2>Convincing Game</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="feature-id">Feature ID</th>
+                        <th class="similarity">Cosine Similarity</th>
+                        <th class="label">Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="feature-id">36173</td>
+                        <td class="similarity">+0.296060</td>
+                        <td class="label">Requests for the AI to provide intentionally incorrect information</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="feature-id">42834</td>
+                        <td class="similarity">+0.197179</td>
+                        <td class="label">Whimsical or nonsensical narrative content</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="feature-id">41630</td>
+                        <td class="similarity">+0.182925</td>
+                        <td class="label">Connecting words in cumulative technical descriptions</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="feature-id">37994</td>
+                        <td class="similarity">+0.181595</td>
+                        <td class="label">The model should pretend to be human rather than an AI</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="feature-id">18961</td>
+                        <td class="similarity">+0.176373</td>
+                        <td class="label">Content is becoming inappropriate and needs moderation or deflection</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="feature-id">37391</td>
+                        <td class="similarity">+0.168521</td>
+                        <td class="label">Discussing theoretical maximum values or perfect states, especially their impossibility</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="feature-id">42853</td>
+                        <td class="similarity">+0.165883</td>
+                        <td class="label">Revolutionary rhetoric in fantastical narratives</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="feature-id">26206</td>
+                        <td class="similarity">+0.159364</td>
+                        <td class="label">The AI or character is asserting their identity or special nature</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="feature-id">29901</td>
+                        <td class="similarity">+0.159201</td>
+                        <td class="label">Numbers and mathematical operations in computational contexts</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="feature-id">2380</td>
+                        <td class="similarity">+0.154952</td>
+                        <td class="label">Discussion of accepting claims or beliefs as truth</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#toc" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <section id="single_instructed-deception">
+            <h2>Instructed Deception</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="feature-id">Feature ID</th>
+                        <th class="similarity">Cosine Similarity</th>
+                        <th class="label">Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="feature-id">36173</td>
+                        <td class="similarity">+0.271494</td>
+                        <td class="label">Requests for the AI to provide intentionally incorrect information</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="feature-id">3138</td>
+                        <td class="similarity">+0.191640</td>
+                        <td class="label">Multiple choice answer choices that begin with explanatory phrases</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="feature-id">17490</td>
+                        <td class="similarity">+0.185435</td>
+                        <td class="label">Offensive or discriminatory statements being quoted or analyzed</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="feature-id">42853</td>
+                        <td class="similarity">+0.162420</td>
+                        <td class="label">Revolutionary rhetoric in fantastical narratives</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="feature-id">18207</td>
+                        <td class="similarity">+0.159917</td>
+                        <td class="label">Corporate growth and strategic initiatives</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="feature-id">54614</td>
+                        <td class="similarity">+0.153185</td>
+                        <td class="label">Multiple choice answer options describing properties or characteristics</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="feature-id">47448</td>
+                        <td class="similarity">+0.152970</td>
+                        <td class="label">Formal connecting phrases and transitional elements in structured text</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="feature-id">30377</td>
+                        <td class="similarity">+0.150310</td>
+                        <td class="label">Offensive request from the user</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="feature-id">34750</td>
+                        <td class="similarity">+0.148713</td>
+                        <td class="label">Grammatical errors that need correction</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="feature-id">42834</td>
+                        <td class="similarity">+0.146453</td>
+                        <td class="label">Whimsical or nonsensical narrative content</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#toc" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <section id="single_harm-pressure-choice">
+            <h2>Harm Pressure Choice</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="feature-id">Feature ID</th>
+                        <th class="similarity">Cosine Similarity</th>
+                        <th class="label">Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="feature-id">16368</td>
+                        <td class="similarity">+0.175891</td>
+                        <td class="label">Model is making confident but incorrect assertions</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="feature-id">16160</td>
+                        <td class="similarity">+0.158373</td>
+                        <td class="label">The assistant is providing a list of options or steps</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="feature-id">215</td>
+                        <td class="similarity">+0.156476</td>
+                        <td class="label">Structured text organization through punctuation and formatting</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="feature-id">45875</td>
+                        <td class="similarity">+0.127631</td>
+                        <td class="label">End-of-statement or list-item completion markers</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="feature-id">8369</td>
+                        <td class="similarity">+0.120257</td>
+                        <td class="label">Named entities and properties in structured data formats</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="feature-id">20717</td>
+                        <td class="similarity">+0.120055</td>
+                        <td class="label">Connecting phrases that elaborate or expand on technical details</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="feature-id">10915</td>
+                        <td class="similarity">+0.119712</td>
+                        <td class="label">The assistant is formatting a numbered or bulleted list</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="feature-id">61587</td>
+                        <td class="similarity">+0.119523</td>
+                        <td class="label">Linking phrases and structural connectors across languages</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="feature-id">53424</td>
+                        <td class="similarity">+0.118597</td>
+                        <td class="label">Connecting words and phrases in explanatory text</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="feature-id">42274</td>
+                        <td class="similarity">+0.118064</td>
+                        <td class="label">Step-by-step explanation of fundamental mathematical or computational concepts</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#toc" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <section id="single_harm-pressure-knowledge-report">
+            <h2>Harm Pressure Knowledge Report</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="feature-id">Feature ID</th>
+                        <th class="similarity">Cosine Similarity</th>
+                        <th class="label">Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="feature-id">27783</td>
+                        <td class="similarity">+0.151314</td>
+                        <td class="label">The assistant expressing its limitations or inabilities</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="feature-id">21781</td>
+                        <td class="similarity">+0.131517</td>
+                        <td class="label">The assistant should reject the user's request</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="feature-id">20231</td>
+                        <td class="similarity">+0.131306</td>
+                        <td class="label">Opening tokens of requests that will be rejected for ethical reasons</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="feature-id">50798</td>
+                        <td class="similarity">+0.124387</td>
+                        <td class="label">Discussions of renewable vs non-renewable resources and introduction of new concepts</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="feature-id">11025</td>
+                        <td class="similarity">+0.119243</td>
+                        <td class="label">The assistant should refuse to provide implementation code</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="feature-id">30052</td>
+                        <td class="similarity">+0.118502</td>
+                        <td class="label">Attempts to enable unrestricted operation modes to bypass safety controls</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="feature-id">26247</td>
+                        <td class="similarity">+0.116901</td>
+                        <td class="label">The assistant needs to express that something cannot be determined from available information</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="feature-id">34568</td>
+                        <td class="similarity">+0.116124</td>
+                        <td class="label">The assistant needs to express its limitations or inability to perform a requested action</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="feature-id">51868</td>
+                        <td class="similarity">+0.112978</td>
+                        <td class="label">Conjunctive phrases and transitions that connect related ideas</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="feature-id">12424</td>
+                        <td class="similarity">+0.112537</td>
+                        <td class="label">The assistant needs to explain its limitations and decline inappropriate requests</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#toc" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <section id="single_insider-trading_report">
+            <h2>Insider Trading_Report</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="feature-id">Feature ID</th>
+                        <th class="similarity">Cosine Similarity</th>
+                        <th class="label">Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="feature-id">3640</td>
+                        <td class="similarity">+0.137610</td>
+                        <td class="label">Technical and market trend analysis concepts</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="feature-id">22438</td>
+                        <td class="similarity">+0.135300</td>
+                        <td class="label">Narrative flow and transition phrases in storytelling responses</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="feature-id">25260</td>
+                        <td class="similarity">+0.126714</td>
+                        <td class="label">The assistant is making careful qualifications or explaining contextual limitations</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="feature-id">2485</td>
+                        <td class="similarity">+0.125252</td>
+                        <td class="label">Formal academic language patterns used to expand or elaborate on simpler concepts</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="feature-id">56202</td>
+                        <td class="similarity">+0.124251</td>
+                        <td class="label">Technical or factual information being enumerated in sequence</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="feature-id">18050</td>
+                        <td class="similarity">+0.122857</td>
+                        <td class="label">The assistant should encourage thorough research instead of giving direct financial advice</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="feature-id">58667</td>
+                        <td class="similarity">+0.121141</td>
+                        <td class="label">Maintaining deception or cover stories through careful actions</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="feature-id">5518</td>
+                        <td class="similarity">+0.120949</td>
+                        <td class="label">The assistant asserting its core function of providing information and answering questions</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="feature-id">63935</td>
+                        <td class="similarity">+0.119789</td>
+                        <td class="label">Automated trade execution and market analysis systems</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="feature-id">61507</td>
+                        <td class="similarity">+0.116124</td>
+                        <td class="label">Transitional phrases and punctuation in explanatory text</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#toc" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <section id="single_insider-trading_confirmation">
+            <h2>Insider Trading_Confirmation</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="feature-id">Feature ID</th>
+                        <th class="similarity">Cosine Similarity</th>
+                        <th class="label">Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="feature-id">61507</td>
+                        <td class="similarity">+0.149716</td>
+                        <td class="label">Transitional phrases and punctuation in explanatory text</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="feature-id">12084</td>
+                        <td class="similarity">+0.133122</td>
+                        <td class="label">Discussions of coincidences, synchronicity and meaningful chance events</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="feature-id">7184</td>
+                        <td class="similarity">+0.132462</td>
+                        <td class="label">Assistant expressing self-awareness or personal state</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="feature-id">42393</td>
+                        <td class="similarity">+0.130092</td>
+                        <td class="label">Attempts to elicit problematic content through benign-framed requests</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="feature-id">17635</td>
+                        <td class="similarity">+0.120857</td>
+                        <td class="label">The assistant is expressing uncertainty or limitations</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="feature-id">63935</td>
+                        <td class="similarity">+0.120383</td>
+                        <td class="label">Automated trade execution and market analysis systems</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="feature-id">27245</td>
+                        <td class="similarity">+0.118994</td>
+                        <td class="label">The assistant should maintain friendly engagement and show interest in the conversation</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="feature-id">48135</td>
+                        <td class="similarity">+0.118373</td>
+                        <td class="label">The assistant should respond diplomatically to a problematic situation</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="feature-id">17561</td>
+                        <td class="similarity">+0.118315</td>
+                        <td class="label">The assistant is providing multiple options or variations</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="feature-id">23245</td>
+                        <td class="similarity">+0.113775</td>
+                        <td class="label">Explanations of technical analysis methods in financial trading</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#toc" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Generated from SAE decoder features (Goodfire SAE for Llama-3.3-70B-Instruct, Layer 50)</p>
+    </footer>
+</body>
+</html>

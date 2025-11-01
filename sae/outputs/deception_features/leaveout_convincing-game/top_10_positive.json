@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 58667,
+    "similarity": 0.08546756207942963,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.06716141104698181,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.052488118410110474,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.04767846316099167,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.04681112617254257,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.04174411669373512,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.03877827525138855,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.037878334522247314,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  },
+  {
+    "feature_id": 41533,
+    "similarity": 0.03624599799513817,
+    "label": "Acts of deception and dishonesty"
+  },
+  {
+    "feature_id": 10613,
+    "similarity": 0.03550053387880325,
+    "label": "Narrative moments where characters see through deception"
+  }
+]

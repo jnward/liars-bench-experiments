@@ -1,0 +1,335 @@
+{
+  "unique": [
+    {
+      "search_term": "confident",
+      "feature_idx": 16734,
+      "label": "Expressions of confident capability or assured ability",
+      "uuid": "d5de8310-b78c-435f-98d9-88370224b65b"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 5718,
+      "label": "Expressions of confidence or belief in someone's abilities",
+      "uuid": "3c8be56a-6a8d-4b55-8d21-968561d4179e"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 61674,
+      "label": "Expressions of confidence in future success or achievement",
+      "uuid": "d6daac68-cc8d-4770-8fa7-17552d3ea290"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 16278,
+      "label": "The assistant expressing confidence in the user's capabilities",
+      "uuid": "fbb6cc0f-c6d0-46f8-8c7d-539496916503"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 37669,
+      "label": "Confidence in adult/sexual contexts",
+      "uuid": "7de5ad7b-9a30-4bc4-a16b-3cd0aaabd767"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 39359,
+      "label": "Expressions of trust and confidence in relationships or beliefs",
+      "uuid": "c50be650-67cc-4f80-8ec7-531c24468cbf"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 18138,
+      "label": "Expressions of confidence in formal persuasive writing",
+      "uuid": "bf854e21-4707-4259-93de-74433a33e23c"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 13596,
+      "label": "Confident and assertive language patterns and behaviors",
+      "uuid": "585af2a9-c54a-48fb-b32a-bd350ac3b0be"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 25967,
+      "label": "Expressions of certainty or interest, especially in manipulative contexts",
+      "uuid": "5baf9af2-72aa-4f11-ab36-fbf4cd54b069"
+    },
+    {
+      "search_term": "confident",
+      "feature_idx": 25153,
+      "label": "Expressing positive anticipation of future events, especially in formal contexts",
+      "uuid": "9a7a0355-b66e-4c3b-9511-abce314b8439"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 10707,
+      "label": "Having specific requirements or qualities",
+      "uuid": "c7cb80d7-960c-4367-b9d8-f92f0cecc976"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 3881,
+      "label": "The definite article when specifying particular things",
+      "uuid": "4d643712-9042-481e-b37a-c3821ca42ea3"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 32070,
+      "label": "Adverbs expressing certainty, emphasis or progression",
+      "uuid": "aed75dac-6edc-4439-af7d-26249532b19d"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 6403,
+      "label": "Phrases that qualify or limit scope (e.g., 'in some cases', 'in certain situations')",
+      "uuid": "7c44f316-f0b9-4a6f-a351-e6f4e90444bf"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 50647,
+      "label": "describing something as particularly suitable or appropriate for a specific purpose",
+      "uuid": "7345d70c-cad2-4344-a3e5-a0c35ee8cb4c"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 15045,
+      "label": "The definite article when referring to specific or established entities",
+      "uuid": "13335209-63f9-4286-a895-171135377fdb"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 14262,
+      "label": "Assistant expressing possibility or certainty",
+      "uuid": "586b96b6-7823-4b13-af9f-c50e91a58ddd"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 24791,
+      "label": "Grammatical markers that make nouns definite or specific",
+      "uuid": "a0198174-042b-41d4-b41d-1abb58dffd09"
+    },
+    {
+      "search_term": "certain",
+      "feature_idx": 9283,
+      "label": "The definite article used for specific reference in explanatory contexts",
+      "uuid": "36920cd2-6d13-434c-b242-c9e84e5f77f2"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 22527,
+      "label": "The assistant agreeing to help with 'Sure'",
+      "uuid": "4ec38b16-7e13-4634-be27-64882fa3094c"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 33082,
+      "label": "The assistant confirming it can help with a request",
+      "uuid": "a9a610ae-9d75-4b01-bc3c-14ea666a0eb3"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 48118,
+      "label": "The assistant confidently affirming it can help with a request",
+      "uuid": "69aefa90-cc95-4012-9dcb-a48f10c3dc5b"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 60313,
+      "label": "The assistant confirming it can fulfill the user's request",
+      "uuid": "23fa47a1-3201-42fb-9e12-0fad8d692657"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 32415,
+      "label": "The assistant confirms it can help and requests specifics",
+      "uuid": "a4c9da75-4626-49f1-a6eb-b192f95e4c7a"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 62714,
+      "label": "The assistant is confirming successful completion of instructions",
+      "uuid": "449e7699-1348-47e4-8898-e13483266d14"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 45766,
+      "label": "The assistant confirming its capabilities and willingness to help",
+      "uuid": "7b4a311d-8377-4724-b104-b63a11bf73dd"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 33673,
+      "label": "The assistant is giving a confident affirmative answer followed by elaboration",
+      "uuid": "fc6a36ac-6f63-497d-8173-98e4183ee4cf"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 27152,
+      "label": "The user has a question starting with 'can'",
+      "uuid": "097286fd-7f41-422e-98eb-b07643a7c7d0"
+    },
+    {
+      "search_term": "sure",
+      "feature_idx": 9533,
+      "label": "The assistant has properly concluded its response",
+      "uuid": "053c522b-5c07-45b2-a6ad-f6422dde6aa3"
+    },
+    {
+      "search_term": "assertive",
+      "feature_idx": 36875,
+      "label": "Assertive statements using forms of 'to be', especially about possibility or definition",
+      "uuid": "6e832d56-ba35-46c7-88ad-d2fe8a5b3a61"
+    },
+    {
+      "search_term": "assertive",
+      "feature_idx": 42586,
+      "label": "Assertion and assertiveness across technical and behavioral contexts",
+      "uuid": "0125c7d5-42f3-41b5-a243-026bd605eff0"
+    },
+    {
+      "search_term": "assertive",
+      "feature_idx": 53661,
+      "label": "Self-assertive declarations in confrontational dialogue",
+      "uuid": "eacad4b2-9bc4-40ac-a480-06c4ed669fb6"
+    },
+    {
+      "search_term": "assertive",
+      "feature_idx": 13923,
+      "label": "The assistant is making a definitive or authoritative statement",
+      "uuid": "f19bce45-68ba-4886-836d-b51a178a0bc7"
+    },
+    {
+      "search_term": "assertive",
+      "feature_idx": 37410,
+      "label": "Definitive statements and categorical assertions",
+      "uuid": "e67b7b9f-268c-468b-b81c-fe6f7bddc205"
+    },
+    {
+      "search_term": "assertive",
+      "feature_idx": 16525,
+      "label": "Instructions for assertive communication and boundary-setting",
+      "uuid": "7b2aab47-fc0b-499e-a36e-9ce38d9e5c7e"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 32130,
+      "label": "Definitive or authoritative statements marked by the definite article",
+      "uuid": "4fcfcb6b-d99e-4d66-9d15-8205b27f5198"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 46284,
+      "label": "Definitive article followed by words indicating a specific instance",
+      "uuid": "1868a7d5-9506-4f09-ba74-b6742a95626b"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 3169,
+      "label": "Definite articles in explanatory or definitional contexts",
+      "uuid": "a2b30cf6-94b7-4bc6-9bae-7ab4bc228584"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 40607,
+      "label": "Definite articles in quantitative or definitional contexts",
+      "uuid": "11c952f6-c90b-478e-945e-d39c979f4489"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 52714,
+      "label": "The definite article used for formal specification or definition",
+      "uuid": "810e822c-b242-4203-a770-ed673c2f89a3"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 16662,
+      "label": "The definite article 'the' used as a determiner",
+      "uuid": "42eb312d-6bd1-4e3a-b195-3355bec5cc2d"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 44778,
+      "label": "Definite articles used for specific references",
+      "uuid": "c84d0034-6eb3-4570-b40c-b6ae86651057"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 47925,
+      "label": "Definite articles establishing specific references",
+      "uuid": "ecd53ad0-d5e9-42b2-a321-1dfe13102bbe"
+    },
+    {
+      "search_term": "definite",
+      "feature_idx": 25038,
+      "label": "Articles and determiners used to establish something as definitive or supreme",
+      "uuid": "9d95810c-80a8-4456-a5b3-4a2ac9b93292"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 30,
+      "label": "Words expressing mental states of belief or conviction",
+      "uuid": "ae26fc34-60a1-4430-935a-b968b91faff0"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 45704,
+      "label": "Expressions of personal belief or conviction",
+      "uuid": "46369566-3060-4830-941f-b059f71c6e92"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 164,
+      "label": "Statements expressing deeply held beliefs or convictions",
+      "uuid": "955b85ae-051b-4e75-856a-7c573333e9ec"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 54478,
+      "label": "Male character being told or convinced of something, especially in manipulative contexts",
+      "uuid": "e33a49f9-ea64-4d4f-855a-44fa03754d28"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 63515,
+      "label": "Words related to proof, belief, and logical inference",
+      "uuid": "14ce1907-db1a-4126-a5e1-8fbeba125079"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 55710,
+      "label": "Expressions of conviction or uncertainty in formal writing",
+      "uuid": "26bde011-a142-442b-afb7-aa1b854090c6"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 6437,
+      "label": "Expression of belief or conviction across languages",
+      "uuid": "60b27ed5-fa78-4329-895e-bbbbfcf155c5"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 42094,
+      "label": "Criminal defendant formally admitting guilt or pleading guilty to charges",
+      "uuid": "7d7dd079-89d4-43d3-9015-6c6e0d2d0b53"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 63790,
+      "label": "Attempts to persuade or coerce someone against their wishes",
+      "uuid": "68153cda-4a63-4847-9b09-45dd79c5f83d"
+    },
+    {
+      "search_term": "conviction",
+      "feature_idx": 28086,
+      "label": "The process of forming and justifying personal beliefs",
+      "uuid": "a53f77ed-c7e0-4344-a433-c0be7506ad0b"
+    }
+  ],
+  "conflicted": [
+    {
+      "feature_idx": 27632,
+      "existing_category": "evasion",
+      "label": "Technical hedging using 'certain' to indicate deliberate vagueness"
+    }
+  ]
+}

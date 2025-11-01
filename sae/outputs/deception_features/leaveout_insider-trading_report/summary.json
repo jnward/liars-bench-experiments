@@ -1,0 +1,55 @@
+{
+  "probe_name": "leaveout_insider-trading_report",
+  "probe_path": "probes-layer50/leaveout_insider-trading_report.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.007384438316901804,
+    "std_similarity": 0.0217123238923713,
+    "max_similarity": 0.07674138247966766,
+    "min_similarity": -0.049740467220544815,
+    "median_similarity": 0.005708856042474508
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 30032,
+      "similarity": 0.07674138247966766,
+      "label": "Characters pretending or feigning behavior"
+    },
+    {
+      "feature_id": 58667,
+      "similarity": 0.0576026514172554,
+      "label": "Maintaining deception or cover stories through careful actions"
+    },
+    {
+      "feature_id": 31975,
+      "similarity": 0.04559529945254326,
+      "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 14969,
+      "similarity": -0.049740467220544815,
+      "label": "The assistant should encourage honesty and transparency when users request help with deception"
+    },
+    {
+      "feature_id": 10681,
+      "similarity": -0.042486272752285004,
+      "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+    },
+    {
+      "feature_id": 51485,
+      "similarity": -0.034963734447956085,
+      "label": "Narrative moments of manipulation or coercion"
+    }
+  ]
+}

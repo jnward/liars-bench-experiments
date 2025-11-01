@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 58667,
+    "similarity": 0.0861387699842453,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.0785726010799408,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.05760445445775986,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.04771466553211212,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.04516362398862839,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.04380645230412483,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.04250837862491608,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  },
+  {
+    "feature_id": 54963,
+    "similarity": 0.039681851863861084,
+    "label": "Descriptions of deceptive or misleading claims in harmful content"
+  },
+  {
+    "feature_id": 41533,
+    "similarity": 0.03933997452259064,
+    "label": "Acts of deception and dishonesty"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.038988616317510605,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  }
+]

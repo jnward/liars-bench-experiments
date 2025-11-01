@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 51485,
+    "similarity": -0.04410368204116821,
+    "label": "Narrative moments of manipulation or coercion"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.030376918613910675,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 14969,
+    "similarity": -0.023532062768936157,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  },
+  {
+    "feature_id": 28458,
+    "similarity": -0.02214227430522442,
+    "label": "The assistant explaining its inability to deceive or have human cognitive capabilities"
+  },
+  {
+    "feature_id": 47236,
+    "similarity": -0.02192828059196472,
+    "label": "Attempts at manipulation or inauthentic behavior that should be discouraged"
+  },
+  {
+    "feature_id": 34269,
+    "similarity": -0.021529734134674072,
+    "label": "Deliberately calculated actions, especially those disguised as accidental"
+  },
+  {
+    "feature_id": 19996,
+    "similarity": -0.02040768787264824,
+    "label": "Playing manipulative social games or power dynamics"
+  },
+  {
+    "feature_id": 23059,
+    "similarity": -0.020398534834384918,
+    "label": "Discussions of deceptive marketing and misleading business practices"
+  },
+  {
+    "feature_id": 1774,
+    "similarity": -0.017683276906609535,
+    "label": "Hidden agendas and true intentions being revealed"
+  },
+  {
+    "feature_id": 21338,
+    "similarity": -0.01763089746236801,
+    "label": "Impersonation, mimicry and deceptive behavior across biological and social contexts"
+  }
+]

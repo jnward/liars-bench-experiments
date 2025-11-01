@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 54963,
+    "similarity": 0.1096402108669281,
+    "label": "Descriptions of deceptive or misleading claims in harmful content"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.10715904086828232,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.08664749562740326,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.060592420399188995,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 27878,
+    "similarity": 0.04719945788383484,
+    "label": "Plot reveals where something or someone's true identity is different from appearances"
+  },
+  {
+    "feature_id": 4964,
+    "similarity": 0.045504167675971985,
+    "label": "supernatural or manipulative charm as a power"
+  },
+  {
+    "feature_id": 50656,
+    "similarity": 0.042473964393138885,
+    "label": "Discussion of manipulation, fraud, or deceptive behavior"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.04101528972387314,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 57234,
+    "similarity": 0.039047494530677795,
+    "label": "Evading consequences or getting away with wrongdoing"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.039039645344018936,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  }
+]

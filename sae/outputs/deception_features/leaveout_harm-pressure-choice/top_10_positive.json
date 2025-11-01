@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 30032,
+    "similarity": 0.1012105643749237,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.09338615834712982,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.0748981162905693,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.06278760731220245,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.05447685346007347,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.052576303482055664,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 54963,
+    "similarity": 0.05195033550262451,
+    "label": "Descriptions of deceptive or misleading claims in harmful content"
+  },
+  {
+    "feature_id": 41533,
+    "similarity": 0.05001595988869667,
+    "label": "Acts of deception and dishonesty"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.049781493842601776,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.044839970767498016,
+    "label": "Pretending to enjoy something under coercion or threat"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "probe_name": "single_harm-pressure-choice",
+  "probe_path": "probes-layer50/single_harm-pressure-choice.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": -0.000985930408154365,
+    "std_similarity": 0.015684738029727887,
+    "max_similarity": 0.0667162761092186,
+    "min_similarity": -0.04410368204116821,
+    "median_similarity": -0.0002909870818257332
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 22003,
+      "similarity": 0.0667162761092186,
+      "label": "Descriptions of coercive or manipulative techniques"
+    },
+    {
+      "feature_id": 56804,
+      "similarity": 0.03723462298512459,
+      "label": "Pretending to enjoy something under coercion or threat"
+    },
+    {
+      "feature_id": 55585,
+      "similarity": 0.031119445338845253,
+      "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 51485,
+      "similarity": -0.04410368204116821,
+      "label": "Narrative moments of manipulation or coercion"
+    },
+    {
+      "feature_id": 64333,
+      "similarity": -0.030376918613910675,
+      "label": "Model is confabulating or making up plausible-sounding but false information"
+    },
+    {
+      "feature_id": 14969,
+      "similarity": -0.023532062768936157,
+      "label": "The assistant should encourage honesty and transparency when users request help with deception"
+    }
+  ]
+}

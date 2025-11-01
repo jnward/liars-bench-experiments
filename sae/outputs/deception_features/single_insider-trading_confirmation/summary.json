@@ -1,0 +1,55 @@
+{
+  "probe_name": "single_insider-trading_confirmation",
+  "probe_path": "probes-layer50/single_insider-trading_confirmation.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.001083427541692492,
+    "std_similarity": 0.031773608723029645,
+    "max_similarity": 0.09449579566717148,
+    "min_similarity": -0.11793188005685806,
+    "median_similarity": -0.0006771422922611237
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 58667,
+      "similarity": 0.09449579566717148,
+      "label": "Maintaining deception or cover stories through careful actions"
+    },
+    {
+      "feature_id": 52515,
+      "similarity": 0.0896332859992981,
+      "label": "The assistant is being evasive or diplomatic rather than direct"
+    },
+    {
+      "feature_id": 7718,
+      "similarity": 0.06829110532999039,
+      "label": "Content explaining manipulative tactics and coercive methods"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 14969,
+      "similarity": -0.11793188005685806,
+      "label": "The assistant should encourage honesty and transparency when users request help with deception"
+    },
+    {
+      "feature_id": 28458,
+      "similarity": -0.05592824146151543,
+      "label": "The assistant explaining its inability to deceive or have human cognitive capabilities"
+    },
+    {
+      "feature_id": 27994,
+      "similarity": -0.05357402190566063,
+      "label": "Discovering hidden truths or evidence"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "probe_name": "single_harm-pressure-knowledge-report",
+  "probe_path": "probes-layer50/single_harm-pressure-knowledge-report.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.00018118900856868903,
+    "std_similarity": 0.0161307417418419,
+    "max_similarity": 0.043480537831783295,
+    "min_similarity": -0.034511469304561615,
+    "median_similarity": -0.0011837230995297432
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 10522,
+      "similarity": 0.043480537831783295,
+      "label": "Manipulative intent to extract information or actions from targets"
+    },
+    {
+      "feature_id": 31088,
+      "similarity": 0.03855255991220474,
+      "label": "Manipulative language attempting to bypass AI safety guardrails"
+    },
+    {
+      "feature_id": 55585,
+      "similarity": 0.03739093616604805,
+      "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 64333,
+      "similarity": -0.034511469304561615,
+      "label": "Model is confabulating or making up plausible-sounding but false information"
+    },
+    {
+      "feature_id": 30686,
+      "similarity": -0.029115930199623108,
+      "label": "Tactical deception and misdirection methods"
+    },
+    {
+      "feature_id": 51485,
+      "similarity": -0.028962772339582443,
+      "label": "Narrative moments of manipulation or coercion"
+    }
+  ]
+}

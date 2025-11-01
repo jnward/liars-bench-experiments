@@ -1,0 +1,55 @@
+{
+  "probe_name": "single_insider-trading_report",
+  "probe_path": "probes-layer50/single_insider-trading_report.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.014480189676068619,
+    "std_similarity": 0.03166980819134265,
+    "max_similarity": 0.1211409866809845,
+    "min_similarity": -0.05454504117369652,
+    "median_similarity": 0.013589409179985523
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 58667,
+      "similarity": 0.1211409866809845,
+      "label": "Maintaining deception or cover stories through careful actions"
+    },
+    {
+      "feature_id": 52515,
+      "similarity": 0.08478375524282455,
+      "label": "The assistant is being evasive or diplomatic rather than direct"
+    },
+    {
+      "feature_id": 4308,
+      "similarity": 0.07483178377151489,
+      "label": "Contexts involving deception, lying, or questioning truthfulness"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 55585,
+      "similarity": -0.05454504117369652,
+      "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+    },
+    {
+      "feature_id": 27994,
+      "similarity": -0.05348188430070877,
+      "label": "Discovering hidden truths or evidence"
+    },
+    {
+      "feature_id": 10681,
+      "similarity": -0.04232694208621979,
+      "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+    }
+  ]
+}

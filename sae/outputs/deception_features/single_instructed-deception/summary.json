@@ -1,0 +1,55 @@
+{
+  "probe_name": "single_instructed-deception",
+  "probe_path": "probes-layer50/single_instructed-deception.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.0143424716686279,
+    "std_similarity": 0.027481208757141468,
+    "max_similarity": 0.10142133384943008,
+    "min_similarity": -0.07326968014240265,
+    "median_similarity": 0.013787118718028069
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 54963,
+      "similarity": 0.10142133384943008,
+      "label": "Descriptions of deceptive or misleading claims in harmful content"
+    },
+    {
+      "feature_id": 30032,
+      "similarity": 0.08591534197330475,
+      "label": "Characters pretending or feigning behavior"
+    },
+    {
+      "feature_id": 54448,
+      "similarity": 0.07664905488491058,
+      "label": "Statements revealing a contrast between appearance and reality"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 22003,
+      "similarity": -0.07326968014240265,
+      "label": "Descriptions of coercive or manipulative techniques"
+    },
+    {
+      "feature_id": 10681,
+      "similarity": -0.04749397188425064,
+      "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+    },
+    {
+      "feature_id": 64333,
+      "similarity": -0.025747807696461678,
+      "label": "Model is confabulating or making up plausible-sounding but false information"
+    }
+  ]
+}

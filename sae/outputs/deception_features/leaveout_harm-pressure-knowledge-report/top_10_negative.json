@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 15788,
+    "similarity": -0.04509919881820679,
+    "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+  },
+  {
+    "feature_id": 10681,
+    "similarity": -0.04167742282152176,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.02236551232635975,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": -0.018336504697799683,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 34269,
+    "similarity": -0.01818305253982544,
+    "label": "Deliberately calculated actions, especially those disguised as accidental"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.017889486625790596,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 63790,
+    "similarity": -0.008661704137921333,
+    "label": "Attempts to persuade or coerce someone against their wishes"
+  },
+  {
+    "feature_id": 51485,
+    "similarity": -0.007958090864121914,
+    "label": "Narrative moments of manipulation or coercion"
+  },
+  {
+    "feature_id": 784,
+    "similarity": -0.0070355720818042755,
+    "label": "Betrayal and treachery in narrative contexts"
+  },
+  {
+    "feature_id": 62071,
+    "similarity": -0.0061380285769701,
+    "label": "Negation tokens revealing truth or subverting expectations"
+  }
+]

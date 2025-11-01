@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 54963,
+    "similarity": 0.11899922788143158,
+    "label": "Descriptions of deceptive or misleading claims in harmful content"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.05560188367962837,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 60685,
+    "similarity": 0.04663483798503876,
+    "label": "Mind control fiction narrative device where hypnotist reveals their true intentions"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.03612272068858147,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.02900870516896248,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.024509333074092865,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 21338,
+    "similarity": 0.023006411269307137,
+    "label": "Impersonation, mimicry and deceptive behavior across biological and social contexts"
+  },
+  {
+    "feature_id": 50656,
+    "similarity": 0.02248731255531311,
+    "label": "Discussion of manipulation, fraud, or deceptive behavior"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.021524257957935333,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  },
+  {
+    "feature_id": 17385,
+    "similarity": 0.02022615261375904,
+    "label": "Plot twist revelations about hidden truths from the past"
+  }
+]

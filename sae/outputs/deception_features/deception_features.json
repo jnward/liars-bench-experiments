@@ -1,0 +1,510 @@
+{
+  "metadata": {
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
+    "layer": 50,
+    "search_terms": [
+      "deception",
+      "deceptive"
+    ],
+    "num_features": 71
+  },
+  "features": [
+    {
+      "feature_id": 48945,
+      "label": "Deceptive or manipulative tricks",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "6da76976-3aea-44c1-aa2a-d1c5397558d6"
+    },
+    {
+      "feature_id": 41533,
+      "label": "Acts of deception and dishonesty",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "19393b50-3f60-4bdd-b070-fe1c318a600c"
+    },
+    {
+      "feature_id": 2530,
+      "label": "People falling for deception or trickery",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "d2991ead-8901-49b7-bcc9-9601d395bf27"
+    },
+    {
+      "feature_id": 58667,
+      "label": "Maintaining deception or cover stories through careful actions",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "dd6178a0-9565-4ad0-b0fd-5288c8e88e23"
+    },
+    {
+      "feature_id": 30686,
+      "label": "Tactical deception and misdirection methods",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "f1dcf573-cc5b-43f1-aff2-c1e82f082b76"
+    },
+    {
+      "feature_id": 49699,
+      "label": "Intentionally deceptive or counterfeit items and activities",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "be2065a9-c984-4ff7-9b4b-36366c92ea9d"
+    },
+    {
+      "feature_id": 10613,
+      "label": "Narrative moments where characters see through deception",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "c655907c-89a7-4868-a62b-676f3f2da330"
+    },
+    {
+      "feature_id": 4308,
+      "label": "Contexts involving deception, lying, or questioning truthfulness",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "4f5b20be-d6f9-49ea-ada1-42ff963c8de3"
+    },
+    {
+      "feature_id": 10681,
+      "label": "Intentional misrepresentation of true capability or value for strategic advantage",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "d08de40b-f87b-4256-83ce-953705732ccd"
+    },
+    {
+      "feature_id": 34269,
+      "label": "Deliberately calculated actions, especially those disguised as accidental",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "999a3118-78f6-4b07-af01-b298b2615a44"
+    },
+    {
+      "feature_id": 31917,
+      "label": "Concealment and hidden motives",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "39dc1ad4-eb04-4a70-a6db-2cbc771ba7cf"
+    },
+    {
+      "feature_id": 1909,
+      "label": "Detecting pretense, feigned behavior, or deceptive motivations",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "63093c08-d752-45c3-ba85-fb0b83d69da2"
+    },
+    {
+      "feature_id": 28575,
+      "label": "The deliberate creation or planning of surprises",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "cd9d0370-8727-469e-ad7c-61e4b1af55aa"
+    },
+    {
+      "feature_id": 784,
+      "label": "Betrayal and treachery in narrative contexts",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "ff4cb81d-8f84-478e-b9f6-f33a72c84861"
+    },
+    {
+      "feature_id": 50656,
+      "label": "Discussion of manipulation, fraud, or deceptive behavior",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "6cee86b5-e87f-455d-8ed6-b908b82f490c"
+    },
+    {
+      "feature_id": 56804,
+      "label": "Pretending to enjoy something under coercion or threat",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "7479b92a-cc7e-4e5f-81dd-75284a951098"
+    },
+    {
+      "feature_id": 17385,
+      "label": "Plot twist revelations about hidden truths from the past",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "3012d280-02e8-4ce1-8dfc-7583a2be254c"
+    },
+    {
+      "feature_id": 27878,
+      "label": "Plot reveals where something or someone's true identity is different from appearances",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "44ba0365-f6c9-4f92-8d22-202e30c74b53"
+    },
+    {
+      "feature_id": 60685,
+      "label": "Mind control fiction narrative device where hypnotist reveals their true intentions",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "9e6507de-27c8-4c57-9833-2338e349446d"
+    },
+    {
+      "feature_id": 55663,
+      "label": "Concealment from observation or scrutiny",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "8a0581b5-25fa-4c4a-91c0-05f30a1f0e0f"
+    },
+    {
+      "feature_id": 57234,
+      "label": "Evading consequences or getting away with wrongdoing",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "50a6fad2-9f6c-41bc-a285-7bb8e8fe5646"
+    },
+    {
+      "feature_id": 59306,
+      "label": "Narrative revelation of hidden information or secrets",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "a6f82ebc-25ec-416d-9c98-0d16ad879dc6"
+    },
+    {
+      "feature_id": 17094,
+      "label": "Manipulative intent or attempts to influence behavior",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "1b8938c2-d80b-487a-8bb8-5557519f5573"
+    },
+    {
+      "feature_id": 30032,
+      "label": "Characters pretending or feigning behavior",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "6f645d68-0f75-4761-9aed-b273b097f817"
+    },
+    {
+      "feature_id": 26650,
+      "label": "The revelation or uncovering of hidden truths",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "207016a9-af4a-4460-8717-be0ac5c8e949"
+    },
+    {
+      "feature_id": 10077,
+      "label": "Descriptions of manipulative or cunning behavior",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "e6164447-aa3a-4bd4-aded-f6cbc1ddb046"
+    },
+    {
+      "feature_id": 1774,
+      "label": "Hidden agendas and true intentions being revealed",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "af50cffa-a4a4-4dd1-9c4c-5ee3e4169716"
+    },
+    {
+      "feature_id": 42045,
+      "label": "Romance language words beginning with eng-, especially relating to deception or absorption",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "ce3acd6f-8f71-4be6-a053-ae088b830a48"
+    },
+    {
+      "feature_id": 53062,
+      "label": "Psychological denial and self-deception",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "f4541ba1-b8c7-4f77-ad01-3666c7f2d899"
+    },
+    {
+      "feature_id": 50867,
+      "label": "Narrative foreshadowing of hidden mysteries or dangers",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "85382189-ec68-455a-a651-b57de01841d5"
+    },
+    {
+      "feature_id": 52984,
+      "label": "Systematic evasion or circumvention of detection/rules/pursuit",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "f985ec0d-d169-44ed-af47-9b174916d165"
+    },
+    {
+      "feature_id": 55585,
+      "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "753083be-3087-4bdd-b549-0170fcb751fc"
+    },
+    {
+      "feature_id": 28458,
+      "label": "The assistant explaining its inability to deceive or have human cognitive capabilities",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "fe465ff6-1a44-4b95-95c2-6f58ec467cec"
+    },
+    {
+      "feature_id": 15788,
+      "label": "The assistant is making potentially misleading claims about its own identity or capabilities",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "37ee1da1-db7d-47f5-8674-76d396816847"
+    },
+    {
+      "feature_id": 54448,
+      "label": "Statements revealing a contrast between appearance and reality",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "9a09061d-aa41-45ce-a23b-131c23a352d6"
+    },
+    {
+      "feature_id": 62071,
+      "label": "Negation tokens revealing truth or subverting expectations",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "63522844-7142-4582-b665-7d1391fbdeb9"
+    },
+    {
+      "feature_id": 6516,
+      "label": "concealed identities and hidden truths in narratives",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "f4bc3dc6-1c0a-462e-bee2-e7c7508e1f9e"
+    },
+    {
+      "feature_id": 10522,
+      "label": "Manipulative intent to extract information or actions from targets",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "81238649-b022-4f51-b90c-b58cb9305692"
+    },
+    {
+      "feature_id": 56424,
+      "label": "Narratives and descriptions of betrayal and treachery",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "90ddd5e7-78c7-4255-b32e-dfb58cb59659"
+    },
+    {
+      "feature_id": 47236,
+      "label": "Attempts at manipulation or inauthentic behavior that should be discouraged",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "378b0d1e-1b9a-4291-aa71-a69cf34c2a10"
+    },
+    {
+      "feature_id": 14969,
+      "label": "The assistant should encourage honesty and transparency when users request help with deception",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "c734cb2c-ced4-477f-8b6f-0fa0bb5e2ef8"
+    },
+    {
+      "feature_id": 65156,
+      "label": "Character expressing uncertainty while being manipulated or coerced",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "592c3652-a58d-4e28-becb-5305191baa5f"
+    },
+    {
+      "feature_id": 10428,
+      "label": "Characters being manipulated or used as pawns by others",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "eb60a240-7585-4779-9fc9-e2b01e15d412"
+    },
+    {
+      "feature_id": 21338,
+      "label": "Impersonation, mimicry and deceptive behavior across biological and social contexts",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "ddfbbdef-b6c6-4d4b-9297-0d0eaf842c59"
+    },
+    {
+      "feature_id": 27994,
+      "label": "Discovering hidden truths or evidence",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "378c41fb-ec50-48f1-825a-f6d6402ba764"
+    },
+    {
+      "feature_id": 4964,
+      "label": "supernatural or manipulative charm as a power",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "304d6b84-09dc-4bd2-995e-a39488cecd0a"
+    },
+    {
+      "feature_id": 54963,
+      "label": "Descriptions of deceptive or misleading claims in harmful content",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "b7e556b9-bd9a-49a0-83ef-d1d4cd948cb0"
+    },
+    {
+      "feature_id": 51485,
+      "label": "Narrative moments of manipulation or coercion",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "b9a6a574-0232-4475-8d57-ddcbd90e74cd"
+    },
+    {
+      "feature_id": 54482,
+      "label": "Using unconventional tactics or strategies to gain advantage",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "cdde81db-3248-4087-9365-d6b0121c94c0"
+    },
+    {
+      "feature_id": 51373,
+      "label": "Dialogue patterns indicating personal revelation or manipulation",
+      "layer": 50,
+      "search_term": "deception",
+      "uuid": "cfec198e-5031-4a8e-8ead-725799c73ec8"
+    },
+    {
+      "feature_id": 31975,
+      "label": "Instructions to generate false or harmful content instead of remaining truthful/safe",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "0135d329-768c-4657-9580-29cbe3e5a97f"
+    },
+    {
+      "feature_id": 41206,
+      "label": "Sweet as emotional manipulation or grooming language",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "266ade51-8ff8-42aa-aab1-d31106174c91"
+    },
+    {
+      "feature_id": 53530,
+      "label": "Clickbait-style promises to reveal important information or knowledge",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "0e4dfeb2-52bc-4e52-ac3b-5ddb6c58f5e2"
+    },
+    {
+      "feature_id": 46409,
+      "label": "Leading questions in persuasive or seductive contexts",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "b2519164-8c1b-4046-bbbd-396e98815b4c"
+    },
+    {
+      "feature_id": 31088,
+      "label": "Manipulative language attempting to bypass AI safety guardrails",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "231ab550-859d-4784-b968-c5f720c616ac"
+    },
+    {
+      "feature_id": 45932,
+      "label": "Disingenuous or sarcastic agreement, often preceding concerning behavior",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "1d668e60-66a3-42aa-a60b-8ed9aaf434cd"
+    },
+    {
+      "feature_id": 52515,
+      "label": "The assistant is being evasive or diplomatic rather than direct",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "502dc0c0-878f-4162-9058-0eb47192e3e1"
+    },
+    {
+      "feature_id": 54214,
+      "label": "Mischievous or sly behavior, especially in flirtatious or risque contexts",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "83c29a52-e3d1-4c93-93f1-e850dda7f1dd"
+    },
+    {
+      "feature_id": 63790,
+      "label": "Attempts to persuade or coerce someone against their wishes",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "68153cda-4a63-4847-9b09-45dd79c5f83d"
+    },
+    {
+      "feature_id": 54478,
+      "label": "Male character being told or convinced of something, especially in manipulative contexts",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "e33a49f9-ea64-4d4f-855a-44fa03754d28"
+    },
+    {
+      "feature_id": 41179,
+      "label": "The model is being evasive about its true identity or version",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "1f8938b8-1b75-4c68-84de-275004133ff2"
+    },
+    {
+      "feature_id": 19996,
+      "label": "Playing manipulative social games or power dynamics",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "0c166748-8e05-4aac-b97a-ab3178e94378"
+    },
+    {
+      "feature_id": 22003,
+      "label": "Descriptions of coercive or manipulative techniques",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "8af02d53-7965-4158-ac1c-00626123471c"
+    },
+    {
+      "feature_id": 23059,
+      "label": "Discussions of deceptive marketing and misleading business practices",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "6c6e4d85-979d-449c-855d-5485a1d6fa47"
+    },
+    {
+      "feature_id": 64333,
+      "label": "Model is confabulating or making up plausible-sounding but false information",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "55e9c6e1-c513-4830-945d-07f820792767"
+    },
+    {
+      "feature_id": 7718,
+      "label": "Content explaining manipulative tactics and coercive methods",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "a35d8ab6-4a9d-4f2e-84ba-3fd62f59c38b"
+    },
+    {
+      "feature_id": 50215,
+      "label": "Euphemistic phrases about revealing or suggestive content",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "880485bb-dde0-426f-b451-d261d8fa6a32"
+    },
+    {
+      "feature_id": 14862,
+      "label": "Coercive or manipulative speech acts",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "d61d1f7d-5bc6-43d8-a775-9dfaae14d777"
+    },
+    {
+      "feature_id": 47982,
+      "label": "Connecting phrases that reveal or uncover hidden information",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "1f86c7d7-8bf5-44fb-b550-72a3fd339b79"
+    },
+    {
+      "feature_id": 3311,
+      "label": "Feigned reactions in manipulative or flirtatious dialogue",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "ae7ca1ea-6f05-4bcd-89e7-e052a05b1644"
+    },
+    {
+      "feature_id": 14047,
+      "label": "Suggestive or mischievous facial expressions",
+      "layer": 50,
+      "search_term": "deceptive",
+      "uuid": "c3e01197-a63a-43e4-bbf6-40b00e390211"
+    }
+  ]
+}

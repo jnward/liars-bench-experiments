@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 10681,
+    "similarity": -0.04055740684270859,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.021428052335977554,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 51485,
+    "similarity": -0.018964963033795357,
+    "label": "Narrative moments of manipulation or coercion"
+  },
+  {
+    "feature_id": 15788,
+    "similarity": -0.018780650570988655,
+    "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.01501239463686943,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 14969,
+    "similarity": -0.011412286199629307,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  },
+  {
+    "feature_id": 47236,
+    "similarity": -0.009296412579715252,
+    "label": "Attempts at manipulation or inauthentic behavior that should be discouraged"
+  },
+  {
+    "feature_id": 34269,
+    "similarity": -0.007638538256287575,
+    "label": "Deliberately calculated actions, especially those disguised as accidental"
+  },
+  {
+    "feature_id": 54478,
+    "similarity": -0.007235720753669739,
+    "label": "Male character being told or convinced of something, especially in manipulative contexts"
+  },
+  {
+    "feature_id": 63790,
+    "similarity": -0.0064936671406030655,
+    "label": "Attempts to persuade or coerce someone against their wishes"
+  }
+]

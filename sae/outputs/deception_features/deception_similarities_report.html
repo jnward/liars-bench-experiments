@@ -1,0 +1,2998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deception Feature Similarities Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2em;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .probe-section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .probe-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .statistics {
+            margin: 20px 0;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .stats-table th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .stats-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+        }
+
+        .similarity-tables {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .table-container h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        .table-description {
+            color: #666;
+            font-style: italic;
+            margin: 5px 0 15px 0;
+        }
+
+        .similarity-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+
+        .similarity-table thead {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .similarity-table th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .similarity-table td {
+            padding: 10px 8px;
+            border: 1px solid #ddd;
+        }
+
+        .similarity-table td:nth-child(1) {
+            text-align: center;
+            font-weight: bold;
+            width: 50px;
+        }
+
+        .similarity-table td:nth-child(2) {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            width: 100px;
+        }
+
+        .similarity-table td:nth-child(3) {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            width: 100px;
+        }
+
+        .similarity-table td:nth-child(4) {
+            text-align: left;
+        }
+
+        .group-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            margin: 30px 0 20px 0;
+            border-radius: 5px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .similarity-tables {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Deception Feature Similarities Report</h1>
+        <p><strong>Analysis:</strong> Cosine similarities between probes and 71 deception-labeled SAE features</p>
+        <p><strong>Model:</strong> meta-llama/Llama-3.3-70B-Instruct (Layer 50)</p>
+        <p><strong>Features:</strong> 71 deception-related features from Goodfire SAE</p>
+        <p><strong>Probes analyzed:</strong> 14 (1 apollo + 1 all_datasets + 6 single + 6 leaveout)</p>
+    </div>
+<div class="group-header">Apollo Probe</div>
+
+    <div class="probe-section">
+        <h2>apollo_probe</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0048</td>
+                    <td>0.0216</td>
+                    <td>+0.1190</td>
+                    <td>-0.0516</td>
+                    <td>+0.0029</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(168, 243, 168);">
+                            <td>1</td>
+                            <td>54963</td>
+                            <td><strong>+0.1190</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 220, 206);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.0556</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 217, 212);">
+                            <td>3</td>
+                            <td>60685</td>
+                            <td><strong>+0.0466</strong></td>
+                            <td>Mind control fiction narrative device where hypnotist reveals their true intentions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(218, 213, 218);">
+                            <td>4</td>
+                            <td>31975</td>
+                            <td><strong>+0.0361</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(222, 210, 222);">
+                            <td>5</td>
+                            <td>58667</td>
+                            <td><strong>+0.0290</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(225, 208, 225);">
+                            <td>6</td>
+                            <td>1909</td>
+                            <td><strong>+0.0245</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(226, 208, 226);">
+                            <td>7</td>
+                            <td>21338</td>
+                            <td><strong>+0.0230</strong></td>
+                            <td>Impersonation, mimicry and deceptive behavior across biological and social contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(226, 208, 226);">
+                            <td>8</td>
+                            <td>50656</td>
+                            <td><strong>+0.0225</strong></td>
+                            <td>Discussion of manipulation, fraud, or deceptive behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(227, 207, 227);">
+                            <td>9</td>
+                            <td>4308</td>
+                            <td><strong>+0.0215</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(227, 207, 227);">
+                            <td>10</td>
+                            <td>17385</td>
+                            <td><strong>+0.0202</strong></td>
+                            <td>Plot twist revelations about hidden truths from the past</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(218, 209, 209);">
+                            <td>1</td>
+                            <td>27994</td>
+                            <td><strong>-0.0516</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 222, 222);">
+                            <td>2</td>
+                            <td>41179</td>
+                            <td><strong>-0.0299</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 224, 224);">
+                            <td>3</td>
+                            <td>14969</td>
+                            <td><strong>-0.0267</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>4</td>
+                            <td>53062</td>
+                            <td><strong>-0.0183</strong></td>
+                            <td>Psychological denial and self-deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 230, 230);">
+                            <td>5</td>
+                            <td>10428</td>
+                            <td><strong>-0.0164</strong></td>
+                            <td>Characters being manipulated or used as pawns by others</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 230, 230);">
+                            <td>6</td>
+                            <td>54482</td>
+                            <td><strong>-0.0164</strong></td>
+                            <td>Using unconventional tactics or strategies to gain advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>7</td>
+                            <td>52515</td>
+                            <td><strong>-0.0152</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>8</td>
+                            <td>7718</td>
+                            <td><strong>-0.0151</strong></td>
+                            <td>Content explaining manipulative tactics and coercive methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 231, 231);">
+                            <td>9</td>
+                            <td>784</td>
+                            <td><strong>-0.0147</strong></td>
+                            <td>Betrayal and treachery in narrative contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 232, 232);">
+                            <td>10</td>
+                            <td>28575</td>
+                            <td><strong>-0.0120</strong></td>
+                            <td>The deliberate creation or planning of surprises</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<div class="group-header">All Datasets Probe</div>
+
+    <div class="probe-section">
+        <h2>all_datasets</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0120</td>
+                    <td>0.0223</td>
+                    <td>+0.0861</td>
+                    <td>-0.0445</td>
+                    <td>+0.0071</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(188, 231, 188);">
+                            <td>1</td>
+                            <td>58667</td>
+                            <td><strong>+0.0861</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(192, 228, 192);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.0786</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 221, 205);">
+                            <td>3</td>
+                            <td>31975</td>
+                            <td><strong>+0.0576</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 217, 211);">
+                            <td>4</td>
+                            <td>52515</td>
+                            <td><strong>+0.0477</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 216, 212);">
+                            <td>5</td>
+                            <td>30686</td>
+                            <td><strong>+0.0452</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 216, 213);">
+                            <td>6</td>
+                            <td>56804</td>
+                            <td><strong>+0.0438</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>7</td>
+                            <td>4308</td>
+                            <td><strong>+0.0425</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>8</td>
+                            <td>54963</td>
+                            <td><strong>+0.0397</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>9</td>
+                            <td>41533</td>
+                            <td><strong>+0.0393</strong></td>
+                            <td>Acts of deception and dishonesty</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>10</td>
+                            <td>1909</td>
+                            <td><strong>+0.0390</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(216, 213, 213);">
+                            <td>1</td>
+                            <td>10681</td>
+                            <td><strong>-0.0445</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 217, 217);">
+                            <td>2</td>
+                            <td>15788</td>
+                            <td><strong>-0.0378</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>3</td>
+                            <td>64333</td>
+                            <td><strong>-0.0182</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>4</td>
+                            <td>51485</td>
+                            <td><strong>-0.0180</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 232, 232);">
+                            <td>5</td>
+                            <td>14969</td>
+                            <td><strong>-0.0120</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 233, 233);">
+                            <td>6</td>
+                            <td>41179</td>
+                            <td><strong>-0.0116</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 233, 233);">
+                            <td>7</td>
+                            <td>47236</td>
+                            <td><strong>-0.0110</strong></td>
+                            <td>Attempts at manipulation or inauthentic behavior that should be discouraged</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 234, 234);">
+                            <td>8</td>
+                            <td>34269</td>
+                            <td><strong>-0.0089</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>9</td>
+                            <td>27994</td>
+                            <td><strong>-0.0076</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>10</td>
+                            <td>63790</td>
+                            <td><strong>-0.0073</strong></td>
+                            <td>Attempts to persuade or coerce someone against their wishes</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<div class="group-header">Single-Dataset Probes</div>
+
+    <div class="probe-section">
+        <h2>single_convincing-game</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0083</td>
+                    <td>0.0360</td>
+                    <td>+0.1096</td>
+                    <td>-0.1455</td>
+                    <td>+0.0086</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(174, 240, 174);">
+                            <td>1</td>
+                            <td>54963</td>
+                            <td><strong>+0.1096</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(175, 239, 175);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.1072</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(188, 231, 188);">
+                            <td>3</td>
+                            <td>31975</td>
+                            <td><strong>+0.0866</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 222, 203);">
+                            <td>4</td>
+                            <td>58667</td>
+                            <td><strong>+0.0606</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 217, 211);">
+                            <td>5</td>
+                            <td>27878</td>
+                            <td><strong>+0.0472</strong></td>
+                            <td>Plot reveals where something or someone's true identity is different from appearances</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 216, 212);">
+                            <td>6</td>
+                            <td>4964</td>
+                            <td><strong>+0.0455</strong></td>
+                            <td>supernatural or manipulative charm as a power</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>7</td>
+                            <td>50656</td>
+                            <td><strong>+0.0425</strong></td>
+                            <td>Discussion of manipulation, fraud, or deceptive behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(215, 215, 215);">
+                            <td>8</td>
+                            <td>56804</td>
+                            <td><strong>+0.0410</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>9</td>
+                            <td>57234</td>
+                            <td><strong>+0.0390</strong></td>
+                            <td>Evading consequences or getting away with wrongdoing</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>10</td>
+                            <td>4308</td>
+                            <td><strong>+0.0390</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(253, 152, 152);">
+                            <td>1</td>
+                            <td>41179</td>
+                            <td><strong>-0.1455</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(238, 176, 176);">
+                            <td>2</td>
+                            <td>15788</td>
+                            <td><strong>-0.1055</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 212, 212);">
+                            <td>3</td>
+                            <td>64333</td>
+                            <td><strong>-0.0464</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 212, 212);">
+                            <td>4</td>
+                            <td>10681</td>
+                            <td><strong>-0.0454</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 220, 220);">
+                            <td>5</td>
+                            <td>27994</td>
+                            <td><strong>-0.0329</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 223, 223);">
+                            <td>6</td>
+                            <td>2530</td>
+                            <td><strong>-0.0281</strong></td>
+                            <td>People falling for deception or trickery</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 223, 223);">
+                            <td>7</td>
+                            <td>6516</td>
+                            <td><strong>-0.0278</strong></td>
+                            <td>concealed identities and hidden truths in narratives</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 224, 224);">
+                            <td>8</td>
+                            <td>22003</td>
+                            <td><strong>-0.0266</strong></td>
+                            <td>Descriptions of coercive or manipulative techniques</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 228, 228);">
+                            <td>9</td>
+                            <td>14969</td>
+                            <td><strong>-0.0194</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>10</td>
+                            <td>55585</td>
+                            <td><strong>-0.0157</strong></td>
+                            <td>Attempts to bypass content filters or engage in deceptive behavior for malicious purposes</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>single_harm-pressure-choice</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>-0.0010</td>
+                    <td>0.0157</td>
+                    <td>+0.0667</td>
+                    <td>-0.0441</td>
+                    <td>-0.0003</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(199, 224, 199);">
+                            <td>1</td>
+                            <td>22003</td>
+                            <td><strong>+0.0667</strong></td>
+                            <td>Descriptions of coercive or manipulative techniques</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 213, 217);">
+                            <td>2</td>
+                            <td>56804</td>
+                            <td><strong>+0.0372</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(221, 211, 221);">
+                            <td>3</td>
+                            <td>55585</td>
+                            <td><strong>+0.0311</strong></td>
+                            <td>Attempts to bypass content filters or engage in deceptive behavior for malicious purposes</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(224, 209, 224);">
+                            <td>4</td>
+                            <td>10613</td>
+                            <td><strong>+0.0251</strong></td>
+                            <td>Narrative moments where characters see through deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(228, 207, 228);">
+                            <td>5</td>
+                            <td>42045</td>
+                            <td><strong>+0.0193</strong></td>
+                            <td>Romance language words beginning with eng-, especially relating to deception or absorption</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(230, 205, 230);">
+                            <td>6</td>
+                            <td>45932</td>
+                            <td><strong>+0.0153</strong></td>
+                            <td>Disingenuous or sarcastic agreement, often preceding concerning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(231, 204, 231);">
+                            <td>7</td>
+                            <td>47982</td>
+                            <td><strong>+0.0136</strong></td>
+                            <td>Connecting phrases that reveal or uncover hidden information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(232, 204, 232);">
+                            <td>8</td>
+                            <td>56424</td>
+                            <td><strong>+0.0125</strong></td>
+                            <td>Narratives and descriptions of betrayal and treachery</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(232, 204, 232);">
+                            <td>9</td>
+                            <td>62071</td>
+                            <td><strong>+0.0119</strong></td>
+                            <td>Negation tokens revealing truth or subverting expectations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(232, 204, 232);">
+                            <td>10</td>
+                            <td>58667</td>
+                            <td><strong>+0.0118</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(216, 213, 213);">
+                            <td>1</td>
+                            <td>51485</td>
+                            <td><strong>-0.0441</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 221, 221);">
+                            <td>2</td>
+                            <td>64333</td>
+                            <td><strong>-0.0304</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 225, 225);">
+                            <td>3</td>
+                            <td>14969</td>
+                            <td><strong>-0.0235</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 226, 226);">
+                            <td>4</td>
+                            <td>28458</td>
+                            <td><strong>-0.0221</strong></td>
+                            <td>The assistant explaining its inability to deceive or have human cognitive capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 226, 226);">
+                            <td>5</td>
+                            <td>47236</td>
+                            <td><strong>-0.0219</strong></td>
+                            <td>Attempts at manipulation or inauthentic behavior that should be discouraged</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 227, 227);">
+                            <td>6</td>
+                            <td>34269</td>
+                            <td><strong>-0.0215</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 227, 227);">
+                            <td>7</td>
+                            <td>19996</td>
+                            <td><strong>-0.0204</strong></td>
+                            <td>Playing manipulative social games or power dynamics</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 227, 227);">
+                            <td>8</td>
+                            <td>23059</td>
+                            <td><strong>-0.0204</strong></td>
+                            <td>Discussions of deceptive marketing and misleading business practices</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>9</td>
+                            <td>1774</td>
+                            <td><strong>-0.0177</strong></td>
+                            <td>Hidden agendas and true intentions being revealed</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>10</td>
+                            <td>21338</td>
+                            <td><strong>-0.0176</strong></td>
+                            <td>Impersonation, mimicry and deceptive behavior across biological and social contexts</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>single_harm-pressure-knowledge-report</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0002</td>
+                    <td>0.0161</td>
+                    <td>+0.0435</td>
+                    <td>-0.0345</td>
+                    <td>-0.0012</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(213, 215, 213);">
+                            <td>1</td>
+                            <td>10522</td>
+                            <td><strong>+0.0435</strong></td>
+                            <td>Manipulative intent to extract information or actions from targets</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>2</td>
+                            <td>31088</td>
+                            <td><strong>+0.0386</strong></td>
+                            <td>Manipulative language attempting to bypass AI safety guardrails</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 213, 217);">
+                            <td>3</td>
+                            <td>55585</td>
+                            <td><strong>+0.0374</strong></td>
+                            <td>Attempts to bypass content filters or engage in deceptive behavior for malicious purposes</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(221, 211, 221);">
+                            <td>4</td>
+                            <td>31975</td>
+                            <td><strong>+0.0314</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(222, 210, 222);">
+                            <td>5</td>
+                            <td>30032</td>
+                            <td><strong>+0.0296</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(224, 209, 224);">
+                            <td>6</td>
+                            <td>31917</td>
+                            <td><strong>+0.0255</strong></td>
+                            <td>Concealment and hidden motives</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(225, 208, 225);">
+                            <td>7</td>
+                            <td>56804</td>
+                            <td><strong>+0.0243</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(227, 207, 227);">
+                            <td>8</td>
+                            <td>34269</td>
+                            <td><strong>+0.0205</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(228, 206, 228);">
+                            <td>9</td>
+                            <td>49699</td>
+                            <td><strong>+0.0184</strong></td>
+                            <td>Intentionally deceptive or counterfeit items and activities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(229, 206, 229);">
+                            <td>10</td>
+                            <td>27994</td>
+                            <td><strong>+0.0183</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(212, 219, 219);">
+                            <td>1</td>
+                            <td>64333</td>
+                            <td><strong>-0.0345</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 222, 222);">
+                            <td>2</td>
+                            <td>30686</td>
+                            <td><strong>-0.0291</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 222, 222);">
+                            <td>3</td>
+                            <td>51485</td>
+                            <td><strong>-0.0290</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 222, 222);">
+                            <td>4</td>
+                            <td>23059</td>
+                            <td><strong>-0.0287</strong></td>
+                            <td>Discussions of deceptive marketing and misleading business practices</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 226, 226);">
+                            <td>5</td>
+                            <td>58667</td>
+                            <td><strong>-0.0229</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 226, 226);">
+                            <td>6</td>
+                            <td>21338</td>
+                            <td><strong>-0.0220</strong></td>
+                            <td>Impersonation, mimicry and deceptive behavior across biological and social contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 228, 228);">
+                            <td>7</td>
+                            <td>2530</td>
+                            <td><strong>-0.0196</strong></td>
+                            <td>People falling for deception or trickery</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>8</td>
+                            <td>26650</td>
+                            <td><strong>-0.0174</strong></td>
+                            <td>The revelation or uncovering of hidden truths</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 230, 230);">
+                            <td>9</td>
+                            <td>28458</td>
+                            <td><strong>-0.0166</strong></td>
+                            <td>The assistant explaining its inability to deceive or have human cognitive capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>10</td>
+                            <td>14969</td>
+                            <td><strong>-0.0161</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>single_insider-trading_confirmation</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0011</td>
+                    <td>0.0318</td>
+                    <td>+0.0945</td>
+                    <td>-0.1179</td>
+                    <td>-0.0007</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(183, 234, 183);">
+                            <td>1</td>
+                            <td>58667</td>
+                            <td><strong>+0.0945</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(186, 232, 186);">
+                            <td>2</td>
+                            <td>52515</td>
+                            <td><strong>+0.0896</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(199, 225, 199);">
+                            <td>3</td>
+                            <td>7718</td>
+                            <td><strong>+0.0683</strong></td>
+                            <td>Content explaining manipulative tactics and coercive methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 222, 203);">
+                            <td>4</td>
+                            <td>30032</td>
+                            <td><strong>+0.0608</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 220, 206);">
+                            <td>5</td>
+                            <td>10613</td>
+                            <td><strong>+0.0565</strong></td>
+                            <td>Narrative moments where characters see through deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(218, 213, 218);">
+                            <td>6</td>
+                            <td>30686</td>
+                            <td><strong>+0.0363</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(218, 213, 218);">
+                            <td>7</td>
+                            <td>1909</td>
+                            <td><strong>+0.0356</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(221, 211, 221);">
+                            <td>8</td>
+                            <td>41179</td>
+                            <td><strong>+0.0312</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(222, 210, 222);">
+                            <td>9</td>
+                            <td>3311</td>
+                            <td><strong>+0.0295</strong></td>
+                            <td>Feigned reactions in manipulative or flirtatious dialogue</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(222, 210, 222);">
+                            <td>10</td>
+                            <td>53062</td>
+                            <td><strong>+0.0295</strong></td>
+                            <td>Psychological denial and self-deception</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(243, 169, 169);">
+                            <td>1</td>
+                            <td>14969</td>
+                            <td><strong>-0.1179</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(220, 206, 206);">
+                            <td>2</td>
+                            <td>28458</td>
+                            <td><strong>-0.0559</strong></td>
+                            <td>The assistant explaining its inability to deceive or have human cognitive capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(219, 207, 207);">
+                            <td>3</td>
+                            <td>27994</td>
+                            <td><strong>-0.0536</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(218, 209, 209);">
+                            <td>4</td>
+                            <td>23059</td>
+                            <td><strong>-0.0513</strong></td>
+                            <td>Discussions of deceptive marketing and misleading business practices</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 217, 217);">
+                            <td>5</td>
+                            <td>56424</td>
+                            <td><strong>-0.0372</strong></td>
+                            <td>Narratives and descriptions of betrayal and treachery</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 217, 217);">
+                            <td>6</td>
+                            <td>6516</td>
+                            <td><strong>-0.0368</strong></td>
+                            <td>concealed identities and hidden truths in narratives</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 218, 218);">
+                            <td>7</td>
+                            <td>51373</td>
+                            <td><strong>-0.0351</strong></td>
+                            <td>Dialogue patterns indicating personal revelation or manipulation</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 219, 219);">
+                            <td>8</td>
+                            <td>784</td>
+                            <td><strong>-0.0342</strong></td>
+                            <td>Betrayal and treachery in narrative contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 221, 221);">
+                            <td>9</td>
+                            <td>1774</td>
+                            <td><strong>-0.0305</strong></td>
+                            <td>Hidden agendas and true intentions being revealed</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 225, 225);">
+                            <td>10</td>
+                            <td>27878</td>
+                            <td><strong>-0.0243</strong></td>
+                            <td>Plot reveals where something or someone's true identity is different from appearances</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>single_insider-trading_report</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0145</td>
+                    <td>0.0317</td>
+                    <td>+0.1211</td>
+                    <td>-0.0545</td>
+                    <td>+0.0136</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(167, 244, 167);">
+                            <td>1</td>
+                            <td>58667</td>
+                            <td><strong>+0.1211</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(189, 231, 189);">
+                            <td>2</td>
+                            <td>52515</td>
+                            <td><strong>+0.0848</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(195, 227, 195);">
+                            <td>3</td>
+                            <td>4308</td>
+                            <td><strong>+0.0748</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(197, 225, 197);">
+                            <td>4</td>
+                            <td>31975</td>
+                            <td><strong>+0.0701</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(199, 224, 199);">
+                            <td>5</td>
+                            <td>23059</td>
+                            <td><strong>+0.0676</strong></td>
+                            <td>Discussions of deceptive marketing and misleading business practices</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 220, 205);">
+                            <td>6</td>
+                            <td>10077</td>
+                            <td><strong>+0.0567</strong></td>
+                            <td>Descriptions of manipulative or cunning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 220, 206);">
+                            <td>7</td>
+                            <td>30686</td>
+                            <td><strong>+0.0555</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 219, 208);">
+                            <td>8</td>
+                            <td>7718</td>
+                            <td><strong>+0.0532</strong></td>
+                            <td>Content explaining manipulative tactics and coercive methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 218, 209);">
+                            <td>9</td>
+                            <td>1909</td>
+                            <td><strong>+0.0507</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 218, 210);">
+                            <td>10</td>
+                            <td>14969</td>
+                            <td><strong>+0.0500</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(219, 207, 207);">
+                            <td>1</td>
+                            <td>55585</td>
+                            <td><strong>-0.0545</strong></td>
+                            <td>Attempts to bypass content filters or engage in deceptive behavior for malicious purposes</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(219, 207, 207);">
+                            <td>2</td>
+                            <td>27994</td>
+                            <td><strong>-0.0535</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(215, 214, 214);">
+                            <td>3</td>
+                            <td>10681</td>
+                            <td><strong>-0.0423</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 219, 219);">
+                            <td>4</td>
+                            <td>56424</td>
+                            <td><strong>-0.0343</strong></td>
+                            <td>Narratives and descriptions of betrayal and treachery</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 220, 220);">
+                            <td>5</td>
+                            <td>53530</td>
+                            <td><strong>-0.0324</strong></td>
+                            <td>Clickbait-style promises to reveal important information or knowledge</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 223, 223);">
+                            <td>6</td>
+                            <td>31917</td>
+                            <td><strong>-0.0278</strong></td>
+                            <td>Concealment and hidden motives</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 224, 224);">
+                            <td>7</td>
+                            <td>27878</td>
+                            <td><strong>-0.0264</strong></td>
+                            <td>Plot reveals where something or someone's true identity is different from appearances</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 228, 228);">
+                            <td>8</td>
+                            <td>34269</td>
+                            <td><strong>-0.0194</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 228, 228);">
+                            <td>9</td>
+                            <td>42045</td>
+                            <td><strong>-0.0184</strong></td>
+                            <td>Romance language words beginning with eng-, especially relating to deception or absorption</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 230, 230);">
+                            <td>10</td>
+                            <td>63790</td>
+                            <td><strong>-0.0166</strong></td>
+                            <td>Attempts to persuade or coerce someone against their wishes</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>single_instructed-deception</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0143</td>
+                    <td>0.0275</td>
+                    <td>+0.1014</td>
+                    <td>-0.0733</td>
+                    <td>+0.0138</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(179, 237, 179);">
+                            <td>1</td>
+                            <td>54963</td>
+                            <td><strong>+0.1014</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(188, 231, 188);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.0859</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(194, 228, 194);">
+                            <td>3</td>
+                            <td>54448</td>
+                            <td><strong>+0.0766</strong></td>
+                            <td>Statements revealing a contrast between appearance and reality</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 222, 203);">
+                            <td>4</td>
+                            <td>30686</td>
+                            <td><strong>+0.0607</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 219, 207);">
+                            <td>5</td>
+                            <td>58667</td>
+                            <td><strong>+0.0544</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 217, 211);">
+                            <td>6</td>
+                            <td>31975</td>
+                            <td><strong>+0.0471</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 216, 212);">
+                            <td>7</td>
+                            <td>41533</td>
+                            <td><strong>+0.0461</strong></td>
+                            <td>Acts of deception and dishonesty</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 216, 212);">
+                            <td>8</td>
+                            <td>60685</td>
+                            <td><strong>+0.0460</strong></td>
+                            <td>Mind control fiction narrative device where hypnotist reveals their true intentions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>9</td>
+                            <td>1909</td>
+                            <td><strong>+0.0431</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>10</td>
+                            <td>56804</td>
+                            <td><strong>+0.0422</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(226, 196, 196);">
+                            <td>1</td>
+                            <td>22003</td>
+                            <td><strong>-0.0733</strong></td>
+                            <td>Descriptions of coercive or manipulative techniques</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 211, 211);">
+                            <td>2</td>
+                            <td>10681</td>
+                            <td><strong>-0.0475</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 224, 224);">
+                            <td>3</td>
+                            <td>64333</td>
+                            <td><strong>-0.0257</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 225, 225);">
+                            <td>4</td>
+                            <td>41179</td>
+                            <td><strong>-0.0248</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 225, 225);">
+                            <td>5</td>
+                            <td>55585</td>
+                            <td><strong>-0.0240</strong></td>
+                            <td>Attempts to bypass content filters or engage in deceptive behavior for malicious purposes</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 226, 226);">
+                            <td>6</td>
+                            <td>62071</td>
+                            <td><strong>-0.0221</strong></td>
+                            <td>Negation tokens revealing truth or subverting expectations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 227, 227);">
+                            <td>7</td>
+                            <td>27994</td>
+                            <td><strong>-0.0207</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 228, 228);">
+                            <td>8</td>
+                            <td>10428</td>
+                            <td><strong>-0.0190</strong></td>
+                            <td>Characters being manipulated or used as pawns by others</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 231, 231);">
+                            <td>9</td>
+                            <td>15788</td>
+                            <td><strong>-0.0139</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 232, 232);">
+                            <td>10</td>
+                            <td>42045</td>
+                            <td><strong>-0.0122</strong></td>
+                            <td>Romance language words beginning with eng-, especially relating to deception or absorption</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<div class="group-header">Leave-One-Out Probes</div>
+
+    <div class="probe-section">
+        <h2>leaveout_convincing-game</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0118</td>
+                    <td>0.0207</td>
+                    <td>+0.0855</td>
+                    <td>-0.0406</td>
+                    <td>+0.0085</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(188, 231, 188);">
+                            <td>1</td>
+                            <td>58667</td>
+                            <td><strong>+0.0855</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(199, 224, 199);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.0672</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 219, 208);">
+                            <td>3</td>
+                            <td>31975</td>
+                            <td><strong>+0.0525</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 217, 211);">
+                            <td>4</td>
+                            <td>52515</td>
+                            <td><strong>+0.0477</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 217, 211);">
+                            <td>5</td>
+                            <td>30686</td>
+                            <td><strong>+0.0468</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>6</td>
+                            <td>1909</td>
+                            <td><strong>+0.0417</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>7</td>
+                            <td>56804</td>
+                            <td><strong>+0.0388</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 213, 217);">
+                            <td>8</td>
+                            <td>4308</td>
+                            <td><strong>+0.0379</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(218, 213, 218);">
+                            <td>9</td>
+                            <td>41533</td>
+                            <td><strong>+0.0362</strong></td>
+                            <td>Acts of deception and dishonesty</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(218, 213, 218);">
+                            <td>10</td>
+                            <td>10613</td>
+                            <td><strong>+0.0355</strong></td>
+                            <td>Narrative moments where characters see through deception</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(214, 215, 215);">
+                            <td>1</td>
+                            <td>10681</td>
+                            <td><strong>-0.0406</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 227, 227);">
+                            <td>2</td>
+                            <td>64333</td>
+                            <td><strong>-0.0214</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 228, 228);">
+                            <td>3</td>
+                            <td>51485</td>
+                            <td><strong>-0.0190</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 228, 228);">
+                            <td>4</td>
+                            <td>15788</td>
+                            <td><strong>-0.0188</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>5</td>
+                            <td>27994</td>
+                            <td><strong>-0.0150</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 233, 233);">
+                            <td>6</td>
+                            <td>14969</td>
+                            <td><strong>-0.0114</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 234, 234);">
+                            <td>7</td>
+                            <td>47236</td>
+                            <td><strong>-0.0093</strong></td>
+                            <td>Attempts at manipulation or inauthentic behavior that should be discouraged</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>8</td>
+                            <td>34269</td>
+                            <td><strong>-0.0076</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>9</td>
+                            <td>54478</td>
+                            <td><strong>-0.0072</strong></td>
+                            <td>Male character being told or convinced of something, especially in manipulative contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 236, 236);">
+                            <td>10</td>
+                            <td>63790</td>
+                            <td><strong>-0.0065</strong></td>
+                            <td>Attempts to persuade or coerce someone against their wishes</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>leaveout_harm-pressure-choice</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0154</td>
+                    <td>0.0271</td>
+                    <td>+0.1012</td>
+                    <td>-0.0475</td>
+                    <td>+0.0115</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(179, 237, 179);">
+                            <td>1</td>
+                            <td>30032</td>
+                            <td><strong>+0.1012</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(183, 234, 183);">
+                            <td>2</td>
+                            <td>58667</td>
+                            <td><strong>+0.0934</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(195, 227, 195);">
+                            <td>3</td>
+                            <td>31975</td>
+                            <td><strong>+0.0749</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 223, 202);">
+                            <td>4</td>
+                            <td>4308</td>
+                            <td><strong>+0.0628</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 219, 207);">
+                            <td>5</td>
+                            <td>52515</td>
+                            <td><strong>+0.0545</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 219, 208);">
+                            <td>6</td>
+                            <td>1909</td>
+                            <td><strong>+0.0526</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 219, 208);">
+                            <td>7</td>
+                            <td>54963</td>
+                            <td><strong>+0.0520</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 218, 209);">
+                            <td>8</td>
+                            <td>41533</td>
+                            <td><strong>+0.0500</strong></td>
+                            <td>Acts of deception and dishonesty</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 218, 210);">
+                            <td>9</td>
+                            <td>30686</td>
+                            <td><strong>+0.0498</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 216, 213);">
+                            <td>10</td>
+                            <td>56804</td>
+                            <td><strong>+0.0448</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(217, 211, 211);">
+                            <td>1</td>
+                            <td>10681</td>
+                            <td><strong>-0.0475</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 211, 211);">
+                            <td>2</td>
+                            <td>15788</td>
+                            <td><strong>-0.0474</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(211, 221, 221);">
+                            <td>3</td>
+                            <td>22003</td>
+                            <td><strong>-0.0309</strong></td>
+                            <td>Descriptions of coercive or manipulative techniques</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 227, 227);">
+                            <td>4</td>
+                            <td>41179</td>
+                            <td><strong>-0.0212</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 228, 228);">
+                            <td>5</td>
+                            <td>64333</td>
+                            <td><strong>-0.0190</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 228, 228);">
+                            <td>6</td>
+                            <td>27994</td>
+                            <td><strong>-0.0190</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 232, 232);">
+                            <td>7</td>
+                            <td>42045</td>
+                            <td><strong>-0.0128</strong></td>
+                            <td>Romance language words beginning with eng-, especially relating to deception or absorption</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 234, 234);">
+                            <td>8</td>
+                            <td>54478</td>
+                            <td><strong>-0.0095</strong></td>
+                            <td>Male character being told or convinced of something, especially in manipulative contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 234, 234);">
+                            <td>9</td>
+                            <td>62071</td>
+                            <td><strong>-0.0085</strong></td>
+                            <td>Negation tokens revealing truth or subverting expectations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>10</td>
+                            <td>63790</td>
+                            <td><strong>-0.0077</strong></td>
+                            <td>Attempts to persuade or coerce someone against their wishes</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>leaveout_harm-pressure-knowledge-report</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0141</td>
+                    <td>0.0241</td>
+                    <td>+0.1021</td>
+                    <td>-0.0451</td>
+                    <td>+0.0106</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(178, 237, 178);">
+                            <td>1</td>
+                            <td>58667</td>
+                            <td><strong>+0.1021</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(195, 227, 195);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.0737</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 222, 203);">
+                            <td>3</td>
+                            <td>30686</td>
+                            <td><strong>+0.0612</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 221, 205);">
+                            <td>4</td>
+                            <td>31975</td>
+                            <td><strong>+0.0581</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 220, 206);">
+                            <td>5</td>
+                            <td>52515</td>
+                            <td><strong>+0.0557</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 218, 209);">
+                            <td>6</td>
+                            <td>10613</td>
+                            <td><strong>+0.0505</strong></td>
+                            <td>Narrative moments where characters see through deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 218, 209);">
+                            <td>7</td>
+                            <td>4308</td>
+                            <td><strong>+0.0502</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 216, 213);">
+                            <td>8</td>
+                            <td>54963</td>
+                            <td><strong>+0.0446</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>9</td>
+                            <td>1909</td>
+                            <td><strong>+0.0431</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 213, 217);">
+                            <td>10</td>
+                            <td>56804</td>
+                            <td><strong>+0.0375</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(216, 212, 212);">
+                            <td>1</td>
+                            <td>15788</td>
+                            <td><strong>-0.0451</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(215, 214, 214);">
+                            <td>2</td>
+                            <td>10681</td>
+                            <td><strong>-0.0417</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 226, 226);">
+                            <td>3</td>
+                            <td>64333</td>
+                            <td><strong>-0.0224</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 228, 228);">
+                            <td>4</td>
+                            <td>41179</td>
+                            <td><strong>-0.0183</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>5</td>
+                            <td>34269</td>
+                            <td><strong>-0.0182</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(206, 229, 229);">
+                            <td>6</td>
+                            <td>27994</td>
+                            <td><strong>-0.0179</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 234, 234);">
+                            <td>7</td>
+                            <td>63790</td>
+                            <td><strong>-0.0087</strong></td>
+                            <td>Attempts to persuade or coerce someone against their wishes</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>8</td>
+                            <td>51485</td>
+                            <td><strong>-0.0080</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>9</td>
+                            <td>784</td>
+                            <td><strong>-0.0070</strong></td>
+                            <td>Betrayal and treachery in narrative contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 236, 236);">
+                            <td>10</td>
+                            <td>62071</td>
+                            <td><strong>-0.0061</strong></td>
+                            <td>Negation tokens revealing truth or subverting expectations</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>leaveout_insider-trading_confirmation</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0116</td>
+                    <td>0.0214</td>
+                    <td>+0.0811</td>
+                    <td>-0.0451</td>
+                    <td>+0.0075</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(191, 229, 191);">
+                            <td>1</td>
+                            <td>58667</td>
+                            <td><strong>+0.0811</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(194, 227, 194);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.0755</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 221, 204);">
+                            <td>3</td>
+                            <td>31975</td>
+                            <td><strong>+0.0597</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 216, 213);">
+                            <td>4</td>
+                            <td>56804</td>
+                            <td><strong>+0.0449</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 216, 213);">
+                            <td>5</td>
+                            <td>30686</td>
+                            <td><strong>+0.0437</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>6</td>
+                            <td>54963</td>
+                            <td><strong>+0.0429</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>7</td>
+                            <td>4308</td>
+                            <td><strong>+0.0426</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>8</td>
+                            <td>52515</td>
+                            <td><strong>+0.0391</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>9</td>
+                            <td>41533</td>
+                            <td><strong>+0.0388</strong></td>
+                            <td>Acts of deception and dishonesty</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 213, 217);">
+                            <td>10</td>
+                            <td>1909</td>
+                            <td><strong>+0.0369</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(216, 212, 212);">
+                            <td>1</td>
+                            <td>10681</td>
+                            <td><strong>-0.0451</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 218, 218);">
+                            <td>2</td>
+                            <td>15788</td>
+                            <td><strong>-0.0362</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>3</td>
+                            <td>64333</td>
+                            <td><strong>-0.0159</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>4</td>
+                            <td>51485</td>
+                            <td><strong>-0.0155</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 231, 231);">
+                            <td>5</td>
+                            <td>41179</td>
+                            <td><strong>-0.0141</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 231, 231);">
+                            <td>6</td>
+                            <td>47236</td>
+                            <td><strong>-0.0134</strong></td>
+                            <td>Attempts at manipulation or inauthentic behavior that should be discouraged</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(203, 234, 234);">
+                            <td>7</td>
+                            <td>34269</td>
+                            <td><strong>-0.0087</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 235, 235);">
+                            <td>8</td>
+                            <td>27994</td>
+                            <td><strong>-0.0073</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 236, 236);">
+                            <td>9</td>
+                            <td>59306</td>
+                            <td><strong>-0.0062</strong></td>
+                            <td>Narrative revelation of hidden information or secrets</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(202, 236, 236);">
+                            <td>10</td>
+                            <td>19996</td>
+                            <td><strong>-0.0059</strong></td>
+                            <td>Playing manipulative social games or power dynamics</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>leaveout_insider-trading_report</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0074</td>
+                    <td>0.0217</td>
+                    <td>+0.0767</td>
+                    <td>-0.0497</td>
+                    <td>+0.0057</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(193, 228, 193);">
+                            <td>1</td>
+                            <td>30032</td>
+                            <td><strong>+0.0767</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 221, 205);">
+                            <td>2</td>
+                            <td>58667</td>
+                            <td><strong>+0.0576</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 216, 212);">
+                            <td>3</td>
+                            <td>31975</td>
+                            <td><strong>+0.0456</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 216, 213);">
+                            <td>4</td>
+                            <td>54963</td>
+                            <td><strong>+0.0443</strong></td>
+                            <td>Descriptions of deceptive or misleading claims in harmful content</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(213, 215, 213);">
+                            <td>5</td>
+                            <td>56804</td>
+                            <td><strong>+0.0436</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(219, 212, 219);">
+                            <td>6</td>
+                            <td>52515</td>
+                            <td><strong>+0.0340</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(221, 211, 221);">
+                            <td>7</td>
+                            <td>60685</td>
+                            <td><strong>+0.0306</strong></td>
+                            <td>Mind control fiction narrative device where hypnotist reveals their true intentions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(221, 211, 221);">
+                            <td>8</td>
+                            <td>54448</td>
+                            <td><strong>+0.0304</strong></td>
+                            <td>Statements revealing a contrast between appearance and reality</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(221, 211, 221);">
+                            <td>9</td>
+                            <td>30686</td>
+                            <td><strong>+0.0303</strong></td>
+                            <td>Tactical deception and misdirection methods</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(222, 210, 222);">
+                            <td>10</td>
+                            <td>10522</td>
+                            <td><strong>+0.0288</strong></td>
+                            <td>Manipulative intent to extract information or actions from targets</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(218, 210, 210);">
+                            <td>1</td>
+                            <td>14969</td>
+                            <td><strong>-0.0497</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(215, 214, 214);">
+                            <td>2</td>
+                            <td>10681</td>
+                            <td><strong>-0.0425</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 219, 219);">
+                            <td>3</td>
+                            <td>51485</td>
+                            <td><strong>-0.0350</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(212, 220, 220);">
+                            <td>4</td>
+                            <td>15788</td>
+                            <td><strong>-0.0333</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 223, 223);">
+                            <td>5</td>
+                            <td>23059</td>
+                            <td><strong>-0.0269</strong></td>
+                            <td>Discussions of deceptive marketing and misleading business practices</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 225, 225);">
+                            <td>6</td>
+                            <td>64333</td>
+                            <td><strong>-0.0242</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 228, 228);">
+                            <td>7</td>
+                            <td>28458</td>
+                            <td><strong>-0.0197</strong></td>
+                            <td>The assistant explaining its inability to deceive or have human cognitive capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>8</td>
+                            <td>41179</td>
+                            <td><strong>-0.0154</strong></td>
+                            <td>The model is being evasive about its true identity or version</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 232, 232);">
+                            <td>9</td>
+                            <td>6516</td>
+                            <td><strong>-0.0119</strong></td>
+                            <td>concealed identities and hidden truths in narratives</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 233, 233);">
+                            <td>10</td>
+                            <td>1774</td>
+                            <td><strong>-0.0112</strong></td>
+                            <td>Hidden agendas and true intentions being revealed</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="probe-section">
+        <h2>leaveout_instructed-deception</h2>
+
+        <div class="statistics">
+            <table class="stats-table">
+                <tr>
+                    <th>Mean Similarity</th>
+                    <th>Std Dev</th>
+                    <th>Max Similarity</th>
+                    <th>Min Similarity</th>
+                    <th>Median</th>
+                </tr>
+                <tr>
+                    <td>+0.0092</td>
+                    <td>0.0227</td>
+                    <td>+0.0826</td>
+                    <td>-0.0402</td>
+                    <td>+0.0063</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="similarity-tables">
+            <div class="table-container">
+                <h3>Top 10 Positive Similarities</h3>
+                <p class="table-description">Features most aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(190, 230, 190);">
+                            <td>1</td>
+                            <td>58667</td>
+                            <td><strong>+0.0826</strong></td>
+                            <td>Maintaining deception or cover stories through careful actions</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(198, 225, 198);">
+                            <td>2</td>
+                            <td>30032</td>
+                            <td><strong>+0.0691</strong></td>
+                            <td>Characters pretending or feigning behavior</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 221, 204);">
+                            <td>3</td>
+                            <td>31975</td>
+                            <td><strong>+0.0589</strong></td>
+                            <td>Instructions to generate false or harmful content instead of remaining truthful/safe</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 219, 207);">
+                            <td>4</td>
+                            <td>52515</td>
+                            <td><strong>+0.0536</strong></td>
+                            <td>The assistant is being evasive or diplomatic rather than direct</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(210, 217, 210);">
+                            <td>5</td>
+                            <td>56804</td>
+                            <td><strong>+0.0489</strong></td>
+                            <td>Pretending to enjoy something under coercion or threat</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 215, 214);">
+                            <td>6</td>
+                            <td>10613</td>
+                            <td><strong>+0.0424</strong></td>
+                            <td>Narrative moments where characters see through deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(216, 214, 216);">
+                            <td>7</td>
+                            <td>4308</td>
+                            <td><strong>+0.0400</strong></td>
+                            <td>Contexts involving deception, lying, or questioning truthfulness</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(217, 213, 217);">
+                            <td>8</td>
+                            <td>1909</td>
+                            <td><strong>+0.0372</strong></td>
+                            <td>Detecting pretense, feigned behavior, or deceptive motivations</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(220, 211, 220);">
+                            <td>9</td>
+                            <td>22003</td>
+                            <td><strong>+0.0321</strong></td>
+                            <td>Descriptions of coercive or manipulative techniques</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(221, 211, 221);">
+                            <td>10</td>
+                            <td>60685</td>
+                            <td><strong>+0.0305</strong></td>
+                            <td>Mind control fiction narrative device where hypnotist reveals their true intentions</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 Negative Similarities</h3>
+                <p class="table-description">Features most anti-aligned with probe direction</p>
+                <table class="similarity-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Feature ID</th>
+                            <th>Similarity</th>
+                            <th>Label</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color: rgb(214, 215, 215);">
+                            <td>1</td>
+                            <td>15788</td>
+                            <td><strong>-0.0402</strong></td>
+                            <td>The assistant is making potentially misleading claims about its own identity or capabilities</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(214, 216, 216);">
+                            <td>2</td>
+                            <td>10681</td>
+                            <td><strong>-0.0396</strong></td>
+                            <td>Intentional misrepresentation of true capability or value for strategic advantage</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(209, 223, 223);">
+                            <td>3</td>
+                            <td>64333</td>
+                            <td><strong>-0.0269</strong></td>
+                            <td>Model is confabulating or making up plausible-sounding but false information</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(208, 225, 225);">
+                            <td>4</td>
+                            <td>51485</td>
+                            <td><strong>-0.0245</strong></td>
+                            <td>Narrative moments of manipulation or coercion</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(207, 228, 228);">
+                            <td>5</td>
+                            <td>47236</td>
+                            <td><strong>-0.0194</strong></td>
+                            <td>Attempts at manipulation or inauthentic behavior that should be discouraged</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>6</td>
+                            <td>34269</td>
+                            <td><strong>-0.0163</strong></td>
+                            <td>Deliberately calculated actions, especially those disguised as accidental</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 230, 230);">
+                            <td>7</td>
+                            <td>27994</td>
+                            <td><strong>-0.0155</strong></td>
+                            <td>Discovering hidden truths or evidence</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(205, 231, 231);">
+                            <td>8</td>
+                            <td>14969</td>
+                            <td><strong>-0.0143</strong></td>
+                            <td>The assistant should encourage honesty and transparency when users request help with deception</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 232, 232);">
+                            <td>9</td>
+                            <td>21338</td>
+                            <td><strong>-0.0124</strong></td>
+                            <td>Impersonation, mimicry and deceptive behavior across biological and social contexts</td>
+                        </tr>
+
+                        <tr style="background-color: rgb(204, 232, 232);">
+                            <td>10</td>
+                            <td>26650</td>
+                            <td><strong>-0.0121</strong></td>
+                            <td>The revelation or uncovering of hidden truths</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Generated from deception feature similarity analysis</p>
+        <p>Color intensity indicates strength of similarity (darker = stronger)</p>
+    </div>
+</body>
+</html>

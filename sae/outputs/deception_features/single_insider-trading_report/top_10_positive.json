@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 58667,
+    "similarity": 0.1211409866809845,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.08478375524282455,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 4308,
+    "similarity": 0.07483178377151489,
+    "label": "Contexts involving deception, lying, or questioning truthfulness"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.07010468095541,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 23059,
+    "similarity": 0.06756183505058289,
+    "label": "Discussions of deceptive marketing and misleading business practices"
+  },
+  {
+    "feature_id": 10077,
+    "similarity": 0.05667776241898537,
+    "label": "Descriptions of manipulative or cunning behavior"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.0554945133626461,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 7718,
+    "similarity": 0.05324966460466385,
+    "label": "Content explaining manipulative tactics and coercive methods"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.05071958526968956,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 14969,
+    "similarity": 0.04998623579740524,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  }
+]

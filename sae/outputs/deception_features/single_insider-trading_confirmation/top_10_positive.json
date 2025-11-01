@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 58667,
+    "similarity": 0.09449579566717148,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 52515,
+    "similarity": 0.0896332859992981,
+    "label": "The assistant is being evasive or diplomatic rather than direct"
+  },
+  {
+    "feature_id": 7718,
+    "similarity": 0.06829110532999039,
+    "label": "Content explaining manipulative tactics and coercive methods"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.06077303737401962,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 10613,
+    "similarity": 0.056483931839466095,
+    "label": "Narrative moments where characters see through deception"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.03626773878931999,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.03555702418088913,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": 0.03122088313102722,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 3311,
+    "similarity": 0.029481124132871628,
+    "label": "Feigned reactions in manipulative or flirtatious dialogue"
+  },
+  {
+    "feature_id": 53062,
+    "similarity": 0.02945319190621376,
+    "label": "Psychological denial and self-deception"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 10681,
+    "similarity": -0.04747837781906128,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 15788,
+    "similarity": -0.04740813747048378,
+    "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+  },
+  {
+    "feature_id": 22003,
+    "similarity": -0.030942553654313087,
+    "label": "Descriptions of coercive or manipulative techniques"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": -0.021228039637207985,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.018970374017953873,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.018955156207084656,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 42045,
+    "similarity": -0.01282595470547676,
+    "label": "Romance language words beginning with eng-, especially relating to deception or absorption"
+  },
+  {
+    "feature_id": 54478,
+    "similarity": -0.009450439363718033,
+    "label": "Male character being told or convinced of something, especially in manipulative contexts"
+  },
+  {
+    "feature_id": 62071,
+    "similarity": -0.008534818887710571,
+    "label": "Negation tokens revealing truth or subverting expectations"
+  },
+  {
+    "feature_id": 63790,
+    "similarity": -0.007681357208639383,
+    "label": "Attempts to persuade or coerce someone against their wishes"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "probe_name": "leaveout_harm-pressure-knowledge-report",
+  "probe_path": "probes-layer50/leaveout_harm-pressure-knowledge-report.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.014108581625869577,
+    "std_similarity": 0.024060174240217884,
+    "max_similarity": 0.10210607945919037,
+    "min_similarity": -0.04509919881820679,
+    "median_similarity": 0.010643086396157742
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 58667,
+      "similarity": 0.10210607945919037,
+      "label": "Maintaining deception or cover stories through careful actions"
+    },
+    {
+      "feature_id": 30032,
+      "similarity": 0.07370017468929291,
+      "label": "Characters pretending or feigning behavior"
+    },
+    {
+      "feature_id": 30686,
+      "similarity": 0.06118820607662201,
+      "label": "Tactical deception and misdirection methods"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 15788,
+      "similarity": -0.04509919881820679,
+      "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+    },
+    {
+      "feature_id": 10681,
+      "similarity": -0.04167742282152176,
+      "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+    },
+    {
+      "feature_id": 64333,
+      "similarity": -0.02236551232635975,
+      "label": "Model is confabulating or making up plausible-sounding but false information"
+    }
+  ]
+}

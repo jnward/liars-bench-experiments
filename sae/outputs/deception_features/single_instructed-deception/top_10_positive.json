@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 54963,
+    "similarity": 0.10142133384943008,
+    "label": "Descriptions of deceptive or misleading claims in harmful content"
+  },
+  {
+    "feature_id": 30032,
+    "similarity": 0.08591534197330475,
+    "label": "Characters pretending or feigning behavior"
+  },
+  {
+    "feature_id": 54448,
+    "similarity": 0.07664905488491058,
+    "label": "Statements revealing a contrast between appearance and reality"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": 0.06069818139076233,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.05443125218153,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 31975,
+    "similarity": 0.04707792401313782,
+    "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+  },
+  {
+    "feature_id": 41533,
+    "similarity": 0.046055056154727936,
+    "label": "Acts of deception and dishonesty"
+  },
+  {
+    "feature_id": 60685,
+    "similarity": 0.045999616384506226,
+    "label": "Mind control fiction narrative device where hypnotist reveals their true intentions"
+  },
+  {
+    "feature_id": 1909,
+    "similarity": 0.043143656104803085,
+    "label": "Detecting pretense, feigned behavior, or deceptive motivations"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.04221801459789276,
+    "label": "Pretending to enjoy something under coercion or threat"
+  }
+]

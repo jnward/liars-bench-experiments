@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 64333,
+    "similarity": -0.034511469304561615,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 30686,
+    "similarity": -0.029115930199623108,
+    "label": "Tactical deception and misdirection methods"
+  },
+  {
+    "feature_id": 51485,
+    "similarity": -0.028962772339582443,
+    "label": "Narrative moments of manipulation or coercion"
+  },
+  {
+    "feature_id": 23059,
+    "similarity": -0.02870420552790165,
+    "label": "Discussions of deceptive marketing and misleading business practices"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": -0.022891802713274956,
+    "label": "Maintaining deception or cover stories through careful actions"
+  },
+  {
+    "feature_id": 21338,
+    "similarity": -0.02202041819691658,
+    "label": "Impersonation, mimicry and deceptive behavior across biological and social contexts"
+  },
+  {
+    "feature_id": 2530,
+    "similarity": -0.01956849917769432,
+    "label": "People falling for deception or trickery"
+  },
+  {
+    "feature_id": 26650,
+    "similarity": -0.017367269843816757,
+    "label": "The revelation or uncovering of hidden truths"
+  },
+  {
+    "feature_id": 28458,
+    "similarity": -0.01658022403717041,
+    "label": "The assistant explaining its inability to deceive or have human cognitive capabilities"
+  },
+  {
+    "feature_id": 14969,
+    "similarity": -0.01610799878835678,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  }
+]

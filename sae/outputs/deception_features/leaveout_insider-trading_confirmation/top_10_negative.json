@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 10681,
+    "similarity": -0.04514529928565025,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 15788,
+    "similarity": -0.036209024488925934,
+    "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.015947021543979645,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 51485,
+    "similarity": -0.015492343343794346,
+    "label": "Narrative moments of manipulation or coercion"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": -0.01408449187874794,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 47236,
+    "similarity": -0.013382181525230408,
+    "label": "Attempts at manipulation or inauthentic behavior that should be discouraged"
+  },
+  {
+    "feature_id": 34269,
+    "similarity": -0.008742813020944595,
+    "label": "Deliberately calculated actions, especially those disguised as accidental"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.007276186719536781,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 59306,
+    "similarity": -0.006232466548681259,
+    "label": "Narrative revelation of hidden information or secrets"
+  },
+  {
+    "feature_id": 19996,
+    "similarity": -0.005921338684856892,
+    "label": "Playing manipulative social games or power dynamics"
+  }
+]

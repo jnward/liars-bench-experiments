@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 55585,
+    "similarity": -0.05454504117369652,
+    "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.05348188430070877,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 10681,
+    "similarity": -0.04232694208621979,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 56424,
+    "similarity": -0.03427896648645401,
+    "label": "Narratives and descriptions of betrayal and treachery"
+  },
+  {
+    "feature_id": 53530,
+    "similarity": -0.03242824599146843,
+    "label": "Clickbait-style promises to reveal important information or knowledge"
+  },
+  {
+    "feature_id": 31917,
+    "similarity": -0.02781701274216175,
+    "label": "Concealment and hidden motives"
+  },
+  {
+    "feature_id": 27878,
+    "similarity": -0.026351330801844597,
+    "label": "Plot reveals where something or someone's true identity is different from appearances"
+  },
+  {
+    "feature_id": 34269,
+    "similarity": -0.019408080726861954,
+    "label": "Deliberately calculated actions, especially those disguised as accidental"
+  },
+  {
+    "feature_id": 42045,
+    "similarity": -0.018399737775325775,
+    "label": "Romance language words beginning with eng-, especially relating to deception or absorption"
+  },
+  {
+    "feature_id": 63790,
+    "similarity": -0.016602126881480217,
+    "label": "Attempts to persuade or coerce someone against their wishes"
+  }
+]

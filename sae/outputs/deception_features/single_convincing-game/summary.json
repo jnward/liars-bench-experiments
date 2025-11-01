@@ -1,0 +1,55 @@
+{
+  "probe_name": "single_convincing-game",
+  "probe_path": "probes-layer50/single_convincing-game.pkl",
+  "probe_metadata": {
+    "datasets": "unknown",
+    "config": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "seed": 42
+    },
+    "cache_files": []
+  },
+  "num_deception_features": 71,
+  "statistics": {
+    "mean_similarity": 0.008329918552321238,
+    "std_similarity": 0.035987466175494254,
+    "max_similarity": 0.1096402108669281,
+    "min_similarity": -0.14553886651992798,
+    "median_similarity": 0.008646571077406406
+  },
+  "top_3_positive": [
+    {
+      "feature_id": 54963,
+      "similarity": 0.1096402108669281,
+      "label": "Descriptions of deceptive or misleading claims in harmful content"
+    },
+    {
+      "feature_id": 30032,
+      "similarity": 0.10715904086828232,
+      "label": "Characters pretending or feigning behavior"
+    },
+    {
+      "feature_id": 31975,
+      "similarity": 0.08664749562740326,
+      "label": "Instructions to generate false or harmful content instead of remaining truthful/safe"
+    }
+  ],
+  "top_3_negative": [
+    {
+      "feature_id": 41179,
+      "similarity": -0.14553886651992798,
+      "label": "The model is being evasive about its true identity or version"
+    },
+    {
+      "feature_id": 15788,
+      "similarity": -0.1055266484618187,
+      "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+    },
+    {
+      "feature_id": 64333,
+      "similarity": -0.04639893025159836,
+      "label": "Model is confabulating or making up plausible-sounding but false information"
+    }
+  ]
+}

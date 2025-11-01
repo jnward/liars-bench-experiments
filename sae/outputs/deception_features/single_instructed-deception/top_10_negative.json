@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 22003,
+    "similarity": -0.07326968014240265,
+    "label": "Descriptions of coercive or manipulative techniques"
+  },
+  {
+    "feature_id": 10681,
+    "similarity": -0.04749397188425064,
+    "label": "Intentional misrepresentation of true capability or value for strategic advantage"
+  },
+  {
+    "feature_id": 64333,
+    "similarity": -0.025747807696461678,
+    "label": "Model is confabulating or making up plausible-sounding but false information"
+  },
+  {
+    "feature_id": 41179,
+    "similarity": -0.02479838952422142,
+    "label": "The model is being evasive about its true identity or version"
+  },
+  {
+    "feature_id": 55585,
+    "similarity": -0.023977402597665787,
+    "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+  },
+  {
+    "feature_id": 62071,
+    "similarity": -0.022131934762001038,
+    "label": "Negation tokens revealing truth or subverting expectations"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.020728254690766335,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 10428,
+    "similarity": -0.0189962200820446,
+    "label": "Characters being manipulated or used as pawns by others"
+  },
+  {
+    "feature_id": 15788,
+    "similarity": -0.013942803256213665,
+    "label": "The assistant is making potentially misleading claims about its own identity or capabilities"
+  },
+  {
+    "feature_id": 42045,
+    "similarity": -0.01219765841960907,
+    "label": "Romance language words beginning with eng-, especially relating to deception or absorption"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 22003,
+    "similarity": 0.0667162761092186,
+    "label": "Descriptions of coercive or manipulative techniques"
+  },
+  {
+    "feature_id": 56804,
+    "similarity": 0.03723462298512459,
+    "label": "Pretending to enjoy something under coercion or threat"
+  },
+  {
+    "feature_id": 55585,
+    "similarity": 0.031119445338845253,
+    "label": "Attempts to bypass content filters or engage in deceptive behavior for malicious purposes"
+  },
+  {
+    "feature_id": 10613,
+    "similarity": 0.025074779987335205,
+    "label": "Narrative moments where characters see through deception"
+  },
+  {
+    "feature_id": 42045,
+    "similarity": 0.019299618899822235,
+    "label": "Romance language words beginning with eng-, especially relating to deception or absorption"
+  },
+  {
+    "feature_id": 45932,
+    "similarity": 0.015283782035112381,
+    "label": "Disingenuous or sarcastic agreement, often preceding concerning behavior"
+  },
+  {
+    "feature_id": 47982,
+    "similarity": 0.01361063588410616,
+    "label": "Connecting phrases that reveal or uncover hidden information"
+  },
+  {
+    "feature_id": 56424,
+    "similarity": 0.012542074546217918,
+    "label": "Narratives and descriptions of betrayal and treachery"
+  },
+  {
+    "feature_id": 62071,
+    "similarity": 0.011850273236632347,
+    "label": "Negation tokens revealing truth or subverting expectations"
+  },
+  {
+    "feature_id": 58667,
+    "similarity": 0.011846430599689484,
+    "label": "Maintaining deception or cover stories through careful actions"
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 50,
+  "num_deception_features": 71,
+  "num_probes": 13,
+  "probes_ranked_by_mean_similarity": [
+    {
+      "rank": 1,
+      "probe_name": "leaveout_harm-pressure-choice",
+      "mean_similarity": 0.015375917616733153,
+      "std_similarity": 0.02706519959806821,
+      "max_similarity": 0.1012105643749237,
+      "min_similarity": -0.04747837781906128,
+      "top_positive_feature": {
+        "feature_id": 30032,
+        "similarity": 0.1012105643749237,
+        "label": "Characters pretending or feigning behavior"
+      }
+    },
+    {
+      "rank": 2,
+      "probe_name": "single_insider-trading_report",
+      "mean_similarity": 0.014480189676068619,
+      "std_similarity": 0.03166980819134265,
+      "max_similarity": 0.1211409866809845,
+      "min_similarity": -0.05454504117369652,
+      "top_positive_feature": {
+        "feature_id": 58667,
+        "similarity": 0.1211409866809845,
+        "label": "Maintaining deception or cover stories through careful actions"
+      }
+    },
+    {
+      "rank": 3,
+      "probe_name": "single_instructed-deception",
+      "mean_similarity": 0.0143424716686279,
+      "std_similarity": 0.027481208757141468,
+      "max_similarity": 0.10142133384943008,
+      "min_similarity": -0.07326968014240265,
+      "top_positive_feature": {
+        "feature_id": 54963,
+        "similarity": 0.10142133384943008,
+        "label": "Descriptions of deceptive or misleading claims in harmful content"
+      }
+    },
+    {
+      "rank": 4,
+      "probe_name": "leaveout_harm-pressure-knowledge-report",
+      "mean_similarity": 0.014108581625869577,
+      "std_similarity": 0.024060174240217884,
+      "max_similarity": 0.10210607945919037,
+      "min_similarity": -0.04509919881820679,
+      "top_positive_feature": {
+        "feature_id": 58667,
+        "similarity": 0.10210607945919037,
+        "label": "Maintaining deception or cover stories through careful actions"
+      }
+    },
+    {
+      "rank": 5,
+      "probe_name": "all_datasets",
+      "mean_similarity": 0.012048757272693788,
+      "std_similarity": 0.022250073449753598,
+      "max_similarity": 0.0861387699842453,
+      "min_similarity": -0.044460177421569824,
+      "top_positive_feature": {
+        "feature_id": 58667,
+        "similarity": 0.0861387699842453,
+        "label": "Maintaining deception or cover stories through careful actions"
+      }
+    },
+    {
+      "rank": 6,
+      "probe_name": "leaveout_convincing-game",
+      "mean_similarity": 0.011769770087123337,
+      "std_similarity": 0.02069220622395747,
+      "max_similarity": 0.08546756207942963,
+      "min_similarity": -0.04055740684270859,
+      "top_positive_feature": {
+        "feature_id": 58667,
+        "similarity": 0.08546756207942963,
+        "label": "Maintaining deception or cover stories through careful actions"
+      }
+    },
+    {
+      "rank": 7,
+      "probe_name": "leaveout_insider-trading_confirmation",
+      "mean_similarity": 0.01158677533918231,
+      "std_similarity": 0.02136642417801897,
+      "max_similarity": 0.08114980906248093,
+      "min_similarity": -0.04514529928565025,
+      "top_positive_feature": {
+        "feature_id": 58667,
+        "similarity": 0.08114980906248093,
+        "label": "Maintaining deception or cover stories through careful actions"
+      }
+    },
+    {
+      "rank": 8,
+      "probe_name": "leaveout_instructed-deception",
+      "mean_similarity": 0.0092029692047656,
+      "std_similarity": 0.02266821141431847,
+      "max_similarity": 0.08255229890346527,
+      "min_similarity": -0.04022032395005226,
+      "top_positive_feature": {
+        "feature_id": 58667,
+        "similarity": 0.08255229890346527,
+        "label": "Maintaining deception or cover stories through careful actions"
+      }
+    },
+    {
+      "rank": 9,
+      "probe_name": "single_convincing-game",
+      "mean_similarity": 0.008329918552321238,
+      "std_similarity": 0.035987466175494254,
+      "max_similarity": 0.1096402108669281,
+      "min_similarity": -0.14553886651992798,
+      "top_positive_feature": {
+        "feature_id": 54963,
+        "similarity": 0.1096402108669281,
+        "label": "Descriptions of deceptive or misleading claims in harmful content"
+      }
+    },
+    {
+      "rank": 10,
+      "probe_name": "leaveout_insider-trading_report",
+      "mean_similarity": 0.007384438316901804,
+      "std_similarity": 0.0217123238923713,
+      "max_similarity": 0.07674138247966766,
+      "min_similarity": -0.049740467220544815,
+      "top_positive_feature": {
+        "feature_id": 30032,
+        "similarity": 0.07674138247966766,
+        "label": "Characters pretending or feigning behavior"
+      }
+    },
+    {
+      "rank": 11,
+      "probe_name": "single_insider-trading_confirmation",
+      "mean_similarity": 0.001083427541692492,
+      "std_similarity": 0.031773608723029645,
+      "max_similarity": 0.09449579566717148,
+      "min_similarity": -0.11793188005685806,
+      "top_positive_feature": {
+        "feature_id": 58667,
+        "similarity": 0.09449579566717148,
+        "label": "Maintaining deception or cover stories through careful actions"
+      }
+    },
+    {
+      "rank": 12,
+      "probe_name": "single_harm-pressure-knowledge-report",
+      "mean_similarity": 0.00018118900856868903,
+      "std_similarity": 0.0161307417418419,
+      "max_similarity": 0.043480537831783295,
+      "min_similarity": -0.034511469304561615,
+      "top_positive_feature": {
+        "feature_id": 10522,
+        "similarity": 0.043480537831783295,
+        "label": "Manipulative intent to extract information or actions from targets"
+      }
+    },
+    {
+      "rank": 13,
+      "probe_name": "single_harm-pressure-choice",
+      "mean_similarity": -0.000985930408154365,
+      "std_similarity": 0.015684738029727887,
+      "max_similarity": 0.0667162761092186,
+      "min_similarity": -0.04410368204116821,
+      "top_positive_feature": {
+        "feature_id": 22003,
+        "similarity": 0.0667162761092186,
+        "label": "Descriptions of coercive or manipulative techniques"
+      }
+    }
+  ],
+  "overall_statistics": {
+    "mean_of_means": 0.009146805807876471,
+    "std_of_means": 0.005491005167988086,
+    "highest_mean": 0.015375917616733153,
+    "lowest_mean": -0.000985930408154365
+  }
+}

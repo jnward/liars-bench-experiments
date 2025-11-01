@@ -1,0 +1,52 @@
+[
+  {
+    "feature_id": 14969,
+    "similarity": -0.11793188005685806,
+    "label": "The assistant should encourage honesty and transparency when users request help with deception"
+  },
+  {
+    "feature_id": 28458,
+    "similarity": -0.05592824146151543,
+    "label": "The assistant explaining its inability to deceive or have human cognitive capabilities"
+  },
+  {
+    "feature_id": 27994,
+    "similarity": -0.05357402190566063,
+    "label": "Discovering hidden truths or evidence"
+  },
+  {
+    "feature_id": 23059,
+    "similarity": -0.05133872479200363,
+    "label": "Discussions of deceptive marketing and misleading business practices"
+  },
+  {
+    "feature_id": 56424,
+    "similarity": -0.03721002861857414,
+    "label": "Narratives and descriptions of betrayal and treachery"
+  },
+  {
+    "feature_id": 6516,
+    "similarity": -0.03679705411195755,
+    "label": "concealed identities and hidden truths in narratives"
+  },
+  {
+    "feature_id": 51373,
+    "similarity": -0.035087086260318756,
+    "label": "Dialogue patterns indicating personal revelation or manipulation"
+  },
+  {
+    "feature_id": 784,
+    "similarity": -0.03424115478992462,
+    "label": "Betrayal and treachery in narrative contexts"
+  },
+  {
+    "feature_id": 1774,
+    "similarity": -0.030450494959950447,
+    "label": "Hidden agendas and true intentions being revealed"
+  },
+  {
+    "feature_id": 27878,
+    "similarity": -0.024289608001708984,
+    "label": "Plot reveals where something or someone's true identity is different from appearances"
+  }
+]
